@@ -1,0 +1,11 @@
+framework module GrowthBook {
+  umbrella header "GrowthBook.h"
+  export *
+
+  module * { export * }
+}
+
+module GrowthBook.Swift {
+  header "GrowthBook-Swift.h"
+  requires objc
+}

@@ -1,0 +1,770 @@
+{
+  "packages": {
+    "LRUCache": {
+      "version": "1.2.1",
+      "url": "https://github.com/nicklockwood/LRUCache.git",
+      "revision": "cb5b2bd0da83ad29c0bec762d39f41c8ad0eaf3e",
+      "builtAt": "2026-06-10T17:44:25Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "LRUCache": {
+          "path": "LRUCache/1.2.1/LRUCache.xcframework"
+        }
+      }
+    },
+    "GrowthBook-IOS": {
+      "version": "1.0.63",
+      "url": "https://github.com/growthbook/growthbook-swift.git",
+      "revision": "1c0795f056038476c838e8b25ec9d26aaafc597b",
+      "builtAt": "2026-06-10T17:43:19Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "GrowthBook": {
+          "path": "GrowthBook-IOS/1.0.63/GrowthBook.xcframework"
+        }
+      }
+    },
+    "Sentry": {
+      "version": "9.8.0",
+      "url": "https://github.com/getsentry/sentry-cocoa",
+      "revision": "05d3ce8332097ff0b2347231ac66476fd7d2f4d8",
+      "builtAt": "2026-06-10T17:44:03Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Sentry": {
+          "path": "Sentry/9.8.0/Sentry.xcframework"
+        }
+      }
+    },
+    "SimpleKeychain": {
+      "version": "1.3.0",
+      "url": "https://github.com/auth0/SimpleKeychain.git",
+      "revision": "776c4a6db74d5c6c143974be91c383680d468630",
+      "builtAt": "2026-06-10T17:44:13Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "SimpleKeychain": {
+          "path": "SimpleKeychain/1.3.0/SimpleKeychain.xcframework"
+        }
+      }
+    },
+    "XCGLogger": {
+      "version": "7.1.5",
+      "url": "https://github.com/DaveWoodCom/XCGLogger.git",
+      "revision": "4def3c1c772ca90ad5e7bfc8ac437c3b0b4276cf",
+      "builtAt": "2026-06-10T17:45:30Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "XCGLogger": {
+          "path": "XCGLogger/7.1.5/XCGLogger.xcframework"
+        }
+      }
+    },
+    "SQLite.swift": {
+      "version": "0.15.3",
+      "url": "https://github.com/stephencelis/SQLite.swift.git",
+      "revision": "a95fc6df17d108bd99210db5e8a9bac90fe984b8",
+      "builtAt": "2026-06-10T17:45:48Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "SQLite": {
+          "path": "SQLite.swift/0.15.3/SQLite.xcframework"
+        }
+      }
+    },
+    "BitByteData": {
+      "version": "2.0.4",
+      "url": "https://github.com/tsolomko/BitByteData",
+      "revision": "cdcdc5177ad536cfb11b95c620f926a81014b7fe",
+      "builtAt": "2026-06-10T17:46:11Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "BitByteData": {
+          "path": "BitByteData/2.0.4/BitByteData.xcframework"
+        }
+      }
+    },
+    "xctest-dynamic-overlay": {
+      "version": "1.7.0",
+      "url": "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "revision": "4c27acf5394b645b70d8ba19dc249c0472d5f618",
+      "builtAt": "2026-06-10T17:37:32Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "IssueReporting": {
+          "path": "xctest-dynamic-overlay/1.7.0/IssueReporting.xcframework"
+        }
+      }
+    },
+    "swift-concurrency-extras": {
+      "version": "1.3.2",
+      "url": "https://github.com/pointfreeco/swift-concurrency-extras",
+      "revision": "5a3825302b1a0d744183200915a47b508c828e6f",
+      "builtAt": "2026-06-10T17:37:44Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "ConcurrencyExtras": {
+          "path": "swift-concurrency-extras/1.3.2/ConcurrencyExtras.xcframework"
+        }
+      }
+    },
+    "combine-schedulers": {
+      "version": "1.0.3",
+      "url": "https://github.com/pointfreeco/combine-schedulers",
+      "revision": "5928286acce13def418ec36d05a001a9641086f2",
+      "builtAt": "2026-06-10T17:38:04Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "CombineSchedulers": {
+          "path": "combine-schedulers/1.0.3/CombineSchedulers.xcframework"
+        }
+      }
+    },
+    "swift-clocks": {
+      "version": "1.0.6",
+      "url": "https://github.com/pointfreeco/swift-clocks",
+      "revision": "cc46202b53476d64e824e0b6612da09d84ffde8e",
+      "builtAt": "2026-06-10T17:38:23Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Clocks": {
+          "path": "swift-clocks/1.0.6/Clocks.xcframework"
+        }
+      }
+    },
+    "Sovran": {
+      "version": "1.1.2",
+      "url": "https://github.com/segmentio/sovran-swift.git",
+      "revision": "24867f3e4ac62027db9827112135e6531b6f4051",
+      "builtAt": "2026-06-10T17:38:42Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Sovran": {
+          "path": "Sovran/1.1.2/Sovran.xcframework"
+        }
+      }
+    },
+    "JSONSafeEncoding": {
+      "version": "2.0.0",
+      "url": "https://github.com/segmentio/jsonsafeencoding-swift.git",
+      "revision": "af6a8b360984085e36c6341b21ecb35c12f47ebd",
+      "builtAt": "2026-06-10T17:38:55Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "JSONSafeEncoding": {
+          "path": "JSONSafeEncoding/2.0.0/JSONSafeEncoding.xcframework"
+        }
+      }
+    },
+    "Segment": {
+      "version": "1.9.1",
+      "url": "https://github.com/segmentio/analytics-swift.git",
+      "revision": "f604cef21bb7269f76136c68bd664c6c993f8e28",
+      "builtAt": "2026-06-10T17:39:19Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Segment": {
+          "path": "Segment/1.9.1/Segment.xcframework"
+        }
+      }
+    },
+    "AuthFoundation": {
+      "version": "1.8.3",
+      "url": "https://github.com/okta/okta-mobile-swift",
+      "revision": "f46413cf3b139b92c543ca8af2a8f88cd2f33bd8",
+      "builtAt": "2026-06-10T17:41:16Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "AuthFoundation": {
+          "path": "AuthFoundation/1.8.3/AuthFoundation.xcframework"
+        }
+      }
+    },
+    "swift-asn1": {
+      "version": "1.5.0",
+      "url": "https://github.com/apple/swift-asn1.git",
+      "revision": "40d25bbb2fc5b557a9aa8512210bded327c0f60d",
+      "builtAt": "2026-06-10T17:39:42Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "SwiftASN1": {
+          "path": "swift-asn1/1.5.0/SwiftASN1.xcframework"
+        }
+      }
+    },
+    "swift-certificates": {
+      "version": "1.15.0",
+      "url": "https://github.com/apple/swift-certificates.git",
+      "revision": "f4cd9e78a1ec209b27e426a5f5c693675f95e75a",
+      "builtAt": "2026-06-10T17:40:47Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "X509": {
+          "path": "swift-certificates/1.15.0/X509.xcframework"
+        }
+      }
+    },
+    "OktaIdx": {
+      "version": "3.2.4",
+      "url": "https://github.com/okta/okta-idx-swift.git",
+      "revision": "65b36bd19063089153c8602113f8bc0d2a1db570",
+      "builtAt": "2026-06-10T17:41:50Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "OktaIdx": {
+          "path": "OktaIdx/3.2.4/OktaIdx.xcframework"
+        }
+      }
+    },
+    "swift-system": {
+      "version": "1.6.3",
+      "url": "https://github.com/apple/swift-system.git",
+      "revision": "395a77f0aa927f0ff73941d7ac35f2b46d47c9db",
+      "builtAt": "2026-06-10T17:09:23Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "SystemPackage": {
+          "path": "swift-system/1.6.3/SystemPackage.xcframework"
+        }
+      }
+    },
+    "swift-async-algorithms": {
+      "version": "1.0.4",
+      "url": "https://github.com/apple/swift-async-algorithms.git",
+      "revision": "042e1c4d9d19748c9c228f8d4ebc97bb1e339b0b",
+      "builtAt": "2026-06-10T17:10:38Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "AsyncAlgorithms": {
+          "path": "swift-async-algorithms/1.0.4/AsyncAlgorithms.xcframework"
+        }
+      }
+    },
+    "Thrift": {
+      "version": "1.1.2",
+      "url": "https://github.com/undefinedlabs/Thrift-Swift",
+      "revision": "18ff09e6b30e589ed38f90a1af23e193b8ecef8e",
+      "builtAt": "2026-06-10T17:21:25Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Thrift": {
+          "path": "Thrift/1.1.2/Thrift.xcframework"
+        }
+      }
+    },
+    "swift-log": {
+      "version": "1.6.4",
+      "url": "https://github.com/apple/swift-log",
+      "revision": "ce592ae52f982c847a4efc0dd881cc9eb32d29f2",
+      "builtAt": "2026-06-10T17:08:15Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Logging": {
+          "path": "swift-log/1.6.4/Logging.xcframework"
+        }
+      }
+    },
+    "swift-metrics": {
+      "version": "2.7.1",
+      "url": "https://github.com/apple/swift-metrics.git",
+      "revision": "0743a9364382629da3bf5677b46a2c4b1ce5d2a6",
+      "builtAt": "2026-06-10T17:08:24Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "CoreMetrics": {
+          "path": "swift-metrics/2.7.1/CoreMetrics.xcframework"
+        }
+      }
+    },
+    "swift-service-context": {
+      "version": "1.2.1",
+      "url": "https://github.com/apple/swift-service-context.git",
+      "revision": "1983448fefc717a2bc2ebde5490fe99873c5b8a6",
+      "builtAt": "2026-06-10T17:08:31Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "ServiceContextModule": {
+          "path": "swift-service-context/1.2.1/ServiceContextModule.xcframework"
+        }
+      }
+    },
+    "swift-http-types": {
+      "version": "1.5.0",
+      "url": "https://github.com/apple/swift-http-types.git",
+      "revision": "9410f6b9a3d418a5416cfe30d8de4227bc6890a0",
+      "builtAt": "2026-06-10T17:08:59Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "HTTPTypes": {
+          "path": "swift-http-types/1.5.0/HTTPTypes.xcframework"
+        }
+      }
+    },
+    "SwiftProtobuf": {
+      "version": "1.32.0",
+      "url": "https://github.com/apple/swift-protobuf.git",
+      "revision": "c6fe6442e6a64250495669325044052e113e990c",
+      "builtAt": "2026-06-10T17:09:58Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "SwiftProtobuf": {
+          "path": "SwiftProtobuf/1.32.0/SwiftProtobuf.xcframework"
+        }
+      }
+    },
+    "swift-atomics": {
+      "version": "1.3.0",
+      "url": "https://github.com/apple/swift-atomics.git",
+      "revision": "b601256eab081c0f92f059e12818ac1d4f178ff7",
+      "builtAt": "2026-06-10T17:08:39Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Atomics": {
+          "path": "swift-atomics/1.3.0/Atomics.xcframework"
+        }
+      }
+    },
+    "swift-algorithms": {
+      "version": "1.2.1",
+      "url": "https://github.com/apple/swift-algorithms.git",
+      "revision": "87e50f483c54e6efd60e885f7f5aa946cee68023",
+      "builtAt": "2026-06-10T17:10:20Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Algorithms": {
+          "path": "swift-algorithms/1.2.1/Algorithms.xcframework"
+        }
+      }
+    },
+    "swift-nio-ssl": {
+      "version": "2.35.0",
+      "url": "https://github.com/apple/swift-nio-ssl.git",
+      "revision": "d3bad3847c53015fe8ec1e6c3ab54e53a5b6f15f",
+      "builtAt": "2026-06-10T17:12:52Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "NIOSSL": {
+          "path": "swift-nio-ssl/2.35.0/NIOSSL.xcframework"
+        }
+      }
+    },
+    "swift-nio-http2": {
+      "version": "1.38.0",
+      "url": "https://github.com/apple/swift-nio-http2.git",
+      "revision": "5e9e99ec96c53bc2c18ddd10c1e25a3cd97c55e5",
+      "builtAt": "2026-06-10T17:13:58Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "NIOHTTP2": {
+          "path": "swift-nio-http2/1.38.0/NIOHTTP2.xcframework"
+        }
+      }
+    },
+    "swift-nio-extras": {
+      "version": "1.29.0",
+      "url": "https://github.com/apple/swift-nio-extras.git",
+      "revision": "a55c3dd3a81d035af8a20ce5718889c0dcab073d",
+      "builtAt": "2026-06-10T17:15:04Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "NIOExtras": {
+          "path": "swift-nio-extras/1.29.0/NIOExtras.xcframework"
+        }
+      }
+    },
+    "swift-nio-transport-services": {
+      "version": "1.25.2",
+      "url": "https://github.com/apple/swift-nio-transport-services.git",
+      "revision": "df6c28355051c72c884574a6c858bc54f7311ff9",
+      "builtAt": "2026-06-10T17:15:54Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "NIOTransportServices": {
+          "path": "swift-nio-transport-services/1.25.2/NIOTransportServices.xcframework"
+        }
+      }
+    },
+    "swift-distributed-tracing": {
+      "version": "1.3.1",
+      "url": "https://github.com/apple/swift-distributed-tracing.git",
+      "revision": "baa932c1336f7894145cbaafcd34ce2dd0b77c97",
+      "builtAt": "2026-06-10T17:16:07Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Tracing": {
+          "path": "swift-distributed-tracing/1.3.1/Tracing.xcframework"
+        }
+      }
+    },
+    "swift-numerics": {
+      "version": "1.1.1",
+      "url": "https://github.com/apple/swift-numerics.git",
+      "revision": "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+      "builtAt": "2026-06-10T17:08:47Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Numerics": {
+          "path": "swift-numerics/1.1.1/Numerics.xcframework"
+        }
+      }
+    },
+    "swift-service-lifecycle": {
+      "version": "2.9.0",
+      "url": "https://github.com/swift-server/swift-service-lifecycle.git",
+      "revision": "0fcc4c9c2d58dd98504c06f7308c86de775396ff",
+      "builtAt": "2026-06-10T17:16:31Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "ServiceLifecycle": {
+          "path": "swift-service-lifecycle/2.9.0/ServiceLifecycle.xcframework"
+        }
+      }
+    },
+    "async-http-client": {
+      "version": "1.30.1",
+      "url": "https://github.com/swift-server/async-http-client.git",
+      "revision": "c464bf94eac4273cad7424307a5dc7e44e361905",
+      "builtAt": "2026-06-10T17:18:31Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "AsyncHTTPClient": {
+          "path": "async-http-client/1.30.1/AsyncHTTPClient.xcframework"
+        }
+      }
+    },
+    "Opentracing": {
+      "version": "0.5.2",
+      "url": "https://github.com/undefinedlabs/opentracing-objc",
+      "revision": "18c1a35ca966236cee0c5a714a51a73ff33384c1",
+      "builtAt": "2026-06-10T17:21:12Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "opentracing": {
+          "path": "Opentracing/0.5.2/opentracing.xcframework"
+        }
+      }
+    },
+    "swift-log-file": {
+      "version": "0.1.0",
+      "url": "https://github.com/crspybits/swift-log-file",
+      "revision": "aa94b38bf88c7d9cbc87ceafcdffadaffbc2bffa",
+      "builtAt": "2026-06-10T17:21:44Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "FileLogging": {
+          "path": "swift-log-file/0.1.0/FileLogging.xcframework"
+        }
+      }
+    },
+    "swift-collections": {
+      "version": "1.3.0",
+      "url": "https://github.com/apple/swift-collections.git",
+      "revision": "7b847a3b7008b2dc2f47ca3110d8c782fb2e5c7e",
+      "builtAt": "2026-06-10T17:10:09Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "OrderedCollections": {
+          "path": "swift-collections/1.3.0/OrderedCollections.xcframework"
+        }
+      }
+    },
+    "swiftui-introspect": {
+      "version": "1.4.0-beta.4",
+      "url": "https://github.com/siteline/swiftui-introspect",
+      "revision": "9bedf1e79c7b7c34b35b74bef126f56d2400ef7f",
+      "builtAt": "2026-06-10T17:44:47Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "SwiftUIIntrospect": {
+          "path": "swiftui-introspect/1.4.0-beta.4/SwiftUIIntrospect.xcframework"
+        }
+      }
+    },
+    "CombineExt": {
+      "version": "1.8.1",
+      "url": "https://github.com/CombineCommunity/CombineExt",
+      "revision": "d7b896fa9ca8b47fa7bcde6b43ef9b70bf8c1f56",
+      "builtAt": "2026-06-10T17:45:07Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "CombineExt": {
+          "path": "CombineExt/1.8.1/CombineExt.xcframework"
+        }
+      }
+    },
+    "PriorsSchema": {
+      "version": "1.7.12",
+      "url": "https://github.com/ischemaview/rapid-priors.git",
+      "revision": "d5e25d99e44dd31de88132a7ec244fa433085857",
+      "builtAt": "2026-06-10T17:46:53Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "PriorsSchema": {
+          "path": "PriorsSchema/1.7.12/PriorsSchema.xcframework"
+        }
+      }
+    },
+    "JSONAny": {
+      "version": "0.0.1",
+      "url": "https://github.com/ischemaview/JSONAny.git",
+      "revision": "a37181060099084958990f1428e4eafa5e23f5d0",
+      "builtAt": "2026-06-10T17:45:16Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "JSONAny": {
+          "path": "JSONAny/0.0.1/JSONAny.xcframework"
+        }
+      }
+    },
+    "CombineExpectations": {
+      "version": "0.10.0",
+      "url": "https://github.com/groue/CombineExpectations.git",
+      "revision": "04d4e4b21c9e8361925f03f64a7ecda89ef9974f",
+      "builtAt": "2026-06-10T17:47:08Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "CombineExpectations": {
+          "path": "CombineExpectations/0.10.0/CombineExpectations.xcframework"
+        }
+      }
+    },
+    "SWCompression": {
+      "version": "4.8.6",
+      "url": "https://github.com/tsolomko/SWCompression",
+      "revision": "390e0b0af8dd19a600005a242a89e570ff482e09",
+      "builtAt": "2026-06-10T17:46:35Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "SWCompression": {
+          "path": "SWCompression/4.8.6/SWCompression.xcframework"
+        }
+      }
+    },
+    "swift-http-structured-headers": {
+      "version": "1.5.0",
+      "url": "https://github.com/apple/swift-http-structured-headers.git",
+      "revision": "a9f3c352f4d46afd155e00b3c6e85decae6bcbeb",
+      "builtAt": "2026-06-10T17:09:11Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "StructuredFieldValues": {
+          "path": "swift-http-structured-headers/1.5.0/StructuredFieldValues.xcframework"
+        }
+      }
+    },
+    "swift-nio": {
+      "version": "2.87.0",
+      "url": "https://github.com/apple/swift-nio.git",
+      "revision": "4e8f4b1c9adaa59315c523540c1ff2b38adc20a9",
+      "builtAt": "2026-06-10T17:11:39Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "NIOCore": {
+          "path": "swift-nio/2.87.0/NIOCore.xcframework"
+        },
+        "NIO": {
+          "path": "swift-nio/2.87.0/NIO.xcframework"
+        },
+        "NIOEmbedded": {
+          "path": "swift-nio/2.87.0/NIOEmbedded.xcframework"
+        },
+        "NIOPosix": {
+          "path": "swift-nio/2.87.0/NIOPosix.xcframework"
+        },
+        "NIOHTTP1": {
+          "path": "swift-nio/2.87.0/NIOHTTP1.xcframework"
+        }
+      }
+    },
+    "AmplifyUtilsNotifications": {
+      "version": "1.1.1",
+      "url": "https://github.com/aws-amplify/amplify-swift-utils-notifications.git",
+      "revision": "959eec669ba97c7d923b963c3e66ca8a0b2737f6",
+      "builtAt": "2026-06-10T21:59:08Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "AmplifyUtilsNotifications": {
+          "path": "AmplifyUtilsNotifications/1.1.1/AmplifyUtilsNotifications.xcframework"
+        }
+      }
+    },
+    "Promises": {
+      "version": "2.4.0",
+      "url": "https://github.com/google/promises.git",
+      "revision": "540318ecedd63d883069ae7f1ed811a2df00b6ac",
+      "builtAt": "2026-06-10T17:26:53Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "FBLPromises": {
+          "path": "Promises/2.4.0/FBLPromises.xcframework"
+        }
+      }
+    },
+    "GTMSessionFetcher": {
+      "version": "4.5.0",
+      "url": "https://github.com/google/gtm-session-fetcher.git",
+      "revision": "c756a29784521063b6a1202907e2cc47f41b667c",
+      "builtAt": "2026-06-10T17:27:08Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "GTMSessionFetcher": {
+          "path": "GTMSessionFetcher/4.5.0/GTMSessionFetcher.xcframework"
+        }
+      }
+    },
+    "GoogleDataTransport": {
+      "version": "10.1.0",
+      "url": "https://github.com/google/GoogleDataTransport.git",
+      "revision": "617af071af9aa1d6a091d59a202910ac482128f9",
+      "builtAt": "2026-06-10T17:29:04Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "GoogleDataTransport": {
+          "path": "GoogleDataTransport/10.1.0/GoogleDataTransport.xcframework"
+        }
+      }
+    },
+    "InteropForGoogle": {
+      "version": "101.0.0",
+      "url": "https://github.com/google/interop-ios-for-google-sdks.git",
+      "revision": "040d087ac2267d2ddd4cca36c757d1c6a05fdbfe",
+      "builtAt": "2026-06-10T17:26:57Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "RecaptchaInterop": {
+          "path": "InteropForGoogle/101.0.0/RecaptchaInterop.xcframework"
+        }
+      }
+    },
+    "AppCheck": {
+      "version": "11.2.0",
+      "url": "https://github.com/google/app-check.git",
+      "revision": "61b85103a1aeed8218f17c794687781505fbbef5",
+      "builtAt": "2026-06-10T17:29:22Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "AppCheckCore": {
+          "path": "AppCheck/11.2.0/AppCheckCore.xcframework"
+        }
+      }
+    },
+    "GoogleUtilities": {
+      "version": "8.1.0",
+      "url": "https://github.com/google/GoogleUtilities.git",
+      "revision": "60da361632d0de02786f709bdc0c4df340f7613e",
+      "builtAt": "2026-06-10T17:28:48Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "GULAppDelegateSwizzler": {
+          "path": "GoogleUtilities/8.1.0/GULAppDelegateSwizzler.xcframework"
+        },
+        "GULUserDefaults": {
+          "path": "GoogleUtilities/8.1.0/GULUserDefaults.xcframework"
+        },
+        "GULEnvironment": {
+          "path": "GoogleUtilities/8.1.0/GULEnvironment.xcframework"
+        },
+        "GULLogger": {
+          "path": "GoogleUtilities/8.1.0/GULLogger.xcframework"
+        },
+        "GULMethodSwizzler": {
+          "path": "GoogleUtilities/8.1.0/GULMethodSwizzler.xcframework"
+        },
+        "GULNetwork": {
+          "path": "GoogleUtilities/8.1.0/GULNetwork.xcframework"
+        },
+        "GULNSData": {
+          "path": "GoogleUtilities/8.1.0/GULNSData.xcframework"
+        },
+        "GULReachability": {
+          "path": "GoogleUtilities/8.1.0/GULReachability.xcframework"
+        }
+      }
+    },
+    "Firebase": {
+      "version": "11.15.0",
+      "url": "https://github.com/firebase/firebase-ios-sdk",
+      "revision": "fdc352fabaf5916e7faa1f96ad02b1957e93e5a5",
+      "builtAt": "2026-06-10T17:33:55Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "FirebaseCore": {
+          "path": "Firebase/11.15.0/FirebaseCore.xcframework"
+        },
+        "FirebaseInstallations": {
+          "path": "Firebase/11.15.0/FirebaseInstallations.xcframework"
+        },
+        "FirebaseMessaging": {
+          "path": "Firebase/11.15.0/FirebaseMessaging.xcframework"
+        }
+      }
+    },
+    "grpc-swift": {
+      "version": "1.26.1",
+      "url": "https://github.com/grpc/grpc-swift.git",
+      "revision": "a56a157218877ef3e9625f7e1f7b2cb7e46ead1b",
+      "builtAt": "2026-06-10T17:21:02Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "GRPC": {
+          "path": "grpc-swift/1.26.1/GRPC.xcframework"
+        }
+      }
+    },
+    "aws-crt-swift": {
+      "version": "0.54.2",
+      "url": "https://github.com/awslabs/aws-crt-swift",
+      "revision": "8241ad06622f7351e8843dfab6bbce14fe6bce5d",
+      "builtAt": "2026-06-10T21:52:42Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "AwsCommonRuntimeKit": {
+          "path": "aws-crt-swift/0.54.2/AwsCommonRuntimeKit.xcframework"
+        }
+      }
+    },
+    "Amplify": {
+      "version": "2.53.3",
+      "url": "https://github.com/aws-amplify/amplify-swift",
+      "revision": "d46019eea8299879a1e24a5d39cc67e1433c198a",
+      "builtAt": "2026-06-10T22:09:42Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "Amplify": {
+          "path": "Amplify/2.53.3/Amplify.xcframework"
+        },
+        "AWSCognitoAuthPlugin": {
+          "path": "Amplify/2.53.3/AWSCognitoAuthPlugin.xcframework"
+        },
+        "AWSAPIPlugin": {
+          "path": "Amplify/2.53.3/AWSAPIPlugin.xcframework"
+        }
+      }
+    },
+    "smithy-swift": {
+      "version": "0.175.0",
+      "url": "https://github.com/smithy-lang/smithy-swift",
+      "revision": "0f3fb709fd034ad4b7a19567858571d08a5f4cbe",
+      "builtAt": "2026-06-10T21:55:16Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "ClientRuntime": {
+          "path": "smithy-swift/0.175.0/ClientRuntime.xcframework"
+        }
+      }
+    },
+    "aws-sdk-swift": {
+      "version": "1.6.7",
+      "url": "https://github.com/awslabs/aws-sdk-swift.git",
+      "revision": "61d0ab5b429599f22c44b71b0737f030dc82f76b",
+      "builtAt": "2026-06-10T21:58:51Z",
+      "xcodeVersion": "Xcode 16.4 Build version 16F6",
+      "products": {
+        "AWSClientRuntime": {
+          "path": "aws-sdk-swift/1.6.7/AWSClientRuntime.xcframework"
+        }
+      }
+    }
+  },
+  "generatedAt": "2026-06-10T22:09:42Z"
+}

@@ -1,0 +1,4 @@
+framework module BitByteData {
+  header "BitByteData-Swift.h"
+  requires objc
+}

@@ -1,0 +1,1098 @@
+{
+  "schemaVersion": 1,
+  "description": "XCFramework conversion inventory for APP-6792. Drives Scripts/build-all-xcframeworks.sh and resolves schemes for Scripts/build-xcframework.sh.",
+  "generatedFrom": "RapidPlatform.xcworkspace/xcshareddata/swiftpm/Package.resolved",
+  "defaults": {
+    "minIOS": "17.0",
+    "outputDir": "XCFrameworks"
+  },
+  "groupOrder": [
+    "shared-infra",
+    "firebase",
+    "aws",
+    "pointfree",
+    "segment",
+    "okta",
+    "easy-wins"
+  ],
+  "packages": [
+    {
+      "name": "swift-log",
+      "url": "https://github.com/apple/swift-log",
+      "version": "1.6.4",
+      "revision": "ce592ae52f982c847a4efc0dd881cc9eb32d29f2",
+      "tag": "1.6.4",
+      "group": "shared-infra",
+      "order": 101,
+      "products": [
+        "Logging"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-metrics",
+      "url": "https://github.com/apple/swift-metrics.git",
+      "version": "2.7.1",
+      "revision": "0743a9364382629da3bf5677b46a2c4b1ce5d2a6",
+      "tag": "2.7.1",
+      "group": "shared-infra",
+      "order": 102,
+      "products": [
+        "CoreMetrics"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-service-context",
+      "url": "https://github.com/apple/swift-service-context.git",
+      "version": "1.2.1",
+      "revision": "1983448fefc717a2bc2ebde5490fe99873c5b8a6",
+      "tag": "1.2.1",
+      "group": "shared-infra",
+      "order": 103,
+      "products": [
+        "ServiceContextModule"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-atomics",
+      "url": "https://github.com/apple/swift-atomics.git",
+      "version": "1.3.0",
+      "revision": "b601256eab081c0f92f059e12818ac1d4f178ff7",
+      "tag": "1.3.0",
+      "group": "shared-infra",
+      "order": 104,
+      "products": [
+        "Atomics"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-numerics",
+      "url": "https://github.com/apple/swift-numerics.git",
+      "version": "1.1.1",
+      "revision": "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+      "tag": "1.1.1",
+      "group": "shared-infra",
+      "order": 105,
+      "products": [
+        "Numerics"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-http-types",
+      "url": "https://github.com/apple/swift-http-types.git",
+      "version": "1.5.0",
+      "revision": "9410f6b9a3d418a5416cfe30d8de4227bc6890a0",
+      "tag": "1.5.0",
+      "group": "shared-infra",
+      "order": 106,
+      "products": [
+        "HTTPTypes"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-http-structured-headers",
+      "url": "https://github.com/apple/swift-http-structured-headers.git",
+      "version": "1.5.0",
+      "revision": "a9f3c352f4d46afd155e00b3c6e85decae6bcbeb",
+      "tag": "1.5.0",
+      "group": "shared-infra",
+      "order": 107,
+      "products": [
+        "StructuredFieldValues"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "verify product name (RawStructuredFieldValues/StructuredFieldValues)",
+      "noMachOOverride": true
+    },
+    {
+      "name": "swift-system",
+      "url": "https://github.com/apple/swift-system.git",
+      "version": "1.6.3",
+      "revision": "395a77f0aa927f0ff73941d7ac35f2b46d47c9db",
+      "tag": "1.6.3",
+      "group": "shared-infra",
+      "order": 108,
+      "products": [
+        "SystemPackage"
+      ],
+      "skip": false
+    },
+    {
+      "name": "SwiftProtobuf",
+      "url": "https://github.com/apple/swift-protobuf.git",
+      "version": "1.32.0",
+      "revision": "c6fe6442e6a64250495669325044052e113e990c",
+      "tag": "1.32.0",
+      "group": "shared-infra",
+      "order": 109,
+      "products": [
+        "SwiftProtobuf"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-collections",
+      "url": "https://github.com/apple/swift-collections.git",
+      "version": "1.3.0",
+      "revision": "7b847a3b7008b2dc2f47ca3110d8c782fb2e5c7e",
+      "tag": "1.3.0",
+      "group": "shared-infra",
+      "order": 110,
+      "products": [
+        "OrderedCollections"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true,
+      "explicitProducts": true,
+      "noToolsDowngrade": true
+    },
+    {
+      "name": "swift-algorithms",
+      "url": "https://github.com/apple/swift-algorithms.git",
+      "version": "1.2.1",
+      "revision": "87e50f483c54e6efd60e885f7f5aa946cee68023",
+      "tag": "1.2.1",
+      "group": "shared-infra",
+      "order": 111,
+      "products": [
+        "Algorithms"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-async-algorithms",
+      "url": "https://github.com/apple/swift-async-algorithms.git",
+      "version": "1.0.4",
+      "revision": "042e1c4d9d19748c9c228f8d4ebc97bb1e339b0b",
+      "tag": "1.0.4",
+      "group": "shared-infra",
+      "order": 112,
+      "products": [
+        "AsyncAlgorithms"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-nio",
+      "url": "https://github.com/apple/swift-nio.git",
+      "version": "2.87.0",
+      "revision": "4e8f4b1c9adaa59315c523540c1ff2b38adc20a9",
+      "tag": "2.87.0",
+      "group": "shared-infra",
+      "order": 113,
+      "products": [
+        "NIOCore",
+        "NIO",
+        "NIOEmbedded",
+        "NIOPosix",
+        "NIOHTTP1"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "multi-product",
+      "noMachOOverride": true,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-nio-ssl",
+      "url": "https://github.com/apple/swift-nio-ssl.git",
+      "version": "2.35.0",
+      "revision": "d3bad3847c53015fe8ec1e6c3ab54e53a5b6f15f",
+      "tag": "2.35.0",
+      "group": "shared-infra",
+      "order": 114,
+      "products": [
+        "NIOSSL"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-nio-http2",
+      "url": "https://github.com/apple/swift-nio-http2.git",
+      "version": "1.38.0",
+      "revision": "5e9e99ec96c53bc2c18ddd10c1e25a3cd97c55e5",
+      "tag": "1.38.0",
+      "group": "shared-infra",
+      "order": 115,
+      "products": [
+        "NIOHTTP2"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-nio-extras",
+      "url": "https://github.com/apple/swift-nio-extras.git",
+      "version": "1.29.0",
+      "revision": "a55c3dd3a81d035af8a20ce5718889c0dcab073d",
+      "tag": "1.29.0",
+      "group": "shared-infra",
+      "order": 116,
+      "products": [
+        "NIOExtras"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-nio-transport-services",
+      "url": "https://github.com/apple/swift-nio-transport-services.git",
+      "version": "1.25.2",
+      "revision": "df6c28355051c72c884574a6c858bc54f7311ff9",
+      "tag": "1.25.2",
+      "group": "shared-infra",
+      "order": 117,
+      "products": [
+        "NIOTransportServices"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-distributed-tracing",
+      "url": "https://github.com/apple/swift-distributed-tracing.git",
+      "version": "1.3.1",
+      "revision": "baa932c1336f7894145cbaafcd34ce2dd0b77c97",
+      "tag": "1.3.1",
+      "group": "shared-infra",
+      "order": 118,
+      "products": [
+        "Tracing"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-service-lifecycle",
+      "url": "https://github.com/swift-server/swift-service-lifecycle.git",
+      "version": "2.9.0",
+      "revision": "0fcc4c9c2d58dd98504c06f7308c86de775396ff",
+      "tag": "2.9.0",
+      "group": "shared-infra",
+      "order": 119,
+      "products": [
+        "ServiceLifecycle"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "async-http-client",
+      "url": "https://github.com/swift-server/async-http-client.git",
+      "version": "1.30.1",
+      "revision": "c464bf94eac4273cad7424307a5dc7e44e361905",
+      "tag": "1.30.1",
+      "group": "shared-infra",
+      "order": 120,
+      "products": [
+        "AsyncHTTPClient"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "grpc-swift",
+      "url": "https://github.com/grpc/grpc-swift.git",
+      "version": "1.26.1",
+      "revision": "a56a157218877ef3e9625f7e1f7b2cb7e46ead1b",
+      "tag": "1.26.1",
+      "group": "shared-infra",
+      "order": 121,
+      "products": [
+        "GRPC"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "package also has protoc plugin executables; build only GRPC library",
+      "patchDeps": {
+        "swift-nio.git": "2.87.0"
+      },
+      "scheme": "GRPC",
+      "explicitProducts": true,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "Opentracing",
+      "url": "https://github.com/undefinedlabs/opentracing-objc",
+      "version": "0.5.2",
+      "revision": "18c1a35ca966236cee0c5a714a51a73ff33384c1",
+      "tag": "0.5.2",
+      "group": "shared-infra",
+      "order": 122,
+      "products": [
+        "opentracing"
+      ],
+      "skip": false
+    },
+    {
+      "name": "Thrift",
+      "url": "https://github.com/undefinedlabs/Thrift-Swift",
+      "version": "1.1.2",
+      "revision": "18ff09e6b30e589ed38f90a1af23e193b8ecef8e",
+      "tag": "1.1.2",
+      "group": "shared-infra",
+      "order": 123,
+      "products": [
+        "Thrift"
+      ],
+      "skip": false
+    },
+    {
+      "name": "opentelemetry-swift",
+      "url": "https://github.com/open-telemetry/opentelemetry-swift",
+      "version": "1.17.1",
+      "revision": "ef63c346d05f4fa7c9ca883f92631fd139eb2cfe",
+      "tag": "1.17.1",
+      "group": "shared-infra",
+      "order": 124,
+      "products": [
+        "OpenTelemetryApi",
+        "OpenTelemetrySdk"
+      ],
+      "skip": true,
+      "complex": true,
+      "note": "multi-product",
+      "noForceDynamic": true
+    },
+    {
+      "name": "swift-log-file",
+      "url": "https://github.com/crspybits/swift-log-file",
+      "version": "0.1.0",
+      "revision": "aa94b38bf88c7d9cbc87ceafcdffadaffbc2bffa",
+      "tag": "0.1.0",
+      "group": "shared-infra",
+      "order": 125,
+      "products": [
+        "FileLogging"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "Promises",
+      "url": "https://github.com/google/promises.git",
+      "version": "2.4.0",
+      "revision": "540318ecedd63d883069ae7f1ed811a2df00b6ac",
+      "tag": "2.4.0",
+      "group": "firebase",
+      "order": 201,
+      "products": [
+        "FBLPromises"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "product name is FBLPromises (ObjC) / Promises (Swift)"
+    },
+    {
+      "name": "InteropForGoogle",
+      "url": "https://github.com/google/interop-ios-for-google-sdks.git",
+      "version": "101.0.0",
+      "revision": "040d087ac2267d2ddd4cca36c757d1c6a05fdbfe",
+      "tag": "101.0.0",
+      "group": "firebase",
+      "order": 202,
+      "products": [
+        "GoogleInterop"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "verify product name"
+    },
+    {
+      "name": "GTMSessionFetcher",
+      "url": "https://github.com/google/gtm-session-fetcher.git",
+      "version": "4.5.0",
+      "revision": "c756a29784521063b6a1202907e2cc47f41b667c",
+      "tag": "4.5.0",
+      "group": "firebase",
+      "order": 203,
+      "products": [
+        "GTMSessionFetcher"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "has Core/Full products + resources"
+    },
+    {
+      "name": "GoogleUtilities",
+      "url": "https://github.com/google/GoogleUtilities.git",
+      "version": "8.1.0",
+      "revision": "60da361632d0de02786f709bdc0c4df340f7613e",
+      "tag": "8.1.0",
+      "group": "firebase",
+      "order": 204,
+      "products": [
+        "GoogleUtilities"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "many sub-products + resource bundles"
+    },
+    {
+      "name": "GoogleDataTransport",
+      "url": "https://github.com/google/GoogleDataTransport.git",
+      "version": "10.1.0",
+      "revision": "617af071af9aa1d6a091d59a202910ac482128f9",
+      "tag": "10.1.0",
+      "group": "firebase",
+      "order": 205,
+      "products": [
+        "GoogleDataTransport"
+      ],
+      "skip": false,
+      "complex": true
+    },
+    {
+      "name": "AppCheck",
+      "url": "https://github.com/google/app-check.git",
+      "version": "11.2.0",
+      "revision": "61b85103a1aeed8218f17c794687781505fbbef5",
+      "tag": "11.2.0",
+      "group": "firebase",
+      "order": 206,
+      "products": [
+        "FirebaseAppCheck"
+      ],
+      "skip": false,
+      "complex": true
+    },
+    {
+      "name": "Firebase",
+      "url": "https://github.com/firebase/firebase-ios-sdk",
+      "version": "11.15.0",
+      "revision": "fdc352fabaf5916e7faa1f96ad02b1957e93e5a5",
+      "tag": "11.15.0",
+      "group": "firebase",
+      "order": 207,
+      "products": [
+        "FirebaseCore",
+        "FirebaseMessaging",
+        "FirebaseInstallations"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "multi-product umbrella SDK; pulls binary deps"
+    },
+    {
+      "name": "aws-crt-swift",
+      "url": "https://github.com/awslabs/aws-crt-swift",
+      "version": "0.54.2",
+      "revision": "8241ad06622f7351e8843dfab6bbce14fe6bce5d",
+      "tag": "0.54.2",
+      "group": "aws",
+      "order": 301,
+      "products": [
+        "AwsCommonRuntimeKit"
+      ],
+      "skip": false,
+      "complex": true,
+      "submodules": true,
+      "note": "native aws-c-* C libs live in git submodules (aws-common-runtime); requires submodules:true"
+    },
+    {
+      "name": "smithy-swift",
+      "url": "https://github.com/smithy-lang/smithy-swift",
+      "version": "0.175.0",
+      "revision": "0f3fb709fd034ad4b7a19567858571d08a5f4cbe",
+      "tag": "0.175.0",
+      "group": "aws",
+      "order": 302,
+      "products": [
+        "ClientRuntime"
+      ],
+      "skip": false,
+      "complex": true,
+      "noStripDevTools": true,
+      "note": "many products; build ClientRuntime. docc dep is env-gated via dependencies.append(.package(...)) — stripping corrupts it, so noStripDevTools:true"
+    },
+    {
+      "name": "aws-sdk-swift",
+      "url": "https://github.com/awslabs/aws-sdk-swift.git",
+      "version": "1.6.7",
+      "revision": "61d0ab5b429599f22c44b71b0737f030dc82f76b",
+      "tag": "1.6.7",
+      "group": "aws",
+      "order": 303,
+      "products": [
+        "AWSClientRuntime"
+      ],
+      "skip": false,
+      "complex": true,
+      "noStripDevTools": true,
+      "explicitProducts": true,
+      "note": "very large; build only AWSClientRuntime. products are computed (runtimeProducts + serviceTargets.map) so explicitProducts:true injects an explicit dynamic product. docc dep env-gated via `return .package(...)` so noStripDevTools:true"
+    },
+    {
+      "name": "AmplifyUtilsNotifications",
+      "url": "https://github.com/aws-amplify/amplify-swift-utils-notifications.git",
+      "version": "1.1.1",
+      "revision": "959eec669ba97c7d923b963c3e66ca8a0b2737f6",
+      "tag": "1.1.1",
+      "group": "aws",
+      "order": 304,
+      "products": [
+        "AmplifyUtilsNotifications"
+      ],
+      "skip": false
+    },
+    {
+      "name": "Amplify",
+      "url": "https://github.com/aws-amplify/amplify-swift",
+      "version": "2.53.3",
+      "revision": "d46019eea8299879a1e24a5d39cc67e1433c198a",
+      "tag": "2.53.3",
+      "group": "aws",
+      "order": 305,
+      "products": [
+        "Amplify",
+        "AWSCognitoAuthPlugin",
+        "AWSAPIPlugin"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "multi-product umbrella SDK"
+    },
+    {
+      "name": "xctest-dynamic-overlay",
+      "url": "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "version": "1.7.0",
+      "revision": "4c27acf5394b645b70d8ba19dc249c0472d5f618",
+      "tag": "1.7.0",
+      "group": "pointfree",
+      "order": 401,
+      "products": [
+        "IssueReporting"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-concurrency-extras",
+      "url": "https://github.com/pointfreeco/swift-concurrency-extras",
+      "version": "1.3.2",
+      "revision": "5a3825302b1a0d744183200915a47b508c828e6f",
+      "tag": "1.3.2",
+      "group": "pointfree",
+      "order": 402,
+      "products": [
+        "ConcurrencyExtras"
+      ],
+      "skip": false
+    },
+    {
+      "name": "combine-schedulers",
+      "url": "https://github.com/pointfreeco/combine-schedulers",
+      "version": "1.0.3",
+      "revision": "5928286acce13def418ec36d05a001a9641086f2",
+      "tag": "1.0.3",
+      "group": "pointfree",
+      "order": 403,
+      "products": [
+        "CombineSchedulers"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-clocks",
+      "url": "https://github.com/pointfreeco/swift-clocks",
+      "version": "1.0.6",
+      "revision": "cc46202b53476d64e824e0b6612da09d84ffde8e",
+      "tag": "1.0.6",
+      "group": "pointfree",
+      "order": 404,
+      "products": [
+        "Clocks"
+      ],
+      "skip": false
+    },
+    {
+      "name": "Sovran",
+      "url": "https://github.com/segmentio/sovran-swift.git",
+      "version": "1.1.2",
+      "revision": "24867f3e4ac62027db9827112135e6531b6f4051",
+      "tag": "1.1.2",
+      "group": "segment",
+      "order": 501,
+      "products": [
+        "Sovran"
+      ],
+      "skip": false
+    },
+    {
+      "name": "JSONSafeEncoding",
+      "url": "https://github.com/segmentio/jsonsafeencoding-swift.git",
+      "version": "2.0.0",
+      "revision": "af6a8b360984085e36c6341b21ecb35c12f47ebd",
+      "tag": "2.0.0",
+      "group": "segment",
+      "order": 502,
+      "products": [
+        "JSONSafeEncoding"
+      ],
+      "skip": false
+    },
+    {
+      "name": "Segment",
+      "url": "https://github.com/segmentio/analytics-swift.git",
+      "version": "1.9.1",
+      "revision": "f604cef21bb7269f76136c68bd664c6c993f8e28",
+      "tag": "1.9.1",
+      "group": "segment",
+      "order": 503,
+      "products": [
+        "Segment"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swift-asn1",
+      "url": "https://github.com/apple/swift-asn1.git",
+      "version": "1.5.0",
+      "revision": "40d25bbb2fc5b557a9aa8512210bded327c0f60d",
+      "tag": "1.5.0",
+      "group": "okta",
+      "order": 601,
+      "products": [
+        "SwiftASN1"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "swift-crypto",
+      "url": "https://github.com/apple/swift-crypto.git",
+      "version": "4.0.0",
+      "revision": "bcd2b89f2a4446395830b82e4e192765edd71e18",
+      "tag": "4.0.0",
+      "group": "okta",
+      "order": 602,
+      "products": [
+        "Crypto"
+      ],
+      "skip": true,
+      "complex": true,
+      "note": "X509 also needs _CryptoExtras; add if link errors",
+      "noForceDynamic": true,
+      "skipReason": "CryptoExtras links Crypto target statically; produces static/dynamic conflict with force_dynamic_products. Transitive swift-asn1 library-evolution bug also surfaces via SPM cache. Needs source changes to resolve."
+    },
+    {
+      "name": "swift-certificates",
+      "url": "https://github.com/apple/swift-certificates.git",
+      "version": "1.15.0",
+      "revision": "f4cd9e78a1ec209b27e426a5f5c693675f95e75a",
+      "tag": "1.15.0",
+      "group": "okta",
+      "order": 603,
+      "products": [
+        "X509"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "AuthFoundation",
+      "url": "https://github.com/okta/okta-mobile-swift",
+      "version": "1.8.3",
+      "revision": "f46413cf3b139b92c543ca8af2a8f88cd2f33bd8",
+      "tag": "1.8.3",
+      "group": "okta",
+      "order": 604,
+      "products": [
+        "AuthFoundation"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "OktaIdx",
+      "url": "https://github.com/okta/okta-idx-swift.git",
+      "version": "3.2.4",
+      "revision": "65b36bd19063089153c8602113f8bc0d2a1db570",
+      "tag": "3.2.4",
+      "group": "okta",
+      "order": 605,
+      "products": [
+        "OktaIdx"
+      ],
+      "skip": false,
+      "enableTestability": true,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "GrowthBook-IOS",
+      "url": "https://github.com/growthbook/growthbook-swift.git",
+      "version": "1.0.63",
+      "revision": "1c0795f056038476c838e8b25ec9d26aaafc597b",
+      "tag": "1.0.63",
+      "group": "easy-wins",
+      "order": 701,
+      "products": [
+        "GrowthBook"
+      ],
+      "skip": false
+    },
+    {
+      "name": "Sentry",
+      "url": "https://github.com/getsentry/sentry-cocoa",
+      "version": "9.8.0",
+      "revision": "05d3ce8332097ff0b2347231ac66476fd7d2f4d8",
+      "tag": "9.8.0",
+      "group": "easy-wins",
+      "order": 702,
+      "products": [
+        "Sentry"
+      ],
+      "skip": false,
+      "note": "verified: builds via committed Xcode framework scheme"
+    },
+    {
+      "name": "SimpleKeychain",
+      "url": "https://github.com/auth0/SimpleKeychain.git",
+      "version": "1.3.0",
+      "revision": "776c4a6db74d5c6c143974be91c383680d468630",
+      "tag": "1.3.0",
+      "group": "easy-wins",
+      "order": 703,
+      "products": [
+        "SimpleKeychain"
+      ],
+      "skip": false
+    },
+    {
+      "name": "LRUCache",
+      "url": "https://github.com/nicklockwood/LRUCache.git",
+      "version": "1.2.1",
+      "revision": "cb5b2bd0da83ad29c0bec762d39f41c8ad0eaf3e",
+      "tag": "1.2.1",
+      "group": "easy-wins",
+      "order": 704,
+      "products": [
+        "LRUCache"
+      ],
+      "skip": false
+    },
+    {
+      "name": "swiftui-introspect",
+      "url": "https://github.com/siteline/swiftui-introspect",
+      "version": "1.4.0-beta.4",
+      "revision": "9bedf1e79c7b7c34b35b74bef126f56d2400ef7f",
+      "tag": "1.4.0-beta.4",
+      "group": "easy-wins",
+      "order": 705,
+      "products": [
+        "SwiftUIIntrospect"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "-Static/-Dynamic product variants; archive fails with undefined symbols under mh_dylib. Needs per-package flags."
+    },
+    {
+      "name": "CombineExt",
+      "url": "https://github.com/CombineCommunity/CombineExt",
+      "version": "1.8.1",
+      "revision": "d7b896fa9ca8b47fa7bcde6b43ef9b70bf8c1f56",
+      "tag": "1.8.1",
+      "group": "easy-wins",
+      "order": 706,
+      "products": [
+        "CombineExt"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "committed .xcodeproj has no shared schemes; pure-package resolve fails (Couldn-t get list of tags for a dependency)."
+    },
+    {
+      "name": "JSONAny",
+      "url": "https://github.com/ischemaview/JSONAny.git",
+      "version": "0.0.1",
+      "revision": "a37181060099084958990f1428e4eafa5e23f5d0",
+      "tag": "0.0.1",
+      "group": "easy-wins",
+      "order": 707,
+      "products": [
+        "JSONAny"
+      ],
+      "skip": false,
+      "note": "pure-SPM static library product; library evolution emits an invalid .swiftinterface (nested types). Needs product type .dynamic or a source fix.",
+      "complex": true,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "XCGLogger",
+      "url": "https://github.com/DaveWoodCom/XCGLogger.git",
+      "version": "7.1.5",
+      "revision": "4def3c1c772ca90ad5e7bfc8ac437c3b0b4276cf",
+      "tag": "7.1.5",
+      "group": "easy-wins",
+      "order": 708,
+      "products": [
+        "XCGLogger"
+      ],
+      "skip": false
+    },
+    {
+      "name": "SQLite.swift",
+      "url": "https://github.com/stephencelis/SQLite.swift.git",
+      "version": "0.15.3",
+      "revision": "a95fc6df17d108bd99210db5e8a9bac90fe984b8",
+      "tag": "0.15.3",
+      "group": "easy-wins",
+      "order": 709,
+      "products": [
+        "SQLite"
+      ],
+      "skip": false
+    },
+    {
+      "name": "BitByteData",
+      "url": "https://github.com/tsolomko/BitByteData",
+      "version": "2.0.4",
+      "revision": "cdcdc5177ad536cfb11b95c620f926a81014b7fe",
+      "tag": "2.0.4",
+      "group": "easy-wins",
+      "order": 710,
+      "products": [
+        "BitByteData"
+      ],
+      "skip": false
+    },
+    {
+      "name": "SWCompression",
+      "url": "https://github.com/tsolomko/SWCompression",
+      "version": "4.8.6",
+      "revision": "390e0b0af8dd19a600005a242a89e570ff482e09",
+      "tag": "4.8.6",
+      "group": "easy-wins",
+      "order": 711,
+      "products": [
+        "SWCompression"
+      ],
+      "skip": false,
+      "complex": true,
+      "note": "source dependency on BitByteData; may need BitByteData prebuilt or no-library-evolution",
+      "disableXcodeProj": true
+    },
+    {
+      "name": "PriorsSchema",
+      "url": "https://github.com/ischemaview/rapid-priors.git",
+      "version": "1.7.12",
+      "revision": "d5e25d99e44dd31de88132a7ec244fa433085857",
+      "tag": "1.7.12",
+      "group": "easy-wins",
+      "order": 712,
+      "products": [
+        "PriorsSchema"
+      ],
+      "skip": false,
+      "noLibraryEvolution": true,
+      "complex": true,
+      "note": "depends on JSONAny (needs no-library-evolution across the graph)"
+    },
+    {
+      "name": "CombineExpectations",
+      "url": "https://github.com/groue/CombineExpectations.git",
+      "version": "0.10.0",
+      "revision": "04d4e4b21c9e8361925f03f64a7ecda89ef9974f",
+      "tag": "0.10.0",
+      "group": "easy-wins",
+      "order": 713,
+      "products": [
+        "CombineExpectations"
+      ],
+      "skip": false,
+      "testOnly": true,
+      "note": "test-support lib importing XCTest; invalid interface under evolution and not a normal distributable framework.",
+      "complex": true,
+      "noLibraryEvolution": true
+    },
+    {
+      "name": "abseil",
+      "url": "https://github.com/google/abseil-cpp-binary.git",
+      "version": "1.2024072200.0",
+      "revision": "bbe8b69694d7873315fd3a4ad41efe043e1c07c5",
+      "tag": "1.2024072200.0",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "gRPC",
+      "url": "https://github.com/google/grpc-binary.git",
+      "version": "1.69.1",
+      "revision": "75b31c842f664a0f46a2e590a570e370249fd8f6",
+      "tag": "1.69.1",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework (grpc-binary)"
+    },
+    {
+      "name": "GoogleAdsOnDeviceConversion",
+      "url": "https://github.com/googleads/google-ads-on-device-conversion-ios-sdk",
+      "version": "2.3.0",
+      "revision": "a2d0f1f1666de591eb1a811f40b1706f5c63a2ed",
+      "tag": "2.3.0",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "GoogleAppMeasurement",
+      "url": "https://github.com/google/GoogleAppMeasurement.git",
+      "version": "11.15.0",
+      "revision": "45ce435e9406d3c674dd249a042b932bee006f60",
+      "tag": "11.15.0",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "leveldb",
+      "url": "https://github.com/firebase/leveldb.git",
+      "version": "1.22.5",
+      "revision": "a0bc79961d7be727d258d33d5a6b2f1023270ba1",
+      "tag": "1.22.5",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "nanopb",
+      "url": "https://github.com/firebase/nanopb.git",
+      "version": "2.30910.0",
+      "revision": "b7e1104502eca3a213b46303391ca4d3bc8ddec1",
+      "tag": "2.30910.0",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "Intercom",
+      "url": "https://github.com/intercom/intercom-ios.git",
+      "version": "19.5.2",
+      "revision": "fe435aeb24df82224a5ffb46aff8323c5430de62",
+      "tag": "19.5.2",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "SendbirdChatSDK",
+      "url": "https://github.com/sendbird/sendbird-chat-sdk-ios",
+      "version": "4.36.0",
+      "revision": "a18103966be3aa49bee3be51ace71674780c7dc8",
+      "tag": "4.36.0",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "SendbirdAuthSDK",
+      "url": "https://github.com/sendbird/sendbird-auth-ios.git",
+      "version": "0.0.9",
+      "revision": "97e452c7716875495b12bf62f6474e19ed70bb85",
+      "tag": "0.0.9",
+      "group": "already-binary",
+      "order": 900,
+      "products": [],
+      "skip": true,
+      "reason": "Already distributed as a binary XCFramework"
+    },
+    {
+      "name": "swift-syntax",
+      "url": "https://github.com/swiftlang/swift-syntax",
+      "version": "602.0.0",
+      "revision": "4799286537280063c85a32f09884cfbca301b1a1",
+      "tag": "602.0.0",
+      "group": "cannot-convert",
+      "order": 950,
+      "products": [],
+      "skip": true,
+      "reason": "Compiler plugin / macro support - runs at build time"
+    },
+    {
+      "name": "swift-dependencies",
+      "url": "https://github.com/pointfreeco/swift-dependencies",
+      "version": "1.10.0",
+      "revision": "a10f9feeb214bc72b5337b6ef6d5a029360db4cc",
+      "tag": "1.10.0",
+      "group": "cannot-convert",
+      "order": 950,
+      "products": [],
+      "skip": true,
+      "reason": "Has a .macro target backed by swift-syntax"
+    },
+    {
+      "name": "ShellOut",
+      "url": "https://github.com/JohnSundell/ShellOut.git",
+      "version": "2.3.0",
+      "revision": "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
+      "tag": "2.3.0",
+      "group": "cannot-convert",
+      "order": 950,
+      "products": [],
+      "skip": true,
+      "reason": "CLI-only (SwiftScripts), never in the app binary"
+    },
+    {
+      "name": "swift-argument-parser",
+      "url": "https://github.com/apple/swift-argument-parser.git",
+      "version": "1.6.2",
+      "revision": "cdd0ef3755280949551dc26dee5de9ddeda89f54",
+      "tag": "1.6.2",
+      "group": "cannot-convert",
+      "order": 950,
+      "products": [],
+      "skip": true,
+      "reason": "CLI-only (SwiftScripts), never in the app binary"
+    },
+    {
+      "name": "swift-tools-support-core",
+      "url": "https://github.com/apple/swift-tools-support-core.git",
+      "version": "0.7.3",
+      "revision": "e8fbc8b05a155f311b862178d92d043afb216fe3",
+      "tag": "0.7.3",
+      "group": "cannot-convert",
+      "order": 950,
+      "products": [],
+      "skip": true,
+      "reason": "CLI-only (SwiftScripts), never in the app binary"
+    },
+    {
+      "name": "CodableCSV",
+      "url": "https://github.com/dehesa/CodableCSV",
+      "version": "0.6.7",
+      "revision": "99ace2cfdfbc19108b529c021005fb57a460e715",
+      "tag": "0.6.7",
+      "group": "cannot-convert",
+      "order": 950,
+      "products": [],
+      "skip": true,
+      "reason": "CLI-only (SwiftScripts), never in the app binary"
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name GrowthBook
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import CommonCrypto
+import Foundation
+@_exported import GrowthBook
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct GrowthBookModel {
+}
+@_hasMissingDesignatedInitializers @objc public class GrowthBookBuilder : ObjectiveC.NSObject {
+  @objc public init(apiHost: Swift.String? = nil, clientKey: Swift.String? = nil, encryptionKey: Swift.String? = nil, attributes: [Swift.String : Any], trackingCallback: @escaping GrowthBook.TrackingCallback, refreshHandler: GrowthBook.CacheRefreshHandler? = nil, backgroundSync: Swift.Bool = false, remoteEval: Swift.Bool = false)
+  @objc public init(features: Foundation.Data, attributes: [Swift.String : Any], trackingCallback: @escaping GrowthBook.TrackingCallback, refreshHandler: GrowthBook.CacheRefreshHandler? = nil, backgroundSync: Swift.Bool, remoteEval: Swift.Bool = false)
+  @objc public func setRefreshHandler(refreshHandler: @escaping GrowthBook.CacheRefreshHandler) -> GrowthBook.GrowthBookBuilder
+  @objc public func setNetworkDispatcher(networkDispatcher: any GrowthBook.NetworkProtocol) -> GrowthBook.GrowthBookBuilder
+  public func setStickyBucketService(stickyBucketService: (any GrowthBook.StickyBucketServiceProtocol)? = StickyBucketService()) -> GrowthBook.GrowthBookBuilder
+  @objc public func setLogLevel(_ level: GrowthBook.LoggerLevel) -> GrowthBook.GrowthBookBuilder
+  @objc public func setForcedVariations(forcedVariations: [Swift.String : Swift.Int]) -> GrowthBook.GrowthBookBuilder
+  @objc public func setQAMode(isEnabled: Swift.Bool) -> GrowthBook.GrowthBookBuilder
+  @objc public func setEnabled(isEnabled: Swift.Bool) -> GrowthBook.GrowthBookBuilder
+  @objc public func setCacheDirectory(_ directory: GrowthBook.CacheDirectory) -> GrowthBook.GrowthBookBuilder
+  @objc public func initializer() -> GrowthBook.GrowthBookSDK
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class GrowthBookSDK : ObjectiveC.NSObject {
+  public var gbContext: GrowthBook.Context
+  @objc public func refreshCache()
+  @objc public func clearCache()
+  @objc public func getGBContext() -> GrowthBook.Context
+  @objc public func getFeatures() -> [Swift.String : GrowthBook.Feature]
+  public func subscribe(_ result: @escaping GrowthBook.ExperimentRunCallback)
+  public func clearSubscriptions()
+  public func getFeatureValue(feature id: Swift.String, default defaultValue: GrowthBook.JSON) -> GrowthBook.JSON
+  @objc public func featuresFetchedSuccessfully(features: [Swift.String : GrowthBook.Feature], isRemote: Swift.Bool)
+  @objc public func setEncryptedFeatures(encryptedString: Swift.String, encryptionKey: Swift.String, subtle: (any GrowthBook.CryptoProtocol)? = nil)
+  @objc public func featuresFetchFailed(error: GrowthBook.SDKError, isRemote: Swift.Bool)
+  public func savedGroupsFetchFailed(error: GrowthBook.SDKError, isRemote: Swift.Bool)
+  public func savedGroupsFetchedSuccessfully(savedGroups: GrowthBook.JSON, isRemote: Swift.Bool)
+  @objc public func refreshForRemoteEval()
+  @objc public func evalFeature(id: Swift.String) -> GrowthBook.FeatureResult
+  @objc public func isOn(feature id: Swift.String) -> Swift.Bool
+  @objc public func run(experiment: GrowthBook.Experiment) -> GrowthBook.ExperimentResult
+  @objc public func setForcedFeatures(forcedFeatures: Any)
+  @objc public func setAttributes(attributes: Any)
+  @objc public func setAttributeOverrides(overrides: Any)
+  @objc public func setForcedVariations(forcedVariations: Any)
+  @objc deinit
+}
+@objc public protocol NetworkProtocol {
+  @objc func consumeGETRequest(url: Swift.String, successResult: @escaping (Foundation.Data) -> Swift.Void, errorResult: @escaping (any Swift.Error) -> Swift.Void)
+  @objc func consumePOSTRequest(url: Swift.String, params: [Swift.String : Any], successResult: @escaping (Foundation.Data) -> Swift.Void, errorResult: @escaping (any Swift.Error) -> Swift.Void)
+}
+public enum Component {
+  case date(Swift.String)
+  case message
+  case level
+  case file(fullPath: Swift.Bool, fileExtension: Swift.Bool)
+  case line
+  case column
+  case function
+  case location
+  case block(() -> Any?)
+}
+@_hasMissingDesignatedInitializers open class Formatters {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class Formatter : GrowthBook.Formatters {
+  convenience public init(_ format: Swift.String, _ components: GrowthBook.Component...)
+  public init(_ format: Swift.String, _ components: [GrowthBook.Component])
+  @objc deinit
+}
+extension GrowthBook.Formatters {
+  public static let `default`: GrowthBook.Formatter
+  public static let minimal: GrowthBook.Formatter
+  public static let detailed: GrowthBook.Formatter
+}
+@_hasMissingDesignatedInitializers open class Themes {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class Theme : GrowthBook.Themes {
+  public init(trace: Swift.String, debug: Swift.String, info: Swift.String, warning: Swift.String, error: Swift.String)
+  @objc deinit
+}
+extension GrowthBook.Themes {
+  public static let `default`: GrowthBook.Theme
+  public static let dusk: GrowthBook.Theme
+  public static let midnight: GrowthBook.Theme
+  public static let tomorrow: GrowthBook.Theme
+  public static let tomorrowNight: GrowthBook.Theme
+  public static let tomorrowNightEighties: GrowthBook.Theme
+  public static let tomorrowNightBright: GrowthBook.Theme
+}
+public enum Constants {
+  public static let idAttributeKey: Swift.String
+  public static let featureCache: Swift.String
+  public static let savedGroupsCache: Swift.String
+}
+public struct ParentConditionInterface : Swift.Codable {
+  public let id: Swift.String
+  public let condition: GrowthBook.JSON
+  public let gate: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias CacheRefreshHandler = (Swift.Bool) -> Swift.Void
+public typealias TrackingCallback = (GrowthBook.Experiment, GrowthBook.ExperimentResult) -> Swift.Void
+public typealias ExperimentRunCallback = (GrowthBook.Experiment, GrowthBook.ExperimentResult) -> Swift.Void
+public struct BucketRange : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum SDKError : ObjectiveC.NSInteger, Swift.Error {
+  case failedToLoadData = 0
+  case failedParsedData = 1
+  case failedMissingKey = 2
+  case failedEncryptedFeatures = 3
+  case failedEncryptedSavedGroups = 4
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public typealias RawValue = ObjectiveC.NSInteger
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+public struct VariationMeta : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TrackData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class Filter : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public protocol CryptoProtocol {
+  @objc func encrypt(key: [Swift.UInt8], iv: [Swift.UInt8], plainText: [Swift.UInt8]) throws -> [Swift.UInt8]
+  @objc func decrypt(key: [Swift.UInt8], iv: [Swift.UInt8], cypherText: [Swift.UInt8]) throws -> [Swift.UInt8]
+  @objc func getFeaturesFromEncryptedFeatures(encryptedString: Swift.String, encryptionKey: Swift.String) -> [Swift.String : GrowthBook.Feature]?
+}
+@_hasMissingDesignatedInitializers public class Utils {
+  @objc deinit
+}
+public struct RemoteEvalParams : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol StickyBucketServiceProtocol {
+  func getAssignments(attributeName: Swift.String, attributeValue: Swift.String) -> GrowthBook.StickyAssignmentsDocument?
+  func saveAssignments(doc: GrowthBook.StickyAssignmentsDocument)
+  func getAllAssignments(attributes: [Swift.String : Swift.String]) -> [Swift.String : GrowthBook.StickyAssignmentsDocument]
+}
+public class StickyBucketService : GrowthBook.StickyBucketServiceProtocol {
+  public init(prefix: Swift.String = "gbStickyBuckets__", localStorage: (any GrowthBook.CachingLayer)? = nil)
+  public func getAssignments(attributeName: Swift.String, attributeValue: Swift.String) -> GrowthBook.StickyAssignmentsDocument?
+  public func saveAssignments(doc: GrowthBook.StickyAssignmentsDocument)
+  public func getAllAssignments(attributes: [Swift.String : Swift.String]) -> [Swift.String : GrowthBook.StickyAssignmentsDocument]
+  @objc deinit
+}
+public enum Level : Swift.Int {
+  case trace, debug, info, warning, error
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension GrowthBook.Level : Swift.Comparable {
+  public static func < (lhs: GrowthBook.Level, rhs: GrowthBook.Level) -> Swift.Bool
+}
+open class Logger {
+  open var enabled: Swift.Bool
+  open var formatter: GrowthBook.Formatter {
+    get
+    set
+  }
+  open var theme: GrowthBook.Theme?
+  open var minLevel: GrowthBook.Level
+  open var format: Swift.String {
+    get
+  }
+  open var colors: Swift.String {
+    get
+  }
+  public init(formatter: GrowthBook.Formatter = .default, theme: GrowthBook.Theme? = nil, minLevel: GrowthBook.Level = .trace)
+  open func trace(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n", file: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, function: Swift.String = #function)
+  open func debug(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n", file: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, function: Swift.String = #function)
+  open func info(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n", file: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, function: Swift.String = #function)
+  open func warning(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n", file: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, function: Swift.String = #function)
+  open func error(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n", file: Swift.String = #file, line: Swift.Int = #line, column: Swift.Int = #column, function: Swift.String = #function)
+  @objc deinit
+}
+@objc public enum LoggerLevel : ObjectiveC.NSInteger {
+  case trace = 0
+  case debug = 1
+  case info = 2
+  case warning = 3
+  case error = 4
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public typealias RawValue = ObjectiveC.NSInteger
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+public protocol CachingLayer : AnyObject {
+  func saveContent(fileName: Swift.String, content: Foundation.Data)
+  func getContent(fileName: Swift.String) -> Foundation.Data?
+}
+@_hasMissingDesignatedInitializers public class CachingManager : GrowthBook.CachingLayer {
+  public static let shared: GrowthBook.CachingManager
+  public func saveContent(fileName: Swift.String, content: Foundation.Data)
+  public func getContent(fileName: Swift.String) -> Foundation.Data?
+  public func clearCache()
+  @objc deinit
+}
+@objc public enum CacheDirectory : Swift.Int {
+  case applicationSupport
+  case caches
+  case documents
+  case library
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class Feature : ObjectiveC.NSObject, Swift.Codable {
+  final public let defaultValue: GrowthBook.JSON?
+  final public let rules: [GrowthBook.FeatureRule]?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct FeatureRule : Swift.Codable {
+  public let id: Swift.String?
+  public let condition: GrowthBook.JSON?
+  public let parentConditions: [GrowthBook.ParentConditionInterface]?
+  public let coverage: Swift.Float?
+  public let force: GrowthBook.JSON?
+  public let variations: [GrowthBook.JSON]?
+  public let key: Swift.String?
+  public let weights: [Swift.Float]?
+  public let namespace: [GrowthBook.JSON]?
+  public let hashAttribute: Swift.String?
+  public let hashVersion: Swift.Float?
+  public let fallbackAttribute: Swift.String?
+  public let disableStickyBucketing: Swift.Bool?
+  public let bucketVersion: Swift.Int?
+  public let minBucketVersion: Swift.Int?
+  public let range: GrowthBook.BucketRange?
+  public let ranges: [GrowthBook.BucketRange]?
+  public let meta: [GrowthBook.VariationMeta]?
+  public let filters: [GrowthBook.Filter]?
+  public let seed: Swift.String?
+  public let name: Swift.String?
+  public let phase: Swift.String?
+  public let tracks: [GrowthBook.TrackData]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class FeatureResult : ObjectiveC.NSObject, Swift.Decodable {
+  final public let value: GrowthBook.JSON?
+  final public let isOn: Swift.Bool
+  final public let isOff: Swift.Bool
+  final public let source: Swift.String
+  final public let experiment: GrowthBook.Experiment?
+  final public let experimentResult: GrowthBook.ExperimentResult?
+  @objc deinit
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct StickyAssignmentsDocument : Swift.Codable, Swift.Equatable {
+  public static func == (a: GrowthBook.StickyAssignmentsDocument, b: GrowthBook.StickyAssignmentsDocument) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum SwiftyJSONError : Swift.Int, Swift.Error {
+  case unsupportedType
+  case indexOutOfBounds
+  case elementTooDeep
+  case wrongType
+  case notExist
+  case invalidJSON
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension GrowthBook.SwiftyJSONError : Foundation.CustomNSError {
+  public static var errorDomain: Swift.String {
+    get
+  }
+  public var errorCode: Swift.Int {
+    get
+  }
+  public var errorUserInfo: [Swift.String : Any] {
+    get
+  }
+}
+public enum Type : Swift.Int {
+  case number
+  case string
+  case bool
+  case array
+  case dictionary
+  case null
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct JSON {
+  public init(data: Foundation.Data, options opt: Foundation.JSONSerialization.ReadingOptions = []) throws
+  public init(_ object: Any)
+  public init(parseJSON jsonString: Swift.String)
+  public mutating func merge(with other: GrowthBook.JSON) throws
+  public func merged(with other: GrowthBook.JSON) throws -> GrowthBook.JSON
+  public var type: GrowthBook.`Type` {
+    get
+  }
+  public var error: GrowthBook.SwiftyJSONError? {
+    get
+  }
+  public var object: Any {
+    get
+    set
+  }
+  @available(*, unavailable, renamed: "null")
+  public static var nullJSON: GrowthBook.JSON {
+    get
+  }
+  public static var null: GrowthBook.JSON {
+    get
+  }
+}
+public enum Index<T> : Swift.Comparable {
+  case array(Swift.Int)
+  case dictionary(Swift.DictionaryIndex<Swift.String, T>)
+  case null
+  public static func == (lhs: GrowthBook.Index<T>, rhs: GrowthBook.Index<T>) -> Swift.Bool
+  public static func < (lhs: GrowthBook.Index<T>, rhs: GrowthBook.Index<T>) -> Swift.Bool
+}
+public typealias JSONIndex = GrowthBook.Index<GrowthBook.JSON>
+public typealias JSONRawIndex = GrowthBook.Index<Any>
+extension GrowthBook.JSON : Swift.Collection {
+  public typealias Index = GrowthBook.JSONRawIndex
+  public var startIndex: GrowthBook.JSON.Index {
+    get
+  }
+  public var endIndex: GrowthBook.JSON.Index {
+    get
+  }
+  public func index(after i: GrowthBook.JSON.Index) -> GrowthBook.JSON.Index
+  public subscript(position: GrowthBook.JSON.Index) -> (Swift.String, GrowthBook.JSON) {
+    get
+  }
+  public typealias Element = (Swift.String, GrowthBook.JSON)
+  public typealias Indices = Swift.DefaultIndices<GrowthBook.JSON>
+  public typealias Iterator = Swift.IndexingIterator<GrowthBook.JSON>
+  public typealias SubSequence = Swift.Slice<GrowthBook.JSON>
+}
+public enum JSONKey {
+  case index(Swift.Int)
+  case key(Swift.String)
+}
+public protocol JSONSubscriptType {
+  var jsonKey: GrowthBook.JSONKey { get }
+}
+extension Swift.Int : GrowthBook.JSONSubscriptType {
+  public var jsonKey: GrowthBook.JSONKey {
+    get
+  }
+}
+extension Swift.String : GrowthBook.JSONSubscriptType {
+  public var jsonKey: GrowthBook.JSONKey {
+    get
+  }
+}
+extension GrowthBook.JSON {
+  public subscript(path: [any GrowthBook.JSONSubscriptType]) -> GrowthBook.JSON {
+    get
+    set
+  }
+  public subscript(path: any GrowthBook.JSONSubscriptType...) -> GrowthBook.JSON {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public init(extendedGraphemeClusterLiteral value: Swift.StringLiteralType)
+  public init(unicodeScalarLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
+}
+extension GrowthBook.JSON : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.IntegerLiteralType)
+  public typealias IntegerLiteralType = Swift.IntegerLiteralType
+}
+extension GrowthBook.JSON : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.BooleanLiteralType)
+  public typealias BooleanLiteralType = Swift.BooleanLiteralType
+}
+extension GrowthBook.JSON : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.FloatLiteralType)
+  public typealias FloatLiteralType = Swift.FloatLiteralType
+}
+extension GrowthBook.JSON : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, Any)...)
+  public typealias Key = Swift.String
+  public typealias Value = Any
+}
+extension GrowthBook.JSON : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: Any...)
+  public typealias ArrayLiteralElement = Any
+}
+extension GrowthBook.JSON : Swift.RawRepresentable {
+  public init?(rawValue: Any)
+  public var rawValue: Any {
+    get
+  }
+  public func rawData(options opt: Foundation.JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Foundation.Data
+  public func rawString(_ encoding: Swift.String.Encoding = .utf8, options opt: Foundation.JSONSerialization.WritingOptions = .prettyPrinted) -> Swift.String?
+  public func rawString(_ options: [GrowthBook.writingOptionsKeys : Any]) -> Swift.String?
+  public typealias RawValue = Any
+}
+extension GrowthBook.JSON : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension GrowthBook.JSON {
+  public var array: [GrowthBook.JSON]? {
+    get
+  }
+  public var arrayValue: [GrowthBook.JSON] {
+    get
+  }
+  public var arrayObject: [Any]? {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON {
+  public var dictionary: [Swift.String : GrowthBook.JSON]? {
+    get
+  }
+  public var dictionaryValue: [Swift.String : GrowthBook.JSON] {
+    get
+  }
+  public var dictionaryObject: [Swift.String : Any]? {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON {
+  public var bool: Swift.Bool? {
+    get
+    set
+  }
+  public var boolValue: Swift.Bool {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON {
+  public var string: Swift.String? {
+    get
+    set
+  }
+  public var stringValue: Swift.String {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON {
+  public var number: Foundation.NSNumber? {
+    get
+    set
+  }
+  public var numberValue: Foundation.NSNumber {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON {
+  public var null: Foundation.NSNull? {
+    get
+    set
+  }
+  public func exists() -> Swift.Bool
+}
+extension GrowthBook.JSON {
+  public var url: Foundation.URL? {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON {
+  public var double: Swift.Double? {
+    get
+    set
+  }
+  public var doubleValue: Swift.Double {
+    get
+    set
+  }
+  public var float: Swift.Float? {
+    get
+    set
+  }
+  public var floatValue: Swift.Float {
+    get
+    set
+  }
+  public var int: Swift.Int? {
+    get
+    set
+  }
+  public var intValue: Swift.Int {
+    get
+    set
+  }
+  public var uInt: Swift.UInt? {
+    get
+    set
+  }
+  public var uIntValue: Swift.UInt {
+    get
+    set
+  }
+  public var int8: Swift.Int8? {
+    get
+    set
+  }
+  public var int8Value: Swift.Int8 {
+    get
+    set
+  }
+  public var uInt8: Swift.UInt8? {
+    get
+    set
+  }
+  public var uInt8Value: Swift.UInt8 {
+    get
+    set
+  }
+  public var int16: Swift.Int16? {
+    get
+    set
+  }
+  public var int16Value: Swift.Int16 {
+    get
+    set
+  }
+  public var uInt16: Swift.UInt16? {
+    get
+    set
+  }
+  public var uInt16Value: Swift.UInt16 {
+    get
+    set
+  }
+  public var int32: Swift.Int32? {
+    get
+    set
+  }
+  public var int32Value: Swift.Int32 {
+    get
+    set
+  }
+  public var uInt32: Swift.UInt32? {
+    get
+    set
+  }
+  public var uInt32Value: Swift.UInt32 {
+    get
+    set
+  }
+  public var int64: Swift.Int64? {
+    get
+    set
+  }
+  public var int64Value: Swift.Int64 {
+    get
+    set
+  }
+  public var uInt64: Swift.UInt64? {
+    get
+    set
+  }
+  public var uInt64Value: Swift.UInt64 {
+    get
+    set
+  }
+}
+extension GrowthBook.JSON : Swift.Comparable {
+}
+public func == (lhs: GrowthBook.JSON, rhs: GrowthBook.JSON) -> Swift.Bool
+public func <= (lhs: GrowthBook.JSON, rhs: GrowthBook.JSON) -> Swift.Bool
+public func >= (lhs: GrowthBook.JSON, rhs: GrowthBook.JSON) -> Swift.Bool
+public func > (lhs: GrowthBook.JSON, rhs: GrowthBook.JSON) -> Swift.Bool
+public func < (lhs: GrowthBook.JSON, rhs: GrowthBook.JSON) -> Swift.Bool
+public enum writingOptionsKeys {
+  case jsonSerialization
+  case castNilToNSNull
+  case maxObjextDepth
+  case encoding
+  public static func == (a: GrowthBook.writingOptionsKeys, b: GrowthBook.writingOptionsKeys) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension GrowthBook.JSON : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class Experiment : ObjectiveC.NSObject, Swift.Codable {
+  final public let key: Swift.String
+  final public let variations: [GrowthBook.JSON]
+  final public let namespace: [GrowthBook.JSON]?
+  final public let parentConditions: [GrowthBook.ParentConditionInterface]?
+  final public let hashAttribute: Swift.String?
+  final public let fallbackAttribute: Swift.String?
+  final public let hashVersion: Swift.Float?
+  final public let disableStickyBucketing: Swift.Bool?
+  final public let bucketVersion: Swift.Int?
+  final public let minBucketVersion: Swift.Int?
+  public var weights: [Swift.Float]?
+  public var isActive: Swift.Bool
+  public var coverage: Swift.Float?
+  public var condition: GrowthBook.JSON?
+  public var force: Swift.Int?
+  final public let ranges: [GrowthBook.BucketRange]?
+  final public let meta: [GrowthBook.VariationMeta]?
+  final public let filters: [GrowthBook.Filter]?
+  final public let seed: Swift.String?
+  final public let name: Swift.String?
+  final public let phase: Swift.String?
+  public init(key: Swift.String, variations: [Any] = [], namespace: [Any]? = nil, parentConditions: [GrowthBook.ParentConditionInterface]? = nil, hashAttribute: Swift.String? = nil, fallBackAttribute: Swift.String? = nil, hashVersion: Swift.Float? = nil, disableStickyBucketing: Swift.Bool? = nil, bucketVersion: Swift.Int? = nil, minBucketVersion: Swift.Int? = nil, weights: [Swift.Float]? = nil, isActive: Swift.Bool = true, coverage: Swift.Float? = nil, condition: Any? = nil, force: Swift.Int? = nil, ranges: [GrowthBook.BucketRange]? = nil, meta: [GrowthBook.VariationMeta]? = nil, filters: [GrowthBook.Filter]? = nil, seed: Swift.String? = nil, name: Swift.String? = nil, phase: Swift.String? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class ExperimentResult : ObjectiveC.NSObject, Swift.Codable {
+  final public let inExperiment: Swift.Bool
+  final public let variationId: Swift.Int
+  final public let value: GrowthBook.JSON
+  final public let hashAttribute: Swift.String?
+  final public let valueHash: Swift.String?
+  final public let key: Swift.String
+  public var name: Swift.String?
+  public var bucket: Swift.Float?
+  public var passthrough: Swift.Bool?
+  final public let hashUsed: Swift.Bool?
+  final public let featureId: Swift.String?
+  final public let stickyBucketUsed: Swift.Bool?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class Context : ObjectiveC.NSObject {
+  final public let apiHost: Swift.String?
+  final public let clientKey: Swift.String?
+  final public let encryptionKey: Swift.String?
+  final public let isEnabled: Swift.Bool
+  public var attributes: GrowthBook.JSON
+  public var forcedVariations: GrowthBook.JSON?
+  final public let isQaMode: Swift.Bool
+  final public let trackingClosure: (GrowthBook.Experiment, GrowthBook.ExperimentResult) -> Swift.Void
+  final public let backgroundSync: Swift.Bool
+  final public let stickyBucketService: (any GrowthBook.StickyBucketServiceProtocol)?
+  public var stickyBucketAssignmentDocs: [Swift.String : GrowthBook.StickyAssignmentsDocument]?
+  public var stickyBucketIdentifierAttributes: [Swift.String]?
+  final public let remoteEval: Swift.Bool
+  public var savedGroups: GrowthBook.JSON?
+  @objc public func getFeaturesURL() -> Swift.String?
+  @objc public func getRemoteEvalUrl() -> Swift.String?
+  @objc public func getSSEUrl() -> Swift.String?
+  @objc deinit
+}
+extension GrowthBook.SDKError : Swift.Equatable {}
+extension GrowthBook.SDKError : Swift.Hashable {}
+extension GrowthBook.SDKError : Swift.RawRepresentable {}
+extension GrowthBook.Level : Swift.Hashable {}
+extension GrowthBook.Level : Swift.RawRepresentable {}
+extension GrowthBook.LoggerLevel : Swift.Equatable {}
+extension GrowthBook.LoggerLevel : Swift.Hashable {}
+extension GrowthBook.LoggerLevel : Swift.RawRepresentable {}
+extension GrowthBook.CacheDirectory : Swift.Equatable {}
+extension GrowthBook.CacheDirectory : Swift.Hashable {}
+extension GrowthBook.CacheDirectory : Swift.RawRepresentable {}
+extension GrowthBook.SwiftyJSONError : Swift.Equatable {}
+extension GrowthBook.SwiftyJSONError : Swift.Hashable {}
+extension GrowthBook.SwiftyJSONError : Swift.RawRepresentable {}
+extension GrowthBook.`Type` : Swift.Equatable {}
+extension GrowthBook.`Type` : Swift.Hashable {}
+extension GrowthBook.`Type` : Swift.RawRepresentable {}
+extension GrowthBook.writingOptionsKeys : Swift.Equatable {}
+extension GrowthBook.writingOptionsKeys : Swift.Hashable {}

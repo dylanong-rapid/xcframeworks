@@ -1,0 +1,62 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/var/folders/5_/z2vvjg1j6bv1cqdnh4x20wk00000gp/T/rapid-xcframeworks/dd/Opentracing/Build/Intermediates.noindex/ArchiveIntermediates/OpenTracing/InstallationBuildProductsLocation/Library/Frameworks/opentracing.framework/opentracing'
+relocations:
+  - { offset: 0x34BD3, size: 0x8, addend: 0x0, symName: _opentracingVersionString, symObjAddr: 0x0, symBinAddr: 0x1410, symSize: 0x0 }
+  - { offset: 0x34C07, size: 0x8, addend: 0x0, symName: _opentracingVersionNumber, symObjAddr: 0x30, symBinAddr: 0x1440, symSize: 0x0 }
+  - { offset: 0x34C44, size: 0x8, addend: 0x0, symName: '-[OTNoopSpanContext forEachBaggageItem:]', symObjAddr: 0x0, symBinAddr: 0xC10, symSize: 0x6 }
+  - { offset: 0x34C5E, size: 0x8, addend: 0x0, symName: _g_defaultNoopTracer, symObjAddr: 0x3808, symBinAddr: 0x38D8, symSize: 0x0 }
+  - { offset: 0x34C8A, size: 0x8, addend: 0x0, symName: _g_defaultNoopSpan, symObjAddr: 0x3818, symBinAddr: 0x38E8, symSize: 0x0 }
+  - { offset: 0x34CB6, size: 0x8, addend: 0x0, symName: _g_defaultNoopSpanContext, symObjAddr: 0x3810, symBinAddr: 0x38E0, symSize: 0x0 }
+  - { offset: 0x34CD6, size: 0x8, addend: 0x0, symName: '-[OTNoopSpanContext forEachBaggageItem:]', symObjAddr: 0x0, symBinAddr: 0xC10, symSize: 0x6 }
+  - { offset: 0x34D11, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan tracer]', symObjAddr: 0x6, symBinAddr: 0xC16, symSize: 0x11 }
+  - { offset: 0x34D44, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan context]', symObjAddr: 0x17, symBinAddr: 0xC27, symSize: 0x11 }
+  - { offset: 0x34D77, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan setOperationName:]', symObjAddr: 0x28, symBinAddr: 0xC38, symSize: 0x6 }
+  - { offset: 0x34DB2, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan setTag:value:]', symObjAddr: 0x2E, symBinAddr: 0xC3E, symSize: 0x6 }
+  - { offset: 0x34DF9, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan setTag:numberValue:]', symObjAddr: 0x34, symBinAddr: 0xC44, symSize: 0x6 }
+  - { offset: 0x34E40, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan setTag:boolValue:]', symObjAddr: 0x3A, symBinAddr: 0xC4A, symSize: 0x6 }
+  - { offset: 0x34E87, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan log:]', symObjAddr: 0x40, symBinAddr: 0xC50, symSize: 0x6 }
+  - { offset: 0x34EC2, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan log:timestamp:]', symObjAddr: 0x46, symBinAddr: 0xC56, symSize: 0x6 }
+  - { offset: 0x34F09, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan logEvent:]', symObjAddr: 0x4C, symBinAddr: 0xC5C, symSize: 0x6 }
+  - { offset: 0x34F44, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan logEvent:payload:]', symObjAddr: 0x52, symBinAddr: 0xC62, symSize: 0x6 }
+  - { offset: 0x34F8B, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan log:timestamp:payload:]', symObjAddr: 0x58, symBinAddr: 0xC68, symSize: 0x6 }
+  - { offset: 0x34FDE, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan setBaggageItem:value:]', symObjAddr: 0x5E, symBinAddr: 0xC6E, symSize: 0x9 }
+  - { offset: 0x3502D, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan getBaggageItem:]', symObjAddr: 0x67, symBinAddr: 0xC77, symSize: 0x8 }
+  - { offset: 0x3506C, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan finish]', symObjAddr: 0x6F, symBinAddr: 0xC7F, symSize: 0x6 }
+  - { offset: 0x3509B, size: 0x8, addend: 0x0, symName: '-[OTNoopSpan finishWithTime:]', symObjAddr: 0x75, symBinAddr: 0xC85, symSize: 0x6 }
+  - { offset: 0x350D6, size: 0x8, addend: 0x0, symName: '+[OTNoopTracer initialize]', symObjAddr: 0x7B, symBinAddr: 0xC8B, symSize: 0x6A }
+  - { offset: 0x35129, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer startSpan:]', symObjAddr: 0xE5, symBinAddr: 0xCF5, symSize: 0x11 }
+  - { offset: 0x35168, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer startSpan:tags:]', symObjAddr: 0xF6, symBinAddr: 0xD06, symSize: 0x11 }
+  - { offset: 0x351B3, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer startSpan:childOf:]', symObjAddr: 0x107, symBinAddr: 0xD17, symSize: 0x11 }
+  - { offset: 0x351FE, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer startSpan:childOf:tags:]', symObjAddr: 0x118, symBinAddr: 0xD28, symSize: 0x11 }
+  - { offset: 0x35255, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer startSpan:childOf:tags:startTime:]', symObjAddr: 0x129, symBinAddr: 0xD39, symSize: 0x11 }
+  - { offset: 0x352B8, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer startSpan:references:tags:startTime:]', symObjAddr: 0x13A, symBinAddr: 0xD4A, symSize: 0x11 }
+  - { offset: 0x3531B, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer inject:format:carrier:]', symObjAddr: 0x14B, symBinAddr: 0xD5B, symSize: 0x8 }
+  - { offset: 0x35372, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer inject:format:carrier:error:]', symObjAddr: 0x153, symBinAddr: 0xD63, symSize: 0x8 }
+  - { offset: 0x353D5, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer extractWithFormat:carrier:]', symObjAddr: 0x15B, symBinAddr: 0xD6B, symSize: 0x8 }
+  - { offset: 0x35420, size: 0x8, addend: 0x0, symName: '-[OTNoopTracer extractWithFormat:carrier:error:]', symObjAddr: 0x163, symBinAddr: 0xD73, symSize: 0x8 }
+  - { offset: 0x355B9, size: 0x8, addend: 0x0, symName: _OTFormatTextMap, symObjAddr: 0xB0, symBinAddr: 0x2020, symSize: 0x0 }
+  - { offset: 0x355D8, size: 0x8, addend: 0x0, symName: _OTFormatHTTPHeaders, symObjAddr: 0xB8, symBinAddr: 0x2028, symSize: 0x0 }
+  - { offset: 0x355ED, size: 0x8, addend: 0x0, symName: _OTFormatBinary, symObjAddr: 0xC0, symBinAddr: 0x2030, symSize: 0x0 }
+  - { offset: 0x35602, size: 0x8, addend: 0x0, symName: _OTErrorDomain, symObjAddr: 0xC8, symBinAddr: 0x2038, symSize: 0x0 }
+  - { offset: 0x35618, size: 0x8, addend: 0x0, symName: _OTUnsupportedFormatCode, symObjAddr: 0xD0, symBinAddr: 0x38C0, symSize: 0x0 }
+  - { offset: 0x35635, size: 0x8, addend: 0x0, symName: _OTInvalidCarrierCode, symObjAddr: 0xD8, symBinAddr: 0x38C8, symSize: 0x0 }
+  - { offset: 0x3564B, size: 0x8, addend: 0x0, symName: _OTSpanContextCorruptedCode, symObjAddr: 0xE0, symBinAddr: 0x38D0, symSize: 0x0 }
+  - { offset: 0x35683, size: 0x8, addend: 0x0, symName: '+[OTReference childOf:]', symObjAddr: 0x0, symBinAddr: 0xD7B, symSize: 0x54 }
+  - { offset: 0x3569C, size: 0x8, addend: 0x0, symName: _OTReferenceChildOf, symObjAddr: 0x1F8, symBinAddr: 0x2040, symSize: 0x0 }
+  - { offset: 0x356BB, size: 0x8, addend: 0x0, symName: _OTReferenceFollowsFrom, symObjAddr: 0x200, symBinAddr: 0x2048, symSize: 0x0 }
+  - { offset: 0x35733, size: 0x8, addend: 0x0, symName: '+[OTReference childOf:]', symObjAddr: 0x0, symBinAddr: 0xD7B, symSize: 0x54 }
+  - { offset: 0x357B3, size: 0x8, addend: 0x0, symName: '+[OTReference followsFrom:]', symObjAddr: 0x54, symBinAddr: 0xDCF, symSize: 0x54 }
+  - { offset: 0x35833, size: 0x8, addend: 0x0, symName: '-[OTReference initWithType:referencedContext:]', symObjAddr: 0xA8, symBinAddr: 0xE23, symSize: 0x99 }
+  - { offset: 0x358DB, size: 0x8, addend: 0x0, symName: '-[OTReference type]', symObjAddr: 0x141, symBinAddr: 0xEBC, symSize: 0xA }
+  - { offset: 0x35910, size: 0x8, addend: 0x0, symName: '-[OTReference setType:]', symObjAddr: 0x14B, symBinAddr: 0xEC6, symSize: 0x11 }
+  - { offset: 0x35951, size: 0x8, addend: 0x0, symName: '-[OTReference referencedContext]', symObjAddr: 0x15C, symBinAddr: 0xED7, symSize: 0xA }
+  - { offset: 0x35986, size: 0x8, addend: 0x0, symName: '-[OTReference setReferencedContext:]', symObjAddr: 0x166, symBinAddr: 0xEE1, symSize: 0x11 }
+  - { offset: 0x359C7, size: 0x8, addend: 0x0, symName: '-[OTReference .cxx_destruct]', symObjAddr: 0x177, symBinAddr: 0xEF2, symSize: 0x28 }
+  - { offset: 0x35A5C, size: 0x8, addend: 0x0, symName: '+[OTGlobal initialize]', symObjAddr: 0x0, symBinAddr: 0xF1A, symSize: 0x4E }
+  - { offset: 0x35A76, size: 0x8, addend: 0x0, symName: _g_lock, symObjAddr: 0xFB0, symBinAddr: 0x38F0, symSize: 0x0 }
+  - { offset: 0x35A91, size: 0x8, addend: 0x0, symName: _g_singleton, symObjAddr: 0xFB8, symBinAddr: 0x38F8, symSize: 0x0 }
+  - { offset: 0x35AC4, size: 0x8, addend: 0x0, symName: '+[OTGlobal initialize]', symObjAddr: 0x0, symBinAddr: 0xF1A, symSize: 0x4E }
+  - { offset: 0x35B0B, size: 0x8, addend: 0x0, symName: '+[OTGlobal initSharedTracer:]', symObjAddr: 0x4E, symBinAddr: 0xF68, symSize: 0x78 }
+  - { offset: 0x35BAB, size: 0x8, addend: 0x0, symName: '+[OTGlobal sharedTracer]', symObjAddr: 0xC6, symBinAddr: 0xFE0, symSize: 0x4C }
+...

@@ -1,0 +1,1731 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SimpleKeychain",
+    "printedName": "SimpleKeychain",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SimpleKeychain"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SimpleKeychainError",
+        "printedName": "SimpleKeychainError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV6statuss5Int32Vvp",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV6statuss5Int32Vvp",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV6statuss5Int32Vvg",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV6statuss5Int32Vvg",
+                "moduleName": "SimpleKeychain",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "localizedDescription",
+            "printedName": "localizedDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV20localizedDescriptionSSvp",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV20localizedDescriptionSSvp",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV20localizedDescriptionSSvg",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV20localizedDescriptionSSvg",
+                "moduleName": "SimpleKeychain",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV16errorDescriptionSSSgvp",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV16errorDescriptionSSSgvp",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV16errorDescriptionSSSgvg",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV16errorDescriptionSSSgvg",
+                "moduleName": "SimpleKeychain",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "debugDescription",
+            "printedName": "debugDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV16debugDescriptionSSvp",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV16debugDescriptionSSvp",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV16debugDescriptionSSvg",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV16debugDescriptionSSvg",
+                "moduleName": "SimpleKeychain",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "operationNotImplemented",
+            "printedName": "operationNotImplemented",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV23operationNotImplementedACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV23operationNotImplementedACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV23operationNotImplementedACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV23operationNotImplementedACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidParameters",
+            "printedName": "invalidParameters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV17invalidParametersACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV17invalidParametersACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV17invalidParametersACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV17invalidParametersACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userCanceled",
+            "printedName": "userCanceled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV12userCanceledACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV12userCanceledACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV12userCanceledACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV12userCanceledACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "itemNotAvailable",
+            "printedName": "itemNotAvailable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV16itemNotAvailableACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV16itemNotAvailableACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV16itemNotAvailableACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV16itemNotAvailableACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authFailed",
+            "printedName": "authFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV10authFailedACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV10authFailedACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV10authFailedACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV10authFailedACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "duplicateItem",
+            "printedName": "duplicateItem",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV13duplicateItemACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV13duplicateItemACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV13duplicateItemACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV13duplicateItemACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "itemNotFound",
+            "printedName": "itemNotFound",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV12itemNotFoundACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV12itemNotFoundACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV12itemNotFoundACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV12itemNotFoundACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "interactionNotAllowed",
+            "printedName": "interactionNotAllowed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV21interactionNotAllowedACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV21interactionNotAllowedACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV21interactionNotAllowedACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV21interactionNotAllowedACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "decodeFailed",
+            "printedName": "decodeFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV12decodeFailedACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV12decodeFailedACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV12decodeFailedACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV12decodeFailedACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "missingEntitlement",
+            "printedName": "missingEntitlement",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV18missingEntitlementACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV18missingEntitlementACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV18missingEntitlementACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV18missingEntitlementACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "other",
+            "printedName": "other",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV5otherACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV5otherACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV5otherACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV5otherACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain0aB5ErrorV7unknownACvpZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV7unknownACvpZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimpleKeychainError",
+                    "printedName": "SimpleKeychain.SimpleKeychainError",
+                    "usr": "s:14SimpleKeychain0aB5ErrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain0aB5ErrorV7unknownACvgZ",
+                "mangledName": "$s14SimpleKeychain0aB5ErrorV7unknownACvgZ",
+                "moduleName": "SimpleKeychain",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychain0aB5ErrorV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV2eeoiySbAC_ACtFZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "~=",
+            "printedName": "~=(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychain0aB5ErrorV2teoiySbAC_ACtFZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV2teoiySbAC_ACtFZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "~=",
+            "printedName": "~=(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychainError",
+                "printedName": "SimpleKeychain.SimpleKeychainError",
+                "usr": "s:14SimpleKeychain0aB5ErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychain0aB5ErrorV2teoiySbAC_s0C0_ptFZ",
+            "mangledName": "$s14SimpleKeychain0aB5ErrorV2teoiySbAC_s0C0_ptFZ",
+            "moduleName": "SimpleKeychain",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14SimpleKeychain0aB5ErrorV",
+        "mangledName": "$s14SimpleKeychain0aB5ErrorV",
+        "moduleName": "SimpleKeychain",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "SimpleKeychain"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Accessibility",
+        "printedName": "Accessibility",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "whenUnlocked",
+            "printedName": "whenUnlocked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SimpleKeychain.Accessibility.Type) -> SimpleKeychain.Accessibility",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Accessibility",
+                    "printedName": "SimpleKeychain.Accessibility",
+                    "usr": "s:14SimpleKeychain13AccessibilityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SimpleKeychain.Accessibility.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Accessibility",
+                        "printedName": "SimpleKeychain.Accessibility",
+                        "usr": "s:14SimpleKeychain13AccessibilityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SimpleKeychain13AccessibilityO12whenUnlockedyA2CmF",
+            "mangledName": "$s14SimpleKeychain13AccessibilityO12whenUnlockedyA2CmF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "whenUnlockedThisDeviceOnly",
+            "printedName": "whenUnlockedThisDeviceOnly",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SimpleKeychain.Accessibility.Type) -> SimpleKeychain.Accessibility",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Accessibility",
+                    "printedName": "SimpleKeychain.Accessibility",
+                    "usr": "s:14SimpleKeychain13AccessibilityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SimpleKeychain.Accessibility.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Accessibility",
+                        "printedName": "SimpleKeychain.Accessibility",
+                        "usr": "s:14SimpleKeychain13AccessibilityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SimpleKeychain13AccessibilityO26whenUnlockedThisDeviceOnlyyA2CmF",
+            "mangledName": "$s14SimpleKeychain13AccessibilityO26whenUnlockedThisDeviceOnlyyA2CmF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "afterFirstUnlock",
+            "printedName": "afterFirstUnlock",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SimpleKeychain.Accessibility.Type) -> SimpleKeychain.Accessibility",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Accessibility",
+                    "printedName": "SimpleKeychain.Accessibility",
+                    "usr": "s:14SimpleKeychain13AccessibilityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SimpleKeychain.Accessibility.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Accessibility",
+                        "printedName": "SimpleKeychain.Accessibility",
+                        "usr": "s:14SimpleKeychain13AccessibilityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SimpleKeychain13AccessibilityO16afterFirstUnlockyA2CmF",
+            "mangledName": "$s14SimpleKeychain13AccessibilityO16afterFirstUnlockyA2CmF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "afterFirstUnlockThisDeviceOnly",
+            "printedName": "afterFirstUnlockThisDeviceOnly",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SimpleKeychain.Accessibility.Type) -> SimpleKeychain.Accessibility",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Accessibility",
+                    "printedName": "SimpleKeychain.Accessibility",
+                    "usr": "s:14SimpleKeychain13AccessibilityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SimpleKeychain.Accessibility.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Accessibility",
+                        "printedName": "SimpleKeychain.Accessibility",
+                        "usr": "s:14SimpleKeychain13AccessibilityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SimpleKeychain13AccessibilityO30afterFirstUnlockThisDeviceOnlyyA2CmF",
+            "mangledName": "$s14SimpleKeychain13AccessibilityO30afterFirstUnlockThisDeviceOnlyyA2CmF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "whenPasscodeSetThisDeviceOnly",
+            "printedName": "whenPasscodeSetThisDeviceOnly",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SimpleKeychain.Accessibility.Type) -> SimpleKeychain.Accessibility",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Accessibility",
+                    "printedName": "SimpleKeychain.Accessibility",
+                    "usr": "s:14SimpleKeychain13AccessibilityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SimpleKeychain.Accessibility.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Accessibility",
+                        "printedName": "SimpleKeychain.Accessibility",
+                        "usr": "s:14SimpleKeychain13AccessibilityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14SimpleKeychain13AccessibilityO29whenPasscodeSetThisDeviceOnlyyA2CmF",
+            "mangledName": "$s14SimpleKeychain13AccessibilityO29whenPasscodeSetThisDeviceOnlyyA2CmF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Accessibility",
+                "printedName": "SimpleKeychain.Accessibility",
+                "usr": "s:14SimpleKeychain13AccessibilityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFString",
+                "printedName": "CoreFoundation.CFString",
+                "usr": "c:@T@CFStringRef"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14SimpleKeychain13AccessibilityO8rawValueACSo11CFStringRefa_tcfc",
+            "mangledName": "$s14SimpleKeychain13AccessibilityO8rawValueACSo11CFStringRefa_tcfc",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CFString",
+                "printedName": "CoreFoundation.CFString",
+                "usr": "c:@T@CFStringRef"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SimpleKeychain13AccessibilityO8rawValueSo11CFStringRefavp",
+            "mangledName": "$s14SimpleKeychain13AccessibilityO8rawValueSo11CFStringRefavp",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFString",
+                    "printedName": "CoreFoundation.CFString",
+                    "usr": "c:@T@CFStringRef"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SimpleKeychain13AccessibilityO8rawValueSo11CFStringRefavg",
+                "mangledName": "$s14SimpleKeychain13AccessibilityO8rawValueSo11CFStringRefavg",
+                "moduleName": "SimpleKeychain",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14SimpleKeychain13AccessibilityO",
+        "mangledName": "$s14SimpleKeychain13AccessibilityO",
+        "moduleName": "SimpleKeychain",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFString",
+                    "printedName": "CoreFoundation.CFString",
+                    "usr": "c:@T@CFStringRef"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SimpleKeychain"
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "SimpleKeychain"
+      },
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "SimpleKeychain",
+        "declAttributes": [
+          "Preconcurrency"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SimpleKeychain",
+        "printedName": "SimpleKeychain",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(service:accessGroup:accessibility:accessControlFlags:context:synchronizable:attributes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimpleKeychain",
+                "printedName": "SimpleKeychain.SimpleKeychain",
+                "usr": "s:14SimpleKeychainAAV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Accessibility",
+                "printedName": "SimpleKeychain.Accessibility",
+                "hasDefaultArg": true,
+                "usr": "s:14SimpleKeychain13AccessibilityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Security.SecAccessControlCreateFlags?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SecAccessControlCreateFlags",
+                    "printedName": "Security.SecAccessControlCreateFlags",
+                    "usr": "c:@E@SecAccessControlCreateFlags"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LocalAuthentication.LAContext?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LAContext",
+                    "printedName": "LocalAuthentication.LAContext",
+                    "usr": "c:objc(cs)LAContext"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14SimpleKeychainAAV7service11accessGroup13accessibility0D12ControlFlags7context14synchronizable10attributesABSS_SSSgAA13AccessibilityOSo09SecAccessg6CreateH0VSgSo9LAContextCSgSbSDySSypGtcfc",
+            "mangledName": "$s14SimpleKeychainAAV7service11accessGroup13accessibility0D12ControlFlags7context14synchronizable10attributesABSS_SSSgAA13AccessibilityOSo09SecAccessg6CreateH0VSgSo9LAContextCSgSbSDySSypGtcfc",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "string",
+            "printedName": "string(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV6string6forKeyS2S_tKF",
+            "mangledName": "$s14SimpleKeychainAAV6string6forKeyS2S_tKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV4data6forKey10Foundation4DataVSS_tKF",
+            "mangledName": "$s14SimpleKeychainAAV4data6forKey10Foundation4DataVSS_tKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV3set_6forKeyySS_SStKF",
+            "mangledName": "$s14SimpleKeychainAAV3set_6forKeyySS_SStKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(_:forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV3set_6forKeyy10Foundation4DataV_SStKF",
+            "mangledName": "$s14SimpleKeychainAAV3set_6forKeyy10Foundation4DataV_SStKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteItem",
+            "printedName": "deleteItem(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV10deleteItem6forKeyySS_tKF",
+            "mangledName": "$s14SimpleKeychainAAV10deleteItem6forKeyySS_tKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteAll",
+            "printedName": "deleteAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV9deleteAllyyKF",
+            "mangledName": "$s14SimpleKeychainAAV9deleteAllyyKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasItem",
+            "printedName": "hasItem(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV7hasItem6forKeySbSS_tKF",
+            "mangledName": "$s14SimpleKeychainAAV7hasItem6forKeySbSS_tKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "keys",
+            "printedName": "keys()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SimpleKeychainAAV4keysSaySSGyKF",
+            "mangledName": "$s14SimpleKeychainAAV4keysSaySSGyKF",
+            "moduleName": "SimpleKeychain",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14SimpleKeychainAAV",
+        "mangledName": "$s14SimpleKeychainAAV",
+        "moduleName": "SimpleKeychain",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/SimpleKeychain\/SimpleKeychain\/SimpleKeychainError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7051,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/SimpleKeychain\/SimpleKeychain\/SimpleKeychainError.swift",
+      "kind": "StringLiteral",
+      "offset": 7283,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/SimpleKeychain\/SimpleKeychain\/SimpleKeychain.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2153,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/SimpleKeychain\/SimpleKeychain\/SimpleKeychain.swift",
+      "kind": "Dictionary",
+      "offset": 2204,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

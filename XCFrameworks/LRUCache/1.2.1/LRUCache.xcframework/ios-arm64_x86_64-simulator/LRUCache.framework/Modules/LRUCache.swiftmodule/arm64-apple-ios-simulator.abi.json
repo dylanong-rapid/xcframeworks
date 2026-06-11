@@ -1,0 +1,1185 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "LRUCache",
+    "printedName": "LRUCache",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LRUCache",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Var",
+        "name": "LRUCacheMemoryWarningNotification",
+        "printedName": "LRUCacheMemoryWarningNotification",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Name",
+            "printedName": "Foundation.NSNotification.Name",
+            "usr": "c:@T@NSNotificationName"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:8LRUCache0A25MemoryWarningNotificationSo18NSNotificationNameavp",
+        "mangledName": "$s8LRUCache0A25MemoryWarningNotificationSo18NSNotificationNameavp",
+        "moduleName": "LRUCache",
+        "deprecated": true,
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl",
+          "Available"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:8LRUCache0A25MemoryWarningNotificationSo18NSNotificationNameavg",
+            "mangledName": "$s8LRUCache0A25MemoryWarningNotificationSo18NSNotificationNameavg",
+            "moduleName": "LRUCache",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LRUCache",
+        "printedName": "LRUCache",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(totalCostLimit:countLimit:clearsOnMemoryPressure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LRUCache",
+                "printedName": "LRUCache.LRUCache<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:8LRUCacheAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8LRUCacheAAC14totalCostLimit05countD022clearsOnMemoryPressureAByxq_GSi_SiSbtcfc",
+            "mangledName": "$s8LRUCacheAAC14totalCostLimit05countD022clearsOnMemoryPressureAByxq_GSi_SiSbtcfc",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(totalCostLimit:countLimit:notificationCenter:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LRUCache",
+                "printedName": "LRUCache.LRUCache<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:8LRUCacheAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationCenter",
+                "printedName": "Foundation.NotificationCenter",
+                "usr": "c:objc(cs)NSNotificationCenter"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8LRUCacheAAC14totalCostLimit05countD018notificationCenterAByxq_GSi_SiSo014NSNotificationG0Ctcfc",
+            "mangledName": "$s8LRUCacheAAC14totalCostLimit05countD018notificationCenterAByxq_GSi_SiSo014NSNotificationG0Ctcfc",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "deprecated": true,
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "Available"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Var",
+            "name": "totalCost",
+            "printedName": "totalCost",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC9totalCostSivp",
+            "mangledName": "$s8LRUCacheAAC9totalCostSivp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC9totalCostSivg",
+                "mangledName": "$s8LRUCacheAAC9totalCostSivg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totalCostLimit",
+            "printedName": "totalCostLimit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC14totalCostLimitSivp",
+            "mangledName": "$s8LRUCacheAAC14totalCostLimitSivp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC14totalCostLimitSivg",
+                "mangledName": "$s8LRUCacheAAC14totalCostLimitSivg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC14totalCostLimitSivs",
+                "mangledName": "$s8LRUCacheAAC14totalCostLimitSivs",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC14totalCostLimitSivM",
+                "mangledName": "$s8LRUCacheAAC14totalCostLimitSivM",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "count",
+            "printedName": "count",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC5countSivp",
+            "mangledName": "$s8LRUCacheAAC5countSivp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC5countSivg",
+                "mangledName": "$s8LRUCacheAAC5countSivg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "countLimit",
+            "printedName": "countLimit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC10countLimitSivp",
+            "mangledName": "$s8LRUCacheAAC10countLimitSivp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC10countLimitSivg",
+                "mangledName": "$s8LRUCacheAAC10countLimitSivg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC10countLimitSivs",
+                "mangledName": "$s8LRUCacheAAC10countLimitSivs",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC10countLimitSivM",
+                "mangledName": "$s8LRUCacheAAC10countLimitSivM",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isEmpty",
+            "printedName": "isEmpty",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC7isEmptySbvp",
+            "mangledName": "$s8LRUCacheAAC7isEmptySbvp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC7isEmptySbvg",
+                "mangledName": "$s8LRUCacheAAC7isEmptySbvg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keys",
+            "printedName": "keys",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some Swift.Collection<Key>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Collection",
+                    "printedName": "Swift.Collection",
+                    "usr": "s:Sl"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC4keysQrvp",
+            "mangledName": "$s8LRUCacheAAC4keysQrvp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some Swift.Collection<Key>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Collection",
+                        "printedName": "Swift.Collection",
+                        "usr": "s:Sl"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC4keysQrvg",
+                "mangledName": "$s8LRUCacheAAC4keysQrvg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "values",
+            "printedName": "values",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some Swift.Collection<Value>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Collection",
+                    "printedName": "Swift.Collection",
+                    "usr": "s:Sl"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC6valuesQrvp",
+            "mangledName": "$s8LRUCacheAAC6valuesQrvp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some Swift.Collection<Value>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Collection",
+                        "printedName": "Swift.Collection",
+                        "usr": "s:Sl"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC6valuesQrvg",
+                "mangledName": "$s8LRUCacheAAC6valuesQrvg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "orderedKeys",
+            "printedName": "orderedKeys",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC11orderedKeysSayxGvp",
+            "mangledName": "$s8LRUCacheAAC11orderedKeysSayxGvp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC11orderedKeysSayxGvg",
+                "mangledName": "$s8LRUCacheAAC11orderedKeysSayxGvg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "orderedValues",
+            "printedName": "orderedValues",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_1]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC13orderedValuesSayq_Gvp",
+            "mangledName": "$s8LRUCacheAAC13orderedValuesSayq_Gvp",
+            "moduleName": "LRUCache",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_1]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC13orderedValuesSayq_Gvg",
+                "mangledName": "$s8LRUCacheAAC13orderedValuesSayq_Gvg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allKeys",
+            "printedName": "allKeys",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC7allKeysSayxGvp",
+            "mangledName": "$s8LRUCacheAAC7allKeysSayxGvp",
+            "moduleName": "LRUCache",
+            "deprecated": true,
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC7allKeysSayxGvg",
+                "mangledName": "$s8LRUCacheAAC7allKeysSayxGvg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allValues",
+            "printedName": "allValues",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_1]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8LRUCacheAAC9allValuesSayq_Gvp",
+            "mangledName": "$s8LRUCacheAAC9allValuesSayq_Gvp",
+            "moduleName": "LRUCache",
+            "deprecated": true,
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_1]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8LRUCacheAAC9allValuesSayq_Gvg",
+                "mangledName": "$s8LRUCacheAAC9allValuesSayq_Gvg",
+                "moduleName": "LRUCache",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setValue",
+            "printedName": "setValue(_:forKey:cost:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8LRUCacheAAC8setValue_6forKey4costyq_Sg_xSitF",
+            "mangledName": "$s8LRUCacheAAC8setValue_6forKey4costyq_Sg_xSitF",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasValue",
+            "printedName": "hasValue(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8LRUCacheAAC8hasValue6forKeySbx_tF",
+            "mangledName": "$s8LRUCacheAAC8hasValue6forKeySbx_tF",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8LRUCacheAAC5value6forKeyq_Sgx_tF",
+            "mangledName": "$s8LRUCacheAAC5value6forKeyq_Sgx_tF",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeValue",
+            "printedName": "removeValue(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8LRUCacheAAC11removeValue6forKeyq_Sgx_tF",
+            "mangledName": "$s8LRUCacheAAC11removeValue6forKeyq_Sgx_tF",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "declAttributes": [
+              "Final",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAll",
+            "printedName": "removeAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8LRUCacheAAC9removeAllyyF",
+            "mangledName": "$s8LRUCacheAAC9removeAllyyF",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAllValues",
+            "printedName": "removeAllValues()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8LRUCacheAAC15removeAllValuesyyF",
+            "mangledName": "$s8LRUCacheAAC15removeAllValuesyyF",
+            "moduleName": "LRUCache",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+            "deprecated": true,
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8LRUCacheAAC",
+        "mangledName": "$s8LRUCacheAAC",
+        "moduleName": "LRUCache",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Key, Value where Key : Swift.Hashable, Key : Swift.Sendable>",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "LRUCache"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/LRUCache\/Sources\/LRUCache.swift",
+      "kind": "Dictionary",
+      "offset": 1674,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/LRUCache\/Sources\/LRUCache.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1745,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/LRUCache\/Sources\/LRUCache.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2325,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/LRUCache\/Sources\/LRUCache.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6859,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}

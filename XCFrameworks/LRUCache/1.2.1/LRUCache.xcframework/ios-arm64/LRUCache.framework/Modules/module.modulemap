@@ -1,0 +1,4 @@
+framework module LRUCache {
+  header "LRUCache-Swift.h"
+  requires objc
+}

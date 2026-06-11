@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/var/folders/5_/z2vvjg1j6bv1cqdnh4x20wk00000gp/T/rapid-xcframeworks/dd/swift-certificates/Build/Intermediates.noindex/ArchiveIntermediates/swift-certificates/InstallationBuildProductsLocation/usr/local/lib/X509.framework/X509'
+relocations:     []
+...

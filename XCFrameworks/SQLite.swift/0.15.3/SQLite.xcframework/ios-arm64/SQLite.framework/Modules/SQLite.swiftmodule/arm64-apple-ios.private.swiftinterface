@@ -1,0 +1,1584 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SQLite
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Dispatch
+import Foundation
+@_exported import SQLite
+import SQLite3
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite.Number {
+  public var absoluteValue: SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite._OptionalType, Self.UnderlyingType.WrappedType : SQLite.Number {
+  public var absoluteValue: SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType == Swift.Double {
+  public func round(_ precision: Swift.Int? = nil) -> SQLite.Expression<Self.UnderlyingType>
+}
+extension SQLite.ExpressionType where Self.UnderlyingType == Swift.Double? {
+  public func round(_ precision: Swift.Int? = nil) -> SQLite.Expression<Self.UnderlyingType>
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite.Value, Self.UnderlyingType.Datatype == Swift.Int64 {
+  public static func random() -> SQLite.Expression<Self.UnderlyingType>
+}
+extension SQLite.ExpressionType where Self.UnderlyingType == Foundation.Data {
+  public static func random(_ length: Swift.Int) -> SQLite.Expression<Self.UnderlyingType>
+  public static func allZeros(_ length: Swift.Int) -> SQLite.Expression<Self.UnderlyingType>
+  public var length: SQLite.Expression<Swift.Int> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType == Foundation.Data? {
+  public var length: SQLite.Expression<Swift.Int?> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType == Swift.String {
+  public var length: SQLite.Expression<Swift.Int> {
+    get
+  }
+  public var lowercaseString: SQLite.Expression<Swift.String> {
+    get
+  }
+  public var uppercaseString: SQLite.Expression<Swift.String> {
+    get
+  }
+  public func like(_ pattern: Swift.String, escape character: Swift.Character? = nil) -> SQLite.Expression<Swift.Bool>
+  public func like(_ pattern: SQLite.Expression<Swift.String>, escape character: Swift.Character? = nil) -> SQLite.Expression<Swift.Bool>
+  public func glob(_ pattern: Swift.String) -> SQLite.Expression<Swift.Bool>
+  public func match(_ pattern: Swift.String) -> SQLite.Expression<Swift.Bool>
+  public func regexp(_ pattern: Swift.String) -> SQLite.Expression<Swift.Bool>
+  public func collate(_ collation: SQLite.Collation) -> SQLite.Expression<Self.UnderlyingType>
+  public func ltrim(_ characters: Swift.Set<Swift.Character>? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public func rtrim(_ characters: Swift.Set<Swift.Character>? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public func trim(_ characters: Swift.Set<Swift.Character>? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public func replace(_ pattern: Swift.String, with replacement: Swift.String) -> SQLite.Expression<Self.UnderlyingType>
+  public func substring(_ location: Swift.Int, length: Swift.Int? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public subscript(range: Swift.Range<Swift.Int>) -> SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType == Swift.String? {
+  public var length: SQLite.Expression<Swift.Int?> {
+    get
+  }
+  public var lowercaseString: SQLite.Expression<Swift.Optional<Swift.String>> {
+    get
+  }
+  public var uppercaseString: SQLite.Expression<Swift.Optional<Swift.String>> {
+    get
+  }
+  public func like(_ pattern: Swift.String, escape character: Swift.Character? = nil) -> SQLite.Expression<Swift.Bool?>
+  public func like(_ pattern: SQLite.Expression<Swift.String>, escape character: Swift.Character? = nil) -> SQLite.Expression<Swift.Bool?>
+  public func glob(_ pattern: Swift.String) -> SQLite.Expression<Swift.Bool?>
+  public func match(_ pattern: Swift.String) -> SQLite.Expression<Swift.Bool>
+  public func regexp(_ pattern: Swift.String) -> SQLite.Expression<Swift.Bool?>
+  public func collate(_ collation: SQLite.Collation) -> SQLite.Expression<Self.UnderlyingType>
+  public func ltrim(_ characters: Swift.Set<Swift.Character>? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public func rtrim(_ characters: Swift.Set<Swift.Character>? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public func trim(_ characters: Swift.Set<Swift.Character>? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public func replace(_ pattern: Swift.String, with replacement: Swift.String) -> SQLite.Expression<Self.UnderlyingType>
+  public func substring(_ location: Swift.Int, length: Swift.Int? = nil) -> SQLite.Expression<Self.UnderlyingType>
+  public subscript(range: Swift.Range<Swift.Int>) -> SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+}
+extension Swift.Collection where Self.Element : SQLite.Value {
+  public func contains(_ expression: SQLite.Expression<Self.Iterator.Element>) -> SQLite.Expression<Swift.Bool>
+  public func contains(_ expression: SQLite.Expression<Self.Iterator.Element?>) -> SQLite.Expression<Swift.Bool?>
+}
+extension Swift.String {
+  public func like(_ pattern: SQLite.Expression<Swift.String>, escape character: Swift.Character? = nil) -> SQLite.Expression<Swift.Bool>
+}
+public func ?? <V>(optional: SQLite.Expression<V?>, defaultValue: V) -> SQLite.Expression<V> where V : SQLite.Value
+public func ?? <V>(optional: SQLite.Expression<V?>, defaultValue: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value
+public func ?? <V>(optional: SQLite.Expression<V?>, defaultValue: SQLite.Expression<V?>) -> SQLite.Expression<V> where V : SQLite.Value
+extension SQLite.QueryType {
+  public func insert(_ encodable: any Swift.Encodable, userInfo: [Swift.CodingUserInfoKey : Any] = [:], otherSetters: [SQLite.Setter] = []) throws -> SQLite.Insert
+  public func insert(or onConflict: SQLite.OnConflict, encodable: any Swift.Encodable, userInfo: [Swift.CodingUserInfoKey : Any] = [:], otherSetters: [SQLite.Setter] = []) throws -> SQLite.Insert
+  public func insertMany(_ encodables: [any Swift.Encodable], userInfo: [Swift.CodingUserInfoKey : Any] = [:], otherSetters: [SQLite.Setter] = []) throws -> SQLite.Insert
+  public func upsert(_ encodable: any Swift.Encodable, userInfo: [Swift.CodingUserInfoKey : Any] = [:], otherSetters: [SQLite.Setter] = [], onConflictOf conflicting: any SQLite.Expressible) throws -> SQLite.Insert
+  public func update(_ encodable: any Swift.Encodable, userInfo: [Swift.CodingUserInfoKey : Any] = [:], otherSetters: [SQLite.Setter] = []) throws -> SQLite.Update
+}
+extension SQLite.Row {
+  public func decode<V>(userInfo: [Swift.CodingUserInfoKey : Any] = [:]) throws -> V where V : Swift.Decodable
+  public func decoder(userInfo: [Swift.CodingUserInfoKey : Any] = [:]) -> any Swift.Decoder
+}
+extension SQLite.Module {
+  public static func RTree<T, U>(_ primaryKey: SQLite.Expression<T>, _ pairs: (SQLite.Expression<U>, SQLite.Expression<U>)...) -> SQLite.Module where T : SQLite.Value, U : SQLite.Value, T.Datatype == Swift.Int64, U.Datatype == Swift.Double
+}
+public struct Blob {
+  public let bytes: [Swift.UInt8]
+  public init(bytes: [Swift.UInt8])
+  public init(bytes: Swift.UnsafeRawPointer, length: Swift.Int)
+  public func toHex() -> Swift.String
+}
+extension SQLite.Blob : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension SQLite.Blob : Swift.Equatable {
+}
+public func == (lhs: SQLite.Blob, rhs: SQLite.Blob) -> Swift.Bool
+public enum URIQueryParameter : Swift.CustomStringConvertible {
+  public enum FileMode : Swift.String {
+    case readOnly, readWrite, readWriteCreate, memory
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CacheMode : Swift.String {
+    case shared, `private`
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case cache(SQLite.URIQueryParameter.CacheMode)
+  case immutable(Swift.Bool)
+  case modeOf(Swift.String)
+  case mode(SQLite.URIQueryParameter.FileMode)
+  case nolock(Swift.Bool)
+  case powersafeOverwrite(Swift.Bool)
+  case vfs(Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+extension Foundation.Data : SQLite.Value {
+  public static var declaredDatatype: Swift.String {
+    get
+  }
+  public static func fromDatatypeValue(_ dataValue: SQLite.Blob) -> Foundation.Data
+  public var datatypeValue: SQLite.Blob {
+    get
+  }
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias Datatype = SQLite.Blob
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias ValueType = Foundation.Data
+}
+extension Foundation.Date : SQLite.Value {
+  public static var declaredDatatype: Swift.String {
+    get
+  }
+  public static func fromDatatypeValue(_ stringValue: Swift.String) -> Foundation.Date
+  public var datatypeValue: Swift.String {
+    get
+  }
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias Datatype = Swift.String
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias ValueType = Foundation.Date
+}
+public var dateFormatter: Foundation.DateFormatter
+extension Foundation.UUID : SQLite.Value {
+  public static var declaredDatatype: Swift.String {
+    get
+  }
+  public static func fromDatatypeValue(_ stringValue: Swift.String) -> Foundation.UUID
+  public var datatypeValue: Swift.String {
+    get
+  }
+  @available(iOS 6.0, tvOS 9.0, watchOS 2.0, macOS 10.8, *)
+  public typealias Datatype = Swift.String
+  @available(iOS 6.0, tvOS 9.0, watchOS 2.0, macOS 10.8, *)
+  public typealias ValueType = Foundation.UUID
+}
+extension Foundation.URL : SQLite.Value {
+  public static var declaredDatatype: Swift.String {
+    get
+  }
+  public static func fromDatatypeValue(_ stringValue: Swift.String) -> Foundation.URL
+  public var datatypeValue: Swift.String {
+    get
+  }
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias Datatype = Swift.String
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias ValueType = Foundation.URL
+}
+final public class Connection {
+  public enum Location {
+    case inMemory
+    case temporary
+    case uri(Swift.String, parameters: [SQLite.URIQueryParameter] = [])
+  }
+  public enum Operation {
+    case insert
+    case update
+    case delete
+    public static func == (a: SQLite.Connection.Operation, b: SQLite.Connection.Operation) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var handle: Swift.OpaquePointer {
+    get
+  }
+  public init(_ location: SQLite.Connection.Location = .inMemory, readonly: Swift.Bool = false) throws
+  convenience public init(_ filename: Swift.String, readonly: Swift.Bool = false) throws
+  @objc deinit
+  final public var readonly: Swift.Bool {
+    get
+  }
+  final public var lastInsertRowid: Swift.Int64 {
+    get
+  }
+  final public var changes: Swift.Int {
+    get
+  }
+  final public var totalChanges: Swift.Int {
+    get
+  }
+  final public var usesExtendedErrorCodes: Swift.Bool {
+    get
+    set
+  }
+  final public func execute(_ SQL: Swift.String) throws
+  final public func prepare(_ statement: Swift.String, _ bindings: (any SQLite.Binding)?...) throws -> SQLite.Statement
+  final public func prepare(_ statement: Swift.String, _ bindings: [(any SQLite.Binding)?]) throws -> SQLite.Statement
+  final public func prepare(_ statement: Swift.String, _ bindings: [Swift.String : (any SQLite.Binding)?]) throws -> SQLite.Statement
+  @discardableResult
+  final public func run(_ statement: Swift.String, _ bindings: (any SQLite.Binding)?...) throws -> SQLite.Statement
+  @discardableResult
+  final public func run(_ statement: Swift.String, _ bindings: [(any SQLite.Binding)?]) throws -> SQLite.Statement
+  @discardableResult
+  final public func run(_ statement: Swift.String, _ bindings: [Swift.String : (any SQLite.Binding)?]) throws -> SQLite.Statement
+  @discardableResult
+  final public func vacuum() throws -> SQLite.Statement
+  final public func scalar(_ statement: Swift.String, _ bindings: (any SQLite.Binding)?...) throws -> (any SQLite.Binding)?
+  final public func scalar(_ statement: Swift.String, _ bindings: [(any SQLite.Binding)?]) throws -> (any SQLite.Binding)?
+  final public func scalar(_ statement: Swift.String, _ bindings: [Swift.String : (any SQLite.Binding)?]) throws -> (any SQLite.Binding)?
+  public enum TransactionMode : Swift.String {
+    case deferred
+    case immediate
+    case exclusive
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  final public func transaction(_ mode: SQLite.Connection.TransactionMode = .deferred, block: () throws -> Swift.Void) throws
+  final public func savepoint(_ name: Swift.String = UUID().uuidString, block: () throws -> Swift.Void) throws
+  final public func interrupt()
+  final public var busyTimeout: Swift.Double {
+    get
+    set
+  }
+  final public func busyHandler(_ callback: ((_ tries: Swift.Int) -> Swift.Bool)?)
+  final public func trace(_ callback: ((Swift.String) -> Swift.Void)?)
+  final public func updateHook(_ callback: ((_ operation: SQLite.Connection.Operation, _ db: Swift.String, _ table: Swift.String, _ rowid: Swift.Int64) -> Swift.Void)?)
+  final public func commitHook(_ callback: (() throws -> Swift.Void)?)
+  final public func rollbackHook(_ callback: (() -> Swift.Void)?)
+  final public func createFunction(_ functionName: Swift.String, argumentCount: Swift.UInt? = nil, deterministic: Swift.Bool = false, _ block: @escaping (_ args: [(any SQLite.Binding)?]) -> (any SQLite.Binding)?)
+  final public func createCollation(_ collation: Swift.String, _ block: @escaping (_ lhs: Swift.String, _ rhs: Swift.String) -> Foundation.ComparisonResult) throws
+  final public func backup(databaseName: SQLite.Backup.DatabaseName = .main, usingConnection targetConnection: SQLite.Connection, andDatabaseName targetDatabaseName: SQLite.Backup.DatabaseName = .main) throws -> SQLite.Backup
+}
+extension SQLite.Connection : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+extension SQLite.Connection.Location : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol ExpressionType : SQLite.Expressible, Swift.CustomStringConvertible {
+  associatedtype UnderlyingType = Swift.Void
+  var template: Swift.String { get }
+  var bindings: [(any SQLite.Binding)?] { get }
+  init(_ template: Swift.String, _ bindings: [(any SQLite.Binding)?])
+}
+extension SQLite.ExpressionType {
+  public init(literal: Swift.String)
+  public init(_ identifier: Swift.String)
+  public init<U>(_ expression: U) where U : SQLite.ExpressionType
+  public var description: Swift.String {
+    get
+  }
+}
+public struct Expression<Datatype> : SQLite.ExpressionType {
+  public typealias UnderlyingType = Datatype
+  public var template: Swift.String
+  public var bindings: [(any SQLite.Binding)?]
+  public init(_ template: Swift.String, _ bindings: [(any SQLite.Binding)?])
+}
+public protocol Expressible {
+  var expression: SQLite.Expression<Swift.Void> { get }
+}
+extension SQLite.ExpressionType {
+  public var expression: SQLite.Expression<Swift.Void> {
+    get
+  }
+  public var asc: any SQLite.Expressible {
+    get
+  }
+  public var desc: any SQLite.Expressible {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite.Value {
+  public init(value: Self.UnderlyingType)
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite._OptionalType, Self.UnderlyingType.WrappedType : SQLite.Value {
+  public static var null: Self {
+    get
+  }
+  public init(value: Self.UnderlyingType.WrappedType?)
+}
+extension SQLite.Value {
+  public var expression: SQLite.Expression<Swift.Void> {
+    get
+  }
+}
+public let rowid: SQLite.Expression<Swift.Int64>
+public func cast<T, U>(_ expression: SQLite.Expression<T>) -> SQLite.Expression<U> where T : SQLite.Value, U : SQLite.Value
+public func cast<T, U>(_ expression: SQLite.Expression<T?>) -> SQLite.Expression<U?> where T : SQLite.Value, U : SQLite.Value
+public typealias Star = (SQLite.Expression<any SQLite.Binding>?, SQLite.Expression<any SQLite.Binding>?) -> SQLite.Expression<Swift.Void>
+public func * (_: SQLite.Expression<any SQLite.Binding>?, _: SQLite.Expression<any SQLite.Binding>?) -> SQLite.Expression<Swift.Void>
+public protocol _OptionalType {
+  associatedtype WrappedType
+}
+extension Swift.Optional : SQLite._OptionalType {
+  public typealias WrappedType = Wrapped
+}
+public enum Collation {
+  case binary
+  case nocase
+  case rtrim
+  case custom(Swift.String)
+}
+extension SQLite.Collation : SQLite.Expressible {
+  public var expression: SQLite.Expression<Swift.Void> {
+    get
+  }
+}
+extension SQLite.Collation : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+precedencegroup ColumnAssignment {
+  associativity: left
+  assignment: true
+  lowerThan: AssignmentPrecedence
+}
+infix operator <- : ColumnAssignment
+public struct Setter {
+}
+extension SQLite.Setter : SQLite.Expressible {
+  public var expression: SQLite.Expression<Swift.Void> {
+    get
+  }
+}
+public func <- <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value
+public func <- <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value
+public func <- <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value
+public func <- <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value
+public func <- <V>(column: SQLite.Expression<V?>, value: V?) -> SQLite.Setter where V : SQLite.Value
+public func += (column: SQLite.Expression<Swift.String>, value: SQLite.Expression<Swift.String>) -> SQLite.Setter
+public func += (column: SQLite.Expression<Swift.String>, value: Swift.String) -> SQLite.Setter
+public func += (column: SQLite.Expression<Swift.String?>, value: SQLite.Expression<Swift.String>) -> SQLite.Setter
+public func += (column: SQLite.Expression<Swift.String?>, value: SQLite.Expression<Swift.String?>) -> SQLite.Setter
+public func += (column: SQLite.Expression<Swift.String?>, value: Swift.String) -> SQLite.Setter
+public func += <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func += <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func += <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func += <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func += <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func -= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func -= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func -= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func -= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func -= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func *= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func *= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func *= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func *= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func *= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func /= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func /= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func /= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func /= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func /= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype : SQLite.Number
+public func %= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func %= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func %= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func %= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func %= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func <<= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func <<= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func <<= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func <<= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func <<= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >>= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >>= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >>= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >>= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >>= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func &= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func &= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func &= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func &= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func &= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func |= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func |= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func |= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func |= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func |= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^= <V>(column: SQLite.Expression<V>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^= <V>(column: SQLite.Expression<V>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^= <V>(column: SQLite.Expression<V?>, value: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^= <V>(column: SQLite.Expression<V?>, value: V) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+postfix public func ++ <V>(column: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+postfix public func ++ <V>(column: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+postfix public func -- <V>(column: SQLite.Expression<V>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+postfix public func -- <V>(column: SQLite.Expression<V?>) -> SQLite.Setter where V : SQLite.Value, V.Datatype == Swift.Int64
+extension SQLite.Connection {
+  final public func attach(_ location: SQLite.Connection.Location, as schemaName: Swift.String) throws
+  final public func detach(_ schemaName: Swift.String) throws
+}
+extension SQLite.Connection {
+  final public func createFunction<Z>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping () -> Z) throws -> () -> SQLite.Expression<Z> where Z : SQLite.Value
+  final public func createFunction<Z>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping () -> Z?) throws -> () -> SQLite.Expression<Z?> where Z : SQLite.Value
+  final public func createFunction<Z, A>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A) -> Z) throws -> (SQLite.Expression<A>) -> SQLite.Expression<Z> where Z : SQLite.Value, A : SQLite.Value
+  final public func createFunction<Z, A>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A?) -> Z) throws -> (SQLite.Expression<A?>) -> SQLite.Expression<Z> where Z : SQLite.Value, A : SQLite.Value
+  final public func createFunction<Z, A>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A) -> Z?) throws -> (SQLite.Expression<A>) -> SQLite.Expression<Z?> where Z : SQLite.Value, A : SQLite.Value
+  final public func createFunction<Z, A>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A?) -> Z?) throws -> (SQLite.Expression<A?>) -> SQLite.Expression<Z?> where Z : SQLite.Value, A : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A, B) -> Z) throws -> (SQLite.Expression<A>, SQLite.Expression<B>) -> SQLite.Expression<Z> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A?, B) -> Z) throws -> (SQLite.Expression<A?>, SQLite.Expression<B>) -> SQLite.Expression<Z> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A, B?) -> Z) throws -> (SQLite.Expression<A>, SQLite.Expression<B?>) -> SQLite.Expression<Z> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A, B) -> Z?) throws -> (SQLite.Expression<A>, SQLite.Expression<B>) -> SQLite.Expression<Z?> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A?, B?) -> Z) throws -> (SQLite.Expression<A?>, SQLite.Expression<B?>) -> SQLite.Expression<Z> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A?, B) -> Z?) throws -> (SQLite.Expression<A?>, SQLite.Expression<B>) -> SQLite.Expression<Z?> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A, B?) -> Z?) throws -> (SQLite.Expression<A>, SQLite.Expression<B?>) -> SQLite.Expression<Z?> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+  final public func createFunction<Z, A, B>(_ function: Swift.String, deterministic: Swift.Bool = false, _ block: @escaping (A?, B?) -> Z?) throws -> (SQLite.Expression<A?>, SQLite.Expression<B?>) -> SQLite.Expression<Z?> where Z : SQLite.Value, A : SQLite.Value, B : SQLite.Value
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite.Value {
+  public func lag(offset: Swift.Int = 0, default: (any SQLite.Expressible)? = nil, _ orderBy: any SQLite.Expressible) -> SQLite.Expression<Self.UnderlyingType>
+  public func lead(offset: Swift.Int = 0, default: (any SQLite.Expressible)? = nil, _ orderBy: any SQLite.Expressible) -> SQLite.Expression<Self.UnderlyingType>
+  public func firstValue(_ orderBy: any SQLite.Expressible) -> SQLite.Expression<Self.UnderlyingType>
+  public func lastValue(_ orderBy: any SQLite.Expressible) -> SQLite.Expression<Self.UnderlyingType>
+  public func value(_ index: Swift.Int, _ orderBy: any SQLite.Expressible) -> SQLite.Expression<Self.UnderlyingType>
+}
+public func ntile(_ size: Swift.Int, _ orderBy: any SQLite.Expressible) -> SQLite.Expression<Swift.Int>
+public func rowNumber(_ orderBy: any SQLite.Expressible) -> SQLite.Expression<Swift.Int>
+public func rank(_ orderBy: any SQLite.Expressible) -> SQLite.Expression<Swift.Int>
+public func denseRank(_ orderBy: any SQLite.Expressible) -> SQLite.Expression<Swift.Int>
+public func percentRank(_ orderBy: any SQLite.Expressible) -> SQLite.Expression<Swift.Double>
+public func cumeDist(_ orderBy: any SQLite.Expressible) -> SQLite.Expression<Swift.Double>
+extension SQLite.Module {
+  public static func FTS4(_ column: any SQLite.Expressible, _ more: any SQLite.Expressible...) -> SQLite.Module
+  public static func FTS4(_ columns: [any SQLite.Expressible] = [], tokenize tokenizer: SQLite.Tokenizer? = nil) -> SQLite.Module
+  public static func FTS4(_ config: SQLite.FTS4Config) -> SQLite.Module
+}
+extension SQLite.VirtualTable {
+  public func match(_ pattern: Swift.String) -> SQLite.Expression<Swift.Bool>
+  public func match(_ pattern: SQLite.Expression<Swift.String>) -> SQLite.Expression<Swift.Bool>
+  public func match(_ pattern: SQLite.Expression<Swift.String?>) -> SQLite.Expression<Swift.Bool?>
+  public func match(_ pattern: Swift.String) -> any SQLite.QueryType
+  public func match(_ pattern: SQLite.Expression<Swift.String>) -> any SQLite.QueryType
+  public func match(_ pattern: SQLite.Expression<Swift.String?>) -> any SQLite.QueryType
+}
+public struct Tokenizer {
+  public static let Simple: SQLite.Tokenizer
+  public static let Porter: SQLite.Tokenizer
+  public static func Unicode61(removeDiacritics: Swift.Bool? = nil, tokenchars: Swift.Set<Swift.Character> = [], separators: Swift.Set<Swift.Character> = []) -> SQLite.Tokenizer
+  public static func Trigram(caseSensitive: Swift.Bool = false) -> SQLite.Tokenizer
+  public static func Custom(_ name: Swift.String) -> SQLite.Tokenizer
+  public let name: Swift.String
+  public let arguments: [Swift.String]
+}
+extension SQLite.Tokenizer : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers open class FTSConfig {
+  public enum ColumnOption {
+    case unindexed
+    public static func == (a: SQLite.FTSConfig.ColumnOption, b: SQLite.FTSConfig.ColumnOption) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @discardableResult
+  open func column(_ column: any SQLite.Expressible, _ options: [SQLite.FTSConfig.ColumnOption] = []) -> Self
+  @discardableResult
+  open func columns(_ columns: [any SQLite.Expressible]) -> Self
+  @discardableResult
+  open func tokenizer(_ tokenizer: SQLite.Tokenizer?) -> Self
+  @discardableResult
+  open func prefix(_ prefix: [Swift.Int]) -> Self
+  @discardableResult
+  open func externalContent(_ schema: any SQLite.SchemaType) -> Self
+  @discardableResult
+  open func contentless() -> Self
+  @objc deinit
+}
+@_inheritsConvenienceInitializers open class FTS4Config : SQLite.FTSConfig {
+  public enum MatchInfo : Swift.String {
+    case fts3
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Order : Swift.String {
+    case asc
+    case desc
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init()
+  @discardableResult
+  open func compress(_ functionName: Swift.String) -> Self
+  @discardableResult
+  open func uncompress(_ functionName: Swift.String) -> Self
+  @discardableResult
+  open func languageId(_ columnName: Swift.String) -> Self
+  @discardableResult
+  open func matchInfo(_ matchInfo: SQLite.FTS4Config.MatchInfo) -> Self
+  @discardableResult
+  open func order(_ order: SQLite.FTS4Config.Order) -> Self
+  @objc deinit
+}
+public protocol Binding {
+}
+public protocol Number : SQLite.Binding {
+}
+public protocol Value : SQLite.Expressible {
+  associatedtype ValueType = Self
+  associatedtype Datatype : SQLite.Binding
+  static var declaredDatatype: Swift.String { get }
+  static func fromDatatypeValue(_ datatypeValue: Self.Datatype) throws -> Self.ValueType
+  var datatypeValue: Self.Datatype { get }
+}
+extension Swift.Double : SQLite.Number, SQLite.Value {
+  public static let declaredDatatype: Swift.String
+  public static func fromDatatypeValue(_ datatypeValue: Swift.Double) -> Swift.Double
+  public var datatypeValue: Swift.Double {
+    get
+  }
+  public typealias Datatype = Swift.Double
+  public typealias ValueType = Swift.Double
+}
+extension Swift.Int64 : SQLite.Number, SQLite.Value {
+  public static let declaredDatatype: Swift.String
+  public static func fromDatatypeValue(_ datatypeValue: Swift.Int64) -> Swift.Int64
+  public var datatypeValue: Swift.Int64 {
+    get
+  }
+  public typealias Datatype = Swift.Int64
+  public typealias ValueType = Swift.Int64
+}
+extension Swift.String : SQLite.Binding, SQLite.Value {
+  public static let declaredDatatype: Swift.String
+  public static func fromDatatypeValue(_ datatypeValue: Swift.String) -> Swift.String
+  public var datatypeValue: Swift.String {
+    get
+  }
+  public typealias Datatype = Swift.String
+  public typealias ValueType = Swift.String
+}
+extension SQLite.Blob : SQLite.Binding, SQLite.Value {
+  public static let declaredDatatype: Swift.String
+  public static func fromDatatypeValue(_ datatypeValue: SQLite.Blob) -> SQLite.Blob
+  public var datatypeValue: SQLite.Blob {
+    get
+  }
+  public typealias Datatype = SQLite.Blob
+  public typealias ValueType = SQLite.Blob
+}
+extension Swift.Bool : SQLite.Binding, SQLite.Value {
+  public static var declaredDatatype: Swift.String
+  public static func fromDatatypeValue(_ datatypeValue: Swift.Int64) -> Swift.Bool
+  public var datatypeValue: Swift.Int64 {
+    get
+  }
+  public typealias Datatype = Swift.Int64
+  public typealias ValueType = Swift.Bool
+}
+extension Swift.Int : SQLite.Number, SQLite.Value {
+  public static var declaredDatatype: Swift.String
+  public static func fromDatatypeValue(_ datatypeValue: Swift.Int64) -> Swift.Int
+  public var datatypeValue: Swift.Int64 {
+    get
+  }
+  public typealias Datatype = Swift.Int64
+  public typealias ValueType = Swift.Int
+}
+public func + (lhs: SQLite.Expression<Swift.String>, rhs: SQLite.Expression<Swift.String>) -> SQLite.Expression<Swift.String>
+public func + (lhs: SQLite.Expression<Swift.String>, rhs: SQLite.Expression<Swift.String?>) -> SQLite.Expression<Swift.String?>
+public func + (lhs: SQLite.Expression<Swift.String?>, rhs: SQLite.Expression<Swift.String>) -> SQLite.Expression<Swift.String?>
+public func + (lhs: SQLite.Expression<Swift.String?>, rhs: SQLite.Expression<Swift.String?>) -> SQLite.Expression<Swift.String?>
+public func + (lhs: SQLite.Expression<Swift.String>, rhs: Swift.String) -> SQLite.Expression<Swift.String>
+public func + (lhs: SQLite.Expression<Swift.String?>, rhs: Swift.String) -> SQLite.Expression<Swift.String?>
+public func + (lhs: Swift.String, rhs: SQLite.Expression<Swift.String>) -> SQLite.Expression<Swift.String>
+public func + (lhs: Swift.String, rhs: SQLite.Expression<Swift.String?>) -> SQLite.Expression<Swift.String?>
+public func + <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func + <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func + <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func + <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func + <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func + <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func + <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func + <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func - <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func * <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func / <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+prefix public func - <V>(rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype : SQLite.Number
+prefix public func - <V>(rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype : SQLite.Number
+public func % <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func % <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func % <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func % <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func % <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func % <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func % <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func % <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func << <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func >> <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func & <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func | <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func ^ <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+prefix public func ~ <V>(rhs: SQLite.Expression<V>) -> SQLite.Expression<V> where V : SQLite.Value, V.Datatype == Swift.Int64
+prefix public func ~ <V>(rhs: SQLite.Expression<V?>) -> SQLite.Expression<V?> where V : SQLite.Value, V.Datatype == Swift.Int64
+public func == <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func == <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func == <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func == <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func == <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func == <V>(lhs: SQLite.Expression<V?>, rhs: V?) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func == <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func == <V>(lhs: V?, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: SQLite.Expression<V?>, rhs: V?) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func === <V>(lhs: V?, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: SQLite.Expression<V?>, rhs: V?) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func != <V>(lhs: V?, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: SQLite.Expression<V?>, rhs: V?) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func !== <V>(lhs: V?, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Equatable
+public func > <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func > <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func > <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func > <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func > <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func > <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func > <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func > <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func >= <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func < <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: SQLite.Expression<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: SQLite.Expression<V?>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: SQLite.Expression<V>, rhs: V) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: SQLite.Expression<V?>, rhs: V) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: V, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func <= <V>(lhs: V, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.ClosedRange<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.ClosedRange<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.Range<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.Range<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.PartialRangeThrough<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.PartialRangeThrough<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.PartialRangeUpTo<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.PartialRangeUpTo<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.PartialRangeFrom<V>, rhs: SQLite.Expression<V>) -> SQLite.Expression<Swift.Bool> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func ~= <V>(lhs: Swift.PartialRangeFrom<V>, rhs: SQLite.Expression<V?>) -> SQLite.Expression<Swift.Bool?> where V : SQLite.Value, V : Swift.Comparable, V.Datatype : SQLite.Value, V.Datatype : Swift.Comparable
+public func and(_ terms: SQLite.Expression<Swift.Bool>...) -> SQLite.Expression<Swift.Bool>
+public func and(_ terms: [SQLite.Expression<Swift.Bool>]) -> SQLite.Expression<Swift.Bool>
+public func && (lhs: SQLite.Expression<Swift.Bool>, rhs: SQLite.Expression<Swift.Bool>) -> SQLite.Expression<Swift.Bool>
+public func && (lhs: SQLite.Expression<Swift.Bool>, rhs: SQLite.Expression<Swift.Bool?>) -> SQLite.Expression<Swift.Bool?>
+public func && (lhs: SQLite.Expression<Swift.Bool?>, rhs: SQLite.Expression<Swift.Bool>) -> SQLite.Expression<Swift.Bool?>
+public func && (lhs: SQLite.Expression<Swift.Bool?>, rhs: SQLite.Expression<Swift.Bool?>) -> SQLite.Expression<Swift.Bool?>
+public func && (lhs: SQLite.Expression<Swift.Bool>, rhs: Swift.Bool) -> SQLite.Expression<Swift.Bool>
+public func && (lhs: SQLite.Expression<Swift.Bool?>, rhs: Swift.Bool) -> SQLite.Expression<Swift.Bool?>
+public func && (lhs: Swift.Bool, rhs: SQLite.Expression<Swift.Bool>) -> SQLite.Expression<Swift.Bool>
+public func && (lhs: Swift.Bool, rhs: SQLite.Expression<Swift.Bool?>) -> SQLite.Expression<Swift.Bool?>
+public func or(_ terms: SQLite.Expression<Swift.Bool>...) -> SQLite.Expression<Swift.Bool>
+public func or(_ terms: [SQLite.Expression<Swift.Bool>]) -> SQLite.Expression<Swift.Bool>
+public func || (lhs: SQLite.Expression<Swift.Bool>, rhs: SQLite.Expression<Swift.Bool>) -> SQLite.Expression<Swift.Bool>
+public func || (lhs: SQLite.Expression<Swift.Bool>, rhs: SQLite.Expression<Swift.Bool?>) -> SQLite.Expression<Swift.Bool?>
+public func || (lhs: SQLite.Expression<Swift.Bool?>, rhs: SQLite.Expression<Swift.Bool>) -> SQLite.Expression<Swift.Bool?>
+public func || (lhs: SQLite.Expression<Swift.Bool?>, rhs: SQLite.Expression<Swift.Bool?>) -> SQLite.Expression<Swift.Bool?>
+public func || (lhs: SQLite.Expression<Swift.Bool>, rhs: Swift.Bool) -> SQLite.Expression<Swift.Bool>
+public func || (lhs: SQLite.Expression<Swift.Bool?>, rhs: Swift.Bool) -> SQLite.Expression<Swift.Bool?>
+public func || (lhs: Swift.Bool, rhs: SQLite.Expression<Swift.Bool>) -> SQLite.Expression<Swift.Bool>
+public func || (lhs: Swift.Bool, rhs: SQLite.Expression<Swift.Bool?>) -> SQLite.Expression<Swift.Bool?>
+prefix public func ! (rhs: SQLite.Expression<Swift.Bool>) -> SQLite.Expression<Swift.Bool>
+prefix public func ! (rhs: SQLite.Expression<Swift.Bool?>) -> SQLite.Expression<Swift.Bool?>
+extension SQLite.SchemaType {
+  public func drop(ifExists: Swift.Bool = false) -> Swift.String
+}
+extension SQLite.Table {
+  public func create(temporary: Swift.Bool = false, ifNotExists: Swift.Bool = false, withoutRowid: Swift.Bool = false, block: (SQLite.TableBuilder) -> Swift.Void) -> Swift.String
+  public func create(_ query: any SQLite.QueryType, temporary: Swift.Bool = false, ifNotExists: Swift.Bool = false) -> Swift.String
+  public func addColumn<V>(_ name: SQLite.Expression<V>, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V) -> Swift.String where V : SQLite.Value
+  public func addColumn<V>(_ name: SQLite.Expression<V>, check: SQLite.Expression<Swift.Bool?>, defaultValue: V) -> Swift.String where V : SQLite.Value
+  public func addColumn<V>(_ name: SQLite.Expression<V?>, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V? = nil) -> Swift.String where V : SQLite.Value
+  public func addColumn<V>(_ name: SQLite.Expression<V?>, check: SQLite.Expression<Swift.Bool?>, defaultValue: V? = nil) -> Swift.String where V : SQLite.Value
+  public func addColumn<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.Int64
+  public func addColumn<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.Int64
+  public func addColumn<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.Int64
+  public func addColumn<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.Int64
+  public func addColumn<V>(_ name: SQLite.Expression<V>, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V, collate: SQLite.Collation) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.String
+  public func addColumn<V>(_ name: SQLite.Expression<V>, check: SQLite.Expression<Swift.Bool?>, defaultValue: V, collate: SQLite.Collation) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.String
+  public func addColumn<V>(_ name: SQLite.Expression<V?>, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V? = nil, collate: SQLite.Collation) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.String
+  public func addColumn<V>(_ name: SQLite.Expression<V?>, check: SQLite.Expression<Swift.Bool?>, defaultValue: V? = nil, collate: SQLite.Collation) -> Swift.String where V : SQLite.Value, V.Datatype == Swift.String
+  public func rename(_ to: SQLite.Table) -> Swift.String
+  public func createIndex(_ columns: any SQLite.Expressible..., unique: Swift.Bool = false, ifNotExists: Swift.Bool = false) -> Swift.String
+  public func dropIndex(_ columns: any SQLite.Expressible..., ifExists: Swift.Bool = false) -> Swift.String
+}
+extension SQLite.View {
+  public func create(_ query: any SQLite.QueryType, temporary: Swift.Bool = false, ifNotExists: Swift.Bool = false) -> Swift.String
+  public func drop(ifExists: Swift.Bool = false) -> Swift.String
+}
+extension SQLite.VirtualTable {
+  public func create(_ using: SQLite.Module, ifNotExists: Swift.Bool = false) -> Swift.String
+  public func rename(_ to: SQLite.VirtualTable) -> Swift.String
+}
+@_hasMissingDesignatedInitializers final public class TableBuilder {
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: SQLite.Expression<V>? = nil) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: SQLite.Expression<V>? = nil) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: V) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: SQLite.Expression<V>? = nil) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: SQLite.Expression<V?>) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: SQLite.Expression<V>? = nil) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: SQLite.Expression<V?>) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: V) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V>, primaryKey: Swift.Bool, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: SQLite.Expression<V>? = nil) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V>, primaryKey: Swift.Bool, check: SQLite.Expression<Swift.Bool?>, defaultValue: SQLite.Expression<V>? = nil) where V : SQLite.Value
+  final public func column<V>(_ name: SQLite.Expression<V>, primaryKey: SQLite.PrimaryKey, check: SQLite.Expression<Swift.Bool>? = nil) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V>, primaryKey: SQLite.PrimaryKey, check: SQLite.Expression<Swift.Bool?>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V>, primaryKey: Swift.Bool, check: SQLite.Expression<Swift.Bool>? = nil, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V>, primaryKey: Swift.Bool, check: SQLite.Expression<Swift.Bool?>, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V?>, primaryKey: Swift.Bool, check: SQLite.Expression<Swift.Bool>? = nil, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V?>, primaryKey: Swift.Bool, check: SQLite.Expression<Swift.Bool?>, references table: any SQLite.QueryType, _ other: SQLite.Expression<V>) where V : SQLite.Value, V.Datatype == Swift.Int64
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: SQLite.Expression<V>? = nil, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: SQLite.Expression<V>? = nil, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: V, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: SQLite.Expression<V>? = nil, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: SQLite.Expression<V?>, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool>? = nil, defaultValue: V, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: SQLite.Expression<V>? = nil, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: SQLite.Expression<V?>, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func column<V>(_ name: SQLite.Expression<V?>, unique: Swift.Bool = false, check: SQLite.Expression<Swift.Bool?>, defaultValue: V, collate: SQLite.Collation) where V : SQLite.Value, V.Datatype == Swift.String
+  final public func primaryKey<T>(_ column: SQLite.Expression<T>) where T : SQLite.Value
+  final public func primaryKey<T, U>(_ compositeA: SQLite.Expression<T>, _ expr: SQLite.Expression<U>) where T : SQLite.Value, U : SQLite.Value
+  final public func primaryKey<T, U, V>(_ compositeA: SQLite.Expression<T>, _ expr1: SQLite.Expression<U>, _ expr2: SQLite.Expression<V>) where T : SQLite.Value, U : SQLite.Value, V : SQLite.Value
+  final public func primaryKey<T, U, V, W>(_ compositeA: SQLite.Expression<T>, _ expr1: SQLite.Expression<U>, _ expr2: SQLite.Expression<V>, _ expr3: SQLite.Expression<W>) where T : SQLite.Value, U : SQLite.Value, V : SQLite.Value, W : SQLite.Value
+  final public func unique(_ columns: any SQLite.Expressible...)
+  final public func unique(_ columns: [any SQLite.Expressible])
+  final public func check(_ condition: SQLite.Expression<Swift.Bool>)
+  final public func check(_ condition: SQLite.Expression<Swift.Bool?>)
+  public enum Dependency : Swift.String {
+    case noAction
+    case restrict
+    case setNull
+    case setDefault
+    case cascade
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  final public func foreignKey<T>(_ column: SQLite.Expression<T>, references table: any SQLite.QueryType, _ other: SQLite.Expression<T>, update: SQLite.TableBuilder.Dependency? = nil, delete: SQLite.TableBuilder.Dependency? = nil) where T : SQLite.Value
+  final public func foreignKey<T>(_ column: SQLite.Expression<T?>, references table: any SQLite.QueryType, _ other: SQLite.Expression<T>, update: SQLite.TableBuilder.Dependency? = nil, delete: SQLite.TableBuilder.Dependency? = nil) where T : SQLite.Value
+  final public func foreignKey<T, U>(_ composite: (SQLite.Expression<T>, SQLite.Expression<U>), references table: any SQLite.QueryType, _ other: (SQLite.Expression<T>, SQLite.Expression<U>), update: SQLite.TableBuilder.Dependency? = nil, delete: SQLite.TableBuilder.Dependency? = nil) where T : SQLite.Value, U : SQLite.Value
+  final public func foreignKey<T, U, V>(_ composite: (SQLite.Expression<T>, SQLite.Expression<U>, SQLite.Expression<V>), references table: any SQLite.QueryType, _ other: (SQLite.Expression<T>, SQLite.Expression<U>, SQLite.Expression<V>), update: SQLite.TableBuilder.Dependency? = nil, delete: SQLite.TableBuilder.Dependency? = nil) where T : SQLite.Value, U : SQLite.Value, V : SQLite.Value
+  @objc deinit
+}
+public enum PrimaryKey {
+  case `default`
+  case autoincrement
+  public static func == (a: SQLite.PrimaryKey, b: SQLite.PrimaryKey) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Module {
+  public init(_ name: Swift.String, _ arguments: [any SQLite.Expressible])
+}
+extension SQLite.Module : SQLite.Expressible {
+  public var expression: SQLite.Expression<Swift.Void> {
+    get
+  }
+}
+public protocol QueryType : SQLite.Expressible {
+  var clauses: SQLite.QueryClauses { get set }
+  init(_ name: Swift.String, database: Swift.String?)
+}
+public protocol SchemaType : SQLite.QueryType {
+  static var identifier: Swift.String { get }
+}
+extension SQLite.SchemaType {
+  public func select(_ column1: any SQLite.Expressible, _ more: any SQLite.Expressible...) -> Self
+  public func select(distinct column1: any SQLite.Expressible, _ more: any SQLite.Expressible...) -> Self
+  public func select(_ all: [any SQLite.Expressible]) -> Self
+  public func select(distinct columns: [any SQLite.Expressible]) -> Self
+  public func select(_ star: (SQLite.Expression<any SQLite.Binding>?, SQLite.Expression<any SQLite.Binding>?) -> SQLite.Expression<Swift.Void>) -> Self
+  public func select(distinct star: (SQLite.Expression<any SQLite.Binding>?, SQLite.Expression<any SQLite.Binding>?) -> SQLite.Expression<Swift.Void>) -> Self
+  public func select<V>(_ column: SQLite.Expression<V>) -> SQLite.ScalarQuery<V> where V : SQLite.Value
+  public func select<V>(_ column: SQLite.Expression<V?>) -> SQLite.ScalarQuery<V?> where V : SQLite.Value
+  public func select<V>(distinct column: SQLite.Expression<V>) -> SQLite.ScalarQuery<V> where V : SQLite.Value
+  public func select<V>(distinct column: SQLite.Expression<V?>) -> SQLite.ScalarQuery<V?> where V : SQLite.Value
+  public var count: SQLite.ScalarQuery<Swift.Int> {
+    get
+  }
+}
+extension SQLite.QueryType {
+  public func union(all: Swift.Bool = false, _ table: any SQLite.QueryType) -> Self
+  public func join(_ table: any SQLite.QueryType, on condition: SQLite.Expression<Swift.Bool>) -> Self
+  public func join(_ table: any SQLite.QueryType, on condition: SQLite.Expression<Swift.Bool?>) -> Self
+  public func join(_ type: SQLite.JoinType, _ table: any SQLite.QueryType, on condition: SQLite.Expression<Swift.Bool>) -> Self
+  public func join(_ type: SQLite.JoinType, _ table: any SQLite.QueryType, on condition: SQLite.Expression<Swift.Bool?>) -> Self
+  public func filter(_ predicate: SQLite.Expression<Swift.Bool>) -> Self
+  public func filter(_ predicate: SQLite.Expression<Swift.Bool?>) -> Self
+  public func `where`(_ predicate: SQLite.Expression<Swift.Bool>) -> Self
+  public func `where`(_ predicate: SQLite.Expression<Swift.Bool?>) -> Self
+  public func group(_ by: any SQLite.Expressible...) -> Self
+  public func group(_ by: [any SQLite.Expressible]) -> Self
+  public func group(_ by: any SQLite.Expressible, having: SQLite.Expression<Swift.Bool>) -> Self
+  public func group(_ by: any SQLite.Expressible, having: SQLite.Expression<Swift.Bool?>) -> Self
+  public func group(_ by: [any SQLite.Expressible], having: SQLite.Expression<Swift.Bool>) -> Self
+  public func group(_ by: [any SQLite.Expressible], having: SQLite.Expression<Swift.Bool?>) -> Self
+  public func order(_ by: any SQLite.Expressible...) -> Self
+  public func order(_ by: [any SQLite.Expressible]) -> Self
+  public func limit(_ length: Swift.Int?) -> Self
+  public func limit(_ length: Swift.Int, offset: Swift.Int) -> Self
+  public func alias(_ aliasName: Swift.String) -> Self
+  public func insert(_ value: SQLite.Setter, _ more: SQLite.Setter...) -> SQLite.Insert
+  public func insert(_ values: [SQLite.Setter]) -> SQLite.Insert
+  public func insert(or onConflict: SQLite.OnConflict, _ values: SQLite.Setter...) -> SQLite.Insert
+  public func insert(or onConflict: SQLite.OnConflict, _ values: [SQLite.Setter]) -> SQLite.Insert
+  public func insertMany(_ values: [[SQLite.Setter]]) -> SQLite.Insert
+  public func insertMany(or onConflict: SQLite.OnConflict, _ values: [[SQLite.Setter]]) -> SQLite.Insert
+  public func insertMany(or onConflict: SQLite.OnConflict, _ values: [SQLite.Setter]...) -> SQLite.Insert
+  public func insert() -> SQLite.Insert
+  public func insert(_ query: any SQLite.QueryType) -> SQLite.Update
+  public func upsert(_ insertValues: SQLite.Setter..., onConflictOf conflicting: any SQLite.Expressible) -> SQLite.Insert
+  public func upsert(_ insertValues: [SQLite.Setter], onConflictOf conflicting: any SQLite.Expressible) -> SQLite.Insert
+  public func upsert(_ insertValues: SQLite.Setter..., onConflictOf conflicting: any SQLite.Expressible, set setValues: [SQLite.Setter]) -> SQLite.Insert
+  public func upsert(_ insertValues: [SQLite.Setter], onConflictOf conflicting: any SQLite.Expressible, set setValues: [SQLite.Setter]) -> SQLite.Insert
+  public func update(_ values: SQLite.Setter...) -> SQLite.Update
+  public func update(_ values: [SQLite.Setter]) -> SQLite.Update
+  public func delete() -> SQLite.Delete
+  public var exists: SQLite.Select<Swift.Bool> {
+    get
+  }
+  public func namespace<V>(_ column: SQLite.Expression<V>) -> SQLite.Expression<V>
+  public subscript<T>(column: SQLite.Expression<T>) -> SQLite.Expression<T> {
+    get
+  }
+  public subscript<T>(column: SQLite.Expression<T?>) -> SQLite.Expression<T?> {
+    get
+  }
+  public subscript(star: (SQLite.Expression<any SQLite.Binding>?, SQLite.Expression<any SQLite.Binding>?) -> SQLite.Expression<Swift.Void>) -> SQLite.Expression<Swift.Void> {
+    get
+  }
+  public var expression: SQLite.Expression<Swift.Void> {
+    get
+  }
+}
+public struct Table : SQLite.SchemaType {
+  public static let identifier: Swift.String
+  public var clauses: SQLite.QueryClauses
+  public init(_ name: Swift.String, database: Swift.String? = nil)
+}
+public struct View : SQLite.SchemaType {
+  public static let identifier: Swift.String
+  public var clauses: SQLite.QueryClauses
+  public init(_ name: Swift.String, database: Swift.String? = nil)
+}
+public struct VirtualTable : SQLite.SchemaType {
+  public static let identifier: Swift.String
+  public var clauses: SQLite.QueryClauses
+  public init(_ name: Swift.String, database: Swift.String? = nil)
+}
+public struct ScalarQuery<V> : SQLite.QueryType {
+  public var clauses: SQLite.QueryClauses
+  public init(_ name: Swift.String, database: Swift.String? = nil)
+}
+public struct Select<T> : SQLite.ExpressionType {
+  public var template: Swift.String
+  public var bindings: [(any SQLite.Binding)?]
+  public init(_ template: Swift.String, _ bindings: [(any SQLite.Binding)?])
+  public typealias UnderlyingType = Swift.Void
+}
+public struct Insert : SQLite.ExpressionType {
+  public var template: Swift.String
+  public var bindings: [(any SQLite.Binding)?]
+  public init(_ template: Swift.String, _ bindings: [(any SQLite.Binding)?])
+  public typealias UnderlyingType = Swift.Void
+}
+public struct Update : SQLite.ExpressionType {
+  public var template: Swift.String
+  public var bindings: [(any SQLite.Binding)?]
+  public init(_ template: Swift.String, _ bindings: [(any SQLite.Binding)?])
+  public typealias UnderlyingType = Swift.Void
+}
+public struct Delete : SQLite.ExpressionType {
+  public var template: Swift.String
+  public var bindings: [(any SQLite.Binding)?]
+  public init(_ template: Swift.String, _ bindings: [(any SQLite.Binding)?])
+  public typealias UnderlyingType = Swift.Void
+}
+public struct RowIterator : SQLite.FailableIterator {
+  public typealias Element = SQLite.Row
+  public func failableNext() throws -> SQLite.Row?
+  public func map<T>(_ transform: (SQLite.RowIterator.Element) throws -> T) throws -> [T]
+  public func compactMap<T>(_ transform: (SQLite.RowIterator.Element) throws -> T?) throws -> [T]
+}
+extension SQLite.Connection {
+  final public func prepare(_ query: any SQLite.QueryType) throws -> Swift.AnySequence<SQLite.Row>
+  final public func prepareRowIterator(_ query: any SQLite.QueryType) throws -> SQLite.RowIterator
+  final public func prepareRowIterator(_ statement: Swift.String, bindings: (any SQLite.Binding)?...) throws -> SQLite.RowIterator
+  final public func prepareRowIterator(_ statement: Swift.String, bindings: [(any SQLite.Binding)?]) throws -> SQLite.RowIterator
+  final public func scalar<V>(_ query: SQLite.ScalarQuery<V>) throws -> V where V : SQLite.Value
+  final public func scalar<V>(_ query: SQLite.ScalarQuery<V?>) throws -> V.ValueType? where V : SQLite.Value
+  final public func scalar<V>(_ query: SQLite.Select<V>) throws -> V where V : SQLite.Value
+  final public func scalar<V>(_ query: SQLite.Select<V?>) throws -> V.ValueType? where V : SQLite.Value
+  final public func pluck(_ query: any SQLite.QueryType) throws -> SQLite.Row?
+  @discardableResult
+  final public func run(_ query: SQLite.Insert) throws -> Swift.Int64
+  @discardableResult
+  final public func run(_ query: SQLite.Update) throws -> Swift.Int
+  @discardableResult
+  final public func run(_ query: SQLite.Delete) throws -> Swift.Int
+}
+public struct Row {
+  public func get<V>(_ column: SQLite.Expression<V>) throws -> V where V : SQLite.Value
+  public func get<V>(_ column: SQLite.Expression<V?>) throws -> V? where V : SQLite.Value
+  public subscript<T>(column: SQLite.Expression<T>) -> T where T : SQLite.Value {
+    get
+  }
+  public subscript<T>(column: SQLite.Expression<T?>) -> T? where T : SQLite.Value {
+    get
+  }
+}
+public enum JoinType : Swift.String {
+  case cross
+  case inner
+  case leftOuter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum OnConflict : Swift.String {
+  case replace
+  case rollback
+  case abort
+  case fail
+  case ignore
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct QueryClauses {
+}
+@_hasMissingDesignatedInitializers final public class Statement {
+  @objc deinit
+  final public var columnCount: Swift.Int {
+    get
+    set
+  }
+  final public var columnNames: [Swift.String] {
+    get
+    set
+  }
+  final public var row: SQLite.Cursor {
+    get
+    set
+  }
+  final public func bind(_ values: (any SQLite.Binding)?...) -> SQLite.Statement
+  final public func bind(_ values: [(any SQLite.Binding)?]) -> SQLite.Statement
+  final public func bind(_ values: [Swift.String : (any SQLite.Binding)?]) -> SQLite.Statement
+  @discardableResult
+  final public func run(_ bindings: (any SQLite.Binding)?...) throws -> SQLite.Statement
+  @discardableResult
+  final public func run(_ bindings: [(any SQLite.Binding)?]) throws -> SQLite.Statement
+  @discardableResult
+  final public func run(_ bindings: [Swift.String : (any SQLite.Binding)?]) throws -> SQLite.Statement
+  final public func scalar(_ bindings: (any SQLite.Binding)?...) throws -> (any SQLite.Binding)?
+  final public func scalar(_ bindings: [(any SQLite.Binding)?]) throws -> (any SQLite.Binding)?
+  final public func scalar(_ bindings: [Swift.String : (any SQLite.Binding)?]) throws -> (any SQLite.Binding)?
+  final public func step() throws -> Swift.Bool
+  final public func reset()
+}
+extension SQLite.Statement : Swift.Sequence {
+  final public func makeIterator() -> SQLite.Statement
+  public typealias Iterator = SQLite.Statement
+}
+public protocol FailableIterator : Swift.IteratorProtocol {
+  func failableNext() throws -> Self.Element?
+}
+extension SQLite.FailableIterator {
+  public func next() -> Self.Element?
+}
+extension Swift.Array {
+  public init<I>(_ failableIterator: I) throws where Element == I.Element, I : SQLite.FailableIterator
+}
+extension SQLite.Statement : SQLite.FailableIterator {
+  public typealias Element = [(any SQLite.Binding)?]
+  final public func failableNext() throws -> [(any SQLite.Binding)?]?
+}
+extension SQLite.Statement : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+public struct Cursor {
+  public subscript(idx: Swift.Int) -> Swift.Double {
+    get
+  }
+  public subscript(idx: Swift.Int) -> Swift.Int64 {
+    get
+  }
+  public subscript(idx: Swift.Int) -> Swift.String {
+    get
+  }
+  public subscript(idx: Swift.Int) -> SQLite.Blob {
+    get
+  }
+  public subscript(idx: Swift.Int) -> Swift.Bool {
+    get
+  }
+  public subscript(idx: Swift.Int) -> Swift.Int {
+    get
+  }
+}
+extension SQLite.Cursor : Swift.Sequence {
+  public subscript(idx: Swift.Int) -> (any SQLite.Binding)? {
+    get
+  }
+  public func makeIterator() -> Swift.AnyIterator<(any SQLite.Binding)?>
+  public typealias Element = (any SQLite.Binding)?
+  public typealias Iterator = Swift.AnyIterator<(any SQLite.Binding)?>
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite.Value {
+  public var distinct: SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+  public var count: SQLite.Expression<Swift.Int> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite._OptionalType, Self.UnderlyingType.WrappedType : SQLite.Value {
+  public var distinct: SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+  public var count: SQLite.Expression<Swift.Int> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite.Value, Self.UnderlyingType.Datatype : Swift.Comparable {
+  public var max: SQLite.Expression<Self.UnderlyingType?> {
+    get
+  }
+  public var min: SQLite.Expression<Self.UnderlyingType?> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite._OptionalType, Self.UnderlyingType.WrappedType : SQLite.Value, Self.UnderlyingType.WrappedType.Datatype : Swift.Comparable {
+  public var max: SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+  public var min: SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite.Value, Self.UnderlyingType.Datatype : SQLite.Number {
+  public var average: SQLite.Expression<Swift.Double?> {
+    get
+  }
+  public var sum: SQLite.Expression<Self.UnderlyingType?> {
+    get
+  }
+  public var total: SQLite.Expression<Swift.Double> {
+    get
+  }
+}
+extension SQLite.ExpressionType where Self.UnderlyingType : SQLite._OptionalType, Self.UnderlyingType.WrappedType : SQLite.Value, Self.UnderlyingType.WrappedType.Datatype : SQLite.Number {
+  public var average: SQLite.Expression<Swift.Double?> {
+    get
+  }
+  public var sum: SQLite.Expression<Self.UnderlyingType> {
+    get
+  }
+  public var total: SQLite.Expression<Swift.Double> {
+    get
+  }
+}
+public func count(_ star: (SQLite.Expression<any SQLite.Binding>?, SQLite.Expression<any SQLite.Binding>?) -> SQLite.Expression<Swift.Void>) -> SQLite.Expression<Swift.Int>
+extension SQLite.Module {
+  public static func FTS5(_ config: SQLite.FTS5Config) -> SQLite.Module
+}
+@_inheritsConvenienceInitializers open class FTS5Config : SQLite.FTSConfig {
+  public enum Detail : Swift.String {
+    case full
+    case column
+    case none
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init()
+  @discardableResult
+  open func contentRowId(_ column: any SQLite.Expressible) -> Self
+  @discardableResult
+  open func columnSize(_ size: Swift.Int) -> Self
+  @discardableResult
+  open func detail(_ detail: SQLite.FTS5Config.Detail) -> Self
+  @objc deinit
+}
+final public class Backup {
+  public enum DatabaseName {
+    case main
+    case temp
+    case attached(name: Swift.String)
+  }
+  public enum Pages {
+    case all
+    case limited(number: Swift.Int32)
+  }
+  final public var pageCount: Swift.Int32 {
+    get
+  }
+  final public var remainingPages: Swift.Int32 {
+    get
+  }
+  public init(sourceConnection: SQLite.Connection, sourceName: SQLite.Backup.DatabaseName = .main, targetConnection: SQLite.Connection, targetName: SQLite.Backup.DatabaseName = .main) throws
+  final public func step(pagesToCopy pages: SQLite.Backup.Pages = .all) throws
+  final public func finish()
+  @objc deinit
+}
+public enum QueryError : Swift.Error, Swift.CustomStringConvertible {
+  case noSuchTable(name: Swift.String)
+  case noSuchColumn(name: Swift.String, columns: [Swift.String])
+  case ambiguousColumn(name: Swift.String, similar: [Swift.String])
+  case unexpectedNullValue(name: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class DateFunctions {
+  public static func date(_ timestring: Swift.String, _ modifiers: Swift.String...) -> SQLite.Expression<Foundation.Date?>
+  public static func time(_ timestring: Swift.String, _ modifiers: Swift.String...) -> SQLite.Expression<Foundation.Date?>
+  public static func datetime(_ timestring: Swift.String, _ modifiers: Swift.String...) -> SQLite.Expression<Foundation.Date?>
+  public static func julianday(_ timestring: Swift.String, _ modifiers: Swift.String...) -> SQLite.Expression<Foundation.Date?>
+  public static func strftime(_ format: Swift.String, _ timestring: Swift.String, _ modifiers: Swift.String...) -> SQLite.Expression<Foundation.Date?>
+  @objc deinit
+}
+extension Foundation.Date {
+  public var date: SQLite.Expression<Foundation.Date?> {
+    get
+  }
+  public var time: SQLite.Expression<Foundation.Date?> {
+    get
+  }
+  public var datetime: SQLite.Expression<Foundation.Date?> {
+    get
+  }
+  public var julianday: SQLite.Expression<Foundation.Date?> {
+    get
+  }
+}
+extension SQLite.Expression where Datatype == Foundation.Date {
+  public var date: SQLite.Expression<Foundation.Date> {
+    get
+  }
+  public var time: SQLite.Expression<Foundation.Date> {
+    get
+  }
+  public var datetime: SQLite.Expression<Foundation.Date> {
+    get
+  }
+  public var julianday: SQLite.Expression<Foundation.Date> {
+    get
+  }
+}
+public struct SQLiteVersion : Swift.Comparable, Swift.CustomStringConvertible {
+  public let major: Swift.Int
+  public let minor: Swift.Int
+  public var point: Swift.Int
+  public var description: Swift.String {
+    get
+  }
+  public static func < (lhs: SQLite.SQLiteVersion, rhs: SQLite.SQLiteVersion) -> Swift.Bool
+  public static func == (lhs: SQLite.SQLiteVersion, rhs: SQLite.SQLiteVersion) -> Swift.Bool
+}
+public enum Result : Swift.Error {
+  case error(message: Swift.String, code: Swift.Int32, statement: SQLite.Statement?)
+  case extendedError(message: Swift.String, extendedCode: Swift.Int32, statement: SQLite.Statement?)
+}
+extension SQLite.Result : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension SQLite.QueryType {
+  public func with(_ alias: SQLite.Table, columns: [any SQLite.Expressible]? = nil, recursive: Swift.Bool = false, hint: SQLite.MaterializationHint? = nil, as subquery: any SQLite.QueryType) -> Self
+}
+public enum MaterializationHint : Swift.String {
+  case materialized
+  case notMaterialized
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension SQLite.Connection {
+  final public func createAggregation<T>(_ functionName: Swift.String, argumentCount: Swift.UInt? = nil, deterministic: Swift.Bool = false, step: @escaping ([(any SQLite.Binding)?], Swift.UnsafeMutablePointer<T>) -> Swift.Void, final: @escaping (Swift.UnsafeMutablePointer<T>) -> (any SQLite.Binding)?, state: @escaping () -> Swift.UnsafeMutablePointer<T>)
+  final public func createAggregation<T>(_ aggregate: Swift.String, argumentCount: Swift.UInt? = nil, deterministic: Swift.Bool = false, initialValue: T, reduce: @escaping (T, [(any SQLite.Binding)?]) -> T, result: @escaping (T) -> (any SQLite.Binding)?) where T : AnyObject
+  final public func createAggregation<T>(_ aggregate: Swift.String, argumentCount: Swift.UInt? = nil, deterministic: Swift.Bool = false, initialValue: T, reduce: @escaping (T, [(any SQLite.Binding)?]) -> T, result: @escaping (T) -> (any SQLite.Binding)?)
+}
+@_hasMissingDesignatedInitializers public class SchemaChanger : Swift.CustomStringConvertible {
+  public enum Error : Foundation.LocalizedError {
+    case invalidColumnDefinition(Swift.String)
+    case foreignKeyError([SQLite.ForeignKeyError])
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum Operation {
+    case addColumn(SQLite.ColumnDefinition)
+    case dropColumn(Swift.String)
+    case renameColumn(Swift.String, Swift.String)
+    case renameTable(Swift.String)
+  }
+  @_hasMissingDesignatedInitializers public class AlterTableDefinition {
+    public func add(column: SQLite.ColumnDefinition)
+    public func drop(column: Swift.String)
+    public func rename(column: Swift.String, to: Swift.String)
+    @objc deinit
+  }
+  public typealias AlterTableDefinitionBlock = (SQLite.SchemaChanger.AlterTableDefinition) -> Swift.Void
+  convenience public init(connection: SQLite.Connection)
+  public func alter(table: Swift.String, block: (SQLite.SchemaChanger.AlterTableDefinition) -> Swift.Void) throws
+  public func drop(table: Swift.String, ifExists: Swift.Bool = true) throws
+  public func rename(table: Swift.String, to: Swift.String) throws
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public struct ObjectDefinition : Swift.Equatable {
+  public enum ObjectType : Swift.String {
+    case table, index, view, trigger
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let type: SQLite.ObjectDefinition.ObjectType
+  public let name: Swift.String
+  public let tableName: Swift.String
+  public let rootpage: Swift.Int64
+  public let sql: Swift.String?
+  public var isInternal: Swift.Bool {
+    get
+  }
+  public static func == (a: SQLite.ObjectDefinition, b: SQLite.ObjectDefinition) -> Swift.Bool
+}
+public struct ColumnDefinition : Swift.Equatable {
+  public enum Affinity : Swift.String, Swift.CustomStringConvertible, Swift.CaseIterable {
+    case INTEGER
+    case NUMERIC
+    case REAL
+    case TEXT
+    case BLOB
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [SQLite.ColumnDefinition.Affinity]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [SQLite.ColumnDefinition.Affinity] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum OnConflict : Swift.String, Swift.CaseIterable {
+    case ROLLBACK
+    case ABORT
+    case FAIL
+    case IGNORE
+    case REPLACE
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [SQLite.ColumnDefinition.OnConflict]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [SQLite.ColumnDefinition.OnConflict] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct PrimaryKey : Swift.Equatable {
+    public static func == (a: SQLite.ColumnDefinition.PrimaryKey, b: SQLite.ColumnDefinition.PrimaryKey) -> Swift.Bool
+  }
+  public struct ForeignKey : Swift.Equatable {
+    public static func == (a: SQLite.ColumnDefinition.ForeignKey, b: SQLite.ColumnDefinition.ForeignKey) -> Swift.Bool
+  }
+  public let name: Swift.String
+  public let primaryKey: SQLite.ColumnDefinition.PrimaryKey?
+  public let type: SQLite.ColumnDefinition.Affinity
+  public let nullable: Swift.Bool
+  public let defaultValue: SQLite.LiteralValue
+  public let references: SQLite.ColumnDefinition.ForeignKey?
+  public init(name: Swift.String, primaryKey: SQLite.ColumnDefinition.PrimaryKey? = nil, type: SQLite.ColumnDefinition.Affinity, nullable: Swift.Bool = true, defaultValue: SQLite.LiteralValue = .NULL, references: SQLite.ColumnDefinition.ForeignKey? = nil)
+  public static func == (a: SQLite.ColumnDefinition, b: SQLite.ColumnDefinition) -> Swift.Bool
+}
+public enum LiteralValue : Swift.Equatable, Swift.CustomStringConvertible {
+  case numericLiteral(Swift.String)
+  case stringLiteral(Swift.String)
+  case blobLiteral(Swift.String)
+  case NULL
+  case TRUE
+  case FALSE
+  case CURRENT_TIME
+  case CURRENT_DATE
+  case CURRENT_TIMESTAMP
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: SQLite.LiteralValue, b: SQLite.LiteralValue) -> Swift.Bool
+}
+public struct IndexDefinition : Swift.Equatable {
+  public enum Order : Swift.String {
+    case ASC, DESC
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(table: Swift.String, name: Swift.String, unique: Swift.Bool = false, columns: [Swift.String], where: Swift.String? = nil, orders: [Swift.String : SQLite.IndexDefinition.Order]? = nil)
+  public let table: Swift.String
+  public let name: Swift.String
+  public let unique: Swift.Bool
+  public let columns: [Swift.String]
+  public let `where`: Swift.String?
+  public let orders: [Swift.String : SQLite.IndexDefinition.Order]?
+  public static func == (a: SQLite.IndexDefinition, b: SQLite.IndexDefinition) -> Swift.Bool
+}
+public struct ForeignKeyError : Swift.CustomStringConvertible {
+  public let from: Swift.String
+  public let rowId: Swift.Int64
+  public let to: Swift.String
+  public var description: Swift.String {
+    get
+  }
+}
+extension SQLite.IndexDefinition {
+  public func toSQL(ifNotExists: Swift.Bool = false) -> Swift.String
+}
+extension SQLite.Connection {
+  final public var schema: SQLite.SchemaReader {
+    get
+  }
+  final public func foreignKeyCheck(table: Swift.String? = nil) throws -> [SQLite.ForeignKeyError]
+  final public func integrityCheck(table: Swift.String? = nil) throws -> [Swift.String]
+}
+public typealias UserVersion = Swift.Int32
+extension SQLite.Connection {
+  final public var userVersion: SQLite.UserVersion? {
+    get
+    set
+  }
+  final public var sqliteVersion: SQLite.SQLiteVersion {
+    get
+  }
+  final public var foreignKeys: Swift.Bool {
+    get
+    set
+  }
+  final public var deferForeignKeys: Swift.Bool {
+    get
+    set
+  }
+}
+@_hasMissingDesignatedInitializers public class SchemaReader {
+  public func columnDefinitions(table: Swift.String) throws -> [SQLite.ColumnDefinition]
+  public func objectDefinitions(name: Swift.String? = nil, type: SQLite.ObjectDefinition.ObjectType? = nil, temp: Swift.Bool = false) throws -> [SQLite.ObjectDefinition]
+  public func indexDefinitions(table: Swift.String) throws -> [SQLite.IndexDefinition]
+  @objc deinit
+}
+extension SQLite.URIQueryParameter.FileMode : Swift.Equatable {}
+extension SQLite.URIQueryParameter.FileMode : Swift.Hashable {}
+extension SQLite.URIQueryParameter.FileMode : Swift.RawRepresentable {}
+extension SQLite.URIQueryParameter.CacheMode : Swift.Equatable {}
+extension SQLite.URIQueryParameter.CacheMode : Swift.Hashable {}
+extension SQLite.URIQueryParameter.CacheMode : Swift.RawRepresentable {}
+extension SQLite.Connection.Operation : Swift.Equatable {}
+extension SQLite.Connection.Operation : Swift.Hashable {}
+extension SQLite.Connection.TransactionMode : Swift.Equatable {}
+extension SQLite.Connection.TransactionMode : Swift.Hashable {}
+extension SQLite.Connection.TransactionMode : Swift.RawRepresentable {}
+extension SQLite.FTSConfig.ColumnOption : Swift.Equatable {}
+extension SQLite.FTSConfig.ColumnOption : Swift.Hashable {}
+extension SQLite.FTS4Config.MatchInfo : Swift.Equatable {}
+extension SQLite.FTS4Config.MatchInfo : Swift.Hashable {}
+extension SQLite.FTS4Config.MatchInfo : Swift.RawRepresentable {}
+extension SQLite.FTS4Config.Order : Swift.Equatable {}
+extension SQLite.FTS4Config.Order : Swift.Hashable {}
+extension SQLite.FTS4Config.Order : Swift.RawRepresentable {}
+extension SQLite.TableBuilder.Dependency : Swift.Equatable {}
+extension SQLite.TableBuilder.Dependency : Swift.Hashable {}
+extension SQLite.TableBuilder.Dependency : Swift.RawRepresentable {}
+extension SQLite.PrimaryKey : Swift.Equatable {}
+extension SQLite.PrimaryKey : Swift.Hashable {}
+extension SQLite.JoinType : Swift.Equatable {}
+extension SQLite.JoinType : Swift.Hashable {}
+extension SQLite.JoinType : Swift.RawRepresentable {}
+extension SQLite.OnConflict : Swift.Equatable {}
+extension SQLite.OnConflict : Swift.Hashable {}
+extension SQLite.OnConflict : Swift.RawRepresentable {}
+extension SQLite.FTS5Config.Detail : Swift.Equatable {}
+extension SQLite.FTS5Config.Detail : Swift.Hashable {}
+extension SQLite.FTS5Config.Detail : Swift.RawRepresentable {}
+extension SQLite.MaterializationHint : Swift.Equatable {}
+extension SQLite.MaterializationHint : Swift.Hashable {}
+extension SQLite.MaterializationHint : Swift.RawRepresentable {}
+extension SQLite.ObjectDefinition.ObjectType : Swift.Equatable {}
+extension SQLite.ObjectDefinition.ObjectType : Swift.Hashable {}
+extension SQLite.ObjectDefinition.ObjectType : Swift.RawRepresentable {}
+extension SQLite.ColumnDefinition.Affinity : Swift.Equatable {}
+extension SQLite.ColumnDefinition.Affinity : Swift.Hashable {}
+extension SQLite.ColumnDefinition.Affinity : Swift.RawRepresentable {}
+extension SQLite.ColumnDefinition.OnConflict : Swift.Equatable {}
+extension SQLite.ColumnDefinition.OnConflict : Swift.Hashable {}
+extension SQLite.ColumnDefinition.OnConflict : Swift.RawRepresentable {}
+extension SQLite.IndexDefinition.Order : Swift.Equatable {}
+extension SQLite.IndexDefinition.Order : Swift.Hashable {}
+extension SQLite.IndexDefinition.Order : Swift.RawRepresentable {}

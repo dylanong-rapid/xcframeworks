@@ -1,0 +1,77 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SimpleKeychain
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Foundation
+import LocalAuthentication
+import Security
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct SimpleKeychainError : Foundation.LocalizedError, Swift.CustomDebugStringConvertible {
+  public var status: Darwin.OSStatus {
+    get
+  }
+  public var localizedDescription: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+  public static let operationNotImplemented: SimpleKeychain.SimpleKeychainError
+  public static let invalidParameters: SimpleKeychain.SimpleKeychainError
+  public static let userCanceled: SimpleKeychain.SimpleKeychainError
+  public static let itemNotAvailable: SimpleKeychain.SimpleKeychainError
+  public static let authFailed: SimpleKeychain.SimpleKeychainError
+  public static let duplicateItem: SimpleKeychain.SimpleKeychainError
+  public static let itemNotFound: SimpleKeychain.SimpleKeychainError
+  public static let interactionNotAllowed: SimpleKeychain.SimpleKeychainError
+  public static let decodeFailed: SimpleKeychain.SimpleKeychainError
+  public static let missingEntitlement: SimpleKeychain.SimpleKeychainError
+  public static let other: SimpleKeychain.SimpleKeychainError
+  public static let unknown: SimpleKeychain.SimpleKeychainError
+}
+extension SimpleKeychain.SimpleKeychainError : Swift.Equatable {
+  public static func == (lhs: SimpleKeychain.SimpleKeychainError, rhs: SimpleKeychain.SimpleKeychainError) -> Swift.Bool
+}
+extension SimpleKeychain.SimpleKeychainError {
+  public static func ~= (lhs: SimpleKeychain.SimpleKeychainError, rhs: SimpleKeychain.SimpleKeychainError) -> Swift.Bool
+  public static func ~= (lhs: SimpleKeychain.SimpleKeychainError, rhs: any Swift.Error) -> Swift.Bool
+}
+public enum Accessibility : Swift.RawRepresentable, @unchecked Swift.Sendable {
+  case whenUnlocked
+  case whenUnlockedThisDeviceOnly
+  case afterFirstUnlock
+  case afterFirstUnlockThisDeviceOnly
+  case whenPasscodeSetThisDeviceOnly
+  public init(rawValue: CoreFoundation.CFString)
+  public var rawValue: CoreFoundation.CFString {
+    get
+  }
+  public typealias RawValue = CoreFoundation.CFString
+}
+public struct SimpleKeychain : @unchecked Swift.Sendable {
+  public init(service: Swift.String = Bundle.main.bundleIdentifier!, accessGroup: Swift.String? = nil, accessibility: SimpleKeychain.Accessibility = .afterFirstUnlock, accessControlFlags: Security.SecAccessControlCreateFlags? = nil, context: LocalAuthentication.LAContext? = nil, synchronizable: Swift.Bool = false, attributes: [Swift.String : Any] = [:])
+}
+extension SimpleKeychain.SimpleKeychain {
+  public func string(forKey key: Swift.String) throws -> Swift.String
+  public func data(forKey key: Swift.String) throws -> Foundation.Data
+}
+extension SimpleKeychain.SimpleKeychain {
+  public func set(_ string: Swift.String, forKey key: Swift.String) throws
+  public func set(_ data: Foundation.Data, forKey key: Swift.String) throws
+}
+extension SimpleKeychain.SimpleKeychain {
+  public func deleteItem(forKey key: Swift.String) throws
+  public func deleteAll() throws
+}
+extension SimpleKeychain.SimpleKeychain {
+  public func hasItem(forKey key: Swift.String) throws -> Swift.Bool
+  public func keys() throws -> [Swift.String]
+}
+extension SimpleKeychain.Accessibility : Swift.Equatable {}
+extension SimpleKeychain.Accessibility : Swift.Hashable {}

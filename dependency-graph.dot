@@ -1,0 +1,182 @@
+digraph deps {
+  rankdir=LR;
+  node [shape=box fontname="Helvetica" fontsize=10];
+  edge [arrowsize=0.6];
+  compound=true;
+
+  subgraph "cluster_shared-infra" {
+    label="shared-infra"; style=filled; fillcolor="#AED6F180"; color="#AED6F1";
+    "swift-log";
+    "swift-metrics";
+    "swift-service-context";
+    "swift-atomics";
+    "swift-numerics";
+    "swift-http-types";
+    "swift-http-structured-headers";
+    "swift-system";
+    "SwiftProtobuf";
+    "swift-collections";
+    "swift-algorithms";
+    "swift-async-algorithms";
+    "swift-nio";
+    "swift-nio-ssl";
+    "swift-nio-http2";
+    "swift-nio-extras";
+    "swift-nio-transport-services";
+    "swift-distributed-tracing";
+    "swift-service-lifecycle";
+    "async-http-client";
+    "grpc-swift";
+    "Opentracing";
+    "Thrift";
+    "opentelemetry-swift";
+    "swift-log-file";
+  }
+
+  subgraph "cluster_firebase" {
+    label="firebase"; style=filled; fillcolor="#FAD7A080"; color="#FAD7A0";
+    "Promises";
+    "InteropForGoogle";
+    "GTMSessionFetcher";
+    "GoogleUtilities";
+    "GoogleDataTransport";
+    "AppCheck";
+    "Firebase";
+  }
+
+  subgraph "cluster_okta" {
+    label="okta"; style=filled; fillcolor="#D2B4DE80"; color="#D2B4DE";
+    "swift-asn1";
+    "swift-crypto";
+    "swift-certificates";
+    "AuthFoundation";
+    "OktaIdx";
+  }
+
+  subgraph "cluster_pointfree" {
+    label="pointfree"; style=filled; fillcolor="#A9DFBF80"; color="#A9DFBF";
+    "xctest-dynamic-overlay";
+    "swift-concurrency-extras";
+    "combine-schedulers";
+    "swift-clocks";
+  }
+
+  subgraph "cluster_segment" {
+    label="segment"; style=filled; fillcolor="#A3E4D780"; color="#A3E4D7";
+    "Sovran";
+    "JSONSafeEncoding";
+    "Segment";
+  }
+
+  subgraph "cluster_easy-wins" {
+    label="easy-wins"; style=filled; fillcolor="#FDEBD080"; color="#FDEBD0";
+    "GrowthBook-IOS";
+    "Sentry";
+    "SimpleKeychain";
+    "LRUCache";
+    "swiftui-introspect";
+    "CombineExt";
+    "JSONAny";
+    "XCGLogger";
+    "SQLite.swift";
+    "BitByteData";
+    "SWCompression";
+    "PriorsSchema";
+    "CombineExpectations";
+  }
+
+  subgraph "cluster_aws" {
+    label="aws"; style=filled; fillcolor="#F5B7B180"; color="#F5B7B1";
+    "aws-crt-swift";
+    "smithy-swift";
+    "aws-sdk-swift";
+    "AmplifyUtilsNotifications";
+    "Amplify";
+  }
+
+  // edges
+  "swift-algorithms" -> "swift-numerics";
+  "swift-async-algorithms" -> "swift-collections";
+  "swift-nio" -> "swift-atomics";
+  "swift-nio" -> "swift-collections";
+  "swift-nio" -> "swift-system";
+  "swift-nio-ssl" -> "swift-nio";
+  "swift-nio-http2" -> "swift-nio";
+  "swift-nio-http2" -> "swift-atomics";
+  "swift-nio-extras" -> "swift-nio";
+  "swift-nio-extras" -> "swift-nio-http2";
+  "swift-nio-extras" -> "swift-http-types";
+  "swift-nio-extras" -> "swift-http-structured-headers";
+  "swift-nio-extras" -> "swift-atomics";
+  "swift-nio-extras" -> "swift-algorithms";
+  "swift-nio-extras" -> "swift-certificates" [color=red penwidth=1.5];
+  "swift-nio-extras" -> "swift-nio-ssl";
+  "swift-nio-extras" -> "swift-asn1" [color=red penwidth=1.5];
+  "swift-nio-extras" -> "swift-service-lifecycle";
+  "swift-nio-extras" -> "swift-async-algorithms";
+  "swift-nio-extras" -> "swift-log";
+  "swift-nio-transport-services" -> "swift-nio";
+  "swift-nio-transport-services" -> "swift-atomics";
+  "swift-distributed-tracing" -> "swift-service-context";
+  "swift-service-lifecycle" -> "swift-log";
+  "swift-service-lifecycle" -> "swift-async-algorithms";
+  "async-http-client" -> "swift-nio";
+  "async-http-client" -> "swift-nio-ssl";
+  "async-http-client" -> "swift-nio-http2";
+  "async-http-client" -> "swift-nio-extras";
+  "async-http-client" -> "swift-nio-transport-services";
+  "async-http-client" -> "swift-log";
+  "async-http-client" -> "swift-atomics";
+  "async-http-client" -> "swift-algorithms";
+  "async-http-client" -> "swift-distributed-tracing";
+  "grpc-swift" -> "swift-nio";
+  "grpc-swift" -> "swift-nio-http2";
+  "grpc-swift" -> "swift-nio-transport-services";
+  "grpc-swift" -> "swift-nio-extras";
+  "grpc-swift" -> "swift-collections";
+  "grpc-swift" -> "swift-atomics";
+  "grpc-swift" -> "SwiftProtobuf";
+  "grpc-swift" -> "swift-log";
+  "grpc-swift" -> "swift-nio-ssl";
+  "opentelemetry-swift" -> "swift-nio";
+  "opentelemetry-swift" -> "grpc-swift";
+  "opentelemetry-swift" -> "SwiftProtobuf";
+  "opentelemetry-swift" -> "swift-log";
+  "opentelemetry-swift" -> "swift-metrics";
+  "opentelemetry-swift" -> "swift-atomics";
+  "opentelemetry-swift" -> "Opentracing";
+  "opentelemetry-swift" -> "Thrift";
+  "swift-log-file" -> "swift-log";
+  "swift-log-file" -> "XCGLogger" [color=red penwidth=1.5];
+  "GoogleDataTransport" -> "Promises";
+  "AppCheck" -> "Promises";
+  "AppCheck" -> "GoogleUtilities";
+  "Firebase" -> "Promises";
+  "Firebase" -> "SwiftProtobuf" [color=red penwidth=1.5];
+  "Firebase" -> "GoogleDataTransport";
+  "Firebase" -> "GoogleUtilities";
+  "Firebase" -> "GTMSessionFetcher";
+  "Firebase" -> "InteropForGoogle";
+  "Firebase" -> "AppCheck";
+  "swift-crypto" -> "swift-asn1";
+  "swift-certificates" -> "swift-crypto";
+  "swift-certificates" -> "swift-asn1";
+  "OktaIdx" -> "AuthFoundation";
+  "combine-schedulers" -> "swift-concurrency-extras";
+  "combine-schedulers" -> "xctest-dynamic-overlay";
+  "swift-clocks" -> "swift-concurrency-extras";
+  "swift-clocks" -> "xctest-dynamic-overlay";
+  "Segment" -> "Sovran";
+  "Segment" -> "JSONSafeEncoding";
+  "CombineExt" -> "combine-schedulers" [color=red penwidth=1.5];
+  "SWCompression" -> "BitByteData";
+  "smithy-swift" -> "aws-crt-swift";
+  "smithy-swift" -> "swift-log" [color=red penwidth=1.5];
+  "smithy-swift" -> "opentelemetry-swift" [color=red penwidth=1.5];
+  "smithy-swift" -> "async-http-client" [color=red penwidth=1.5];
+  "aws-sdk-swift" -> "smithy-swift";
+  "aws-sdk-swift" -> "aws-crt-swift";
+  "Amplify" -> "aws-sdk-swift";
+  "Amplify" -> "SQLite.swift" [color=red penwidth=1.5];
+  "Amplify" -> "AmplifyUtilsNotifications";
+}

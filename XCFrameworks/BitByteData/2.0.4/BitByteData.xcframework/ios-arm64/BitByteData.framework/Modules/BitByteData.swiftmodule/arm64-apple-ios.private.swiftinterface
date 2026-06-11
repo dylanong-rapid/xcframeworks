@@ -1,0 +1,225 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BitByteData
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Foundation.Data {
+  @inlinable @inline(__always) internal func toU16() -> Swift.UInt16 {
+        return self.withUnsafeBytes { $0.bindMemory(to: UInt16.self)[0] }
+    }
+  @inlinable @inline(__always) internal func toU32() -> Swift.UInt32 {
+        return self.withUnsafeBytes { $0.bindMemory(to: UInt32.self)[0] }
+    }
+  @inlinable @inline(__always) internal func toU64() -> Swift.UInt64 {
+        return self.withUnsafeBytes { $0.bindMemory(to: UInt64.self)[0] }
+    }
+  @inlinable @inline(__always) internal func toByteArray() -> [Swift.UInt8] {
+        return self.withUnsafeBytes { $0.map { $0 } }
+    }
+}
+final public class MsbBitWriter : BitByteData.BitWriter {
+  final public var data: Foundation.Data {
+    get
+  }
+  final public var isAligned: Swift.Bool {
+    get
+  }
+  public init()
+  final public func write(bit: Swift.UInt8)
+  final public func write(unsignedNumber: Swift.UInt, bitsCount: Swift.Int)
+  final public func append(byte: Swift.UInt8)
+  final public func align()
+  @objc deinit
+}
+final public class LsbBitWriter : BitByteData.BitWriter {
+  final public var data: Foundation.Data {
+    get
+  }
+  final public var isAligned: Swift.Bool {
+    get
+  }
+  public init()
+  final public func write(bit: Swift.UInt8)
+  final public func write(unsignedNumber: Swift.UInt, bitsCount: Swift.Int)
+  final public func append(byte: Swift.UInt8)
+  final public func align()
+  @objc deinit
+}
+public protocol BitWriter {
+  var data: Foundation.Data { get }
+  var isAligned: Swift.Bool { get }
+  init()
+  func write(bit: Swift.UInt8)
+  func write(bits: [Swift.UInt8])
+  func write(number: Swift.Int, bitsCount: Swift.Int)
+  func write(signedNumber: Swift.Int, bitsCount: Swift.Int, representation: BitByteData.SignedNumberRepresentation)
+  func write(unsignedNumber: Swift.UInt, bitsCount: Swift.Int)
+  func append(byte: Swift.UInt8)
+  func align()
+}
+extension BitByteData.BitWriter {
+  public func write(bits: [Swift.UInt8])
+  public func write(number: Swift.Int, bitsCount: Swift.Int)
+  public func write(signedNumber: Swift.Int, bitsCount: Swift.Int, representation: BitByteData.SignedNumberRepresentation = .twoComplementNegatives)
+}
+final public class LittleEndianByteReader : BitByteData.ByteReader {
+  final public let size: Swift.Int
+  final public let data: Foundation.Data
+  final public var offset: Swift.Int
+  public init(data: Foundation.Data)
+  final public func byte() -> Swift.UInt8
+  final public func bytes(count: Swift.Int) -> [Swift.UInt8]
+  final public func uint64() -> Swift.UInt64
+  final public func uint64(fromBytes count: Swift.Int) -> Swift.UInt64
+  final public func uint32() -> Swift.UInt32
+  final public func uint32(fromBytes count: Swift.Int) -> Swift.UInt32
+  final public func uint16() -> Swift.UInt16
+  final public func uint16(fromBytes count: Swift.Int) -> Swift.UInt16
+  @objc deinit
+}
+public enum SignedNumberRepresentation {
+  case signMagnitude
+  case oneComplementNegatives
+  case twoComplementNegatives
+  case biased(bias: Swift.Int)
+  case radixNegativeTwo
+  public func minRepresentableNumber(bitsCount: Swift.Int) -> Swift.Int
+  public func maxRepresentableNumber(bitsCount: Swift.Int) -> Swift.Int
+}
+final public class BigEndianByteReader : BitByteData.ByteReader {
+  final public let size: Swift.Int
+  final public let data: Foundation.Data
+  final public var offset: Swift.Int
+  public init(data: Foundation.Data)
+  final public func byte() -> Swift.UInt8
+  final public func bytes(count: Swift.Int) -> [Swift.UInt8]
+  final public func uint64() -> Swift.UInt64
+  final public func uint64(fromBytes count: Swift.Int) -> Swift.UInt64
+  final public func uint32() -> Swift.UInt32
+  final public func uint32(fromBytes count: Swift.Int) -> Swift.UInt32
+  final public func uint16() -> Swift.UInt16
+  final public func uint16(fromBytes count: Swift.Int) -> Swift.UInt16
+  @objc deinit
+}
+public protocol ByteReader : AnyObject {
+  var size: Swift.Int { get }
+  var data: Foundation.Data { get }
+  var offset: Swift.Int { get set }
+  init(data: Foundation.Data)
+  func byte() -> Swift.UInt8
+  func bytes(count: Swift.Int) -> [Swift.UInt8]
+  func int(fromBytes count: Swift.Int) -> Swift.Int
+  func uint64(fromBytes count: Swift.Int) -> Swift.UInt64
+  func uint32(fromBytes count: Swift.Int) -> Swift.UInt32
+  func uint16(fromBytes count: Swift.Int) -> Swift.UInt16
+}
+extension BitByteData.ByteReader {
+  public init(_ bitReader: any BitByteData.BitReader)
+  public var bytesLeft: Swift.Int {
+    get
+  }
+  public var bytesRead: Swift.Int {
+    get
+  }
+  public var isFinished: Swift.Bool {
+    get
+  }
+  public func int(fromBytes count: Swift.Int) -> Swift.Int
+}
+final public class MsbBitReader : BitByteData.BitReader {
+  final public let size: Swift.Int
+  final public let data: Foundation.Data
+  final public var offset: Swift.Int {
+    get
+    set
+  }
+  final public var isAligned: Swift.Bool {
+    get
+  }
+  final public var bitsLeft: Swift.Int {
+    get
+  }
+  final public var bitsRead: Swift.Int {
+    get
+  }
+  public init(data: Foundation.Data)
+  convenience public init(_ byteReader: any BitByteData.ByteReader)
+  final public func advance(by count: Swift.Int = 1)
+  final public func bit() -> Swift.UInt8
+  final public func bits(count: Swift.Int) -> [Swift.UInt8]
+  final public func signedInt(fromBits count: Swift.Int, representation: BitByteData.SignedNumberRepresentation = .twoComplementNegatives) -> Swift.Int
+  final public func byte(fromBits count: Swift.Int) -> Swift.UInt8
+  final public func uint16(fromBits count: Swift.Int) -> Swift.UInt16
+  final public func uint32(fromBits count: Swift.Int) -> Swift.UInt32
+  final public func uint64(fromBits count: Swift.Int) -> Swift.UInt64
+  final public func align()
+  final public func byte() -> Swift.UInt8
+  final public func bytes(count: Swift.Int) -> [Swift.UInt8]
+  final public func uint64() -> Swift.UInt64
+  final public func uint64(fromBytes count: Swift.Int) -> Swift.UInt64
+  final public func uint32() -> Swift.UInt32
+  final public func uint32(fromBytes count: Swift.Int) -> Swift.UInt32
+  final public func uint16() -> Swift.UInt16
+  final public func uint16(fromBytes count: Swift.Int) -> Swift.UInt16
+  @objc deinit
+}
+public protocol BitReader : BitByteData.ByteReader {
+  var isAligned: Swift.Bool { get }
+  var bitsLeft: Swift.Int { get }
+  var bitsRead: Swift.Int { get }
+  init(_ byteReader: any BitByteData.ByteReader)
+  func advance(by count: Swift.Int)
+  func bit() -> Swift.UInt8
+  func bits(count: Swift.Int) -> [Swift.UInt8]
+  func int(fromBits count: Swift.Int) -> Swift.Int
+  func signedInt(fromBits count: Swift.Int, representation: BitByteData.SignedNumberRepresentation) -> Swift.Int
+  func byte(fromBits count: Swift.Int) -> Swift.UInt8
+  func uint16(fromBits count: Swift.Int) -> Swift.UInt16
+  func uint32(fromBits count: Swift.Int) -> Swift.UInt32
+  func uint64(fromBits count: Swift.Int) -> Swift.UInt64
+  func align()
+}
+extension BitByteData.BitReader {
+  public func int(fromBits count: Swift.Int) -> Swift.Int
+}
+final public class LsbBitReader : BitByteData.BitReader {
+  final public let size: Swift.Int
+  final public let data: Foundation.Data
+  final public var offset: Swift.Int {
+    get
+    set
+  }
+  final public var isAligned: Swift.Bool {
+    get
+  }
+  final public var bitsLeft: Swift.Int {
+    get
+  }
+  final public var bitsRead: Swift.Int {
+    get
+  }
+  public init(data: Foundation.Data)
+  convenience public init(_ byteReader: any BitByteData.ByteReader)
+  final public func advance(by count: Swift.Int = 1)
+  final public func bit() -> Swift.UInt8
+  final public func bits(count: Swift.Int) -> [Swift.UInt8]
+  final public func signedInt(fromBits count: Swift.Int, representation: BitByteData.SignedNumberRepresentation = .twoComplementNegatives) -> Swift.Int
+  final public func byte(fromBits count: Swift.Int) -> Swift.UInt8
+  final public func uint16(fromBits count: Swift.Int) -> Swift.UInt16
+  final public func uint32(fromBits count: Swift.Int) -> Swift.UInt32
+  final public func uint64(fromBits count: Swift.Int) -> Swift.UInt64
+  final public func align()
+  final public func byte() -> Swift.UInt8
+  final public func bytes(count: Swift.Int) -> [Swift.UInt8]
+  final public func uint64() -> Swift.UInt64
+  final public func uint64(fromBytes count: Swift.Int) -> Swift.UInt64
+  final public func uint32() -> Swift.UInt32
+  final public func uint32(fromBytes count: Swift.Int) -> Swift.UInt32
+  final public func uint16() -> Swift.UInt16
+  final public func uint16(fromBytes count: Swift.Int) -> Swift.UInt16
+  @objc deinit
+}

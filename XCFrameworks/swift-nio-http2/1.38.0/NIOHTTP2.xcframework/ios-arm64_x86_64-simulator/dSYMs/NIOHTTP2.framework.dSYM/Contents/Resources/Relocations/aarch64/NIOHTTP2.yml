@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/var/folders/5_/z2vvjg1j6bv1cqdnh4x20wk00000gp/T/rapid-xcframeworks/dd/swift-nio-http2/Build/Intermediates.noindex/ArchiveIntermediates/NIOHTTP2/InstallationBuildProductsLocation/usr/local/lib/NIOHTTP2.framework/NIOHTTP2'
+relocations:     []
+...
