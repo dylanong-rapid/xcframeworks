@@ -1,0 +1,3727 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "Clocks",
+    "printedName": "Clocks",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "AnyClock",
+        "printedName": "AnyClock",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Instant",
+            "printedName": "Instant",
+            "children": [
+              {
+                "kind": "Function",
+                "name": "advanced",
+                "printedName": "advanced(by:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks8AnyClockC7InstantV8advanced2byAEyx_Gx_tF",
+                "mangledName": "$s6Clocks8AnyClockC7InstantV8advanced2byAEyx_Gx_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "duration",
+                "printedName": "duration(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks8AnyClockC7InstantV8duration2toxAEyx_G_tF",
+                "mangledName": "$s6Clocks8AnyClockC7InstantV8duration2toxAEyx_G_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "<",
+                "printedName": "<(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks8AnyClockC7InstantV1loiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks8AnyClockC7InstantV1loiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:6Clocks8AnyClockC7InstantV9hashValueSivp",
+                "mangledName": "$s6Clocks8AnyClockC7InstantV9hashValueSivp",
+                "moduleName": "Clocks",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:6Clocks8AnyClockC7InstantV9hashValueSivg",
+                    "mangledName": "$s6Clocks8AnyClockC7InstantV9hashValueSivg",
+                    "moduleName": "Clocks",
+                    "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                    "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks8AnyClockC7InstantV4hash4intoys6HasherVz_tF",
+                "mangledName": "$s6Clocks8AnyClockC7InstantV4hash4intoys6HasherVz_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks8AnyClockC7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks8AnyClockC7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:6Clocks8AnyClockC7InstantV",
+            "mangledName": "$s6Clocks8AnyClockC7InstantV",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "InstantProtocol",
+                "printedName": "InstantProtocol",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Duration",
+                    "printedName": "Duration",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s15InstantProtocolP",
+                "mangledName": "$ss15InstantProtocolP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Comparable",
+                "printedName": "Comparable",
+                "usr": "s:SL",
+                "mangledName": "$sSL"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyClock",
+                "printedName": "Clocks.AnyClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks8AnyClockC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks8AnyClockCyACyxGqd__c8DurationQyd__Rsz12_Concurrency0C0Rd__lufc",
+            "mangledName": "$s6Clocks8AnyClockCyACyxGqd__c8DurationQyd__Rszs0C0Rd__lufc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Hashable, τ_0_0 == τ_1_0.Duration, τ_1_0 : _Concurrency.Clock>",
+            "sugared_genericSig": "<Duration, C where Duration : Swift.Hashable, Duration == C.Duration, C : _Concurrency.Clock>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "minimumResolution",
+            "printedName": "minimumResolution",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks8AnyClockC17minimumResolutionxvp",
+            "mangledName": "$s6Clocks8AnyClockC17minimumResolutionxvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks8AnyClockC17minimumResolutionxvg",
+                "mangledName": "$s6Clocks8AnyClockC17minimumResolutionxvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "now",
+            "printedName": "now",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks8AnyClockC7InstantV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks8AnyClockC3nowAC7InstantVyx_Gvp",
+            "mangledName": "$s6Clocks8AnyClockC3nowAC7InstantVyx_Gvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks8AnyClockC3nowAC7InstantVyx_Gvg",
+                "mangledName": "$s6Clocks8AnyClockC3nowAC7InstantVyx_Gvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "sleep",
+            "printedName": "sleep(until:tolerance:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks8AnyClockC7InstantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks8AnyClockC5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "mangledName": "$s6Clocks8AnyClockC5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Clocks8AnyClockC",
+        "mangledName": "$s6Clocks8AnyClockC",
+        "moduleName": "Clocks",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+        "intro_Macosx": "13",
+        "intro_iOS": "16",
+        "intro_tvOS": "16",
+        "intro_watchOS": "9",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Clock",
+            "printedName": "Clock",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Duration",
+                "printedName": "Duration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Instant",
+                "printedName": "Instant",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.AnyClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks8AnyClockC7InstantV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12_Concurrency5ClockP",
+            "mangledName": "$ss5ClockP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ConcurrencyExtras",
+        "printedName": "ConcurrencyExtras",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ImmediateClock",
+        "printedName": "ImmediateClock",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Instant",
+            "printedName": "Instant",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(offset:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0",
+                    "hasDefaultArg": true
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV6offsetAEyx_Gx_tcfc",
+                "mangledName": "$s6Clocks14ImmediateClockC7InstantV6offsetAEyx_Gx_tcfc",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "advanced",
+                "printedName": "advanced(by:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV8advanced2byAEyx_Gx_tF",
+                "mangledName": "$s6Clocks14ImmediateClockC7InstantV8advanced2byAEyx_Gx_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "duration",
+                "printedName": "duration(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV8duration2toxAEyx_G_tF",
+                "mangledName": "$s6Clocks14ImmediateClockC7InstantV8duration2toxAEyx_G_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "<",
+                "printedName": "<(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV1loiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks14ImmediateClockC7InstantV1loiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV9hashValueSivp",
+                "mangledName": "$s6Clocks14ImmediateClockC7InstantV9hashValueSivp",
+                "moduleName": "Clocks",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV9hashValueSivg",
+                    "mangledName": "$s6Clocks14ImmediateClockC7InstantV9hashValueSivg",
+                    "moduleName": "Clocks",
+                    "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                    "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV4hash4intoys6HasherVz_tF",
+                "mangledName": "$s6Clocks14ImmediateClockC7InstantV4hash4intoys6HasherVz_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks14ImmediateClockC7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:6Clocks14ImmediateClockC7InstantV",
+            "mangledName": "$s6Clocks14ImmediateClockC7InstantV",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "InstantProtocol",
+                "printedName": "InstantProtocol",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Duration",
+                    "printedName": "Duration",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s15InstantProtocolP",
+                "mangledName": "$ss15InstantProtocolP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Comparable",
+                "printedName": "Comparable",
+                "usr": "s:SL",
+                "mangledName": "$sSL"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "now",
+            "printedName": "now",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks14ImmediateClockC3nowAC7InstantVyx_Gvp",
+            "mangledName": "$s6Clocks14ImmediateClockC3nowAC7InstantVyx_Gvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks14ImmediateClockC3nowAC7InstantVyx_Gvg",
+                "mangledName": "$s6Clocks14ImmediateClockC3nowAC7InstantVyx_Gvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minimumResolution",
+            "printedName": "minimumResolution",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks14ImmediateClockC17minimumResolutionxvp",
+            "mangledName": "$s6Clocks14ImmediateClockC17minimumResolutionxvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks14ImmediateClockC17minimumResolutionxvg",
+                "mangledName": "$s6Clocks14ImmediateClockC17minimumResolutionxvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(now:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImmediateClock",
+                "printedName": "Clocks.ImmediateClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks14ImmediateClockC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                "hasDefaultArg": true,
+                "usr": "s:6Clocks14ImmediateClockC7InstantV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks14ImmediateClockC3nowACyxGAC7InstantVyx_G_tcfc",
+            "mangledName": "$s6Clocks14ImmediateClockC3nowACyxGAC7InstantVyx_G_tcfc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "sleep",
+            "printedName": "sleep(until:tolerance:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks14ImmediateClockC7InstantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks14ImmediateClockC5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "mangledName": "$s6Clocks14ImmediateClockC5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImmediateClock",
+                "printedName": "Clocks.ImmediateClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks14ImmediateClockC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks14ImmediateClockCAAs8DurationVRszrlEACyAEGycfc",
+            "mangledName": "$s6Clocks14ImmediateClockCAAs8DurationVRszrlEACyAEGycfc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 == Swift.Duration>",
+            "sugared_genericSig": "<Duration where Duration == Swift.Duration>",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Clocks14ImmediateClockC",
+        "mangledName": "$s6Clocks14ImmediateClockC",
+        "moduleName": "Clocks",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+        "intro_Macosx": "13",
+        "intro_iOS": "16",
+        "intro_tvOS": "16",
+        "intro_watchOS": "9",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Clock",
+            "printedName": "Clock",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Duration",
+                "printedName": "Duration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Instant",
+                "printedName": "Instant",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks14ImmediateClockC7InstantV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12_Concurrency5ClockP",
+            "mangledName": "$ss5ClockP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "_AsyncTimerSequence",
+        "printedName": "_AsyncTimerSequence",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Iterator",
+            "printedName": "Iterator",
+            "children": [
+              {
+                "kind": "Function",
+                "name": "next",
+                "printedName": "next()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0.Instant?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.Instant"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks19_AsyncTimerSequenceV8IteratorV4next7InstantQzSgyYaF",
+                "mangledName": "$s6Clocks19_AsyncTimerSequenceV8IteratorV4next7InstantQzSgyYaF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.Clock>",
+                "sugared_genericSig": "<C where C : _Concurrency.Clock>",
+                "declAttributes": [
+                  "Mutating",
+                  "AccessControl"
+                ],
+                "funcSelfKind": "Mutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:6Clocks19_AsyncTimerSequenceV8IteratorV",
+            "mangledName": "$s6Clocks19_AsyncTimerSequenceV8IteratorV",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.Clock>",
+            "sugared_genericSig": "<C where C : _Concurrency.Clock>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "AsyncIteratorProtocol",
+                "printedName": "AsyncIteratorProtocol",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Element",
+                    "printedName": "Element",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.Instant"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Failure",
+                    "printedName": "Failure",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:ScI",
+                "mangledName": "$sScI"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "makeAsyncIterator",
+            "printedName": "makeAsyncIterator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Iterator",
+                "printedName": "Clocks._AsyncTimerSequence<τ_0_0>.Iterator",
+                "usr": "s:6Clocks19_AsyncTimerSequenceV8IteratorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks19_AsyncTimerSequenceV04makeB8IteratorAC0F0Vyx_GyF",
+            "mangledName": "$s6Clocks19_AsyncTimerSequenceV04makeB8IteratorAC0F0Vyx_GyF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.Clock>",
+            "sugared_genericSig": "<C where C : _Concurrency.Clock>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6Clocks19_AsyncTimerSequenceV",
+        "mangledName": "$s6Clocks19_AsyncTimerSequenceV",
+        "moduleName": "Clocks",
+        "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.Clock>",
+        "sugared_genericSig": "<C where C : _Concurrency.Clock>",
+        "intro_Macosx": "13.0",
+        "intro_iOS": "16.0",
+        "intro_tvOS": "16.0",
+        "intro_watchOS": "9.0",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AsyncSequence",
+            "printedName": "AsyncSequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AsyncIterator",
+                "printedName": "AsyncIterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Clocks._AsyncTimerSequence<τ_0_0>.Iterator",
+                    "usr": "s:6Clocks19_AsyncTimerSequenceV8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Instant"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Failure",
+                "printedName": "Failure",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sci",
+            "mangledName": "$sSci"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "Import",
+        "name": "ConcurrencyExtras",
+        "printedName": "ConcurrencyExtras",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "Import",
+        "name": "IssueReporting",
+        "printedName": "IssueReporting",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TestClock",
+        "printedName": "TestClock",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Instant",
+            "printedName": "Instant",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(offset:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0",
+                    "hasDefaultArg": true
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:6Clocks9TestClockC7InstantV6offsetAEyx_Gx_tcfc",
+                "mangledName": "$s6Clocks9TestClockC7InstantV6offsetAEyx_Gx_tcfc",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "advanced",
+                "printedName": "advanced(by:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks9TestClockC7InstantV8advanced2byAEyx_Gx_tF",
+                "mangledName": "$s6Clocks9TestClockC7InstantV8advanced2byAEyx_Gx_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "duration",
+                "printedName": "duration(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks9TestClockC7InstantV8duration2toxAEyx_G_tF",
+                "mangledName": "$s6Clocks9TestClockC7InstantV8duration2toxAEyx_G_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "<",
+                "printedName": "<(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks9TestClockC7InstantV1loiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks9TestClockC7InstantV1loiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:6Clocks9TestClockC7InstantV9hashValueSivp",
+                "mangledName": "$s6Clocks9TestClockC7InstantV9hashValueSivp",
+                "moduleName": "Clocks",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:6Clocks9TestClockC7InstantV9hashValueSivg",
+                    "mangledName": "$s6Clocks9TestClockC7InstantV9hashValueSivg",
+                    "moduleName": "Clocks",
+                    "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                    "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks9TestClockC7InstantV4hash4intoys6HasherVz_tF",
+                "mangledName": "$s6Clocks9TestClockC7InstantV4hash4intoys6HasherVz_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks9TestClockC7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks9TestClockC7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:6Clocks9TestClockC7InstantV",
+            "mangledName": "$s6Clocks9TestClockC7InstantV",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "InstantProtocol",
+                "printedName": "InstantProtocol",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Duration",
+                    "printedName": "Duration",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s15InstantProtocolP",
+                "mangledName": "$ss15InstantProtocolP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Comparable",
+                "printedName": "Comparable",
+                "usr": "s:SL",
+                "mangledName": "$sSL"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minimumResolution",
+            "printedName": "minimumResolution",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks9TestClockC17minimumResolutionxvp",
+            "mangledName": "$s6Clocks9TestClockC17minimumResolutionxvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks9TestClockC17minimumResolutionxvg",
+                "mangledName": "$s6Clocks9TestClockC17minimumResolutionxvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks9TestClockC17minimumResolutionxvs",
+                "mangledName": "$s6Clocks9TestClockC17minimumResolutionxvs",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks9TestClockC17minimumResolutionxvM",
+                "mangledName": "$s6Clocks9TestClockC17minimumResolutionxvM",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "intro_Macosx": "13",
+                "intro_iOS": "16",
+                "intro_tvOS": "16",
+                "intro_watchOS": "9",
+                "declAttributes": [
+                  "Final",
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "now",
+            "printedName": "now",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks9TestClockC7InstantV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks9TestClockC3nowAC7InstantVyx_Gvp",
+            "mangledName": "$s6Clocks9TestClockC3nowAC7InstantVyx_Gvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks9TestClockC3nowAC7InstantVyx_Gvg",
+                "mangledName": "$s6Clocks9TestClockC3nowAC7InstantVyx_Gvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(now:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TestClock",
+                "printedName": "Clocks.TestClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks9TestClockC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                "hasDefaultArg": true,
+                "usr": "s:6Clocks9TestClockC7InstantV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks9TestClockC3nowACyxGAC7InstantVyx_G_tcfc",
+            "mangledName": "$s6Clocks9TestClockC3nowACyxGAC7InstantVyx_G_tcfc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "sleep",
+            "printedName": "sleep(until:tolerance:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks9TestClockC7InstantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks9TestClockC5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "mangledName": "$s6Clocks9TestClockC5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkSuspension",
+            "printedName": "checkSuspension()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks9TestClockC15checkSuspensionyyYaKF",
+            "mangledName": "$s6Clocks9TestClockC15checkSuspensionyyYaKF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "advance",
+            "printedName": "advance(by:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0",
+                "hasDefaultArg": true
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks9TestClockC7advance2byyx_tYaF",
+            "mangledName": "$s6Clocks9TestClockC7advance2byyx_tYaF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "advance",
+            "printedName": "advance(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks9TestClockC7InstantV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks9TestClockC7advance2toyAC7InstantVyx_G_tYaF",
+            "mangledName": "$s6Clocks9TestClockC7advance2toyAC7InstantVyx_G_tYaF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "run",
+            "printedName": "run(timeout:fileID:filePath:line:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Duration",
+                "printedName": "Swift.Duration",
+                "hasDefaultArg": true,
+                "usr": "s:s8DurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks9TestClockC3run7timeout6fileID0F4Path4line6columnys8DurationV_s12StaticStringVAMS2utYaF",
+            "mangledName": "$s6Clocks9TestClockC3run7timeout6fileID0F4Path4line6columnys8DurationV_s12StaticStringVAMS2utYaF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TestClock",
+                "printedName": "Clocks.TestClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks9TestClockC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks9TestClockCAAs8DurationVRszrlEACyAEGycfc",
+            "mangledName": "$s6Clocks9TestClockCAAs8DurationVRszrlEACyAEGycfc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 == Swift.Duration>",
+            "sugared_genericSig": "<Duration where Duration == Swift.Duration>",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Clocks9TestClockC",
+        "mangledName": "$s6Clocks9TestClockC",
+        "moduleName": "Clocks",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+        "intro_Macosx": "13",
+        "intro_iOS": "16",
+        "intro_tvOS": "16",
+        "intro_watchOS": "9",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Clock",
+            "printedName": "Clock",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Duration",
+                "printedName": "Duration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Instant",
+                "printedName": "Instant",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.TestClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks9TestClockC7InstantV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12_Concurrency5ClockP",
+            "mangledName": "$ss5ClockP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SuspensionError",
+        "printedName": "SuspensionError",
+        "declKind": "Struct",
+        "usr": "s:6Clocks15SuspensionErrorV",
+        "mangledName": "$s6Clocks15SuspensionErrorV",
+        "moduleName": "Clocks",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ConcurrencyExtras",
+        "printedName": "ConcurrencyExtras",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "Import",
+        "name": "IssueReporting",
+        "printedName": "IssueReporting",
+        "declKind": "Import",
+        "moduleName": "Clocks"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UnimplementedClock",
+        "printedName": "UnimplementedClock",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Instant",
+            "printedName": "Instant",
+            "children": [
+              {
+                "kind": "Function",
+                "name": "advanced",
+                "printedName": "advanced(by:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV8advanced2byAEyx_Gx_tF",
+                "mangledName": "$s6Clocks18UnimplementedClockV7InstantV8advanced2byAEyx_Gx_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "duration",
+                "printedName": "duration(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV8duration2toxAEyx_G_tF",
+                "mangledName": "$s6Clocks18UnimplementedClockV7InstantV8duration2toxAEyx_G_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "<",
+                "printedName": "<(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV1loiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks18UnimplementedClockV7InstantV1loiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV9hashValueSivp",
+                "mangledName": "$s6Clocks18UnimplementedClockV7InstantV9hashValueSivp",
+                "moduleName": "Clocks",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV9hashValueSivg",
+                    "mangledName": "$s6Clocks18UnimplementedClockV7InstantV9hashValueSivg",
+                    "moduleName": "Clocks",
+                    "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                    "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV4hash4intoys6HasherVz_tF",
+                "mangledName": "$s6Clocks18UnimplementedClockV7InstantV4hash4intoys6HasherVz_tF",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "mangledName": "$s6Clocks18UnimplementedClockV7InstantV2eeoiySbAEyx_G_AGtFZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:6Clocks18UnimplementedClockV7InstantV",
+            "mangledName": "$s6Clocks18UnimplementedClockV7InstantV",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "InstantProtocol",
+                "printedName": "InstantProtocol",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Duration",
+                    "printedName": "Duration",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s15InstantProtocolP",
+                "mangledName": "$ss15InstantProtocolP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Comparable",
+                "printedName": "Comparable",
+                "usr": "s:SL",
+                "mangledName": "$sSL"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:name:fileID:filePath:line:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnimplementedClock",
+                "printedName": "Clocks.UnimplementedClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks18UnimplementedClockV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks18UnimplementedClockV_4name6fileID0E4Path4line6columnACyxGqd___SSs12StaticStringVAKS2utc8DurationQyd__Rsz12_Concurrency0C0Rd__lufc",
+            "mangledName": "$s6Clocks18UnimplementedClockV_4name6fileID0E4Path4line6columnACyxGqd___SSs12StaticStringVAKS2utc8DurationQyd__Rszs0C0Rd__lufc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Swift.Hashable, τ_0_0 == τ_1_0.Duration, τ_1_0 : _Concurrency.Clock>",
+            "sugared_genericSig": "<Duration, C where Duration : Swift.Hashable, Duration == C.Duration, C : _Concurrency.Clock>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:now:fileID:filePath:line:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnimplementedClock",
+                "printedName": "Clocks.UnimplementedClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks18UnimplementedClockV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.ImmediateClock<τ_0_0>.Instant",
+                "hasDefaultArg": true,
+                "usr": "s:6Clocks14ImmediateClockC7InstantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks18UnimplementedClockV4name3now6fileID0F4Path4line6columnACyxGSS_AA09ImmediateC0C7InstantVyx_Gs12StaticStringVAQS2utcfc",
+            "mangledName": "$s6Clocks18UnimplementedClockV4name3now6fileID0F4Path4line6columnACyxGSS_AA09ImmediateC0C7InstantVyx_Gs12StaticStringVAQS2utcfc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "now",
+            "printedName": "now",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks18UnimplementedClockV3nowAC7InstantVyx_Gvp",
+            "mangledName": "$s6Clocks18UnimplementedClockV3nowAC7InstantVyx_Gvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks18UnimplementedClockV3nowAC7InstantVyx_Gvg",
+                "mangledName": "$s6Clocks18UnimplementedClockV3nowAC7InstantVyx_Gvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minimumResolution",
+            "printedName": "minimumResolution",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Clocks18UnimplementedClockV17minimumResolutionxvp",
+            "mangledName": "$s6Clocks18UnimplementedClockV17minimumResolutionxvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Clocks18UnimplementedClockV17minimumResolutionxvg",
+                "mangledName": "$s6Clocks18UnimplementedClockV17minimumResolutionxvg",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "sleep",
+            "printedName": "sleep(until:tolerance:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Instant",
+                "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Clocks18UnimplementedClockV5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "mangledName": "$s6Clocks18UnimplementedClockV5sleep5until9toleranceyAC7InstantVyx_G_xSgtYaKF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnimplementedClock",
+                "printedName": "Clocks.UnimplementedClock<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Clocks18UnimplementedClockV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Clocks18UnimplementedClockVAAs8DurationVRszrlE4nameACyAEGSS_tcfc",
+            "mangledName": "$s6Clocks18UnimplementedClockVAAs8DurationVRszrlE4nameACyAEGSS_tcfc",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 == Swift.Duration>",
+            "sugared_genericSig": "<Duration where Duration == Swift.Duration>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6Clocks18UnimplementedClockV",
+        "mangledName": "$s6Clocks18UnimplementedClockV",
+        "moduleName": "Clocks",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.DurationProtocol, τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Duration where Duration : Swift.DurationProtocol, Duration : Swift.Hashable>",
+        "intro_Macosx": "13",
+        "intro_iOS": "16",
+        "intro_tvOS": "16",
+        "intro_watchOS": "9",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Clock",
+            "printedName": "Clock",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Duration",
+                "printedName": "Duration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Instant",
+                "printedName": "Instant",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Instant",
+                    "printedName": "Clocks.UnimplementedClock<τ_0_0>.Instant",
+                    "usr": "s:6Clocks18UnimplementedClockV7InstantV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:12_Concurrency5ClockP",
+            "mangledName": "$ss5ClockP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Clock",
+        "printedName": "Clock",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "immediate",
+            "printedName": "immediate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImmediateClock",
+                "printedName": "Clocks.ImmediateClock<Swift.Duration>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Duration",
+                    "printedName": "Swift.Duration",
+                    "usr": "s:s8DurationV"
+                  }
+                ],
+                "usr": "s:6Clocks14ImmediateClockC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12_Concurrency5ClockP6ClocksAD09ImmediateB0Cys8DurationVGRszrlE9immediateAIvpZ",
+            "mangledName": "$ss5ClockP6ClocksAC09ImmediateA0Cys8DurationVGRszrlE9immediateAHvpZ",
+            "moduleName": "Clocks",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImmediateClock",
+                    "printedName": "Clocks.ImmediateClock<Swift.Duration>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Duration",
+                        "printedName": "Swift.Duration",
+                        "usr": "s:s8DurationV"
+                      }
+                    ],
+                    "usr": "s:6Clocks14ImmediateClockC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12_Concurrency5ClockP6ClocksAD09ImmediateB0Cys8DurationVGRszrlE9immediateAIvgZ",
+                "mangledName": "$ss5ClockP6ClocksAC09ImmediateA0Cys8DurationVGRszrlE9immediateAHvgZ",
+                "moduleName": "Clocks",
+                "genericSig": "<τ_0_0 where τ_0_0 == Clocks.ImmediateClock<Swift.Duration>>",
+                "sugared_genericSig": "<Self where Self == Clocks.ImmediateClock<Swift.Duration>>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "timer",
+            "printedName": "timer(interval:tolerance:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "_AsyncTimerSequence",
+                "printedName": "Clocks._AsyncTimerSequence<Clocks.AnyClock<τ_0_0.Duration>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyClock",
+                    "printedName": "Clocks.AnyClock<τ_0_0.Duration>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.Duration"
+                      }
+                    ],
+                    "usr": "s:6Clocks8AnyClockC"
+                  }
+                ],
+                "usr": "s:6Clocks19_AsyncTimerSequenceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Duration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Duration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Duration"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12_Concurrency5ClockP6ClocksSH8DurationRpzrlE5timer8interval9toleranceAD19_AsyncTimerSequenceVyAD03AnyB0CyAFGGAF_AFSgtF",
+            "mangledName": "$ss5ClockP6ClocksSH8DurationRpzrlE5timer8interval9toleranceAC19_AsyncTimerSequenceVyAC03AnyA0CyAEGGAE_AESgtF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.Clock, τ_0_0.Duration : Swift.Hashable>",
+            "sugared_genericSig": "<Self where Self : _Concurrency.Clock, Self.Duration : Swift.Hashable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unimplemented",
+            "printedName": "unimplemented(fileID:filePath:line:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12_Concurrency5ClockP6ClocksAD013UnimplementedB0Vys8DurationVGRszrlE13unimplemented6fileID0G4Path4line6columnAIs12StaticStringV_APS2utFZ",
+            "mangledName": "$ss5ClockP6ClocksAC013UnimplementedA0Vys8DurationVGRszrlE13unimplemented6fileID0F4Path4line6columnAHs12StaticStringV_AOS2utFZ",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0 where τ_0_0 == Clocks.UnimplementedClock<Swift.Duration>>",
+            "sugared_genericSig": "<Self where Self == Clocks.UnimplementedClock<Swift.Duration>>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12_Concurrency5ClockP",
+        "mangledName": "$ss5ClockP",
+        "moduleName": "_Concurrency",
+        "genericSig": "<τ_0_0 : Swift.Sendable, τ_0_0.Duration == τ_0_0.Instant.Duration, τ_0_0.Instant : Swift.InstantProtocol>",
+        "sugared_genericSig": "<Self : Swift.Sendable, Self.Duration == Self.Instant.Duration, Self.Instant : Swift.InstantProtocol>",
+        "intro_Macosx": "13.0",
+        "intro_iOS": "16.0",
+        "intro_tvOS": "16.0",
+        "intro_watchOS": "9.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSLock",
+        "printedName": "NSLock",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sync",
+            "printedName": "sync(operation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6NSLockC6ClocksE4sync9operationxxyXE_tlF",
+            "mangledName": "$sSo6NSLockC6ClocksE4sync9operationxxyXE_tlF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<R>",
+            "declAttributes": [
+              "DiscardableResult",
+              "Inlinable"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSLock",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSLock",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSRecursiveLock",
+        "printedName": "NSRecursiveLock",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sync",
+            "printedName": "sync(operation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So15NSRecursiveLockC6ClocksE4sync9operationxxyXE_tlF",
+            "mangledName": "$sSo15NSRecursiveLockC6ClocksE4sync9operationxxyXE_tlF",
+            "moduleName": "Clocks",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<R>",
+            "declAttributes": [
+              "DiscardableResult",
+              "Inlinable"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSRecursiveLock",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSRecursiveLock",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EnvironmentValues",
+        "printedName": "EnvironmentValues",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "continuousClock",
+            "printedName": "continuousClock",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Clock",
+                "printedName": "any _Concurrency.Clock<Swift.Duration>",
+                "usr": "s:12_Concurrency5ClockP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15continuousClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvp",
+            "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15continuousClocks0G0_ps8DurationVAGsAFPRts_XPvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Clock",
+                    "printedName": "any _Concurrency.Clock<Swift.Duration>",
+                    "usr": "s:12_Concurrency5ClockP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15continuousClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvg",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15continuousClocks0G0_ps8DurationVAGsAFPRts_XPvg",
+                "moduleName": "Clocks",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Clock",
+                    "printedName": "any _Concurrency.Clock<Swift.Duration>",
+                    "usr": "s:12_Concurrency5ClockP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15continuousClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvs",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15continuousClocks0G0_ps8DurationVAGsAFPRts_XPvs",
+                "moduleName": "Clocks",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15continuousClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvM",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15continuousClocks0G0_ps8DurationVAGsAFPRts_XPvM",
+                "moduleName": "Clocks",
+                "implicit": true,
+                "intro_Macosx": "13",
+                "intro_iOS": "16",
+                "intro_tvOS": "16",
+                "intro_watchOS": "9",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "suspendingClock",
+            "printedName": "suspendingClock",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Clock",
+                "printedName": "any _Concurrency.Clock<Swift.Duration>",
+                "usr": "s:12_Concurrency5ClockP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvp",
+            "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClocks0G0_ps8DurationVAGsAFPRts_XPvp",
+            "moduleName": "Clocks",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Clock",
+                    "printedName": "any _Concurrency.Clock<Swift.Duration>",
+                    "usr": "s:12_Concurrency5ClockP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvg",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClocks0G0_ps8DurationVAGsAFPRts_XPvg",
+                "moduleName": "Clocks",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Clock",
+                    "printedName": "any _Concurrency.Clock<Swift.Duration>",
+                    "usr": "s:12_Concurrency5ClockP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvs",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClocks0G0_ps8DurationVAGsAFPRts_XPvs",
+                "moduleName": "Clocks",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClock12_Concurrency0G0_ps8DurationVAhfGPRts_XPvM",
+                "mangledName": "$s7SwiftUI17EnvironmentValuesV6ClocksE15suspendingClocks0G0_ps8DurationVAGsAFPRts_XPvM",
+                "moduleName": "Clocks",
+                "implicit": true,
+                "intro_Macosx": "13",
+                "intro_iOS": "16",
+                "intro_tvOS": "16",
+                "intro_watchOS": "9",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7SwiftUI17EnvironmentValuesV",
+        "mangledName": "$s7SwiftUI17EnvironmentValuesV",
+        "moduleName": "SwiftUICore",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-clocks\/Sources\/Clocks\/TestClock.swift",
+      "kind": "Array",
+      "offset": 3172,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-clocks\/Sources\/Clocks\/TestClock.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7662,
+      "length": 3,
+      "value": "500"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-clocks\/Sources\/Clocks\/UnimplementedClock.swift",
+      "kind": "StringLiteral",
+      "offset": 3344,
+      "length": 11,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-clocks\/Sources\/Clocks\/UnimplementedClock.swift",
+      "kind": "StringLiteral",
+      "offset": 3354,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-clocks\/Sources\/Clocks\/UnimplementedClock.swift",
+      "kind": "StringLiteral",
+      "offset": 3738,
+      "length": 7,
+      "value": "\"Clock\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-clocks\/Sources\/Clocks\/UnimplementedClock.swift",
+      "kind": "StringLiteral",
+      "offset": 5139,
+      "length": 7,
+      "value": "\"Clock\""
+    }
+  ]
+}

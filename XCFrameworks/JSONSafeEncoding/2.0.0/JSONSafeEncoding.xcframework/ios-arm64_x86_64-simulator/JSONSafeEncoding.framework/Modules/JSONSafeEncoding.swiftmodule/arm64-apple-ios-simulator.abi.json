@@ -1,0 +1,2650 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "JSONSafeEncoding",
+    "printedName": "JSONSafeEncoding",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JSONSafeEncoding",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JSONSafeEncoding",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JSONSafeEncoding",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JSONSafeEncoder",
+        "printedName": "JSONSafeEncoder",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "OutputFormatting",
+            "printedName": "OutputFormatting",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV8rawValueSuvp",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV8rawValueSuvp",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt",
+                        "printedName": "Swift.UInt",
+                        "usr": "s:Su"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV8rawValueSuvg",
+                    "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV8rawValueSuvg",
+                    "moduleName": "JSONSafeEncoding",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OutputFormatting",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV8rawValueAESu_tcfc",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV8rawValueAESu_tcfc",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "prettyPrinted",
+                "printedName": "prettyPrinted",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OutputFormatting",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV13prettyPrintedAEvpZ",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV13prettyPrintedAEvpZ",
+                "moduleName": "JSONSafeEncoding",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OutputFormatting",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV13prettyPrintedAEvgZ",
+                    "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV13prettyPrintedAEvgZ",
+                    "moduleName": "JSONSafeEncoding",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "sortedKeys",
+                "printedName": "sortedKeys",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OutputFormatting",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV10sortedKeysAEvpZ",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV10sortedKeysAEvpZ",
+                "moduleName": "JSONSafeEncoding",
+                "static": true,
+                "intro_Macosx": "10.13",
+                "intro_iOS": "11.0",
+                "intro_tvOS": "11.0",
+                "intro_watchOS": "4.0",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OutputFormatting",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV10sortedKeysAEvgZ",
+                    "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV10sortedKeysAEvgZ",
+                    "moduleName": "JSONSafeEncoding",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "withoutEscapingSlashes",
+                "printedName": "withoutEscapingSlashes",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OutputFormatting",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV22withoutEscapingSlashesAEvpZ",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV22withoutEscapingSlashesAEvpZ",
+                "moduleName": "JSONSafeEncoding",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OutputFormatting",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV22withoutEscapingSlashesAEvgZ",
+                    "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV22withoutEscapingSlashesAEvgZ",
+                    "moduleName": "JSONSafeEncoding",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC16OutputFormattingV",
+            "moduleName": "JSONSafeEncoding",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "OptionSet",
+                "printedName": "OptionSet",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Element",
+                    "printedName": "Element",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OutputFormatting",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s9OptionSetP",
+                "mangledName": "$ss9OptionSetP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt",
+                        "printedName": "Swift.UInt",
+                        "usr": "s:Su"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SetAlgebra",
+                "printedName": "SetAlgebra",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "Element",
+                    "printedName": "Element",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OutputFormatting",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s10SetAlgebraP",
+                "mangledName": "$ss10SetAlgebraP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "ExpressibleByArrayLiteral",
+                "printedName": "ExpressibleByArrayLiteral",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "ArrayLiteralElement",
+                    "printedName": "ArrayLiteralElement",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OutputFormatting",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s25ExpressibleByArrayLiteralP",
+                "mangledName": "$ss25ExpressibleByArrayLiteralP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "DateEncodingStrategy",
+            "printedName": "DateEncodingStrategy",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "deferredToDate",
+                "printedName": "deferredToDate",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DateEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO010deferredToD0yA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DateB8StrategyO010deferredToD0yA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "secondsSince1970",
+                "printedName": "secondsSince1970",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DateEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO16secondsSince1970yA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DateB8StrategyO16secondsSince1970yA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "millisecondsSince1970",
+                "printedName": "millisecondsSince1970",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DateEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO21millisecondsSince1970yA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DateB8StrategyO21millisecondsSince1970yA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "iso8601",
+                "printedName": "iso8601",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DateEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO7iso8601yA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DateB8StrategyO7iso8601yA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "intro_Macosx": "10.12",
+                "intro_iOS": "10.0",
+                "intro_tvOS": "10.0",
+                "intro_watchOS": "3.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available",
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "formatted",
+                "printedName": "formatted",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type) -> (Foundation.DateFormatter) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.DateFormatter) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateFormatter",
+                            "printedName": "Foundation.DateFormatter",
+                            "usr": "c:objc(cs)NSDateFormatter"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO9formattedyAESo15NSDateFormatterCcAEmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DateB8StrategyO9formattedyAESo15NSDateFormatterCcAEmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "custom",
+                "printedName": "custom",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type) -> (@escaping (Foundation.Date, any Swift.Encoder) throws -> ()) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(@escaping (Foundation.Date, any Swift.Encoder) throws -> ()) -> JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Foundation.Date, any Swift.Encoder) throws -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Tuple",
+                                "printedName": "(Foundation.Date, any Swift.Encoder)",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Date",
+                                    "printedName": "Foundation.Date",
+                                    "usr": "s:10Foundation4DateV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Encoder",
+                                    "printedName": "any Swift.Encoder",
+                                    "usr": "s:s7EncoderP"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DateEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO6customyAEy10Foundation0D0V_s0C0_ptKccAEmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DateB8StrategyO6customyAEy10Foundation0D0V_s0C0_ptKccAEmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DateB8StrategyO",
+            "moduleName": "JSONSafeEncoding",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "DataEncodingStrategy",
+            "printedName": "DataEncodingStrategy",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "deferredToData",
+                "printedName": "deferredToData",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DataEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DataEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO010deferredToD0yA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DataB8StrategyO010deferredToD0yA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "base64",
+                "printedName": "base64",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DataEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DataEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO6base64yA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DataB8StrategyO6base64yA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "custom",
+                "printedName": "custom",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy.Type) -> (@escaping (Foundation.Data, any Swift.Encoder) throws -> ()) -> JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(@escaping (Foundation.Data, any Swift.Encoder) throws -> ()) -> JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DataEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Foundation.Data, any Swift.Encoder) throws -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Tuple",
+                                "printedName": "(Foundation.Data, any Swift.Encoder)",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Data",
+                                    "printedName": "Foundation.Data",
+                                    "usr": "s:10Foundation4DataV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Encoder",
+                                    "printedName": "any Swift.Encoder",
+                                    "usr": "s:s7EncoderP"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DataEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO6customyAEy10Foundation0D0V_s0C0_ptKccAEmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DataB8StrategyO6customyAEy10Foundation0D0V_s0C0_ptKccAEmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC04DataB8StrategyO",
+            "moduleName": "JSONSafeEncoding",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "NonConformingFloatEncodingStrategy",
+            "printedName": "NonConformingFloatEncodingStrategy",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "throw",
+                "printedName": "throw",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NonConformingFloatEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NonConformingFloatEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO5throwyA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO5throwyA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "null",
+                "printedName": "null",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NonConformingFloatEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NonConformingFloatEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO4nullyA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO4nullyA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "zero",
+                "printedName": "zero",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NonConformingFloatEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NonConformingFloatEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO4zeroyA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO4zeroyA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "convertToString",
+                "printedName": "convertToString",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type) -> (Swift.String, Swift.String, Swift.String) -> JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, Swift.String, Swift.String) -> JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NonConformingFloatEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(positiveInfinity: Swift.String, negativeInfinity: Swift.String, nan: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NonConformingFloatEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO15convertToStringyAESS_S2StcAEmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO15convertToStringyAESS_S2StcAEmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO",
+            "moduleName": "JSONSafeEncoding",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "KeyEncodingStrategy",
+            "printedName": "KeyEncodingStrategy",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "useDefaultKeys",
+                "printedName": "useDefaultKeys",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "KeyEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO14useDefaultKeysyA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO14useDefaultKeysyA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "convertToSnakeCase",
+                "printedName": "convertToSnakeCase",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy.Type) -> JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyEncodingStrategy",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                        "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "KeyEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO18convertToSnakeCaseyA2EmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO18convertToSnakeCaseyA2EmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "custom",
+                "printedName": "custom",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy.Type) -> (@escaping ([any Swift.CodingKey]) -> any Swift.CodingKey) -> JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(@escaping ([any Swift.CodingKey]) -> any Swift.CodingKey) -> JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "KeyEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "([any Swift.CodingKey]) -> any Swift.CodingKey",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "CodingKey",
+                                "printedName": "any Swift.CodingKey",
+                                "usr": "s:s9CodingKeyP"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[any Swift.CodingKey]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "CodingKey",
+                                    "printedName": "any Swift.CodingKey",
+                                    "usr": "s:s9CodingKeyP"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "KeyEncodingStrategy",
+                            "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                            "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO6customyAEs06CodingD0_pSaysAG_pGccAEmF",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO6customyAEs06CodingD0_pSaysAG_pGccAEmF",
+                "moduleName": "JSONSafeEncoding",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO",
+            "moduleName": "JSONSafeEncoding",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "outputFormatting",
+            "printedName": "outputFormatting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OutputFormatting",
+                "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0Vvp",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0Vvp",
+            "moduleName": "JSONSafeEncoding",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OutputFormatting",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0Vvg",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0Vvg",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OutputFormatting",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.OutputFormatting",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC16OutputFormattingV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0Vvs",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0Vvs",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0VvM",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC16outputFormattingAC06OutputE0VvM",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dateEncodingStrategy",
+            "printedName": "dateEncodingStrategy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DateEncodingStrategy",
+                "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0Ovp",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0Ovp",
+            "moduleName": "JSONSafeEncoding",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DateEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0Ovg",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0Ovg",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DateEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.DateEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC04DateB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0Ovs",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0Ovs",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0OvM",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dateB8StrategyAC04DatebE0OvM",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dataEncodingStrategy",
+            "printedName": "dataEncodingStrategy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DataEncodingStrategy",
+                "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0Ovp",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0Ovp",
+            "moduleName": "JSONSafeEncoding",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DataEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0Ovg",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0Ovg",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DataEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.DataEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC04DataB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0Ovs",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0Ovs",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0OvM",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC04dataB8StrategyAC04DatabE0OvM",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nonConformingFloatEncodingStrategy",
+            "printedName": "nonConformingFloatEncodingStrategy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NonConformingFloatEncodingStrategy",
+                "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0Ovp",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0Ovp",
+            "moduleName": "JSONSafeEncoding",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NonConformingFloatEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0Ovg",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0Ovg",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NonConformingFloatEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.NonConformingFloatEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC018NonConformingFloatB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0Ovs",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0Ovs",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0OvM",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC018nonConformingFloatB8StrategyAC03NonefbG0OvM",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "keyEncodingStrategy",
+            "printedName": "keyEncodingStrategy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeyEncodingStrategy",
+                "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0Ovp",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0Ovp",
+            "moduleName": "JSONSafeEncoding",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0Ovg",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0Ovg",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyEncodingStrategy",
+                    "printedName": "JSONSafeEncoding.JSONSafeEncoder.KeyEncodingStrategy",
+                    "usr": "s:16JSONSafeEncoding0A7EncoderC03KeyB8StrategyO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0Ovs",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0Ovs",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0OvM",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC03keyB8StrategyAC03KeybE0OvM",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userInfo",
+            "printedName": "userInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.CodingUserInfoKey : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CodingUserInfoKey",
+                    "printedName": "Swift.CodingUserInfoKey",
+                    "usr": "s:s17CodingUserInfoKeyV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvp",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvp",
+            "moduleName": "JSONSafeEncoding",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.CodingUserInfoKey : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingUserInfoKey",
+                        "printedName": "Swift.CodingUserInfoKey",
+                        "usr": "s:s17CodingUserInfoKeyV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvg",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvg",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.CodingUserInfoKey : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingUserInfoKey",
+                        "printedName": "Swift.CodingUserInfoKey",
+                        "usr": "s:s17CodingUserInfoKeyV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvs",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvs",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvM",
+                "mangledName": "$s16JSONSafeEncoding0A7EncoderC8userInfoSDys010CodingUserE3KeyVypGvM",
+                "moduleName": "JSONSafeEncoding",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JSONSafeEncoder",
+                "printedName": "JSONSafeEncoding.JSONSafeEncoder",
+                "usr": "s:16JSONSafeEncoding0A7EncoderC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16JSONSafeEncoding0A7EncoderCACycfc",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderCACycfc",
+            "moduleName": "JSONSafeEncoding",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16JSONSafeEncoding0A7EncoderC6encodey10Foundation4DataVxKSERzlF",
+            "mangledName": "$s16JSONSafeEncoding0A7EncoderC6encodey10Foundation4DataVxKSERzlF",
+            "moduleName": "JSONSafeEncoding",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Encodable>",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16JSONSafeEncoding0A7EncoderC",
+        "mangledName": "$s16JSONSafeEncoding0A7EncoderC",
+        "moduleName": "JSONSafeEncoding",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JSONSafeEncoding",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Dictionary",
+        "printedName": "Dictionary",
+        "declKind": "Struct",
+        "usr": "s:SD",
+        "mangledName": "$sSD",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable>",
+        "sugared_genericSig": "<Key, Value where Key : Swift.Hashable>",
+        "declAttributes": [
+          "EagerMove",
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Collection",
+            "printedName": "Collection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(key: τ_0_0, value: τ_0_1)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Index",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Index",
+                    "usr": "s:SD5IndexV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "Swift.Dictionary<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:SD8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Slice",
+                    "printedName": "Swift.Slice<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:s5SliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultIndices",
+                    "printedName": "Swift.DefaultIndices<[τ_0_0 : τ_0_1]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[τ_0_0 : τ_0_1]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:SI"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sl",
+            "mangledName": "$sSl"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByDictionaryLiteral",
+            "printedName": "ExpressibleByDictionaryLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Key",
+                "printedName": "Key",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Value",
+                "printedName": "Value",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s30ExpressibleByDictionaryLiteralP",
+            "mangledName": "$ss30ExpressibleByDictionaryLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1025,
+      "length": 3,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1077,
+      "length": 4,
+      "value": "\"\r\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1131,
+      "length": 4,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1181,
+      "length": 4,
+      "value": "\"\t\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1234,
+      "length": 3,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1285,
+      "length": 3,
+      "value": "\",\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1341,
+      "length": 3,
+      "value": "\"{\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1397,
+      "length": 3,
+      "value": "\"}\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1455,
+      "length": 3,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1513,
+      "length": 3,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1565,
+      "length": 4,
+      "value": "\"\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1621,
+      "length": 4,
+      "value": "\"\\\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1717,
+      "length": 3,
+      "value": "\"t\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1736,
+      "length": 3,
+      "value": "\"r\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1755,
+      "length": 3,
+      "value": "\"u\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1774,
+      "length": 3,
+      "value": "\"e\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1827,
+      "length": 3,
+      "value": "\"f\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1846,
+      "length": 3,
+      "value": "\"a\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1865,
+      "length": 3,
+      "value": "\"l\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1884,
+      "length": 3,
+      "value": "\"s\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1903,
+      "length": 3,
+      "value": "\"e\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1955,
+      "length": 3,
+      "value": "\"n\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1974,
+      "length": 3,
+      "value": "\"u\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1993,
+      "length": 3,
+      "value": "\"l\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 2012,
+      "length": 3,
+      "value": "\"l\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2091,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2096,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2315,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2320,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2782,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2787,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "StringLiteral",
+      "offset": 5214,
+      "length": 10,
+      "value": "\"Infinity\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "StringLiteral",
+      "offset": 5256,
+      "length": 11,
+      "value": "\"-Infinity\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "StringLiteral",
+      "offset": 5286,
+      "length": 5,
+      "value": "\"NaN\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "Array",
+      "offset": 10190,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "Dictionary",
+      "offset": 10939,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "Array",
+      "offset": 13352,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "Dictionary",
+      "offset": 14659,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 26612,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 32346,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 36216,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 41111,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 42072,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43851,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/JSONSafeEncoder.swift",
+      "kind": "StringLiteral",
+      "offset": 49499,
+      "length": 7,
+      "value": "\"super\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/JSONSafeEncoding\/Sources\/JSONSafeEncoding\/Version.swift",
+      "kind": "StringLiteral",
+      "offset": 339,
+      "length": 7,
+      "value": "\"2.0.0\""
+    }
+  ]
+}

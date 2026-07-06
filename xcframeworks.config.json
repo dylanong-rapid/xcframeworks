@@ -27,8 +27,7 @@
       "products": [
         "Logging"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-metrics",
@@ -67,8 +66,7 @@
       "products": [
         "Atomics"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-numerics",
@@ -81,8 +79,7 @@
       "products": [
         "Numerics"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-http-types",
@@ -148,10 +145,11 @@
       "group": "shared-infra",
       "order": 110,
       "products": [
-        "OrderedCollections"
+        "OrderedCollections",
+        "DequeModule",
+        "InternalCollectionsUtilities"
       ],
       "skip": false,
-      "noLibraryEvolution": true,
       "explicitProducts": true,
       "noToolsDowngrade": true
     },
@@ -166,8 +164,7 @@
       "products": [
         "Algorithms"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-async-algorithms",
@@ -200,8 +197,7 @@
       "skip": false,
       "complex": true,
       "note": "multi-product",
-      "noMachOOverride": true,
-      "noLibraryEvolution": true
+      "noMachOOverride": true
     },
     {
       "name": "swift-nio-ssl",
@@ -214,8 +210,7 @@
       "products": [
         "NIOSSL"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-nio-http2",
@@ -228,8 +223,7 @@
       "products": [
         "NIOHTTP2"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-nio-extras",
@@ -242,8 +236,7 @@
       "products": [
         "NIOExtras"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-nio-transport-services",
@@ -256,8 +249,7 @@
       "products": [
         "NIOTransportServices"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-distributed-tracing",
@@ -283,8 +275,7 @@
       "products": [
         "ServiceLifecycle"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "async-http-client",
@@ -297,8 +288,7 @@
       "products": [
         "AsyncHTTPClient"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "grpc-swift",
@@ -318,8 +308,7 @@
         "swift-nio.git": "2.87.0"
       },
       "scheme": "GRPC",
-      "explicitProducts": true,
-      "noLibraryEvolution": true
+      "explicitProducts": true
     },
     {
       "name": "Opentracing",
@@ -357,12 +346,14 @@
       "order": 124,
       "products": [
         "OpenTelemetryApi",
-        "OpenTelemetrySdk"
+        "OpenTelemetrySdk",
+        "InMemoryExporter",
+        "OpenTelemetryProtocolExporterHTTP"
       ],
-      "skip": true,
+      "skip": false,
       "complex": true,
-      "note": "multi-product",
-      "noForceDynamic": true
+      "note": "multi-product. smithy-swift ClientRuntime links 4 OTEL products on iOS (Api, Sdk, InMemoryExporter, OpenTelemetryProtocolExporterHTTP); the latter two pull internal targets OpenTelemetryProtocolExporterCommon + DataCompression and external Atomics/Logging/SwiftProtobuf (shared-infra)",
+      "perProductScheme": true
     },
     {
       "name": "swift-log-file",
@@ -375,8 +366,7 @@
       "products": [
         "FileLogging"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "Promises",
@@ -402,11 +392,10 @@
       "group": "firebase",
       "order": 202,
       "products": [
-        "GoogleInterop"
+        "RecaptchaInterop"
       ],
       "skip": false,
-      "complex": true,
-      "note": "verify product name"
+      "complex": true
     },
     {
       "name": "GTMSessionFetcher",
@@ -432,7 +421,14 @@
       "group": "firebase",
       "order": 204,
       "products": [
-        "GoogleUtilities"
+        "GULAppDelegateSwizzler",
+        "GULEnvironment",
+        "GULLogger",
+        "GULMethodSwizzler",
+        "GULNetwork",
+        "GULNSData",
+        "GULReachability",
+        "GULUserDefaults"
       ],
       "skip": false,
       "complex": true,
@@ -461,7 +457,7 @@
       "group": "firebase",
       "order": 206,
       "products": [
-        "FirebaseAppCheck"
+        "AppCheckCore"
       ],
       "skip": false,
       "complex": true
@@ -508,12 +504,38 @@
       "group": "aws",
       "order": 302,
       "products": [
-        "ClientRuntime"
+        "ClientRuntime",
+        "Smithy",
+        "SmithyCBOR",
+        "SmithyChecksums",
+        "SmithyChecksumsAPI",
+        "SmithyEventStreams",
+        "SmithyEventStreamsAPI",
+        "SmithyEventStreamsAuthAPI",
+        "SmithyFormURL",
+        "SmithyHTTPAPI",
+        "SmithyHTTPAuth",
+        "SmithyHTTPAuthAPI",
+        "SmithyHTTPClient",
+        "SmithyHTTPClientAPI",
+        "SmithyIdentity",
+        "SmithyIdentityAPI",
+        "SmithyJSON",
+        "SmithyReadWrite",
+        "SmithyRetries",
+        "SmithyRetriesAPI",
+        "SmithySerialization",
+        "SmithyStreams",
+        "SmithyTelemetryAPI",
+        "SmithyTimestamps",
+        "SmithyWaitersAPI",
+        "SmithyXML"
       ],
       "skip": false,
       "complex": true,
       "noStripDevTools": true,
-      "note": "many products; build ClientRuntime. docc dep is env-gated via dependencies.append(.package(...)) — stripping corrupts it, so noStripDevTools:true"
+      "perProductScheme": true,
+      "note": "FULL closure for AWSCognitoAuthPlugin+AWSS3StoragePlugin: all 26 reachable products (every closure target here is a .library product). docc dep is env-gated via dependencies.append(.package(...)) so noStripDevTools:true"
     },
     {
       "name": "aws-sdk-swift",
@@ -524,13 +546,27 @@
       "group": "aws",
       "order": 303,
       "products": [
-        "AWSClientRuntime"
+        "AWSClientRuntime",
+        "AWSS3",
+        "AWSCognitoIdentity",
+        "AWSCognitoIdentityProvider",
+        "AWSSDKChecksums",
+        "AWSSDKCommon",
+        "AWSSDKHTTPAuth",
+        "AWSSDKIdentity",
+        "AWSSDKIdentityAPI",
+        "InternalAWSCognitoIdentity",
+        "InternalAWSSSO",
+        "InternalAWSSSOOIDC",
+        "InternalAWSSTS",
+        "InternalAWSSignin"
       ],
       "skip": false,
       "complex": true,
       "noStripDevTools": true,
       "explicitProducts": true,
-      "note": "very large; build only AWSClientRuntime. products are computed (runtimeProducts + serviceTargets.map) so explicitProducts:true injects an explicit dynamic product. docc dep env-gated via `return .package(...)` so noStripDevTools:true"
+      "perProductScheme": true,
+      "note": "FULL closure for AWSCognitoAuthPlugin+AWSS3StoragePlugin. aws-sdk-swift is code-generated with hundreds of modules — build ONLY this closure. These 9 are .library products; the internal targets AWSSDKDynamic, InternalAWSCognitoIdentity, InternalAWSSSO, InternalAWSSSOOIDC, InternalAWSSTS, InternalAWSSignin are NOT declared products but ARE library targets — added to products so explicitProducts:true injects them as dynamic products and they get built as xcframeworks (binary .swiftmodule consumers need their swiftmodule files). products are computed (runtimeProducts + serviceTargets.map) so explicitProducts:true injects explicit dynamic products. docc dep env-gated via `return .package(...)` so noStripDevTools:true"
     },
     {
       "name": "AmplifyUtilsNotifications",
@@ -555,25 +591,43 @@
       "order": 305,
       "products": [
         "Amplify",
+        "AWSPluginsCore",
+        "AmplifyBigInteger",
+        "AmplifySRP",
+        "InternalAmplifyCredentials",
         "AWSCognitoAuthPlugin",
+        "AWSS3StoragePlugin",
         "AWSAPIPlugin"
       ],
       "skip": false,
       "complex": true,
-      "note": "multi-product umbrella SDK"
+      "note": "multi-product umbrella SDK. AWSCognitoAuthPlugin+AWSS3StoragePlugin are the two plugins the consumers need; AWSPluginsCore is a shared product they both link. Internal targets InternalAmplifyCredentials, AmplifyAvailability, AmplifyBigInteger, AmplifySRP, libtommathAmplify(C) are NOT products — they compile into the plugin frameworks. AWSAPIPlugin retained (closure is a subset, adds no new external products) | shared-core dynamic dedup for Amplify+AWSPluginsCore (fixes AuthCategory singleton). AmplifyBigInteger/AmplifySRP/InternalAmplifyCredentials are products (own xcframeworks) ONLY to ship their binary swiftmodules to consumers; they stay statically embedded in plugins (non-singletons). NOT sharedCore because AmplifyBigInteger-as-binaryTarget drops the libtommathAmplify C-module dep AmplifySRP needs.",
+      "perProductScheme": true,
+      "sharedCore": true,
+      "sharedCoreLibs": [
+        "Amplify",
+        "AWSPluginsCore"
+      ],
+      "explicitProducts": true
     },
     {
       "name": "xctest-dynamic-overlay",
       "url": "https://github.com/pointfreeco/xctest-dynamic-overlay",
-      "version": "1.7.0",
-      "revision": "4c27acf5394b645b70d8ba19dc249c0472d5f618",
-      "tag": "1.7.0",
+      "version": "1.10.1",
+      "revision": "401bf70d95bfe8db2a1dc619f9e175a85c089321",
+      "tag": "1.10.1",
       "group": "pointfree",
       "order": 401,
       "products": [
-        "IssueReporting"
+        "IssueReporting",
+        "XCTestDynamicOverlay"
       ],
-      "skip": false
+      "skip": false,
+      "explicitProducts": true,
+      "noToolsDowngrade": true,
+      "note": "PointFree runtime stack. Build IssueReporting + XCTestDynamicOverlay (both XCTest-free, safe for device archive). minIOS 13.0 to match upstream so consumers (swift-dependencies/combine-schedulers/swift-clocks at iOS 13) accept the binary products. IssueReportingTestSupport excluded from binary build (imports XCTest/Testing) but vended as a SOURCE target in the consumer wrapper so DependenciesTestSupport resolves. swift-tools 6.0 + swiftLanguageModes[.v6] => noToolsDowngrade. Transitive dep pulled by swift-dependencies/combine-schedulers/swift-clocks.",
+      "perProductScheme": true,
+      "minIOS": "13.0"
     },
     {
       "name": "swift-concurrency-extras",
@@ -664,8 +718,7 @@
       "products": [
         "SwiftASN1"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "swift-crypto",
@@ -678,10 +731,9 @@
       "products": [
         "Crypto"
       ],
-      "skip": true,
+      "skip": false,
       "complex": true,
       "note": "X509 also needs _CryptoExtras; add if link errors",
-      "noForceDynamic": true,
       "skipReason": "CryptoExtras links Crypto target statically; produces static/dynamic conflict with force_dynamic_products. Transitive swift-asn1 library-evolution bug also surfaces via SPM cache. Needs source changes to resolve."
     },
     {
@@ -695,8 +747,7 @@
       "products": [
         "X509"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "AuthFoundation",
@@ -709,8 +760,7 @@
       "products": [
         "AuthFoundation"
       ],
-      "skip": false,
-      "noLibraryEvolution": true
+      "skip": false
     },
     {
       "name": "OktaIdx",
@@ -724,8 +774,7 @@
         "OktaIdx"
       ],
       "skip": false,
-      "enableTestability": true,
-      "noLibraryEvolution": true
+      "enableTestability": true
     },
     {
       "name": "GrowthBook-IOS",
@@ -823,8 +872,7 @@
       ],
       "skip": false,
       "note": "pure-SPM static library product; library evolution emits an invalid .swiftinterface (nested types). Needs product type .dynamic or a source fix.",
-      "complex": true,
-      "noLibraryEvolution": true
+      "complex": true
     },
     {
       "name": "XCGLogger",
@@ -835,7 +883,8 @@
       "group": "easy-wins",
       "order": 708,
       "products": [
-        "XCGLogger"
+        "XCGLogger",
+        "ObjcExceptionBridging"
       ],
       "skip": false
     },
@@ -893,7 +942,6 @@
         "PriorsSchema"
       ],
       "skip": false,
-      "noLibraryEvolution": true,
       "complex": true,
       "note": "depends on JSONAny (needs no-library-evolution across the graph)"
     },
@@ -911,8 +959,7 @@
       "skip": false,
       "testOnly": true,
       "note": "test-support lib importing XCTest; invalid interface under evolution and not a normal distributable framework.",
-      "complex": true,
-      "noLibraryEvolution": true
+      "complex": true
     },
     {
       "name": "abseil",

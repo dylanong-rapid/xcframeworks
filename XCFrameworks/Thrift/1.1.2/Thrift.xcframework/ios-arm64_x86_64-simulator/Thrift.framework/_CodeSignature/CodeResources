@@ -4,13 +4,124 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/Thrift-Swift.h</key>
+		<data>
+		B8zZ3A6H/Q+EWyggIPXOvC3mcg4=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		ltgI1fkm0JuW/YoR8HEFJv7NcKc=
 		</data>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		KyLbvypoRsem5sa+Y+Odeb9HWVs=
+		</data>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		rP2R23bzS2Qn8HVhjnJ67q1s1Is=
+		</data>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		OYpWG/at0T++EjHd6zb33nZcX6w=
+		</data>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		rP2R23bzS2Qn8HVhjnJ67q1s1Is=
+		</data>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		KyLbvypoRsem5sa+Y+Odeb9HWVs=
+		</data>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		W8/ZrvzFpcQXq9ghVZ//zuup03Y=
+		</data>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		qCXp9Z4SZwaMt3hJVP4QVHs9ky0=
+		</data>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		W8/ZrvzFpcQXq9ghVZ//zuup03Y=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		NFyxYliWoar+fV0cxVqubB3cisU=
+		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Headers/Thrift-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yQBs6JNLCNX4wxmKWRB3GZ0FGr89tu6fYl+EcVtwJug=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lyk5xuLQsTbHt0QhwISAM8VesJJ4EpCYnAfzkxgAgQM=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YjA9QjGkqXM2g9+CvswKZ04Xtjho7F72zhgMT3MLBZQ=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AgzG9aia+AMgdHTPhjTzbL6GkzlrxRmTj83U9NTULdA=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YjA9QjGkqXM2g9+CvswKZ04Xtjho7F72zhgMT3MLBZQ=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lyk5xuLQsTbHt0QhwISAM8VesJJ4EpCYnAfzkxgAgQM=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gLfyT7Xx5xNhTgN1VLNL8YNjfeZV6K60HlR170O4Fyc=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+2zsJX4NtLS9JT186SQjE2hC41C1MhWhU+3HYs8ev7M=
+			</data>
+		</dict>
+		<key>Modules/Thrift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gLfyT7Xx5xNhTgN1VLNL8YNjfeZV6K60HlR170O4Fyc=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UxymLPWeC4XRBh0g++1l7UJ/xZnVxKhnmDw2U0reYtc=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

@@ -1,0 +1,64 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature MemberImportVisibility -enable-experimental-feature DebugDescriptionMacro -module-name StructuredFieldValues -package-name swift_http_structured_headers
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import Foundation
+import RawStructuredFieldValues
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct StructuredFieldValueDecoder : Swift.Sendable {
+  public var keyDecodingStrategy: StructuredFieldValues.StructuredFieldValueDecoder.KeyDecodingStrategy?
+  public init()
+}
+extension StructuredFieldValues.StructuredFieldValueDecoder {
+  public struct KeyDecodingStrategy : Swift.Hashable, Swift.Sendable {
+    public static let lowercase: StructuredFieldValues.StructuredFieldValueDecoder.KeyDecodingStrategy
+    public static func == (a: StructuredFieldValues.StructuredFieldValueDecoder.KeyDecodingStrategy, b: StructuredFieldValues.StructuredFieldValueDecoder.KeyDecodingStrategy) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension StructuredFieldValues.StructuredFieldValueDecoder {
+  public func decode<StructuredField, BaseData>(_ type: StructuredField.Type = StructuredField.self, from data: BaseData) throws -> StructuredField where StructuredField : StructuredFieldValues.StructuredFieldValue, BaseData : Swift.RandomAccessCollection, BaseData.Element == Swift.UInt8
+}
+public struct DisplayString : Swift.RawRepresentable, Swift.Codable, Swift.Equatable, Swift.Hashable, Swift.Sendable {
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String
+  public init(rawValue: Swift.String)
+}
+public struct StructuredFieldValueEncoder : Swift.Sendable {
+  public var keyEncodingStrategy: StructuredFieldValues.StructuredFieldValueEncoder.KeyEncodingStrategy?
+  public init()
+}
+extension StructuredFieldValues.StructuredFieldValueEncoder {
+  public struct KeyEncodingStrategy : Swift.Hashable, Swift.Sendable {
+    public static let lowercase: StructuredFieldValues.StructuredFieldValueEncoder.KeyEncodingStrategy
+    public static func == (a: StructuredFieldValues.StructuredFieldValueEncoder.KeyEncodingStrategy, b: StructuredFieldValues.StructuredFieldValueEncoder.KeyEncodingStrategy) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension StructuredFieldValues.StructuredFieldValueEncoder {
+  public func encode<StructuredField>(_ data: StructuredField) throws -> [Swift.UInt8] where StructuredField : StructuredFieldValues.StructuredFieldValue
+}
+public protocol StructuredFieldValue : Swift.Decodable, Swift.Encodable {
+  static var structuredFieldType: StructuredFieldValues.StructuredFieldType { get }
+}
+public enum StructuredFieldType : Swift.Sendable {
+  case item
+  case list
+  case dictionary
+  public static func == (a: StructuredFieldValues.StructuredFieldType, b: StructuredFieldValues.StructuredFieldType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension StructuredFieldValues.StructuredFieldType : Swift.Equatable {}
+extension StructuredFieldValues.StructuredFieldType : Swift.Hashable {}

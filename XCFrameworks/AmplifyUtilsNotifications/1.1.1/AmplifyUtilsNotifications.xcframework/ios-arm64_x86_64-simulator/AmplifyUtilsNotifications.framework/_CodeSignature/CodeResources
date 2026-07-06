@@ -4,13 +4,124 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/AmplifyUtilsNotifications-Swift.h</key>
+		<data>
+		cDnB+HTG3TCwcMreksB9U2kIztM=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		7AEI1hOOYpKpFjbL3LNZHxvJAlI=
 		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		ejSW1PwWdRIJiL6tVxFaAnqb53Q=
+		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		TFW+JyUB0h013/WlIWNe5GwcBNM=
+		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		E1eoc5A08OqDXo/tm/mndNWTHxU=
+		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		TFW+JyUB0h013/WlIWNe5GwcBNM=
+		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		ejSW1PwWdRIJiL6tVxFaAnqb53Q=
+		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		WRWs5GxQCztp4EaLW2/cgiU9qiQ=
+		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		gqIzRFkveVqoizMrfyyrVwFIA3A=
+		</data>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		WRWs5GxQCztp4EaLW2/cgiU9qiQ=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		kuslA5eE4DNYAHjbFuzKw26lsd4=
+		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Headers/AmplifyUtilsNotifications-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iLvV56b6jznzboBQ1baz+mQ4R5IUXBdQGr0KIhccjvU=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F9MlkwZAO5zxfzpxMIyuLhtUDI7JFLCm8XhSuk8UG/A=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cjcE1pFzTGs8pd/P65oI1szQNT6FATdB2nGJ5Xx3+Qo=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CV2GB77ESHWlV1f9jeUp6LDcqEhCXABKKgB3FuAhAeo=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cjcE1pFzTGs8pd/P65oI1szQNT6FATdB2nGJ5Xx3+Qo=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F9MlkwZAO5zxfzpxMIyuLhtUDI7JFLCm8XhSuk8UG/A=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			atUgdvbkm6hwGjJUEcWN0ct5N90LZ9IMwcsHaBn0zp4=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qK+mWtrSjTgJeNdNx8tQwngyjy+CDm1VU2nTFeiVXyQ=
+			</data>
+		</dict>
+		<key>Modules/AmplifyUtilsNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			atUgdvbkm6hwGjJUEcWN0ct5N90LZ9IMwcsHaBn0zp4=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			N8RLvMgYe3FWoN+XiQDeMXjD3xq/D+Pw9166mt7vtPQ=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

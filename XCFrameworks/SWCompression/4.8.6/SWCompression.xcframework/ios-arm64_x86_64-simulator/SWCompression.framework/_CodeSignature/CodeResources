@@ -4,13 +4,124 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/SWCompression-Swift.h</key>
+		<data>
+		PtLryfnGrIxHVf0csx5flRz1Ii0=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		cYI6LqnRM7pj6Xk8SZ/HhZdaWyo=
 		</data>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		FW/eE0U6DvTBpEtIY/wf0UD/YQU=
+		</data>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		xAaYe+XpJ7UO5oWDMT9lVL2WQ/U=
+		</data>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		aHTz42Ab1KsCvg5kTJntsLx0q+0=
+		</data>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		xAaYe+XpJ7UO5oWDMT9lVL2WQ/U=
+		</data>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		FW/eE0U6DvTBpEtIY/wf0UD/YQU=
+		</data>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		FmmUl9FZqJ5lqjpkhq/SNWY1P08=
+		</data>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		32+3qy6NBwvuD9p6eKp9mIhmG9o=
+		</data>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		FmmUl9FZqJ5lqjpkhq/SNWY1P08=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		Nbrxz7YpQdxFZ/isuMelkxkTR5c=
+		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Headers/SWCompression-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c7Cog9KYWLvZjD6ULbw2Cz1uqnga530rs0EDh927zMM=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pfsqcB3xAvG1pw2Q7eveSQsa6JtfNhE5cfn0sx8q/4I=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rbaltRy483bWKQKoKVEmBLyKhdoxLWNtIEClW00O6J8=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0rzdNdAOAYHW5j7Fpdk6EeVyIfwDdLQWnvv7Xv54Zlk=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rbaltRy483bWKQKoKVEmBLyKhdoxLWNtIEClW00O6J8=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pfsqcB3xAvG1pw2Q7eveSQsa6JtfNhE5cfn0sx8q/4I=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eiqy6Cl6YDj22WbwM3JujcoSZUPDTC2KVNU1Lr72L2M=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			laNNM8/Hk7LJ+7wbVaLd0BoU2q7TuIJ9xOVznax9KvI=
+			</data>
+		</dict>
+		<key>Modules/SWCompression.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eiqy6Cl6YDj22WbwM3JujcoSZUPDTC2KVNU1Lr72L2M=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hhOwt7/y3ru3eKuDT85OlrY18+mxjyfCX6DnH+Rna1E=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

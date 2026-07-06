@@ -4,13 +4,124 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/AsyncAlgorithms-Swift.h</key>
+		<data>
+		t82nHyKsvtUD2bxszZ6ubON0QuE=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		wQTNAZaFbBZQ74YEqYE8JSEitTY=
 		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		SSMm+wJyGxYR5b+5kwtwDkPjnko=
+		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		d+dKWGD7drt0OvJckD8a4JKAql4=
+		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		Y2XII5Dr/I0q9mN4evVE/cUPj0Q=
+		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		d+dKWGD7drt0OvJckD8a4JKAql4=
+		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		SSMm+wJyGxYR5b+5kwtwDkPjnko=
+		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		/eaU2wFHQ/BBZItXPPcYHMNWi7A=
+		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		+pYwUJTbxzLRhXzz2ctOURcpj3I=
+		</data>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		/eaU2wFHQ/BBZItXPPcYHMNWi7A=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		n8QLQsghHEp2gUnh0Y40iNFOfao=
+		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Headers/AsyncAlgorithms-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			awCRYqFu0YI07uP0VrIS4DPqMUpgFNoXH3A7A/2rr/U=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CSB4A6jLTdmuADVi7vcBIPgo1yXSLKfB1nkobpwLtI0=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			b8WmFuT9bkSPGWGp5BPlOck5bxvDm9nCj64Y3u9I6jo=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SRE2vSWtSAL/FgN9Bv3wGyEuGiWx3emDA/2BMFQNDwY=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			b8WmFuT9bkSPGWGp5BPlOck5bxvDm9nCj64Y3u9I6jo=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CSB4A6jLTdmuADVi7vcBIPgo1yXSLKfB1nkobpwLtI0=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ffjiYyrP8HNJBtJyI5J+vs800J4Gi+kQ7n0EJWNx3do=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FBt/zV8JzOhdupJrKZcYVmbMhLkCVJYJfm6D1knMBQs=
+			</data>
+		</dict>
+		<key>Modules/AsyncAlgorithms.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ffjiYyrP8HNJBtJyI5J+vs800J4Gi+kQ7n0EJWNx3do=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JyDToF2p3W+BQcAcCnqDalWf7aRO0fc+TcKwtMVF3Nw=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

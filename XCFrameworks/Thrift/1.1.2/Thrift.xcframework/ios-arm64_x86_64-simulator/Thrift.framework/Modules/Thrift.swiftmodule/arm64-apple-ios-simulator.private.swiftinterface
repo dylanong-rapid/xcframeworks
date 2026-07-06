@@ -1,0 +1,881 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-4.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name Thrift
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import CoreFoundation
+import Darwin
+import Dispatch
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct TApplicationError : Thrift.TError {
+  public enum Code : Thrift.TErrorCode {
+    case unknown
+    case unknownMethod(methodName: Swift.String?)
+    case invalidMessageType
+    case wrongMethodName(methodName: Swift.String?)
+    case badSequenceId
+    case missingResult(methodName: Swift.String?)
+    case internalError
+    case protocolError
+    case invalidTransform
+    case invalidProtocol
+    case unsupportedClientType
+    public init(thriftErrorCode: Swift.Int)
+    public var thriftErrorCode: Swift.Int {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+  }
+  public init()
+  public init(thriftErrorCode code: Swift.Int, message: Swift.String? = nil)
+  public var error: Thrift.TApplicationError.Code
+  public var message: Swift.String?
+  public static var defaultCase: Thrift.TApplicationError.Code {
+    get
+  }
+}
+extension Thrift.TApplicationError : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Thrift.TApplicationError
+  public func write(to proto: any Thrift.TProtocol) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public func == (lhs: Thrift.TApplicationError, rhs: Thrift.TApplicationError) -> Swift.Bool
+extension Foundation.Data : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Foundation.Data
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+public struct TBinaryProtocolVersion {
+}
+public class TBinaryProtocol : Thrift.TProtocol {
+  public var messageSizeLimit: Swift.UInt32
+  public var transport: any Thrift.TTransport
+  public static var strictRead: Swift.Bool
+  public static var strictWrite: Swift.Bool
+  convenience public init(transport: any Thrift.TTransport, strictRead: Swift.Bool, strictWrite: Swift.Bool)
+  required public init(on transport: any Thrift.TTransport)
+  public func readMessageBegin() throws -> (Swift.String, Thrift.TMessageType, Swift.Int32)
+  public func readMessageEnd() throws
+  public func readStructBegin() throws -> Swift.String
+  public func readStructEnd() throws
+  public func readFieldBegin() throws -> (Swift.String, Thrift.TType, Swift.Int32)
+  public func readFieldEnd() throws
+  public func readMapBegin() throws -> (Thrift.TType, Thrift.TType, Swift.Int32)
+  public func readMapEnd() throws
+  public func readSetBegin() throws -> (Thrift.TType, Swift.Int32)
+  public func readSetEnd() throws
+  public func readListBegin() throws -> (Thrift.TType, Swift.Int32)
+  public func readListEnd() throws
+  public func read() throws -> Swift.String
+  public func read() throws -> Swift.Bool
+  public func read() throws -> Swift.UInt8
+  public func read() throws -> Swift.Int16
+  public func read() throws -> Swift.Int32
+  public func read() throws -> Swift.Int64
+  public func read() throws -> Swift.Double
+  public func read() throws -> Foundation.Data
+  public func writeMessageBegin(name: Swift.String, type messageType: Thrift.TMessageType, sequenceID: Swift.Int32) throws
+  public func writeMessageEnd() throws
+  public func writeStructBegin(name: Swift.String) throws
+  public func writeStructEnd() throws
+  public func writeFieldBegin(name: Swift.String, type fieldType: Thrift.TType, fieldID: Swift.Int32) throws
+  public func writeFieldStop() throws
+  public func writeFieldEnd() throws
+  public func writeMapBegin(keyType: Thrift.TType, valueType: Thrift.TType, size: Swift.Int32) throws
+  public func writeMapEnd() throws
+  public func writeSetBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  public func writeSetEnd() throws
+  public func writeListBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  public func writeListEnd() throws
+  public func write(_ value: Swift.String) throws
+  public func write(_ value: Swift.Bool) throws
+  public func write(_ value: Swift.UInt8) throws
+  public func write(_ value: Swift.Int16) throws
+  public func write(_ value: Swift.Int32) throws
+  public func write(_ value: Swift.Int64) throws
+  public func write(_ value: Swift.Double) throws
+  public func write(_ data: Foundation.Data) throws
+  @objc deinit
+}
+open class TClient {
+  final public let inProtocol: any Thrift.TProtocol
+  final public let outProtocol: any Thrift.TProtocol
+  required public init(inoutProtocol: any Thrift.TProtocol)
+  required public init(inProtocol: any Thrift.TProtocol, outProtocol: any Thrift.TProtocol)
+  @objc deinit
+}
+open class TAsyncClient<Protocol, Factory> where Protocol : Thrift.TProtocol, Factory : Thrift.TAsyncTransportFactory {
+  public var factory: Factory
+  public init(with protocol: Protocol.Type, factory: Factory)
+  @objc deinit
+}
+public enum TAsyncResult<T> {
+  case success(T)
+  case error(any Swift.Error)
+  public func value() throws -> T
+}
+public enum TCType : Swift.UInt8 {
+  case stop
+  case boolean_TRUE
+  case boolean_FALSE
+  case i8
+  case i16
+  case i32
+  case i64
+  case double
+  case binary
+  case list
+  case set
+  case map
+  case `struct`
+  public static let typeMask: Swift.UInt8
+  public static let typeBits: Swift.UInt8
+  public static let typeShiftAmount: Swift.Int
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public class TCompactProtocol : Thrift.TProtocol {
+  public static let protocolID: Swift.UInt8
+  public static let version: Swift.UInt8
+  public static let versionMask: Swift.UInt8
+  public var transport: any Thrift.TTransport
+  required public init(on transport: any Thrift.TTransport)
+  public func readMessageBegin() throws -> (Swift.String, Thrift.TMessageType, Swift.Int32)
+  public func readMessageEnd() throws
+  public func readStructBegin() throws -> Swift.String
+  public func readStructEnd() throws
+  public func readFieldBegin() throws -> (Swift.String, Thrift.TType, Swift.Int32)
+  public func readFieldEnd() throws
+  public func read() throws -> Swift.String
+  public func read() throws -> Swift.Bool
+  public func read() throws -> Swift.UInt8
+  public func read() throws -> Swift.Int16
+  public func read() throws -> Swift.Int32
+  public func read() throws -> Swift.Int64
+  public func read() throws -> Swift.Double
+  public func read() throws -> Foundation.Data
+  public func readMapBegin() throws -> (Thrift.TType, Thrift.TType, Swift.Int32)
+  public func readMapEnd() throws
+  public func readSetBegin() throws -> (Thrift.TType, Swift.Int32)
+  public func readSetEnd() throws
+  public func readListBegin() throws -> (Thrift.TType, Swift.Int32)
+  public func readListEnd() throws
+  public func writeMessageBegin(name: Swift.String, type messageType: Thrift.TMessageType, sequenceID: Swift.Int32) throws
+  public func writeMessageEnd() throws
+  public func writeStructBegin(name: Swift.String) throws
+  public func writeStructEnd() throws
+  public func writeFieldBegin(name: Swift.String, type fieldType: Thrift.TType, fieldID: Swift.Int32) throws
+  public func writeFieldStop() throws
+  public func writeFieldEnd() throws
+  public func writeMapBegin(keyType: Thrift.TType, valueType: Thrift.TType, size: Swift.Int32) throws
+  public func writeMapEnd() throws
+  public func writeSetBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  public func writeSetEnd() throws
+  public func writeListBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  public func writeListEnd() throws
+  public func write(_ value: Swift.String) throws
+  public func write(_ value: Swift.Bool) throws
+  public func write(_ value: Swift.UInt8) throws
+  public func write(_ value: Swift.Int16) throws
+  public func write(_ value: Swift.Int32) throws
+  public func write(_ value: Swift.Int64) throws
+  public func write(_ value: Swift.Double) throws
+  public func write(_ data: Foundation.Data) throws
+  @objc deinit
+}
+public protocol TEnum : Swift.Hashable, Thrift.TSerializable {
+  var rawValue: Swift.Int32 { get }
+}
+extension Thrift.TEnum {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+public protocol TErrorCode : Swift.CustomStringConvertible {
+  var thriftErrorCode: Swift.Int { get }
+}
+public protocol TError : Swift.CustomStringConvertible, Swift.Error {
+  associatedtype Code : Thrift.TErrorCode
+  var error: Self.Code { get set }
+  var message: Swift.String? { get set }
+  static var defaultCase: Self.Code { get }
+  init()
+}
+extension Thrift.TError {
+  public var description: Swift.String {
+    get
+  }
+  public init(error: Self.Code, message: Swift.String? = nil)
+}
+public class TFileHandleTransport : Thrift.TTransport {
+  public init(inputFileHandle: Foundation.FileHandle, outputFileHandle: Foundation.FileHandle)
+  convenience public init(fileHandle: Foundation.FileHandle)
+  public func read(size: Swift.Int) throws -> Foundation.Data
+  public func write(data: Foundation.Data) throws
+  public func flush() throws
+  @objc deinit
+}
+public class TFileTransport : Thrift.TTransport {
+  public init(fileHandle: Swift.UnsafeMutablePointer<_stdio.FILE>)
+  convenience public init(filename: Swift.String) throws
+  @objc deinit
+  public func readAll(size: Swift.Int) throws -> Foundation.Data
+  public func read(size: Swift.Int) throws -> Foundation.Data
+  public func write(data: Foundation.Data) throws
+  public func flush() throws
+}
+public class TFramedTransport : Thrift.TTransport {
+  public static let headerSize: Swift.Int
+  public static let initFrameSize: Swift.Int
+  public var transport: any Thrift.TTransport
+  public init(transport: any Thrift.TTransport, maxSize: Swift.Int)
+  convenience public init(transport: any Thrift.TTransport)
+  public func read(size: Swift.Int) throws -> Foundation.Data
+  public func flush() throws
+  public func write(data: Foundation.Data) throws
+  public func close() throws
+  public func open() throws
+  public func isOpen() throws -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class THTTPSessionTransport : Thrift.TAsyncTransport {
+  public class Factory : Thrift.TAsyncTransportFactory {
+    public var responseValidate: ((Foundation.HTTPURLResponse?, Foundation.Data?) throws -> Swift.Void)?
+    public class func setupDefaultsForSessionConfiguration(_ config: Foundation.URLSessionConfiguration, withProtocolName protocolName: Swift.String?)
+    public init(session: Foundation.URLSession, url: Foundation.URL)
+    public func newTransport() -> Thrift.THTTPSessionTransport
+    public typealias Transport = Thrift.THTTPSessionTransport
+    @objc deinit
+  }
+  public func readAll(size: Swift.Int) throws -> Foundation.Data
+  public func read(size: Swift.Int) throws -> Foundation.Data
+  public func write(data: Foundation.Data) throws
+  public func flush(_ completed: @escaping (any Thrift.TAsyncTransport, (any Swift.Error)?) -> Swift.Void)
+  public func flush() throws
+  @objc deinit
+}
+public struct TList<Element> : Swift.RandomAccessCollection, Swift.MutableCollection, Swift.ExpressibleByArrayLiteral, Thrift.TSerializable, Swift.Hashable where Element : Swift.Hashable, Element : Thrift.TSerializable {
+  public typealias Storage = Swift.Array<Element>
+  public typealias Indices = Thrift.TList<Element>.Storage.Indices
+  public init()
+  public init(arrayLiteral elements: Element...)
+  public init<Source>(_ sequence: Source) where Element == Source.Element, Source : Swift.Sequence
+  public func hash(into hasher: inout Swift.Hasher)
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Thrift.TList<Element>
+  public func write(to proto: any Thrift.TProtocol) throws
+  public typealias SubSequence = Thrift.TList<Element>.Storage.SubSequence
+  public typealias Index = Thrift.TList<Element>.Storage.Index
+  public subscript(position: Thrift.TList<Element>.Storage.Index) -> Element {
+    get
+    set
+  }
+  public subscript(range: Swift.Range<Thrift.TList<Element>.Index>) -> Thrift.TList<Element>.SubSequence {
+    get
+    set
+  }
+  public var startIndex: Thrift.TList<Element>.Index {
+    get
+  }
+  public var endIndex: Thrift.TList<Element>.Index {
+    get
+  }
+  public func formIndex(after i: inout Thrift.TList<Element>.Index)
+  public func formIndex(before i: inout Swift.Int)
+  public func index(after i: Thrift.TList<Element>.Index) -> Thrift.TList<Element>.Index
+  public func index(before i: Swift.Int) -> Swift.Int
+  public typealias ArrayLiteralElement = Element
+  public typealias Iterator = Swift.IndexingIterator<Thrift.TList<Element>>
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Thrift.TList : Swift.RangeReplaceableCollection {
+  public mutating func replaceSubrange<C>(_ subrange: Swift.Range<Thrift.TList<Element>.Index>, with newElements: C) where Element == C.Element, C : Swift.Collection
+}
+extension Thrift.TList : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public func == <Element>(lhs: Thrift.TList<Element>, rhs: Thrift.TList<Element>) -> Swift.Bool where Element : Swift.Hashable, Element : Thrift.TSerializable
+public struct TMap<Key, Value> : Swift.Collection, Swift.ExpressibleByDictionaryLiteral, Swift.Hashable, Thrift.TSerializable where Key : Swift.Hashable, Key : Thrift.TSerializable, Value : Swift.Hashable, Value : Thrift.TSerializable {
+  public typealias Storage = Swift.Dictionary<Key, Value>
+  public typealias Element = Thrift.TMap<Key, Value>.Storage.Element
+  public typealias Index = Thrift.TMap<Key, Value>.Storage.Index
+  public typealias IndexDistance = Swift.Int
+  public typealias Indices = Thrift.TMap<Key, Value>.Storage.Indices
+  public typealias SubSequence = Thrift.TMap<Key, Value>.Storage.SubSequence
+  public func indexForKey(_ key: Key) -> Thrift.TMap<Key, Value>.Index?
+  public mutating func updateValue(_ value: Value, forKey key: Key) -> Value?
+  public mutating func removeAtIndex(_ index: Swift.DictionaryIndex<Key, Value>) -> (Key, Value)
+  public mutating func removeValueForKey(_ key: Key) -> Value?
+  public init(minimumCapacity: Swift.Int)
+  public init(_ dict: [Key : Value])
+  public var dictionary: [Key : Value] {
+    get
+  }
+  public subscript(key: Key) -> Value? {
+    get
+    set
+  }
+  public var indices: Thrift.TMap<Key, Value>.Indices {
+    get
+  }
+  public func distance(from start: Thrift.TMap<Key, Value>.Index, to end: Thrift.TMap<Key, Value>.Index) -> Thrift.TMap<Key, Value>.IndexDistance
+  public func index(_ i: Thrift.TMap<Key, Value>.Index, offsetBy n: Thrift.TMap<Key, Value>.IndexDistance) -> Thrift.TMap<Key, Value>.Index
+  public func index(_ i: Thrift.TMap<Key, Value>.Index, offsetBy n: Thrift.TMap<Key, Value>.IndexDistance, limitedBy limit: Thrift.TMap<Key, Value>.Index) -> Thrift.TMap<Key, Value>.Index?
+  public subscript(position: Thrift.TMap<Key, Value>.Index) -> Thrift.TMap<Key, Value>.Element {
+    get
+  }
+  public var startIndex: Thrift.TMap<Key, Value>.Index {
+    get
+  }
+  public var endIndex: Thrift.TMap<Key, Value>.Index {
+    get
+  }
+  public func index(after i: Thrift.TMap<Key, Value>.Index) -> Thrift.TMap<Key, Value>.Index
+  public func formIndex(after i: inout Thrift.TMap<Key, Value>.Index)
+  public subscript(bounds: Swift.Range<Thrift.TMap<Key, Value>.Index>) -> Thrift.TMap<Key, Value>.SubSequence {
+    get
+  }
+  public init(dictionaryLiteral elements: (Key, Value)...)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public init()
+  public static func read(from proto: any Thrift.TProtocol) throws -> Thrift.TMap<Key, Value>
+  public func write(to proto: any Thrift.TProtocol) throws
+  public typealias Iterator = Swift.IndexingIterator<Thrift.TMap<Key, Value>>
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Thrift.TMap : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public func == <Key, Value>(lhs: Thrift.TMap<Key, Value>, rhs: Thrift.TMap<Key, Value>) -> Swift.Bool where Key : Swift.Hashable, Key : Thrift.TSerializable, Value : Swift.Hashable, Value : Thrift.TSerializable
+public class TMemoryBufferTransport : Thrift.TTransport {
+  public var readBuffer: Foundation.Data {
+    get
+  }
+  public var writeBuffer: Foundation.Data {
+    get
+  }
+  public var position: Swift.Int {
+    get
+  }
+  public var bytesRemainingInBuffer: Swift.Int {
+    get
+  }
+  public func consumeBuffer(size: Swift.Int)
+  public func clear()
+  public init(flushHandler: ((Thrift.TMemoryBufferTransport, Foundation.Data) -> ())? = nil)
+  convenience public init(readBuffer: Foundation.Data, flushHandler: ((Thrift.TMemoryBufferTransport, Foundation.Data) -> ())? = nil)
+  public func reset(readBuffer: Foundation.Data = Data(), writeBuffer: Foundation.Data = Data())
+  public func read(size: Swift.Int) throws -> Foundation.Data
+  public func write(data: Foundation.Data) throws
+  public func flush() throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class TMultiplexedProtocol<Protocol> : Thrift.TWrappedProtocol<Protocol> where Protocol : Thrift.TProtocol {
+  final public let separator: Swift.String
+  public var serviceName: Swift.String
+  convenience public init(on transport: any Thrift.TTransport, serviceName: Swift.String)
+  override public func writeMessageBegin(name: Swift.String, type messageType: Thrift.TMessageType, sequenceID: Swift.Int32) throws
+  required public init(on transport: any Thrift.TTransport)
+  @objc deinit
+}
+public typealias TProcessorMessageHandler<T> = (Swift.Int, any Thrift.TProtocol, any Thrift.TProtocol, T) -> Swift.Void
+public protocol TProcessor {
+  associatedtype Service
+  var service: Self.Service { get set }
+  func process(on inProtocol: any Thrift.TProtocol, outProtocol: any Thrift.TProtocol) throws
+  init(service: Self.Service)
+}
+public enum TMessageType : Swift.Int32 {
+  case call
+  case reply
+  case exception
+  case oneway
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
+public enum TType : Swift.Int32 {
+  case stop
+  case void
+  case bool
+  case i8
+  case double
+  case i16
+  case i32
+  case i64
+  case string
+  case `struct`
+  case map
+  case set
+  case list
+  case utf8
+  case utf16
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
+public protocol TProtocol {
+  var transport: any Thrift.TTransport { get set }
+  init(on transport: any Thrift.TTransport)
+  func readMessageBegin() throws -> (Swift.String, Thrift.TMessageType, Swift.Int32)
+  func readMessageEnd() throws
+  func readStructBegin() throws -> Swift.String
+  func readStructEnd() throws
+  func readFieldBegin() throws -> (Swift.String, Thrift.TType, Swift.Int32)
+  func readFieldEnd() throws
+  func readMapBegin() throws -> (Thrift.TType, Thrift.TType, Swift.Int32)
+  func readMapEnd() throws
+  func readSetBegin() throws -> (Thrift.TType, Swift.Int32)
+  func readSetEnd() throws
+  func readListBegin() throws -> (Thrift.TType, Swift.Int32)
+  func readListEnd() throws
+  func read() throws -> Swift.String
+  func read() throws -> Swift.Bool
+  func read() throws -> Swift.UInt8
+  func read() throws -> Swift.Int16
+  func read() throws -> Swift.Int32
+  func read() throws -> Swift.Int64
+  func read() throws -> Swift.Double
+  func read() throws -> Foundation.Data
+  func writeMessageBegin(name: Swift.String, type messageType: Thrift.TMessageType, sequenceID: Swift.Int32) throws
+  func writeMessageEnd() throws
+  func writeStructBegin(name: Swift.String) throws
+  func writeStructEnd() throws
+  func writeFieldBegin(name: Swift.String, type fieldType: Thrift.TType, fieldID: Swift.Int32) throws
+  func writeFieldStop() throws
+  func writeFieldEnd() throws
+  func writeMapBegin(keyType: Thrift.TType, valueType: Thrift.TType, size: Swift.Int32) throws
+  func writeMapEnd() throws
+  func writeSetBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  func writeSetEnd() throws
+  func writeListBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  func writeListEnd() throws
+  func write(_ value: Swift.String) throws
+  func write(_ value: Swift.Bool) throws
+  func write(_ value: Swift.UInt8) throws
+  func write(_ value: Swift.Int16) throws
+  func write(_ value: Swift.Int32) throws
+  func write(_ value: Swift.Int64) throws
+  func write(_ value: Swift.Double) throws
+  func write(_ value: Foundation.Data) throws
+}
+extension Thrift.TProtocol {
+  public func writeFieldValue(_ value: any Thrift.TSerializable, name: Swift.String, type: Thrift.TType, id: Swift.Int32) throws
+  public func validateValue(_ value: Any?, named name: Swift.String) throws
+  public func readResultMessageBegin() throws
+  public func readException() throws -> Thrift.TApplicationError
+  public func writeException(messageName name: Swift.String, sequenceID: Swift.Int32, ex: Thrift.TApplicationError) throws
+  public func skip(type: Thrift.TType) throws
+}
+public struct TProtocolError : Thrift.TError {
+  public init()
+  public enum Code : Thrift.TErrorCode {
+    case unknown
+    case invalidData
+    case negativeSize
+    case sizeLimit(limit: Swift.Int, got: Swift.Int)
+    case badVersion(expected: Swift.String, got: Swift.String)
+    case notImplemented
+    case depthLimit
+    public var thriftErrorCode: Swift.Int {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+  }
+  public enum ExtendedErrorCode : Thrift.TErrorCode {
+    case unknown
+    case missingRequiredField(fieldName: Swift.String)
+    case unexpectedType(type: Thrift.TType)
+    case mismatchedProtocol(expected: Swift.String, got: Swift.String)
+    public var thriftErrorCode: Swift.Int {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+  }
+  public var extendedError: Thrift.TProtocolError.ExtendedErrorCode?
+  public init(error: Thrift.TProtocolError.Code = .unknown, message: Swift.String? = nil, extendedError: Thrift.TProtocolError.ExtendedErrorCode? = nil)
+  public var error: Thrift.TProtocolError.Code
+  public var message: Swift.String?
+  public static var defaultCase: Thrift.TProtocolError.Code {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public class TSSLSocketTransport : Thrift.TStreamTransport {
+  public init(hostname: Swift.String, port: Swift.UInt16) throws
+  public func isOpen() -> Swift.Bool
+  @objc deinit
+}
+extension Thrift.TSSLSocketTransport : Foundation.StreamDelegate {
+  @objc dynamic public func stream(_ aStream: Foundation.Stream, handle eventCode: Foundation.Stream.Event)
+}
+public struct TSSLSocketTransportError : Thrift.TError {
+  public enum ErrorCode : Thrift.TErrorCode {
+    case hostanameResolution(hostname: Swift.String)
+    case socketCreate(port: Swift.Int)
+    case connect
+    public var thriftErrorCode: Swift.Int {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+  }
+  public var error: Thrift.TSSLSocketTransportError.ErrorCode
+  public var message: Swift.String?
+  public static var defaultCase: Thrift.TSSLSocketTransportError.ErrorCode {
+    get
+  }
+  public init()
+  public typealias Code = Thrift.TSSLSocketTransportError.ErrorCode
+}
+public protocol TSerializable {
+  var hashValue: Swift.Int { get }
+  static var thriftType: Thrift.TType { get }
+  static func read(from proto: any Thrift.TProtocol) throws -> Self
+  func write(to proto: any Thrift.TProtocol) throws
+}
+extension Thrift.TSerializable {
+  public static func write(_ value: Self, to proto: any Thrift.TProtocol) throws
+  public var thriftType: Thrift.TType {
+    get
+  }
+}
+public func == <T>(lhs: T, rhs: T) -> Swift.Bool where T : Thrift.TSerializable
+extension Swift.Bool : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Swift.Bool
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+extension Swift.Int8 : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Swift.Int8
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+extension Swift.Int16 : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Swift.Int16
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+extension Swift.Int32 : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Swift.Int32
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+extension Swift.Int64 : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Swift.Int64
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+extension Swift.Double : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Swift.Double
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+extension Swift.String : Thrift.TSerializable {
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public static func read(from proto: any Thrift.TProtocol) throws -> Swift.String
+  public func write(to proto: any Thrift.TProtocol) throws
+}
+public struct TSet<Element> : Swift.SetAlgebra, Swift.Hashable, Swift.Collection, Swift.ExpressibleByArrayLiteral, Thrift.TSerializable where Element : Swift.Hashable, Element : Thrift.TSerializable {
+  public func makeIterator() -> Thrift.TSet<Element>.Storage.Iterator
+  public typealias Storage = Swift.Set<Element>
+  public typealias Indices = Thrift.TSet<Element>.Storage.Indices
+  public typealias Index = Thrift.TSet<Element>.Storage.Index
+  public typealias IndexDistance = Swift.Int
+  public typealias SubSequence = Thrift.TSet<Element>.Storage.SubSequence
+  public var indices: Thrift.TSet<Element>.Indices {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public func distance(from start: Thrift.TSet<Element>.Index, to end: Thrift.TSet<Element>.Index) -> Thrift.TSet<Element>.IndexDistance
+  public func index(_ i: Thrift.TSet<Element>.Index, offsetBy n: Thrift.TSet<Element>.IndexDistance) -> Thrift.TSet<Element>.Index
+  public func index(_ i: Thrift.TSet<Element>.Index, offsetBy n: Thrift.TSet<Element>.IndexDistance, limitedBy limit: Thrift.TSet<Element>.Index) -> Thrift.TSet<Element>.Index?
+  public subscript(position: Thrift.TSet<Element>.Storage.Index) -> Element {
+    get
+  }
+  public func contains(_ member: Element) -> Swift.Bool
+  public mutating func insert(_ newMember: Element) -> (inserted: Swift.Bool, memberAfterInsert: Element)
+  public mutating func remove(_ member: Element) -> Element?
+  public func union(_ other: Thrift.TSet<Element>) -> Thrift.TSet<Element>
+  public mutating func formIntersection(_ other: Thrift.TSet<Element>)
+  public mutating func formSymmetricDifference(_ other: Thrift.TSet<Element>)
+  public mutating func formUnion(_ other: Thrift.TSet<Element>)
+  public func intersection(_ other: Thrift.TSet<Element>) -> Thrift.TSet<Element>
+  public func symmetricDifference(_ other: Thrift.TSet<Element>) -> Thrift.TSet<Element>
+  public mutating func update(with newMember: Element) -> Element?
+  public var startIndex: Thrift.TSet<Element>.Index {
+    get
+  }
+  public var endIndex: Thrift.TSet<Element>.Index {
+    get
+  }
+  public func index(after i: Thrift.TSet<Element>.Index) -> Thrift.TSet<Element>.Index
+  public func formIndex(after i: inout Thrift.TSet<Element>.Storage.Index)
+  public subscript(bounds: Swift.Range<Thrift.TSet<Element>.Index>) -> Thrift.TSet<Element>.SubSequence {
+    get
+  }
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public init()
+  public init(arrayLiteral elements: Element...)
+  public init<Source>(_ sequence: Source) where Element == Source.Element, Source : Swift.Sequence
+  public static func read(from proto: any Thrift.TProtocol) throws -> Thrift.TSet<Element>
+  public func write(to proto: any Thrift.TProtocol) throws
+  public typealias ArrayLiteralElement = Element
+  public typealias Iterator = Thrift.TSet<Element>.Storage.Iterator
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Thrift.TSet : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public func == <Element>(lhs: Thrift.TSet<Element>, rhs: Thrift.TSet<Element>) -> Swift.Bool where Element : Swift.Hashable, Element : Thrift.TSerializable
+public let TSocketServerClientConnectionFinished: Swift.String
+public let TSocketServerProcessorKey: Swift.String
+public let TSocketServerTransportKey: Swift.String
+extension Darwin.in_addr {
+  public init?(hostent: Darwin.hostent?)
+}
+@objc public class TCFSocketTransport : Thrift.TStreamTransport {
+  public init?(hostname: Swift.String, port: Swift.Int, secure: Swift.Bool = false)
+  @objc deinit
+}
+extension Thrift.TCFSocketTransport : Foundation.StreamDelegate {
+}
+public class TSocketTransport : Thrift.TTransport {
+  public var socketDescriptor: Swift.Int32
+  public init(socketDescriptor: Swift.Int32)
+  convenience public init(hostname: Swift.String, port: Swift.Int) throws
+  @objc deinit
+  public func readAll(size: Swift.Int) throws -> Foundation.Data
+  public func read(size: Swift.Int) throws -> Foundation.Data
+  public func write(data: Foundation.Data)
+  public func flush() throws
+  public func close()
+}
+@objc public class TStreamTransport : ObjectiveC.NSObject, Thrift.TTransport {
+  public var input: Foundation.InputStream?
+  public var output: Foundation.OutputStream?
+  public init(inputStream: Foundation.InputStream?, outputStream: Foundation.OutputStream?)
+  convenience public init(inputStream: Foundation.InputStream?)
+  convenience public init(outputStream: Foundation.OutputStream?)
+  @objc deinit
+  public func readAll(size: Swift.Int) throws -> Foundation.Data
+  public func read(size: Swift.Int) throws -> Foundation.Data
+  public func write(data: Foundation.Data) throws
+  public func flush() throws
+  public func close()
+}
+public protocol TStruct : Thrift.TSerializable {
+  static var fieldIds: [Swift.String : Swift.Int32] { get }
+  static var structName: Swift.String { get }
+}
+extension Thrift.TStruct {
+  public static var fieldIds: [Swift.String : (id: Swift.Int32, type: Thrift.TType)] {
+    get
+  }
+  public static var thriftType: Thrift.TType {
+    get
+  }
+  public func write(to proto: any Thrift.TProtocol) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol TTransport {
+  func read(size: Swift.Int) throws -> Foundation.Data
+  func write(data: Foundation.Data) throws
+  func flush() throws
+  func readAll(size: Swift.Int) throws -> Foundation.Data
+  func isOpen() throws -> Swift.Bool
+  func open() throws
+  func close() throws
+}
+extension Thrift.TTransport {
+  public func isOpen() throws -> Swift.Bool
+  public func open() throws
+  public func close() throws
+  public func readAll(size: Swift.Int) throws -> Foundation.Data
+}
+public protocol TAsyncTransport : Thrift.TTransport {
+  func flush(_ completion: @escaping (any Thrift.TAsyncTransport, (any Swift.Error)?) -> ())
+}
+public protocol TAsyncTransportFactory {
+  associatedtype Transport : Thrift.TAsyncTransport
+  func newTransport() -> Self.Transport
+}
+public struct TTransportError : Thrift.TError {
+  public enum ErrorCode : Thrift.TErrorCode {
+    case unknown
+    case notOpen
+    case alreadyOpen
+    case timedOut
+    case endOfFile
+    case negativeSize
+    case sizeLimit(limit: Swift.Int, got: Swift.Int)
+    public var thriftErrorCode: Swift.Int {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+  }
+  public var error: Thrift.TTransportError.ErrorCode
+  public var message: Swift.String?
+  public static var defaultCase: Thrift.TTransportError.ErrorCode {
+    get
+  }
+  public init()
+  public typealias Code = Thrift.TTransportError.ErrorCode
+}
+public struct THTTPTransportError : Thrift.TError {
+  public enum ErrorCode : Thrift.TErrorCode {
+    case invalidResponse
+    case invalidStatus(statusCode: Swift.Int)
+    case authentication
+    public var description: Swift.String {
+      get
+    }
+    public var thriftErrorCode: Swift.Int {
+      get
+    }
+  }
+  public var error: Thrift.THTTPTransportError.ErrorCode
+  public var message: Swift.String?
+  public static var defaultCase: Thrift.THTTPTransportError.ErrorCode {
+    get
+  }
+  public init()
+  public typealias Code = Thrift.THTTPTransportError.ErrorCode
+}
+open class TWrappedProtocol<Protocol> : Thrift.TProtocol where Protocol : Thrift.TProtocol {
+  public var transport: any Thrift.TTransport {
+    get
+    set
+  }
+  required public init(on transport: any Thrift.TTransport)
+  public func readMessageBegin() throws -> (Swift.String, Thrift.TMessageType, Swift.Int32)
+  public func readMessageEnd() throws
+  public func readStructBegin() throws -> Swift.String
+  public func readStructEnd() throws
+  public func readFieldBegin() throws -> (Swift.String, Thrift.TType, Swift.Int32)
+  public func readFieldEnd() throws
+  public func readMapBegin() throws -> (Thrift.TType, Thrift.TType, Swift.Int32)
+  public func readMapEnd() throws
+  public func readSetBegin() throws -> (Thrift.TType, Swift.Int32)
+  public func readSetEnd() throws
+  public func readListBegin() throws -> (Thrift.TType, Swift.Int32)
+  public func readListEnd() throws
+  public func read() throws -> Swift.String
+  public func read() throws -> Swift.Bool
+  public func read() throws -> Swift.UInt8
+  public func read() throws -> Swift.Int16
+  public func read() throws -> Swift.Int32
+  public func read() throws -> Swift.Int64
+  public func read() throws -> Swift.Double
+  public func read() throws -> Foundation.Data
+  public func writeMessageBegin(name: Swift.String, type messageType: Thrift.TMessageType, sequenceID: Swift.Int32) throws
+  public func writeMessageEnd() throws
+  public func writeStructBegin(name: Swift.String) throws
+  public func writeStructEnd() throws
+  public func writeFieldBegin(name: Swift.String, type fieldType: Thrift.TType, fieldID: Swift.Int32) throws
+  public func writeFieldStop() throws
+  public func writeFieldEnd() throws
+  public func writeMapBegin(keyType: Thrift.TType, valueType: Thrift.TType, size: Swift.Int32) throws
+  public func writeMapEnd() throws
+  public func writeSetBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  public func writeSetEnd() throws
+  public func writeListBegin(elementType: Thrift.TType, size: Swift.Int32) throws
+  public func writeListEnd() throws
+  public func write(_ value: Swift.String) throws
+  public func write(_ value: Swift.Bool) throws
+  public func write(_ value: Swift.UInt8) throws
+  public func write(_ value: Swift.Int16) throws
+  public func write(_ value: Swift.Int32) throws
+  public func write(_ value: Swift.Int64) throws
+  public func write(_ value: Swift.Double) throws
+  public func write(_ data: Foundation.Data) throws
+  @objc deinit
+}
+extension Thrift.TCType : Swift.Equatable {}
+extension Thrift.TCType : Swift.Hashable {}
+extension Thrift.TCType : Swift.RawRepresentable {}
+extension Thrift.TMessageType : Swift.Equatable {}
+extension Thrift.TMessageType : Swift.Hashable {}
+extension Thrift.TMessageType : Swift.RawRepresentable {}
+extension Thrift.TType : Swift.Equatable {}
+extension Thrift.TType : Swift.Hashable {}
+extension Thrift.TType : Swift.RawRepresentable {}

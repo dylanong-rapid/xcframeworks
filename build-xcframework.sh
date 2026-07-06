@@ -744,29 +744,92 @@ detect_scheme() {
 }
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 3. Archive the scheme for one platform.
-#    archive_slice <destination> <sdk-tag> -> sets ARCHIVE_PATH
+# 3a. Patch @inlinable class designated initialisers.
+#
+#     Under BUILD_LIBRARY_FOR_DISTRIBUTION=YES the Swift compiler requires that
+#     designated initialisers of resilient (non-@frozen) classes are NOT
+#     @inlinable, because the class memory layout is hidden from clients and
+#     cannot be inlined.  However, @inlinable methods that CALL such inits need
+#     the init to be at least @usableFromInline.
+#
+#     This function parses a failed build log, locates every "error: '@inlinable'
+#     attribute is not supported on a designated initializer" diagnostic, finds
+#     the @inlinable annotation immediately before the offending init declaration,
+#     and replaces it with @usableFromInline.  Returns 0 if at least one patch
+#     was applied.
 # ──────────────────────────────────────────────────────────────────────────────
-archive_slice() {
-    local destination="$1" sdk="$2"
-    local archive_path="$ARCHIVE_DIR/${sdk}.xcarchive"
-    local logf="$ARCHIVE_DIR/${sdk}.log"
+patch_inlinable_class_inits() { # patch_inlinable_class_inits <logfile>
+    local logf="$1"
+    python3 - "$logf" << 'PYEOF'
+import sys, re
+
+log_path = sys.argv[1]
+try:
+    log_content = open(log_path).read()
+except Exception:
+    sys.exit(1)
+
+# Swift emits several message forms for this class of error:
+#   <file>:<line>:<col>: error: '@inlinable' attribute is not supported on a designated initializer
+#   <file>:<line>:<col>: error: '@inlinable' initializer cannot be in a non-frozen class
+#   <file>:<line>:<col>: error: initializer for class 'X' is '@inlinable' and must delegate to another initializer
+#   <file>:<line>:<col>: error: '@inlinable' attribute is incompatible with designated initializer
+error_re = re.compile(
+    r'(/[^\n]+?\.swift):(\d+):\d+: error: .*(?:'
+    r"@inlinable.*(?:designated initializer|non-frozen class|resilient class|must delegate)"
+    r"|initializer.*@inlinable.*must delegate"
+    r"|@inlinable.*incompatible.*designated"
+    r')',
+    re.IGNORECASE
+)
+
+patched = set()
+for path, line_str in error_re.findall(log_content):
+    if path in patched:
+        continue
+    target_line = int(line_str) - 1  # 0-based
+
+    try:
+        lines = open(path).readlines()
+    except Exception:
+        continue
+
+    changed = False
+    # Walk backwards from the error line to find the @inlinable annotation.
+    # Note: the Swift compiler reports the error on the `init(` line itself, so
+    # the @inlinable annotation is one line above.  We must NOT treat the init
+    # declaration line as a "stop" marker.
+    for i in range(min(target_line, len(lines) - 1), max(target_line - 8, -1), -1):
+        stripped = lines[i].strip()
+        if '@inlinable' in stripped and '@usableFromInline' not in stripped:
+            lines[i] = lines[i].replace('@inlinable', '@usableFromInline')
+            changed = True
+            break
+        # Stop when we hit real code — but NOT on the init declaration itself
+        # (that is the line where the error is reported).
+        is_init_line = bool(re.match(r'(?:\w+ )*init\s*[(<(]', stripped))
+        if stripped and not stripped.startswith('@') and not stripped.startswith('//') and not is_init_line:
+            break
+
+    if changed:
+        open(path, 'w').writelines(lines)
+        patched.add(path)
+        print(f"  patched: {path}")
+
+sys.exit(0 if patched else 1)
+PYEOF
+}
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 3b. Run one xcodebuild archive invocation (shared inner helper).
+# ──────────────────────────────────────────────────────────────────────────────
+_run_archive() { # _run_archive <archive_path> <logfile> <evolution> <destination> <clang_rt>
+    local archive_path="$1" logf="$2" evolution="$3" destination="$4" clang_rt_flag="$5"
     local quiet_flag=(); $QUIET && quiet_flag=(-quiet)
-    local evolution="YES"; [ "$LIBRARY_EVOLUTION" = true ] || evolution="NO"
     local swift_ver_flag=(); [ -n "$SWIFT_VERSION_OVERRIDE" ] && swift_ver_flag=("SWIFT_VERSION=$SWIFT_VERSION_OVERRIDE")
     local testability_flag=(); [ "$ENABLE_TESTABILITY" = true ] && testability_flag=("ENABLE_TESTABILITY=YES")
-    # When noForceDynamic is set, omit MACH_O_TYPE — BUILD_LIBRARY_FOR_DISTRIBUTION alone
-    # is sufficient for packages that already declare library products. Forcing mh_dylib on
-    # packages with executables or complex internal targets causes duplicate-output errors.
     local mach_o_flag=(); [ "$NO_MACH_O_OVERRIDE" = false ] && mach_o_flag=("MACH_O_TYPE=mh_dylib")
 
-    log "Archiving $sdk ($destination) ..."
-    local clang_rt_flag=""
-    if [ "$sdk" = "iphoneos" ] && [ -n "$CLANG_RT_IOS" ]; then
-        clang_rt_flag="$CLANG_RT_IOS"
-    elif [ "$sdk" = "iphonesimulator" ] && [ -n "$CLANG_RT_IOSSIM" ]; then
-        clang_rt_flag="$CLANG_RT_IOSSIM"
-    fi
     ( cd "$SRC_DIR" && xcodebuild archive \
         -scheme "$SCHEME" \
         -configuration Release \
@@ -784,13 +847,157 @@ archive_slice() {
         IPHONEOS_DEPLOYMENT_TARGET="$MIN_IOS" \
         ${swift_ver_flag[@]+"${swift_ver_flag[@]}"} \
         ${testability_flag[@]+"${testability_flag[@]}"} \
-        > "$logf" 2>&1 ) || {
+        > "$logf" 2>&1 )
+}
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 3. Archive the scheme for one platform.
+#    archive_slice <destination> <sdk-tag> -> sets ARCHIVE_PATH
+#
+#    When BUILD_LIBRARY_FOR_DISTRIBUTION=YES is requested and the initial build
+#    fails, the function attempts two automatic recoveries before giving up:
+#
+#      1. @inlinable class init patch — if the log contains the "not supported on
+#         a designated initializer" diagnostic, it replaces @inlinable with
+#         @usableFromInline on the offending declarations and retries.
+#
+#      2. Graceful fallback — if the build still fails (e.g. internal C-shim
+#         module verification errors that cannot be source-patched), the archive
+#         is retried with BUILD_LIBRARY_FOR_DISTRIBUTION=NO.  The resulting
+#         framework will not have a .swiftinterface, but the package remains
+#         functional.  A warning is emitted so the operator can act later.
+# ──────────────────────────────────────────────────────────────────────────────
+archive_slice() {
+    local destination="$1" sdk="$2"
+    local archive_path="$ARCHIVE_DIR/${sdk}.xcarchive"
+    local logf="$ARCHIVE_DIR/${sdk}.log"
+    local evolution="YES"; [ "$LIBRARY_EVOLUTION" = true ] || evolution="NO"
+    # Tracks what we actually used — may be downgraded to NO by recovery paths.
+    local used_evolution="$evolution"
+
+    log "Archiving $sdk ($destination) ..."
+    local clang_rt_flag=""
+    if [ "$sdk" = "iphoneos" ] && [ -n "$CLANG_RT_IOS" ]; then
+        clang_rt_flag="$CLANG_RT_IOS"
+    elif [ "$sdk" = "iphonesimulator" ] && [ -n "$CLANG_RT_IOSSIM" ]; then
+        clang_rt_flag="$CLANG_RT_IOSSIM"
+    fi
+
+    _run_archive "$archive_path" "$logf" "$evolution" "$destination" "$clang_rt_flag" || {
+        # ── Recovery 1: @inlinable class designated init ──────────────────────
+        if [ "$evolution" = "YES" ] && \
+           grep -iE "@inlinable.*designated initializer|designated initializer.*@inlinable|@inlinable.*non-frozen class|@inlinable.*resilient class|initializer.*@inlinable.*must delegate|@inlinable.*must delegate|@inlinable.*incompatible.*designated" "$logf" 2>/dev/null | grep -q "error:"; then
+            warn "$NAME: @inlinable class init error detected; patching sources and retrying..."
+            if patch_inlinable_class_inits "$logf"; then
+                rm -rf "$archive_path"
+                _run_archive "$archive_path" "$logf" "$evolution" "$destination" "$clang_rt_flag" || {
+                    warn "$NAME: still failing after @inlinable patch; falling back to BUILD_LIBRARY_FOR_DISTRIBUTION=NO"
+                    rm -rf "$archive_path"
+                    _run_archive "$archive_path" "$logf" "NO" "$destination" "$clang_rt_flag" || {
+                        err "archive failed: scheme=$SCHEME sdk=$sdk"
+                        echo -e "${DIM}---- error lines from $logf ----${NC}" >&2
+                        grep -E "^.+error:|ARCHIVE FAILED|does not contain a scheme" "$logf" | head -20 >&2 || tail -30 "$logf" >&2
+                        return 1
+                    }
+                    used_evolution="NO"
+                    warn "$NAME ($sdk): built without library evolution — no .swiftinterface will be included"
+                }
+            fi
+        # ── Recovery 2: module interface verification / other evolution errors ─
+        # Also catches @inlinable deinit on non-@_fixed_layout classes, which
+        # cannot be source-patched (deinit cannot be @usableFromInline).
+        elif [ "$evolution" = "YES" ] && \
+             grep -qiE "verify module interface|failed to emit module|module interface|deinitializer can only be.*@inlinable|@inlinable.*deinitializer|@_fixed_layout" "$logf" 2>/dev/null; then
+            warn "$NAME ($sdk): module interface verification failed; falling back to BUILD_LIBRARY_FOR_DISTRIBUTION=NO"
+            rm -rf "$archive_path"
+            # Also clean DerivedData intermediates so no stale .swiftinterface files
+            # from the failed YES build leak into the NO-evolution archive during injection.
+            rm -rf "$DD_DIR/Build/Intermediates.noindex/ArchiveIntermediates/${SCHEME}"
+            _run_archive "$archive_path" "$logf" "NO" "$destination" "$clang_rt_flag" || {
+                err "archive failed: scheme=$SCHEME sdk=$sdk"
+                echo -e "${DIM}---- error lines from $logf ----${NC}" >&2
+                grep -E "^.+error:|ARCHIVE FAILED|does not contain a scheme" "$logf" | head -20 >&2 || tail -30 "$logf" >&2
+                return 1
+            }
+            used_evolution="NO"
+            warn "$NAME ($sdk): built without library evolution — no .swiftinterface will be included"
+        else
             err "archive failed: scheme=$SCHEME sdk=$sdk"
             echo -e "${DIM}---- error lines from $logf ----${NC}" >&2
-            grep -E "error:|ARCHIVE FAILED|does not contain a scheme" "$logf" | head -20 >&2 || tail -30 "$logf" >&2
+            grep -E "^.+error:|ARCHIVE FAILED|does not contain a scheme" "$logf" | head -20 >&2 || tail -30 "$logf" >&2
             return 1
-        }
+        fi
+    }
     ARCHIVE_PATH="$archive_path"
+
+    # ── Inject module interfaces from DerivedData into the xcarchive ──────────
+    # SPM-generated schemes do not install the .swiftinterface files into the
+    # framework bundle during archiving (they stay in DerivedData intermediates).
+    # When a subsequent SDK archive runs, xcodebuild cleans those intermediates.
+    # We must inject NOW, while the BuildProductsPath for this SDK is still fresh.
+    # Only inject when this specific archive actually used library evolution —
+    # if we fell back to NO, there are no valid .swiftinterface files to inject.
+    if [ "$used_evolution" = "YES" ]; then
+        inject_module_interfaces "$archive_path" "$sdk"
+    fi
+}
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 3c. Copy .swiftinterface and related files from DerivedData into the
+#     xcarchive framework bundle.  Must be called immediately after
+#     archive_slice() so that BuildProductsPath/<sdk> is still intact.
+# ──────────────────────────────────────────────────────────────────────────────
+inject_module_interfaces() { # inject_module_interfaces <archive_path> <sdk>
+    local archive_path="$1" sdk="$2"
+    local scheme_name="${SCHEME}"
+    local dd_base="$DD_DIR/Build/Intermediates.noindex/ArchiveIntermediates/${scheme_name}"
+    local build_products="$dd_base/BuildProductsPath/Release-${sdk}"
+    local intermediates="$dd_base/IntermediateBuildFilesPath"
+
+    for product in "${PRODUCTS[@]}"; do
+        local swift_mod_src="$build_products/${product}.swiftmodule"
+        [ -d "$swift_mod_src" ] || continue
+
+        local fw; fw="$(find_framework "$archive_path" "$product")"
+        [ -n "$fw" ] || continue
+
+        local modules_dir="$fw/Modules"
+        local swift_mod_dst="$modules_dir/${product}.swiftmodule"
+        mkdir -p "$swift_mod_dst"
+
+        # Copy only text-based interface files (skip binary .swiftmodule).
+        local copied=0
+        while IFS= read -r f; do
+            cp -f "$f" "$swift_mod_dst/" && copied=$((copied + 1))
+        done < <(find "$swift_mod_src" -maxdepth 1 \
+            \( -name "*.swiftinterface" -o -name "*.swiftdoc" -o -name "*.abi.json" \) \
+            -not -name "*.swiftmodule" 2>/dev/null)
+
+        if [ "$copied" -eq 0 ]; then
+            rm -rf "$swift_mod_dst"
+            continue
+        fi
+
+        # Inject modulemap (references the Swift-generated ObjC header).
+        local mm_src
+        mm_src="$(find "$intermediates" -name "${product}.modulemap" \
+            -path "*GeneratedModuleMaps*" 2>/dev/null | head -1)"
+        if [ -n "$mm_src" ]; then
+            cp -f "$mm_src" "$modules_dir/module.modulemap"
+            # Also copy the companion Swift.h header if present (referenced by the map).
+            local hdr_src
+            hdr_src="$(find "$intermediates" -name "${product}-Swift.h" \
+                -path "*GeneratedModuleMaps*" 2>/dev/null | head -1)"
+            if [ -n "$hdr_src" ]; then
+                mkdir -p "$fw/Headers"
+                cp -f "$hdr_src" "$fw/Headers/"
+            fi
+        fi
+
+        # Remove stale code signature so resign_xcframework seals the new contents.
+        rm -rf "$fw/_CodeSignature"
+        ok "Injected .swiftinterface for $product ($sdk)"
+    done
 }
 
 # ──────────────────────────────────────────────────────────────────────────────

@@ -1,0 +1,375 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name CombineSchedulers -package-name combine_schedulers
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import Combine
+import ConcurrencyExtras
+import Darwin
+import Dispatch
+import Foundation
+import IssueReporting
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct AnyScheduler<SchedulerTimeType, SchedulerOptions> : Combine.Scheduler, @unchecked Swift.Sendable where SchedulerTimeType : Swift.Strideable, SchedulerTimeType.Stride : Combine.SchedulerTimeIntervalConvertible {
+  public var minimumTolerance: SchedulerTimeType.Stride {
+    get
+  }
+  public var now: SchedulerTimeType {
+    get
+  }
+  public init(minimumTolerance: @escaping () -> SchedulerTimeType.Stride, now: @escaping () -> SchedulerTimeType, scheduleImmediately: @escaping (SchedulerOptions?, @escaping () -> Swift.Void) -> Swift.Void, delayed: @escaping (SchedulerTimeType, SchedulerTimeType.Stride, SchedulerOptions?, @escaping () -> Swift.Void) -> Swift.Void, interval: @escaping (SchedulerTimeType, SchedulerTimeType.Stride, SchedulerTimeType.Stride, SchedulerOptions?, @escaping () -> Swift.Void) -> any Combine.Cancellable)
+  public init<S>(_ scheduler: S) where SchedulerTimeType == S.SchedulerTimeType, SchedulerOptions == S.SchedulerOptions, S : Combine.Scheduler
+  public func schedule(after date: SchedulerTimeType, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Swift.Void)
+  public func schedule(after date: SchedulerTimeType, interval: SchedulerTimeType.Stride, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Swift.Void) -> any Combine.Cancellable
+  public func schedule(options: SchedulerOptions?, _ action: @escaping () -> Swift.Void)
+}
+public typealias AnySchedulerOf<Scheduler> = CombineSchedulers.AnyScheduler<Scheduler.SchedulerTimeType, Scheduler.SchedulerOptions> where Scheduler : Combine.Scheduler
+extension Combine.Scheduler {
+  public func eraseToAnyScheduler() -> CombineSchedulers.AnyScheduler<Self.SchedulerTimeType, Self.SchedulerOptions>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Dispatch.DispatchQueue.SchedulerTimeType, SchedulerOptions == Dispatch.DispatchQueue.SchedulerOptions {
+  public static var main: CombineSchedulers.AnyScheduler<Dispatch.DispatchQueue.SchedulerTimeType, Dispatch.DispatchQueue.SchedulerOptions> {
+    get
+  }
+  public static func global(qos: Dispatch.DispatchQoS.QoSClass = .default) -> CombineSchedulers.AnyScheduler<SchedulerTimeType, SchedulerOptions>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.OperationQueue.SchedulerTimeType, SchedulerOptions == Foundation.OperationQueue.SchedulerOptions {
+  public static var main: CombineSchedulers.AnyScheduler<Foundation.OperationQueue.SchedulerTimeType, Foundation.OperationQueue.SchedulerOptions> {
+    get
+  }
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.RunLoop.SchedulerTimeType, SchedulerOptions == Foundation.RunLoop.SchedulerOptions {
+  public static var main: CombineSchedulers.AnyScheduler<Foundation.RunLoop.SchedulerTimeType, Foundation.RunLoop.SchedulerOptions> {
+    get
+  }
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Dispatch.DispatchQueue.SchedulerTimeType, SchedulerOptions == Swift.Never {
+  public static var shared: CombineSchedulers.AnyScheduler<Dispatch.DispatchQueue.SchedulerTimeType, Swift.Never> {
+    get
+  }
+}
+extension Combine.Scheduler {
+  public func sleep(for duration: Self.SchedulerTimeType.Stride, tolerance: Self.SchedulerTimeType.Stride = .zero, options: Self.SchedulerOptions? = nil) async throws
+  public func sleep(until deadline: Self.SchedulerTimeType, tolerance: Self.SchedulerTimeType.Stride = .zero, options: Self.SchedulerOptions? = nil) async throws
+  public func timer(interval: Self.SchedulerTimeType.Stride, tolerance: Self.SchedulerTimeType.Stride = .zero, options: Self.SchedulerOptions? = nil) -> _Concurrency.AsyncStream<Self.SchedulerTimeType>
+  public func measure(_ work: () throws -> Swift.Void) rethrows -> Self.SchedulerTimeType.Stride
+}
+public struct ImmediateScheduler<SchedulerTimeType, SchedulerOptions> : Combine.Scheduler where SchedulerTimeType : Swift.Strideable, SchedulerTimeType.Stride : Combine.SchedulerTimeIntervalConvertible {
+  public let minimumTolerance: SchedulerTimeType.Stride
+  public let now: SchedulerTimeType
+  public init(now: SchedulerTimeType)
+  public func schedule(options _: SchedulerOptions?, _ action: () -> Swift.Void)
+  public func schedule(after _: SchedulerTimeType, tolerance _: SchedulerTimeType.Stride, options _: SchedulerOptions?, _ action: () -> Swift.Void)
+  public func schedule(after _: SchedulerTimeType, interval _: SchedulerTimeType.Stride, tolerance _: SchedulerTimeType.Stride, options _: SchedulerOptions?, _ action: () -> Swift.Void) -> any Combine.Cancellable
+}
+extension CombineSchedulers.ImmediateScheduler : Swift.Sendable where SchedulerTimeType : Swift.Sendable, SchedulerTimeType.Stride : Swift.Sendable {
+}
+extension Dispatch.DispatchQueue {
+  public static var immediate: CombineSchedulers.ImmediateSchedulerOf<Dispatch.DispatchQueue> {
+    get
+  }
+}
+extension CombineSchedulers.UIScheduler {
+  public static var immediate: CombineSchedulers.ImmediateSchedulerOf<CombineSchedulers.UIScheduler> {
+    get
+  }
+}
+extension Foundation.OperationQueue {
+  public static var immediate: CombineSchedulers.ImmediateSchedulerOf<Foundation.OperationQueue> {
+    get
+  }
+}
+extension Foundation.RunLoop {
+  public static var immediate: CombineSchedulers.ImmediateSchedulerOf<Foundation.RunLoop> {
+    get
+  }
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Dispatch.DispatchQueue.SchedulerTimeType, SchedulerOptions == Dispatch.DispatchQueue.SchedulerOptions {
+  public static var immediate: CombineSchedulers.AnyScheduler<Dispatch.DispatchQueue.SchedulerTimeType, Dispatch.DispatchQueue.SchedulerOptions> {
+    get
+  }
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.OperationQueue.SchedulerTimeType, SchedulerOptions == Foundation.OperationQueue.SchedulerOptions {
+  public static var immediate: CombineSchedulers.AnyScheduler<Foundation.OperationQueue.SchedulerTimeType, Foundation.OperationQueue.SchedulerOptions> {
+    get
+  }
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.RunLoop.SchedulerTimeType, SchedulerOptions == Foundation.RunLoop.SchedulerOptions {
+  public static var immediate: CombineSchedulers.AnyScheduler<Foundation.RunLoop.SchedulerTimeType, Foundation.RunLoop.SchedulerOptions> {
+    get
+  }
+}
+public typealias ImmediateSchedulerOf<Scheduler> = CombineSchedulers.ImmediateScheduler<Scheduler.SchedulerTimeType, Scheduler.SchedulerOptions> where Scheduler : Combine.Scheduler
+@available(iOS, deprecated: 9999.0, renamed: "UnimplementedScheduler")
+@available(macOS, deprecated: 9999.0, renamed: "UnimplementedScheduler")
+@available(tvOS, deprecated: 9999.0, renamed: "UnimplementedScheduler")
+@available(watchOS, deprecated: 9999.0, renamed: "UnimplementedScheduler")
+public typealias FailingScheduler = CombineSchedulers.UnimplementedScheduler
+@available(iOS, deprecated: 9999.0, renamed: "UnimplementedSchedulerOf")
+@available(macOS, deprecated: 9999.0, renamed: "UnimplementedSchedulerOf")
+@available(tvOS, deprecated: 9999.0, renamed: "UnimplementedSchedulerOf")
+@available(watchOS, deprecated: 9999.0, renamed: "UnimplementedSchedulerOf")
+public typealias FailingSchedulerOf = CombineSchedulers.UnimplementedSchedulerOf
+extension Dispatch.DispatchQueue {
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static var failing: CombineSchedulers.UnimplementedSchedulerOf<Dispatch.DispatchQueue> {
+    get
+  }
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static func failing(_ prefix: Swift.String) -> CombineSchedulers.UnimplementedSchedulerOf<Dispatch.DispatchQueue>
+}
+extension Foundation.OperationQueue {
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static var failing: CombineSchedulers.UnimplementedSchedulerOf<Foundation.OperationQueue> {
+    get
+  }
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static func failing(_ prefix: Swift.String) -> CombineSchedulers.UnimplementedSchedulerOf<Foundation.OperationQueue>
+}
+extension Foundation.RunLoop {
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static var failing: CombineSchedulers.UnimplementedSchedulerOf<Foundation.RunLoop> {
+    get
+  }
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static func failing(_ prefix: Swift.String) -> CombineSchedulers.UnimplementedSchedulerOf<Foundation.RunLoop>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Dispatch.DispatchQueue.SchedulerTimeType, SchedulerOptions == Dispatch.DispatchQueue.SchedulerOptions {
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static var failing: CombineSchedulers.AnyScheduler<Dispatch.DispatchQueue.SchedulerTimeType, Dispatch.DispatchQueue.SchedulerOptions> {
+    get
+  }
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static func failing(_ prefix: Swift.String) -> CombineSchedulers.AnyScheduler<SchedulerTimeType, SchedulerOptions>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.OperationQueue.SchedulerTimeType, SchedulerOptions == Foundation.OperationQueue.SchedulerOptions {
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static var failing: CombineSchedulers.AnyScheduler<Foundation.OperationQueue.SchedulerTimeType, Foundation.OperationQueue.SchedulerOptions> {
+    get
+  }
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static func failing(_ prefix: Swift.String) -> CombineSchedulers.AnyScheduler<SchedulerTimeType, SchedulerOptions>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.RunLoop.SchedulerTimeType, SchedulerOptions == Foundation.RunLoop.SchedulerOptions {
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static var failing: CombineSchedulers.AnyScheduler<Foundation.RunLoop.SchedulerTimeType, Foundation.RunLoop.SchedulerOptions> {
+    get
+  }
+  @available(iOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(macOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(tvOS, deprecated: 9999.0, renamed: "unimplemented")
+  @available(watchOS, deprecated: 9999.0, renamed: "unimplemented")
+  public static func failing(_ prefix: Swift.String) -> CombineSchedulers.AnyScheduler<SchedulerTimeType, SchedulerOptions>
+}
+extension Combine.Scheduler where Self.SchedulerOptions == Dispatch.DispatchQueue.SchedulerOptions, Self.SchedulerTimeType == Dispatch.DispatchQueue.SchedulerTimeType {
+  @available(*, deprecated, renamed: "immediate")
+  public static var immediateScheduler: CombineSchedulers.ImmediateSchedulerOf<Self> {
+    get
+  }
+}
+extension Combine.Scheduler where Self.SchedulerOptions == Foundation.RunLoop.SchedulerOptions, Self.SchedulerTimeType == Foundation.RunLoop.SchedulerTimeType {
+  @available(*, deprecated, renamed: "immediate")
+  public static var immediateScheduler: CombineSchedulers.ImmediateSchedulerOf<Self> {
+    get
+  }
+}
+extension Combine.Scheduler where Self.SchedulerOptions == Foundation.OperationQueue.SchedulerOptions, Self.SchedulerTimeType == Foundation.OperationQueue.SchedulerTimeType {
+  @available(*, deprecated, renamed: "immediate")
+  public static var immediateScheduler: CombineSchedulers.ImmediateSchedulerOf<Self> {
+    get
+  }
+}
+extension Combine.Scheduler where Self.SchedulerOptions == Dispatch.DispatchQueue.SchedulerOptions, Self.SchedulerTimeType == Dispatch.DispatchQueue.SchedulerTimeType {
+  @available(*, deprecated, renamed: "test")
+  public static var testScheduler: CombineSchedulers.TestSchedulerOf<Self> {
+    get
+  }
+}
+extension Combine.Scheduler where Self.SchedulerOptions == Foundation.OperationQueue.SchedulerOptions, Self.SchedulerTimeType == Foundation.OperationQueue.SchedulerTimeType {
+  @available(*, deprecated, renamed: "test")
+  public static var testScheduler: CombineSchedulers.TestSchedulerOf<Self> {
+    get
+  }
+}
+extension Combine.Scheduler where Self.SchedulerOptions == Foundation.RunLoop.SchedulerOptions, Self.SchedulerTimeType == Foundation.RunLoop.SchedulerTimeType {
+  @available(*, deprecated, renamed: "test")
+  public static var testScheduler: CombineSchedulers.TestSchedulerOf<Self> {
+    get
+  }
+}
+extension Foundation.NSRecursiveLock {
+  @discardableResult
+  @inlinable internal func sync<R>(operation: () -> R) -> R {
+    self.lock()
+    defer { self.unlock() }
+    return operation()
+  }
+}
+extension Combine.Scheduler {
+  public func animation(_ animation: SwiftUICore.Animation? = .default) -> CombineSchedulers.AnySchedulerOf<Self>
+  public func transaction(_ transaction: SwiftUICore.Transaction) -> CombineSchedulers.AnySchedulerOf<Self>
+}
+final public class TestScheduler<SchedulerTimeType, SchedulerOptions> : Combine.Scheduler, @unchecked Swift.Sendable where SchedulerTimeType : Swift.Strideable, SchedulerTimeType.Stride : Combine.SchedulerTimeIntervalConvertible {
+  final public let minimumTolerance: SchedulerTimeType.Stride
+  final public var now: SchedulerTimeType {
+    get
+  }
+  public init(now: SchedulerTimeType)
+  final public func advance(by duration: SchedulerTimeType.Stride = .zero)
+  @_Concurrency.MainActor final public func advance(by duration: SchedulerTimeType.Stride = .zero) async
+  final public func advance(to instant: SchedulerTimeType)
+  @_Concurrency.MainActor final public func advance(to instant: SchedulerTimeType) async
+  final public func run()
+  @_Concurrency.MainActor final public func run() async
+  final public func schedule(after date: SchedulerTimeType, interval: SchedulerTimeType.Stride, tolerance _: SchedulerTimeType.Stride, options _: SchedulerOptions?, _ action: @escaping () -> Swift.Void) -> any Combine.Cancellable
+  final public func schedule(after date: SchedulerTimeType, tolerance _: SchedulerTimeType.Stride, options _: SchedulerOptions?, _ action: @escaping () -> Swift.Void)
+  final public func schedule(options _: SchedulerOptions?, _ action: @escaping () -> Swift.Void)
+  @objc deinit
+}
+extension Dispatch.DispatchQueue {
+  public static var test: CombineSchedulers.TestSchedulerOf<Dispatch.DispatchQueue> {
+    get
+  }
+}
+extension CombineSchedulers.UIScheduler {
+  public static var test: CombineSchedulers.TestSchedulerOf<CombineSchedulers.UIScheduler> {
+    get
+  }
+}
+extension Foundation.OperationQueue {
+  public static var test: CombineSchedulers.TestSchedulerOf<Foundation.OperationQueue> {
+    get
+  }
+}
+extension Foundation.RunLoop {
+  public static var test: CombineSchedulers.TestSchedulerOf<Foundation.RunLoop> {
+    get
+  }
+}
+public typealias TestSchedulerOf<Scheduler> = CombineSchedulers.TestScheduler<Scheduler.SchedulerTimeType, Scheduler.SchedulerOptions> where Scheduler : Combine.Scheduler
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Scheduler {
+  public func timerPublisher(every interval: Self.SchedulerTimeType.Stride, tolerance: Self.SchedulerTimeType.Stride? = nil, options: Self.SchedulerOptions? = nil) -> Combine.Publishers.Timer<Self>
+}
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Publishers {
+  final public class Timer<Scheduler> : Combine.ConnectablePublisher where Scheduler : Combine.Scheduler {
+    public typealias Output = Scheduler.SchedulerTimeType
+    public typealias Failure = Swift.Never
+    final public let interval: Scheduler.SchedulerTimeType.Stride
+    final public let options: Scheduler.SchedulerOptions?
+    final public let scheduler: Scheduler
+    final public let tolerance: Scheduler.SchedulerTimeType.Stride?
+    public init(every interval: Scheduler.SchedulerTimeType.Stride, tolerance: Scheduler.SchedulerTimeType.Stride? = nil, scheduler: Scheduler, options: Scheduler.SchedulerOptions? = nil)
+    final public func receive<Sub>(subscriber: Sub) where Sub : Combine.Subscriber, Scheduler.SchedulerTimeType == Sub.Input, Sub.Failure == Swift.Never
+    final public func connect() -> any Combine.Cancellable
+    @objc deinit
+  }
+}
+extension Combine.Scheduler {
+  @_Concurrency.MainActor public func animate(withDuration duration: Foundation.TimeInterval, delay: Foundation.TimeInterval = 0, options animationOptions: UIKit.UIView.AnimationOptions = []) -> CombineSchedulers.AnySchedulerOf<Self>
+  @_Concurrency.MainActor public func animate(withDuration duration: Foundation.TimeInterval, delay: Foundation.TimeInterval = 0, usingSpringWithDamping dampingRatio: CoreFoundation.CGFloat, initialSpringVelocity velocity: CoreFoundation.CGFloat, options animationOptions: UIKit.UIView.AnimationOptions) -> CombineSchedulers.AnySchedulerOf<Self>
+}
+public struct UIScheduler : Combine.Scheduler, Swift.Sendable {
+  public typealias SchedulerOptions = Swift.Never
+  public typealias SchedulerTimeType = Dispatch.DispatchQueue.SchedulerTimeType
+  public static let shared: CombineSchedulers.UIScheduler
+  public var now: CombineSchedulers.UIScheduler.SchedulerTimeType {
+    get
+  }
+  public var minimumTolerance: CombineSchedulers.UIScheduler.SchedulerTimeType.Stride {
+    get
+  }
+  public func schedule(options: CombineSchedulers.UIScheduler.SchedulerOptions? = nil, _ action: @escaping () -> Swift.Void)
+  public func schedule(after date: CombineSchedulers.UIScheduler.SchedulerTimeType, tolerance: CombineSchedulers.UIScheduler.SchedulerTimeType.Stride, options: CombineSchedulers.UIScheduler.SchedulerOptions? = nil, _ action: @escaping () -> Swift.Void)
+  public func schedule(after date: CombineSchedulers.UIScheduler.SchedulerTimeType, interval: CombineSchedulers.UIScheduler.SchedulerTimeType.Stride, tolerance: CombineSchedulers.UIScheduler.SchedulerTimeType.Stride, options: CombineSchedulers.UIScheduler.SchedulerOptions? = nil, _ action: @escaping () -> Swift.Void) -> any Combine.Cancellable
+}
+public struct UnimplementedScheduler<SchedulerTimeType, SchedulerOptions> : Combine.Scheduler where SchedulerTimeType : Swift.Strideable, SchedulerTimeType.Stride : Combine.SchedulerTimeIntervalConvertible {
+  public var minimumTolerance: SchedulerTimeType.Stride {
+    get
+  }
+  public var now: SchedulerTimeType {
+    get
+  }
+  public let prefix: Swift.String
+  public init(_ prefix: Swift.String = "", now: SchedulerTimeType)
+  public func schedule(options _: SchedulerOptions?, _ action: () -> Swift.Void)
+  public func schedule(after _: SchedulerTimeType, tolerance _: SchedulerTimeType.Stride, options _: SchedulerOptions?, _ action: () -> Swift.Void)
+  public func schedule(after _: SchedulerTimeType, interval _: SchedulerTimeType.Stride, tolerance _: SchedulerTimeType.Stride, options _: SchedulerOptions?, _ action: () -> Swift.Void) -> any Combine.Cancellable
+}
+extension CombineSchedulers.UnimplementedScheduler : Swift.Sendable where SchedulerTimeType : Swift.Sendable, SchedulerTimeType.Stride : Swift.Sendable {
+}
+extension Dispatch.DispatchQueue {
+  public static var unimplemented: CombineSchedulers.UnimplementedSchedulerOf<Dispatch.DispatchQueue> {
+    get
+  }
+  public static func unimplemented(_ prefix: Swift.String) -> CombineSchedulers.UnimplementedSchedulerOf<Dispatch.DispatchQueue>
+}
+extension Foundation.OperationQueue {
+  public static var unimplemented: CombineSchedulers.UnimplementedSchedulerOf<Foundation.OperationQueue> {
+    get
+  }
+  public static func unimplemented(_ prefix: Swift.String) -> CombineSchedulers.UnimplementedSchedulerOf<Foundation.OperationQueue>
+}
+extension Foundation.RunLoop {
+  public static var unimplemented: CombineSchedulers.UnimplementedSchedulerOf<Foundation.RunLoop> {
+    get
+  }
+  public static func unimplemented(_ prefix: Swift.String) -> CombineSchedulers.UnimplementedSchedulerOf<Foundation.RunLoop>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Dispatch.DispatchQueue.SchedulerTimeType, SchedulerOptions == Dispatch.DispatchQueue.SchedulerOptions {
+  public static var unimplemented: CombineSchedulers.AnyScheduler<Dispatch.DispatchQueue.SchedulerTimeType, Dispatch.DispatchQueue.SchedulerOptions> {
+    get
+  }
+  public static func unimplemented(_ prefix: Swift.String) -> CombineSchedulers.AnyScheduler<SchedulerTimeType, SchedulerOptions>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.OperationQueue.SchedulerTimeType, SchedulerOptions == Foundation.OperationQueue.SchedulerOptions {
+  public static var unimplemented: CombineSchedulers.AnyScheduler<Foundation.OperationQueue.SchedulerTimeType, Foundation.OperationQueue.SchedulerOptions> {
+    get
+  }
+  public static func unimplemented(_ prefix: Swift.String) -> CombineSchedulers.AnyScheduler<SchedulerTimeType, SchedulerOptions>
+}
+extension CombineSchedulers.AnyScheduler where SchedulerTimeType == Foundation.RunLoop.SchedulerTimeType, SchedulerOptions == Foundation.RunLoop.SchedulerOptions {
+  public static var unimplemented: CombineSchedulers.AnyScheduler<Foundation.RunLoop.SchedulerTimeType, Foundation.RunLoop.SchedulerOptions> {
+    get
+  }
+  public static func unimplemented(_ prefix: Swift.String) -> CombineSchedulers.AnyScheduler<SchedulerTimeType, SchedulerOptions>
+}
+public typealias UnimplementedSchedulerOf<Scheduler> = CombineSchedulers.UnimplementedScheduler<Scheduler.SchedulerTimeType, Scheduler.SchedulerOptions> where Scheduler : Combine.Scheduler

@@ -1,0 +1,927 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "AmplifyUtilsNotifications",
+    "printedName": "AmplifyUtilsNotifications",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AmplifyUtilsNotifications",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AUNotificationPayload",
+        "printedName": "AUNotificationPayload",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "remoteMediaURL",
+            "printedName": "remoteMediaURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AmplifyUtilsNotifications21AUNotificationPayloadP14remoteMediaURLSSSgvp",
+            "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationPayloadP14remoteMediaURLSSSgvp",
+            "moduleName": "AmplifyUtilsNotifications",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationPayloadP14remoteMediaURLSSSgvg",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationPayloadP14remoteMediaURLSSSgvg",
+                "moduleName": "AmplifyUtilsNotifications",
+                "genericSig": "<τ_0_0 where τ_0_0 : AmplifyUtilsNotifications.AUNotificationPayload>",
+                "sugared_genericSig": "<Self where Self : AmplifyUtilsNotifications.AUNotificationPayload>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:25AmplifyUtilsNotifications21AUNotificationPayloadP",
+        "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationPayloadP",
+        "moduleName": "AmplifyUtilsNotifications",
+        "genericSig": "<τ_0_0 : Swift.Decodable>",
+        "sugared_genericSig": "<Self : Swift.Decodable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AmplifyUtilsNotifications",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "AmplifyUtilsNotifications"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AmplifyUtilsNotifications"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AUNotificationPermissions",
+        "printedName": "AUNotificationPermissions",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "allowed",
+            "printedName": "allowed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AmplifyUtilsNotifications25AUNotificationPermissionsC7allowedSbvpZ",
+            "mangledName": "$s25AmplifyUtilsNotifications25AUNotificationPermissionsC7allowedSbvpZ",
+            "moduleName": "AmplifyUtilsNotifications",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications25AUNotificationPermissionsC7allowedSbvgZ",
+                "mangledName": "$s25AmplifyUtilsNotifications25AUNotificationPermissionsC7allowedSbvgZ",
+                "moduleName": "AmplifyUtilsNotifications",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNAuthorizationStatus",
+                "printedName": "UserNotifications.UNAuthorizationStatus",
+                "usr": "c:@E@UNAuthorizationStatus"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AmplifyUtilsNotifications25AUNotificationPermissionsC6statusSo21UNAuthorizationStatusVvpZ",
+            "mangledName": "$s25AmplifyUtilsNotifications25AUNotificationPermissionsC6statusSo21UNAuthorizationStatusVvpZ",
+            "moduleName": "AmplifyUtilsNotifications",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNAuthorizationStatus",
+                    "printedName": "UserNotifications.UNAuthorizationStatus",
+                    "usr": "c:@E@UNAuthorizationStatus"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications25AUNotificationPermissionsC6statusSo21UNAuthorizationStatusVvgZ",
+                "mangledName": "$s25AmplifyUtilsNotifications25AUNotificationPermissionsC6statusSo21UNAuthorizationStatusVvgZ",
+                "moduleName": "AmplifyUtilsNotifications",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "request",
+            "printedName": "request(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UserNotifications.UNAuthorizationOptions?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNAuthorizationOptions",
+                    "printedName": "UserNotifications.UNAuthorizationOptions",
+                    "usr": "c:@E@UNAuthorizationOptions"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AmplifyUtilsNotifications25AUNotificationPermissionsC7requestySbSo22UNAuthorizationOptionsVSgYaKFZ",
+            "mangledName": "$s25AmplifyUtilsNotifications25AUNotificationPermissionsC7requestySbSo22UNAuthorizationOptionsVSgYaKFZ",
+            "moduleName": "AmplifyUtilsNotifications",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "registerForRemoteNotifications",
+            "printedName": "registerForRemoteNotifications()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25AmplifyUtilsNotifications25AUNotificationPermissionsC017registerForRemoteC0yyYaFZ",
+            "mangledName": "$s25AmplifyUtilsNotifications25AUNotificationPermissionsC017registerForRemoteC0yyYaFZ",
+            "moduleName": "AmplifyUtilsNotifications",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:25AmplifyUtilsNotifications25AUNotificationPermissionsC",
+        "mangledName": "$s25AmplifyUtilsNotifications25AUNotificationPermissionsC",
+        "moduleName": "AmplifyUtilsNotifications",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "AmplifyUtilsNotifications"
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "AmplifyUtilsNotifications"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AUNotificationService",
+        "printedName": "AUNotificationService",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "payloadSchema",
+            "printedName": "payloadSchema",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any AmplifyUtilsNotifications.AUNotificationPayload.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AUNotificationPayload",
+                    "printedName": "AmplifyUtilsNotifications.AUNotificationPayload",
+                    "usr": "s:25AmplifyUtilsNotifications21AUNotificationPayloadP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvp",
+            "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvp",
+            "moduleName": "AmplifyUtilsNotifications",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExistentialMetatype",
+                    "printedName": "any AmplifyUtilsNotifications.AUNotificationPayload.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AUNotificationPayload",
+                        "printedName": "AmplifyUtilsNotifications.AUNotificationPayload",
+                        "usr": "s:25AmplifyUtilsNotifications21AUNotificationPayloadP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvg",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvg",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExistentialMetatype",
+                    "printedName": "any AmplifyUtilsNotifications.AUNotificationPayload.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AUNotificationPayload",
+                        "printedName": "AmplifyUtilsNotifications.AUNotificationPayload",
+                        "usr": "s:25AmplifyUtilsNotifications21AUNotificationPayloadP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvs",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvs",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvM",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC13payloadSchemaAA0D7Payload_pXpvM",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "contentHandler",
+            "printedName": "contentHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UserNotifications.UNNotificationContent) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNNotificationContent",
+                        "printedName": "UserNotifications.UNNotificationContent",
+                        "usr": "c:objc(cs)UNNotificationContent"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvp",
+            "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvp",
+            "moduleName": "AmplifyUtilsNotifications",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UserNotifications.UNNotificationContent) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNNotificationContent",
+                            "printedName": "UserNotifications.UNNotificationContent",
+                            "usr": "c:objc(cs)UNNotificationContent"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvg",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvg",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UserNotifications.UNNotificationContent) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNNotificationContent",
+                            "printedName": "UserNotifications.UNNotificationContent",
+                            "usr": "c:objc(cs)UNNotificationContent"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvs",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvs",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvM",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC14contentHandlerySo21UNNotificationContentCcSgvM",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bestAttemptContent",
+            "printedName": "bestAttemptContent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UserNotifications.UNMutableNotificationContent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNMutableNotificationContent",
+                    "printedName": "UserNotifications.UNMutableNotificationContent",
+                    "usr": "c:objc(cs)UNMutableNotificationContent"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvp",
+            "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvp",
+            "moduleName": "AmplifyUtilsNotifications",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UserNotifications.UNMutableNotificationContent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNMutableNotificationContent",
+                        "printedName": "UserNotifications.UNMutableNotificationContent",
+                        "usr": "c:objc(cs)UNMutableNotificationContent"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvg",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvg",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UserNotifications.UNMutableNotificationContent?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNMutableNotificationContent",
+                        "printedName": "UserNotifications.UNMutableNotificationContent",
+                        "usr": "c:objc(cs)UNMutableNotificationContent"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvs",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvs",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvM",
+                "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC18bestAttemptContentSo021UNMutableNotificationH0CSgvM",
+                "moduleName": "AmplifyUtilsNotifications",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "didReceive",
+            "printedName": "didReceive(_:withContentHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationRequest",
+                "printedName": "UserNotifications.UNNotificationRequest",
+                "usr": "c:objc(cs)UNNotificationRequest"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UserNotifications.UNNotificationContent) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNNotificationContent",
+                    "printedName": "UserNotifications.UNNotificationContent",
+                    "usr": "c:objc(cs)UNNotificationContent"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AmplifyUtilsNotifications@objc(cs)AUNotificationService(im)didReceiveNotificationRequest:withContentHandler:",
+            "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC10didReceive_18withContentHandlerySo21UNNotificationRequestC_ySo0kI0CctF",
+            "moduleName": "AmplifyUtilsNotifications",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "didReceiveNotificationRequest:withContentHandler:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "serviceExtensionTimeWillExpire",
+            "printedName": "serviceExtensionTimeWillExpire()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AmplifyUtilsNotifications@objc(cs)AUNotificationService(im)serviceExtensionTimeWillExpire",
+            "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC30serviceExtensionTimeWillExpireyyF",
+            "moduleName": "AmplifyUtilsNotifications",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "serviceExtensionTimeWillExpire",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AUNotificationService",
+                "printedName": "AmplifyUtilsNotifications.AUNotificationService",
+                "usr": "c:@M@AmplifyUtilsNotifications@objc(cs)AUNotificationService"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AmplifyUtilsNotifications@objc(cs)AUNotificationService(im)init",
+            "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceCACycfc",
+            "moduleName": "AmplifyUtilsNotifications",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AmplifyUtilsNotifications@objc(cs)AUNotificationService",
+        "mangledName": "$s25AmplifyUtilsNotifications21AUNotificationServiceC",
+        "moduleName": "AmplifyUtilsNotifications",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UNNotificationServiceExtension",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UserNotifications.UNNotificationServiceExtension",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AmplifyUtilsNotifications",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/AmplifyUtilsNotifications\/Sources\/AmplifyUtilsNotifications\/Payloads\/PinpointNotificationPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 441,
+      "length": 11,
+      "value": "\"media-url\""
+    }
+  ]
+}

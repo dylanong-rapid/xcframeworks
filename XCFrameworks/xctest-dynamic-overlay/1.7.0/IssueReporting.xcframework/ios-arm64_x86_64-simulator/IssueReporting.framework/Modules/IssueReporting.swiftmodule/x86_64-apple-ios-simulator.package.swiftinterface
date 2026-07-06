@@ -1,0 +1,623 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name IssueReporting -package-name xctest_dynamic_overlay
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import Darwin
+import Foundation
+import IssueReportingPackageSupport
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@_transparent public func withErrorReporting<R>(_ message: @autoclosure () -> Swift.String? = nil, to reporters: [any IssueReporting.IssueReporter]? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, catching body: () throws -> R) -> R? {
+  if let reporters {
+    return withIssueReporters(reporters) {
+      do {
+        return try body()
+      } catch {
+        reportIssue(
+          error,
+          message(),
+          fileID: fileID,
+          filePath: filePath,
+          line: line,
+          column: column
+        )
+        return nil
+      }
+    }
+  } else {
+    do {
+      return try body()
+    } catch {
+      reportIssue(
+        error,
+        message(),
+        fileID: fileID,
+        filePath: filePath,
+        line: line,
+        column: column
+      )
+      return nil
+    }
+  }
+}
+@_transparent public func withErrorReporting<R>(_ message: @autoclosure () -> Swift.String? = nil, to reporters: [any IssueReporting.IssueReporter]? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, catching body: () throws -> R?) -> R? {
+  (withErrorReporting(
+    message(),
+    to: reporters,
+    fileID: fileID,
+    filePath: filePath,
+    line: line,
+    column: column,
+    catching: body
+  ) as R??) ?? nil
+}
+#if compiler(>=5.3) && $SendingArgsAndResults
+@_transparent public func withErrorReporting<R>(_ message: @autoclosure () -> Swift.String? = nil, to reporters: [any IssueReporting.IssueReporter]? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, isolation: isolated (any _Concurrency.Actor)? = #isolation, catching body: () async throws -> sending R) async -> R? {
+    if let reporters {
+      return await withIssueReporters(reporters) {
+        do {
+          return try await body()
+        } catch {
+          reportIssue(
+            error,
+            message(),
+            fileID: fileID,
+            filePath: filePath,
+            line: line,
+            column: column
+          )
+          return nil
+        }
+      }
+    } else {
+      do {
+        return try await body()
+      } catch {
+        reportIssue(
+          error,
+          message(),
+          fileID: fileID,
+          filePath: filePath,
+          line: line,
+          column: column
+        )
+        return nil
+      }
+    }
+  }
+#else
+@_transparent public func withErrorReporting<R>(_ message: @autoclosure () -> Swift.String? = nil, to reporters: [any IssueReporting.IssueReporter]? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, isolation: isolated (any _Concurrency.Actor)? = #isolation, catching body: () async throws -> R) async -> R? {
+    if let reporters {
+      return await withIssueReporters(reporters) {
+        do {
+          return try await body()
+        } catch {
+          reportIssue(
+            error,
+            message(),
+            fileID: fileID,
+            filePath: filePath,
+            line: line,
+            column: column
+          )
+          return nil
+        }
+      }
+    } else {
+      do {
+        return try await body()
+      } catch {
+        reportIssue(
+          error,
+          message(),
+          fileID: fileID,
+          filePath: filePath,
+          line: line,
+          column: column
+        )
+        return nil
+      }
+    }
+  }
+#endif
+#if compiler(>=5.3) && $SendingArgsAndResults
+@_transparent public func withErrorReporting<R>(_ message: @autoclosure () -> Swift.String? = nil, to reporters: [any IssueReporting.IssueReporter]? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, isolation: isolated (any _Concurrency.Actor)? = #isolation, catching body: () async throws -> sending R?) async -> R? {
+    (await withErrorReporting(
+      message(),
+      to: reporters,
+      fileID: fileID,
+      filePath: filePath,
+      line: line,
+      column: column,
+      catching: body
+    ) as R??) ?? nil
+  }
+#else
+@_transparent public func withErrorReporting<R>(_ message: @autoclosure () -> Swift.String? = nil, to reporters: [any IssueReporting.IssueReporter]? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, isolation: isolated (any _Concurrency.Actor)? = #isolation, catching body: () async throws -> R?) async -> R? {
+    (await withErrorReporting(
+      message(),
+      to: reporters,
+      fileID: fileID,
+      filePath: filePath,
+      line: line,
+      column: column,
+      catching: body
+    ) as R??) ?? nil
+  }
+#endif
+extension Swift.Optional where Wrapped == Swift.String {
+  @usableFromInline
+  internal func withAppHostWarningIfNeeded() -> Swift.String?
+}
+extension Swift.String {
+  @usableFromInline
+  internal func withAppHostWarningIfNeeded() -> Swift.String
+  @usableFromInline
+  internal var isTestFrame: Swift.Bool {
+    get
+  }
+}
+@available(*, unavailable, renamed: "_BreakpointReporter")
+public typealias BreakpointReporter = IssueReporting._BreakpointReporter
+@available(*, unavailable, renamed: "_FatalErrorReporter")
+public typealias FatalErrorReporter = IssueReporting._FatalErrorReporter
+@available(*, unavailable, renamed: "_RuntimeWarningReporter")
+public typealias RuntimeWarningReporter = IssueReporting._RuntimeWarningReporter
+@usableFromInline
+final internal class FailureObserver : @unchecked Swift.Sendable {
+  public static let $current: _Concurrency.TaskLocal<IssueReporting.FailureObserver?>
+  public static var current: IssueReporting.FailureObserver? {
+    get
+  }
+  @usableFromInline
+  internal init(count: Swift.Int = 0)
+  @usableFromInline
+  final internal func withLock<R>(_ body: (inout Swift.Int) -> R) -> R
+  @objc @usableFromInline
+  deinit
+}
+@usableFromInline
+final internal class LockIsolated<Value> : @unchecked Swift.Sendable {
+  @usableFromInline
+  internal init(_ value: @autoclosure @Sendable () throws -> Value) rethrows
+  @usableFromInline
+  final internal func withLock<T>(_ operation: @Sendable (inout Value) throws -> T) rethrows -> T where T : Swift.Sendable
+  @objc @usableFromInline
+  deinit
+}
+@usableFromInline
+@rethrows internal protocol _ErrorMechanism {
+  associatedtype Output
+  func get() throws -> Self.Output
+}
+extension IssueReporting._ErrorMechanism {
+  @usableFromInline
+  internal func _rethrowGet() rethrows -> Self.Output
+}
+extension Swift.Result : IssueReporting._ErrorMechanism {
+  @usableFromInline
+  internal typealias Output = Success
+}
+@usableFromInline
+internal func _recordIssue(message: Swift.String?, fileID: Swift.String = #fileID, filePath: Swift.String = #filePath, line: Swift.Int = #line, column: Swift.Int = #column)
+@usableFromInline
+internal func _recordError(error: any Swift.Error, message: Swift.String?, fileID: Swift.String = #fileID, filePath: Swift.String = #filePath, line: Swift.Int = #line, column: Swift.Int = #column)
+@usableFromInline
+internal func _withKnownIssue(_ message: Swift.String? = nil, isIntermittent: Swift.Bool = false, fileID: Swift.String = #fileID, filePath: Swift.String = #filePath, line: Swift.Int = #line, column: Swift.Int = #column, _ body: () throws -> Swift.Void)
+@usableFromInline
+internal func _withKnownIssue(_ message: Swift.String?, isIntermittent: Swift.Bool, isolation: isolated (any _Concurrency.Actor)?, fileID: Swift.String, filePath: Swift.String, line: Swift.Int, column: Swift.Int, _ body: () async throws -> Swift.Void) async
+@usableFromInline
+internal func _currentTest() -> IssueReportingPackageSupport._Test?
+@usableFromInline
+internal func function(for symbol: Swift.String) -> Any?
+@usableFromInline
+internal func unsafeBitCast<F>(symbol: Swift.String, in library: Swift.String, to function: F.Type) -> F?
+@usableFromInline
+@propertyWrapper internal struct UncheckedSendable<Value> : @unchecked Swift.Sendable {
+  @usableFromInline
+  internal var wrappedValue: Value
+}
+@usableFromInline
+internal func printError(_ message: Swift.String)
+@usableFromInline
+internal func _XCTFail(_ message: Swift.String = "", file: Swift.StaticString = #filePath, line: Swift.UInt = #line)
+@usableFromInline
+@_transparent internal func _XCTExpectFailure<R>(_ failureReason: Swift.String? = nil, enabled: Swift.Bool? = nil, strict: Swift.Bool? = nil, file: Swift.StaticString, line: Swift.UInt, failingBlock: () throws -> R) rethrows -> R {
+    guard let function = function(for: "$s25IssueReportingTestSupport17_XCTExpectFailureypyF")
+    else {
+        printError(
+          """
+          \(file):\(line): An expected failure was recorded without linking the XCTest framework.
+
+          To fix this, add "IssueReportingTestSupport" as a dependency to your test target.
+          """
+        )
+      return try failingBlock()
+    }
+    let XCTExpectFailure =
+      function
+      as! @Sendable (String?, Bool?, Bool?, () throws -> Void) throws -> Void
+    var result: Result<R, any Error>!
+    do {
+      try XCTExpectFailure(failureReason, enabled, strict) {
+        result = Result { try failingBlock() }
+      }
+    } catch {
+      fatalError()
+    }
+    return try result._rethrowGet()
+}
+public let isTesting: Swift.Bool
+public protocol IssueReporter : Swift.Sendable {
+  func reportIssue(_ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+  func reportIssue(_ error: any Swift.Error, _ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+  func expectIssue(_ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+  func expectIssue(_ error: any Swift.Error, _ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+}
+extension IssueReporting.IssueReporter {
+  @_transparent public func reportIssue(_ error: any Swift.Error, _ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt) {
+    reportIssue(
+      "Caught error: \(error)\(message().map { ": \($0)" } ?? "")",
+      fileID: fileID,
+      filePath: filePath,
+      line: line,
+      column: column
+    )
+  }
+  public func expectIssue(_ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+  public func expectIssue(_ error: any Swift.Error, _ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+}
+public enum IssueReporters {
+  public static var current: [any IssueReporting.IssueReporter] {
+    get
+    set
+  }
+}
+public func withIssueReporters<R>(_ reporters: [any IssueReporting.IssueReporter], operation: () throws -> R) rethrows -> R
+public func withIssueReporters<R>(_ reporters: [any IssueReporting.IssueReporter], isolation: isolated (any _Concurrency.Actor)? = #isolation, operation: () async throws -> R) async rethrows -> R
+extension IssueReporting.IssueReporter where Self == IssueReporting._BreakpointReporter {
+  public static var breakpoint: IssueReporting._BreakpointReporter {
+    get
+  }
+}
+public struct _BreakpointReporter : IssueReporting.IssueReporter {
+  public func reportIssue(_ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+}
+extension IssueReporting.IssueReporter where Self == IssueReporting._FatalErrorReporter {
+  public static var fatalError: IssueReporting._FatalErrorReporter {
+    get
+  }
+}
+public struct _FatalErrorReporter : IssueReporting.IssueReporter {
+  public func reportIssue(_ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+}
+extension IssueReporting.IssueReporter where Self == IssueReporting._RuntimeWarningReporter {
+  @_transparent public static var runtimeWarning: IssueReporting._RuntimeWarningReporter {
+    @_transparent get { Self() }
+  }
+}
+public struct _RuntimeWarningReporter : IssueReporting.IssueReporter {
+  @usableFromInline
+  @IssueReporting.UncheckedSendable @_transparent internal var dso: Swift.UnsafeRawPointer {
+    @_transparent get
+    @_transparent set
+    @_transparent _modify
+  }
+  @usableFromInline
+  internal init()
+  @_transparent public func reportIssue(_ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt) {
+      guard ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != "1"
+      else {
+        print("🟣 \(fileID):\(line): \(message() ?? "")")
+        return
+      }
+      let moduleName = String(
+        Substring("\(fileID)".utf8.prefix(while: { $0 != UTF8.CodeUnit(ascii: "/") }))
+      )
+      var message = message() ?? ""
+      if message.isEmpty {
+        message = "Issue reported"
+      }
+      os_log(
+        .fault,
+        dso: dso,
+        log: OSLog(subsystem: "com.apple.runtime-issues", category: moduleName),
+        "%@",
+        "\(isTesting ? "\(fileID):\(line): " : "")\(message)"
+      )
+  }
+  public func expectIssue(_ message: @autoclosure () -> Swift.String?, fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+}
+@_transparent public func reportIssue(_ message: @autoclosure () -> Swift.String? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column) {
+  let (fileID, filePath, line, column) = (
+    IssueContext.current?.fileID ?? fileID,
+    IssueContext.current?.filePath ?? filePath,
+    IssueContext.current?.line ?? line,
+    IssueContext.current?.column ?? column
+  )
+  guard TestContext.current != nil else {
+    guard !isTesting else { return }
+    if let observer = FailureObserver.current {
+      observer.withLock { $0 += 1 }
+      for reporter in IssueReporters.current {
+        reporter.expectIssue(
+          message(),
+          fileID: fileID,
+          filePath: filePath,
+          line: line,
+          column: column
+        )
+      }
+    } else {
+      for reporter in IssueReporters.current {
+        reporter.reportIssue(
+          message(),
+          fileID: fileID,
+          filePath: filePath,
+          line: line,
+          column: column
+        )
+      }
+    }
+    return
+  }
+  _recordIssue(
+    message: message(),
+    fileID: "\(fileID)",
+    filePath: "\(filePath)",
+    line: Int(line),
+    column: Int(column)
+  )
+  _XCTFail(
+    message().withAppHostWarningIfNeeded() ?? "",
+    file: filePath,
+    line: line
+  )
+}
+@_transparent public func reportIssue(_ error: any Swift.Error, _ message: @autoclosure () -> Swift.String? = nil, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column) {
+  let (fileID, filePath, line, column) = (
+    IssueContext.current?.fileID ?? fileID,
+    IssueContext.current?.filePath ?? filePath,
+    IssueContext.current?.line ?? line,
+    IssueContext.current?.column ?? column
+  )
+  guard let context = TestContext.current else {
+    guard !isTesting else { return }
+    if let observer = FailureObserver.current {
+      observer.withLock { $0 += 1 }
+      for reporter in IssueReporters.current {
+        reporter.expectIssue(
+          error,
+          message(),
+          fileID: fileID,
+          filePath: filePath,
+          line: line,
+          column: column
+        )
+      }
+    } else {
+      for reporter in IssueReporters.current {
+        reporter.reportIssue(
+          error,
+          message(),
+          fileID: fileID,
+          filePath: filePath,
+          line: line,
+          column: column
+        )
+      }
+    }
+    return
+  }
+
+  switch context {
+  case .swiftTesting:
+    _recordError(
+      error: error,
+      message: message(),
+      fileID: "\(fileID)",
+      filePath: "\(filePath)",
+      line: Int(line),
+      column: Int(column)
+    )
+  case .xcTest:
+    _XCTFail(
+      "Caught error: \(error)\(message().map { ": \($0)" } ?? "")".withAppHostWarningIfNeeded(),
+      file: filePath,
+      line: line
+    )
+  @unknown default: break
+  }
+}
+public enum TestContext : Swift.Equatable, Swift.Sendable {
+  case swiftTesting(IssueReporting.TestContext.Testing?)
+  case xcTest
+  public static var current: IssueReporting.TestContext? {
+    get
+  }
+  public var isSwiftTesting: Swift.Bool {
+    get
+  }
+  public struct Testing : Swift.Equatable, Swift.Sendable {
+    public let test: IssueReporting.TestContext.Testing.Test
+    public struct Test : Swift.Equatable, Swift.Hashable, Swift.Identifiable, Swift.Sendable {
+      public let id: IssueReporting.TestContext.Testing.Test.ID
+      public let traits: [any Swift.Sendable]
+      public struct ID : Swift.Equatable, Swift.Hashable, @unchecked Swift.Sendable {
+        public let rawValue: Swift.AnyHashable
+        public static func == (a: IssueReporting.TestContext.Testing.Test.ID, b: IssueReporting.TestContext.Testing.Test.ID) -> Swift.Bool
+        public func hash(into hasher: inout Swift.Hasher)
+        public var hashValue: Swift.Int {
+          get
+        }
+      }
+      public static func == (lhs: IssueReporting.TestContext.Testing.Test, rhs: IssueReporting.TestContext.Testing.Test) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public static func == (a: IssueReporting.TestContext.Testing, b: IssueReporting.TestContext.Testing) -> Swift.Bool
+  }
+  @available(*, deprecated, message: "Test using pattern matching, instead.")
+  public static func == (lhs: IssueReporting.TestContext, rhs: IssueReporting.TestContext) -> Swift.Bool
+  @available(*, deprecated, message: "Test for '.swiftTesting' using pattern matching or 'isSwiftTesting', instead.")
+  public static var swiftTesting: IssueReporting.TestContext {
+    get
+  }
+}
+public func unimplemented<each Argument, Result>(_ description: @autoclosure @escaping @Sendable () -> Swift.String = "", placeholder: @autoclosure @escaping @Sendable () -> Result = (), fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, function: Swift.StaticString = #function, line: Swift.UInt = #line, column: Swift.UInt = #column) -> @Sendable (repeat each Argument) -> Result
+public func unimplemented<each Argument, Result>(_ description: @autoclosure @escaping @Sendable () -> Swift.String = "", fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, function: Swift.StaticString = #function, line: Swift.UInt = #line, column: Swift.UInt = #column) -> @Sendable (repeat each Argument) throws -> Result
+public func unimplemented<each Argument, Failure, Result>(_ description: @autoclosure @escaping @Sendable () -> Swift.String = "", throwing failure: @autoclosure @escaping @Sendable () -> Failure, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, function: Swift.StaticString = #function, line: Swift.UInt = #line, column: Swift.UInt = #column) -> @Sendable (repeat each Argument) throws(Failure) -> Result where Failure : Swift.Error
+public func unimplemented<each Argument, Result>(_ description: @autoclosure @escaping @Sendable () -> Swift.String = "", placeholder: @autoclosure @escaping @Sendable () -> Result = (), fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, function: Swift.StaticString = #function, line: Swift.UInt = #line, column: Swift.UInt = #column) -> @Sendable (repeat each Argument) async -> Result
+public func unimplemented<each Argument, Result>(_ description: @autoclosure @escaping @Sendable () -> Swift.String = "", fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, function: Swift.StaticString = #function, line: Swift.UInt = #line, column: Swift.UInt = #column) -> @Sendable (repeat each Argument) async throws -> Result
+public func unimplemented<each Argument, Failure, Result>(_ description: @autoclosure @escaping @Sendable () -> Swift.String = "", throwing failure: @autoclosure @escaping @Sendable () -> Failure, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, function: Swift.StaticString = #function, line: Swift.UInt = #line, column: Swift.UInt = #column) -> @Sendable (repeat each Argument) async throws(Failure) -> Result where Failure : Swift.Error
+@_disfavoredOverload public func unimplemented<Result>(_ description: @autoclosure @escaping @Sendable () -> Swift.String = "", placeholder: @autoclosure @escaping @Sendable () -> Result = (), fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, function: Swift.StaticString = #function, line: Swift.UInt = #line, column: Swift.UInt = #column) -> Result
+public struct UnimplementedFailure : Swift.Error {
+  public let description: Swift.String
+  public init(description: Swift.String)
+}
+package func _fail(_ description: Swift.String, _ parameters: Any?, fileID: Swift.StaticString, filePath: Swift.StaticString, function: Swift.StaticString, line: Swift.UInt, column: Swift.UInt)
+@_transparent public func withExpectedIssue(_ message: Swift.String? = nil, isIntermittent: Swift.Bool = false, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, _ body: () throws -> Swift.Void) {
+  guard let context = TestContext.current else {
+    guard !isTesting else { return }
+    let observer = FailureObserver()
+    FailureObserver.$current.withValue(observer) {
+      do {
+        try body()
+        if observer.withLock({ $0 == 0 }), !isIntermittent {
+          for reporter in IssueReporters.current {
+            reporter.reportIssue(
+              "Known issue was not recorded\(message.map { ": \($0)" } ?? "")",
+              fileID: IssueContext.current?.fileID ?? fileID,
+              filePath: IssueContext.current?.filePath ?? filePath,
+              line: IssueContext.current?.line ?? line,
+              column: IssueContext.current?.column ?? column
+            )
+          }
+        }
+      } catch {
+        for reporter in IssueReporters.current {
+          reporter.expectIssue(
+            error,
+            message,
+            fileID: IssueContext.current?.fileID ?? fileID,
+            filePath: IssueContext.current?.filePath ?? filePath,
+            line: IssueContext.current?.line ?? line,
+            column: IssueContext.current?.column ?? column
+          )
+        }
+      }
+    }
+    return
+  }
+
+  switch context {
+  case .swiftTesting:
+    _withKnownIssue(
+      message,
+      isIntermittent: isIntermittent,
+      fileID: fileID.description,
+      filePath: filePath.description,
+      line: Int(line),
+      column: Int(column),
+      body
+    )
+  case .xcTest:
+    _XCTExpectFailure(
+      message.withAppHostWarningIfNeeded(),
+      strict: !isIntermittent,
+      file: filePath,
+      line: line
+    ) {
+      do {
+        try body()
+      } catch {
+        reportIssue(error, fileID: fileID, filePath: filePath, line: line, column: column)
+      }
+    }
+  @unknown default: break
+  }
+}
+@_transparent public func withExpectedIssue(_ message: Swift.String? = nil, isIntermittent: Swift.Bool = false, isolation: isolated (any _Concurrency.Actor)? = #isolation, fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column, _ body: () async throws -> Swift.Void) async {
+    guard let context = TestContext.current else {
+      guard !isTesting else { return }
+      let observer = FailureObserver()
+      await FailureObserver.$current.withValue(observer) {
+        do {
+          try await body()
+          if observer.withLock({ $0 == 0 }), !isIntermittent {
+            for reporter in IssueReporters.current {
+              reporter.reportIssue(
+                "Known issue was not recorded\(message.map { ": \($0)" } ?? "")",
+                fileID: IssueContext.current?.fileID ?? fileID,
+                filePath: IssueContext.current?.filePath ?? filePath,
+                line: IssueContext.current?.line ?? line,
+                column: IssueContext.current?.column ?? column
+              )
+            }
+          }
+        } catch {
+          for reporter in IssueReporters.current {
+            reporter.expectIssue(
+              error,
+              message,
+              fileID: IssueContext.current?.fileID ?? fileID,
+              filePath: IssueContext.current?.filePath ?? filePath,
+              line: IssueContext.current?.line ?? line,
+              column: IssueContext.current?.column ?? column
+            )
+          }
+        }
+      }
+      return
+    }
+
+    switch context {
+    case .swiftTesting:
+      await _withKnownIssue(
+        message,
+        isIntermittent: isIntermittent,
+        isolation: isolation,
+        fileID: fileID.description,
+        filePath: filePath.description,
+        line: Int(line),
+        column: Int(column),
+        body
+      )
+    case .xcTest:
+      reportIssue(
+        """
+        Asynchronously expecting failures is unavailable in XCTest.
+
+        Omit this test from your XCTest suite, or consider using Swift Testing, instead.
+        """,
+        fileID: fileID,
+        filePath: filePath,
+        line: line,
+        column: column
+      )
+      try? await body()
+    @unknown default: break
+    }
+  }
+public func withIssueContext<R>(fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt, operation: () throws -> R) rethrows -> R
+public func withIssueContext<R>(fileID: Swift.StaticString, filePath: Swift.StaticString, line: Swift.UInt, column: Swift.UInt, isolation: isolated (any _Concurrency.Actor)? = #isolation, operation: () async throws -> R) async rethrows -> R
+@usableFromInline
+internal struct IssueContext : Swift.Sendable {
+  public static let $current: _Concurrency.TaskLocal<IssueReporting.IssueContext?>
+  public static var current: IssueReporting.IssueContext? {
+    get
+  }
+  @usableFromInline
+  internal let fileID: Swift.StaticString
+  @usableFromInline
+  internal let filePath: Swift.StaticString
+  @usableFromInline
+  internal let line: Swift.UInt
+  @usableFromInline
+  internal let column: Swift.UInt
+}

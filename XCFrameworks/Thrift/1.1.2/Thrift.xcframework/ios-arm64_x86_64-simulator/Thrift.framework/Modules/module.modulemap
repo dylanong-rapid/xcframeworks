@@ -1,0 +1,4 @@
+module Thrift {
+header "Thrift-Swift.h"
+export *
+}

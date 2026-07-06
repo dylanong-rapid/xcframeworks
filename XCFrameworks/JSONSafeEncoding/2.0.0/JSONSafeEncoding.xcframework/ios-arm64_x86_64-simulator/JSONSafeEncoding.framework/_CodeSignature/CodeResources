@@ -4,13 +4,124 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/JSONSafeEncoding-Swift.h</key>
+		<data>
+		33ehQuEjNIWIxHbskat8g8JkYxM=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		cvHlSV2iDv75aGbboYnY9sRgIcw=
 		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		E6pnkkS74HbJXn1HjRTqaApoEM8=
+		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		vZEcp9fA9BHZ2Wt/Rd2SWgi69Ug=
+		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		WbZ0F9MxSTNscSeTtoXZjdYfC34=
+		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		vZEcp9fA9BHZ2Wt/Rd2SWgi69Ug=
+		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		E6pnkkS74HbJXn1HjRTqaApoEM8=
+		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		ryoOBlqNH62bn5/GXBgdS++pnGc=
+		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		prGcUOoNFKBtiAMM7PkBVvgczBc=
+		</data>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		ryoOBlqNH62bn5/GXBgdS++pnGc=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		EPGRFjFezu4ciiGBJUSPxdPQIjE=
+		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Headers/JSONSafeEncoding-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m2zBA5XTiTCUQO+lbUl2PW2A4vQlJ0jAWTNZUKFq41A=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dJ+EYybrO/RYSUw2wSSbPNl7QF9eO4H87V8QSZA8INs=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0PV43aFPMF65bjE+b8UOg00y/SJDa5sVfpq2W9jnaKY=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8k3RrN2yauLmn9F8oO8JRMYwew1G1sE8N2VYBZdvvWg=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0PV43aFPMF65bjE+b8UOg00y/SJDa5sVfpq2W9jnaKY=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dJ+EYybrO/RYSUw2wSSbPNl7QF9eO4H87V8QSZA8INs=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UQmYsKggFitkb6D2uYnjyPExhEk07GvY5Jgo9R7JsIA=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			B/GCV1Z8PU3JYHcyFlqIESp+VyxDoA8c4EQiqKDwc+0=
+			</data>
+		</dict>
+		<key>Modules/JSONSafeEncoding.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UQmYsKggFitkb6D2uYnjyPExhEk07GvY5Jgo9R7JsIA=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vnbOEJeFmddHWKdpson09LNQ2JVLyHFJjUEmDChNdMg=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

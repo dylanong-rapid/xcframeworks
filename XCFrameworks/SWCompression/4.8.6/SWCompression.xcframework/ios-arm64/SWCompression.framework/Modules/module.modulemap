@@ -1,0 +1,4 @@
+module SWCompression {
+header "SWCompression-Swift.h"
+export *
+}

@@ -1,0 +1,550 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name SWCompression
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import BitByteData
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class SevenZipContainer : SWCompression.Container {
+  public static func open(container data: Foundation.Data) throws -> [SWCompression.SevenZipEntry]
+  public static func info(container data: Foundation.Data) throws -> [SWCompression.SevenZipEntryInfo]
+  public typealias Entry = SWCompression.SevenZipEntry
+  @objc deinit
+}
+public struct SevenZipEntry : SWCompression.ContainerEntry {
+  public let info: SWCompression.SevenZipEntryInfo
+  public let data: Foundation.Data?
+  public typealias Info = SWCompression.SevenZipEntryInfo
+}
+public struct SevenZipEntryInfo : SWCompression.ContainerEntryInfo {
+  public let name: Swift.String
+  public let size: Swift.Int?
+  public let type: SWCompression.ContainerEntryType
+  public let accessTime: Foundation.Date?
+  public let creationTime: Foundation.Date?
+  public let modificationTime: Foundation.Date?
+  public let permissions: SWCompression.Permissions?
+  public let winAttributes: Swift.UInt32?
+  public let dosAttributes: SWCompression.DosAttributes?
+  public let hasStream: Swift.Bool
+  public let isEmpty: Swift.Bool
+  public let isAnti: Swift.Bool
+  public let crc: Swift.UInt32?
+}
+public enum SevenZipError : Swift.Error {
+  case wrongSignature
+  case wrongFormatVersion
+  case wrongCRC
+  case wrongSize
+  case startPosNotSupported
+  case externalNotSupported
+  case multiStreamNotSupported
+  case additionalStreamsNotSupported
+  case compressionNotSupported
+  case encryptionNotSupported
+  case internalStructureError
+  public static func == (a: SWCompression.SevenZipError, b: SWCompression.SevenZipError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SWCompression.BZip2 {
+  public enum BlockSize : Swift.Int {
+    case one
+    case two
+    case three
+    case four
+    case five
+    case six
+    case seven
+    case eight
+    case nine
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+extension SWCompression.BZip2 : SWCompression.CompressionAlgorithm {
+  public static func compress(data: Foundation.Data) -> Foundation.Data
+  public static func compress(data: Foundation.Data, blockSize: SWCompression.BZip2.BlockSize) -> Foundation.Data
+}
+@_hasMissingDesignatedInitializers public class BZip2 : SWCompression.DecompressionAlgorithm {
+  public static func decompress(data: Foundation.Data) throws -> Foundation.Data
+  @objc deinit
+}
+public enum BZip2Error : Swift.Error {
+  case wrongMagic
+  case wrongVersion
+  case wrongBlockSize
+  case wrongBlockType
+  case randomizedBlock
+  case wrongHuffmanGroups
+  case wrongSelector
+  case wrongHuffmanCodeLength
+  case symbolNotFound
+  case wrongCRC(Foundation.Data)
+}
+public protocol Archive {
+  static func unarchive(archive: Foundation.Data) throws -> Foundation.Data
+}
+public protocol CompressionAlgorithm {
+  static func compress(data: Foundation.Data) throws -> Foundation.Data
+}
+public enum CompressionMethod {
+  case bzip2
+  case copy
+  case deflate
+  case lzma
+  case lzma2
+  case other
+  public static func == (a: SWCompression.CompressionMethod, b: SWCompression.CompressionMethod) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Container {
+  associatedtype Entry : SWCompression.ContainerEntry
+  static func open(container: Foundation.Data) throws -> [Self.Entry]
+  static func info(container: Foundation.Data) throws -> [Self.Entry.Info]
+}
+public protocol ContainerEntry {
+  associatedtype Info : SWCompression.ContainerEntryInfo
+  var info: Self.Info { get }
+  var data: Foundation.Data? { get }
+}
+public protocol ContainerEntryInfo {
+  var name: Swift.String { get }
+  var type: SWCompression.ContainerEntryType { get }
+  var size: Swift.Int? { get }
+  var accessTime: Foundation.Date? { get }
+  var creationTime: Foundation.Date? { get }
+  var modificationTime: Foundation.Date? { get }
+  var permissions: SWCompression.Permissions? { get }
+}
+public enum ContainerEntryType {
+  case blockSpecial
+  case characterSpecial
+  case contiguous
+  case directory
+  case fifo
+  case hardLink
+  case regular
+  case socket
+  case symbolicLink
+  case unknown
+  public static func == (a: SWCompression.ContainerEntryType, b: SWCompression.ContainerEntryType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct DosAttributes : Swift.OptionSet {
+  public let rawValue: Swift.UInt32
+  public init(rawValue: Swift.UInt32)
+  public static let archive: SWCompression.DosAttributes
+  public static let directory: SWCompression.DosAttributes
+  public static let volume: SWCompression.DosAttributes
+  public static let system: SWCompression.DosAttributes
+  public static let hidden: SWCompression.DosAttributes
+  public static let readOnly: SWCompression.DosAttributes
+  public typealias ArrayLiteralElement = SWCompression.DosAttributes
+  public typealias Element = SWCompression.DosAttributes
+  public typealias RawValue = Swift.UInt32
+}
+public struct Permissions : Swift.OptionSet {
+  public let rawValue: Swift.UInt32
+  public init(rawValue: Swift.UInt32)
+  public static let setuid: SWCompression.Permissions
+  public static let setgid: SWCompression.Permissions
+  public static let sticky: SWCompression.Permissions
+  public static let readOwner: SWCompression.Permissions
+  public static let writeOwner: SWCompression.Permissions
+  public static let executeOwner: SWCompression.Permissions
+  public static let readGroup: SWCompression.Permissions
+  public static let writeGroup: SWCompression.Permissions
+  public static let executeGroup: SWCompression.Permissions
+  public static let readOther: SWCompression.Permissions
+  public static let writeOther: SWCompression.Permissions
+  public static let executeOther: SWCompression.Permissions
+  public typealias ArrayLiteralElement = SWCompression.Permissions
+  public typealias Element = SWCompression.Permissions
+  public typealias RawValue = Swift.UInt32
+}
+public enum DataError : Swift.Error, Swift.Equatable {
+  case truncated
+  case corrupted
+  case checksumMismatch([Foundation.Data])
+  case unsupportedFeature
+  public static func == (a: SWCompression.DataError, b: SWCompression.DataError) -> Swift.Bool
+}
+public protocol DecompressionAlgorithm {
+  static func decompress(data: Foundation.Data) throws -> Foundation.Data
+}
+extension Swift.UnsignedInteger {
+  @inlinable @inline(__always) internal func toInt() -> Swift.Int {
+        return Int(truncatingIfNeeded: self)
+    }
+}
+extension Swift.Int {
+  @inlinable @inline(__always) internal func toUInt8() -> Swift.UInt8 {
+        return UInt8(truncatingIfNeeded: UInt(self))
+    }
+  @inlinable @inline(__always) internal func roundTo512() -> Swift.Int {
+        if self >= Int.max - 510 {
+            return Int.max
+        } else {
+            return (self + 511) & (~511)
+        }
+    }
+}
+public enum FileSystemType {
+  case fat
+  case macintosh
+  case ntfs
+  case other
+  case unix
+  public static func == (a: SWCompression.FileSystemType, b: SWCompression.FileSystemType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SWCompression.Deflate : SWCompression.CompressionAlgorithm {
+  public static func compress(data: Foundation.Data) -> Foundation.Data
+}
+@_hasMissingDesignatedInitializers public class Deflate : SWCompression.DecompressionAlgorithm {
+  public static func decompress(data: Foundation.Data) throws -> Foundation.Data
+  @objc deinit
+}
+public enum DeflateError : Swift.Error {
+  case wrongUncompressedBlockLengths
+  case wrongBlockType
+  case wrongSymbol
+  case symbolNotFound
+  public static func == (a: SWCompression.DeflateError, b: SWCompression.DeflateError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class GzipArchive : SWCompression.Archive {
+  public struct Member {
+    public let header: SWCompression.GzipHeader
+    public let data: Foundation.Data
+  }
+  public static func unarchive(archive data: Foundation.Data) throws -> Foundation.Data
+  public static func multiUnarchive(archive data: Foundation.Data) throws -> [SWCompression.GzipArchive.Member]
+  public static func archive(data: Foundation.Data, comment: Swift.String? = nil, fileName: Swift.String? = nil, writeHeaderCRC: Swift.Bool = false, isTextFile: Swift.Bool = false, osType: SWCompression.FileSystemType? = nil, modificationTime: Foundation.Date? = nil, extraFields: [SWCompression.GzipHeader.ExtraField] = []) throws -> Foundation.Data
+  @objc deinit
+}
+public enum GzipError : Swift.Error {
+  case wrongMagic
+  case wrongCompressionMethod
+  case wrongFlags
+  case wrongHeaderCRC
+  case wrongCRC([SWCompression.GzipArchive.Member])
+  case wrongISize
+  case cannotEncodeISOLatin1
+}
+extension SWCompression.GzipHeader {
+  public struct ExtraField {
+    public let si1: Swift.UInt8
+    public let si2: Swift.UInt8
+    public var bytes: [Swift.UInt8]
+    public init(_ si1: Swift.UInt8, _ si2: Swift.UInt8, _ bytes: [Swift.UInt8])
+  }
+}
+public struct GzipHeader {
+  public var compressionMethod: SWCompression.CompressionMethod
+  public var modificationTime: Foundation.Date?
+  public var osType: SWCompression.FileSystemType
+  public var fileName: Swift.String?
+  public var comment: Swift.String?
+  public var isTextFile: Swift.Bool
+  public var extraFields: [SWCompression.GzipHeader.ExtraField]
+  public init(archive data: Foundation.Data) throws
+}
+extension SWCompression.LZ4 : SWCompression.CompressionAlgorithm {
+  public static func compress(data: Foundation.Data) -> Foundation.Data
+  public static func compress(data: Foundation.Data, independentBlocks: Swift.Bool, blockChecksums: Swift.Bool, contentChecksum: Swift.Bool, contentSize: Swift.Bool, blockSize: Swift.Int = 4 * 1024 * 1024, dictionary: Foundation.Data? = nil, dictionaryID: Swift.UInt32? = nil) -> Foundation.Data
+}
+public enum LZ4 : SWCompression.DecompressionAlgorithm {
+  public static func decompress(data: Foundation.Data) throws -> Foundation.Data
+  public static func decompress(data: Foundation.Data, dictionary: Foundation.Data?, dictionaryID: Swift.UInt32? = nil) throws -> Foundation.Data
+  public static func multiDecompress(data: Foundation.Data, dictionary: Foundation.Data? = nil, dictionaryID: Swift.UInt32? = nil) throws -> [Foundation.Data]
+}
+infix operator <<< : DefaultPrecedence
+@_hasMissingDesignatedInitializers public class LZMA : SWCompression.DecompressionAlgorithm {
+  public static func decompress(data: Foundation.Data) throws -> Foundation.Data
+  public static func decompress(data: Foundation.Data, properties: SWCompression.LZMAProperties, uncompressedSize: Swift.Int? = nil) throws -> Foundation.Data
+  @objc deinit
+}
+public enum LZMAError : Swift.Error {
+  case wrongProperties
+  case rangeDecoderInitError
+  case exceededUncompressedSize
+  case windowIsEmpty
+  case rangeDecoderFinishError
+  case repeatWillExceed
+  case notEnoughToRepeat
+  public static func == (a: SWCompression.LZMAError, b: SWCompression.LZMAError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct LZMAProperties {
+  public var lc: Swift.Int
+  public var lp: Swift.Int
+  public var pb: Swift.Int
+  public var dictionarySize: Swift.Int {
+    get
+    set
+  }
+  public init(lc: Swift.Int, lp: Swift.Int, pb: Swift.Int, dictionarySize: Swift.Int)
+  public init()
+}
+@_hasMissingDesignatedInitializers public class LZMA2 : SWCompression.DecompressionAlgorithm {
+  public static func decompress(data: Foundation.Data) throws -> Foundation.Data
+  @objc deinit
+}
+public enum LZMA2Error : Swift.Error {
+  case wrongDictionarySize
+  case wrongControlByte
+  case wrongReset
+  case wrongSizes
+  public static func == (a: SWCompression.LZMA2Error, b: SWCompression.LZMA2Error) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class TarContainer : SWCompression.Container {
+  public enum Format {
+    case prePosix
+    case ustar
+    case gnu
+    case pax
+    public static func == (a: SWCompression.TarContainer.Format, b: SWCompression.TarContainer.Format) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func formatOf(container data: Foundation.Data) throws -> SWCompression.TarContainer.Format
+  public static func create(from entries: [SWCompression.TarEntry]) -> Foundation.Data
+  public static func create(from entries: [SWCompression.TarEntry], force format: SWCompression.TarContainer.Format) -> Foundation.Data
+  public static func open(container data: Foundation.Data) throws -> [SWCompression.TarEntry]
+  public static func info(container data: Foundation.Data) throws -> [SWCompression.TarEntryInfo]
+  public typealias Entry = SWCompression.TarEntry
+  @objc deinit
+}
+public enum TarCreateError : Swift.Error {
+  case utf8NonEncodable
+  public static func == (a: SWCompression.TarCreateError, b: SWCompression.TarCreateError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct TarEntry : SWCompression.ContainerEntry {
+  public var info: SWCompression.TarEntryInfo
+  public var data: Foundation.Data? {
+    get
+    set
+  }
+  public init(info: SWCompression.TarEntryInfo, data: Foundation.Data?)
+  public typealias Info = SWCompression.TarEntryInfo
+}
+public struct TarEntryInfo : SWCompression.ContainerEntryInfo {
+  public var name: Swift.String
+  public var size: Swift.Int? {
+    get
+  }
+  public let type: SWCompression.ContainerEntryType
+  public var accessTime: Foundation.Date?
+  public var creationTime: Foundation.Date?
+  public var modificationTime: Foundation.Date?
+  public var permissions: SWCompression.Permissions?
+  public let compressionMethod: SWCompression.CompressionMethod
+  public var ownerID: Swift.Int?
+  public var groupID: Swift.Int?
+  public var ownerUserName: Swift.String?
+  public var ownerGroupName: Swift.String?
+  public var deviceMajorNumber: Swift.Int?
+  public var deviceMinorNumber: Swift.Int?
+  public var charset: Swift.String?
+  public var comment: Swift.String?
+  public var linkName: Swift.String
+  public var unknownExtendedHeaderRecords: [Swift.String : Swift.String]?
+  public init(name: Swift.String, type: SWCompression.ContainerEntryType)
+}
+public enum TarError : Swift.Error {
+  case tooSmallFileIsPassed
+  case wrongField
+  case wrongHeaderChecksum
+  case wrongPaxHeaderEntry
+  public static func == (a: SWCompression.TarError, b: SWCompression.TarError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct TarReader {
+  public init(fileHandle: Foundation.FileHandle)
+  public mutating func process<T>(_ transform: (SWCompression.TarEntry?) throws -> T) throws -> T
+  public mutating func read() throws -> SWCompression.TarEntry?
+}
+public struct TarWriter {
+  public init(fileHandle: Foundation.FileHandle, force format: SWCompression.TarContainer.Format = .pax)
+  public mutating func append(_ entry: SWCompression.TarEntry) throws
+  public func finalize() throws
+}
+infix operator >>> : DefaultPrecedence
+@_hasMissingDesignatedInitializers public class XZArchive : SWCompression.Archive {
+  public static func unarchive(archive data: Foundation.Data) throws -> Foundation.Data
+  public static func splitUnarchive(archive data: Foundation.Data) throws -> [Foundation.Data]
+  @objc deinit
+}
+public enum XZError : Swift.Error {
+  case wrongMagic
+  case wrongField
+  case wrongInfoCRC
+  case wrongFilterID
+  case checkTypeSHA256
+  case wrongDataSize
+  case wrongCheck([Foundation.Data])
+  case wrongPadding
+  case multiByteIntegerError
+}
+@_hasMissingDesignatedInitializers public class ZipContainer : SWCompression.Container {
+  public static var customExtraFields: [Swift.UInt16 : any SWCompression.ZipExtraField.Type]
+  public static func open(container data: Foundation.Data) throws -> [SWCompression.ZipEntry]
+  public static func info(container data: Foundation.Data) throws -> [SWCompression.ZipEntryInfo]
+  public typealias Entry = SWCompression.ZipEntry
+  @objc deinit
+}
+public struct ZipEntry : SWCompression.ContainerEntry {
+  public let info: SWCompression.ZipEntryInfo
+  public let data: Foundation.Data?
+  public typealias Info = SWCompression.ZipEntryInfo
+}
+public struct ZipEntryInfo : SWCompression.ContainerEntryInfo {
+  public let name: Swift.String
+  public let size: Swift.Int?
+  public let type: SWCompression.ContainerEntryType
+  public let accessTime: Foundation.Date?
+  public let creationTime: Foundation.Date?
+  public let modificationTime: Foundation.Date?
+  public let permissions: SWCompression.Permissions?
+  public let comment: Swift.String
+  public let externalFileAttributes: Swift.UInt32
+  public let dosAttributes: SWCompression.DosAttributes?
+  public let isTextFile: Swift.Bool
+  public let fileSystemType: SWCompression.FileSystemType
+  public let compressionMethod: SWCompression.CompressionMethod
+  public let ownerID: Swift.Int?
+  public let groupID: Swift.Int?
+  public let customExtraFields: [any SWCompression.ZipExtraField]
+  public let crc: Swift.UInt32
+}
+public enum ZipError : Swift.Error {
+  case notFoundCentralDirectoryEnd
+  case wrongSignature
+  case wrongSize
+  case wrongVersion
+  case multiVolumesNotSupported
+  case encryptionNotSupported
+  case patchingNotSupported
+  case compressionNotSupported
+  case wrongLocalHeader
+  case wrongCRC([SWCompression.ZipEntry])
+  case wrongTextField
+}
+public protocol ZipExtraField {
+  static var id: Swift.UInt16 { get }
+  var location: SWCompression.ZipExtraFieldLocation { get }
+  var size: Swift.Int { get }
+  init?(_ byteReader: BitByteData.LittleEndianByteReader, _ size: Swift.Int, location: SWCompression.ZipExtraFieldLocation)
+}
+extension SWCompression.ZipExtraField {
+  public var id: Swift.UInt16 {
+    get
+  }
+}
+public enum ZipExtraFieldLocation {
+  case centralDirectory
+  case localHeader
+  public static func == (a: SWCompression.ZipExtraFieldLocation, b: SWCompression.ZipExtraFieldLocation) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ZlibArchive : SWCompression.Archive {
+  public static func unarchive(archive data: Foundation.Data) throws -> Foundation.Data
+  public static func archive(data: Foundation.Data) -> Foundation.Data
+  @objc deinit
+}
+public enum ZlibError : Swift.Error {
+  case wrongCompressionMethod
+  case wrongCompressionInfo
+  case wrongFcheck
+  case wrongCompressionLevel
+  case wrongAdler32(Foundation.Data)
+}
+public struct ZlibHeader {
+  public enum CompressionLevel : Swift.Int {
+    case fastestAlgorithm
+    case fastAlgorithm
+    case defaultAlgorithm
+    case slowAlgorithm
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public let compressionMethod: SWCompression.CompressionMethod
+  public let compressionLevel: SWCompression.ZlibHeader.CompressionLevel
+  public let windowSize: Swift.Int
+  public init(archive data: Foundation.Data) throws
+}
+extension SWCompression.SevenZipError : Swift.Equatable {}
+extension SWCompression.SevenZipError : Swift.Hashable {}
+extension SWCompression.CompressionMethod : Swift.Equatable {}
+extension SWCompression.CompressionMethod : Swift.Hashable {}
+extension SWCompression.BZip2.BlockSize : Swift.Equatable {}
+extension SWCompression.BZip2.BlockSize : Swift.Hashable {}
+extension SWCompression.BZip2.BlockSize : Swift.RawRepresentable {}
+extension SWCompression.ContainerEntryType : Swift.Equatable {}
+extension SWCompression.ContainerEntryType : Swift.Hashable {}
+extension SWCompression.FileSystemType : Swift.Equatable {}
+extension SWCompression.FileSystemType : Swift.Hashable {}
+extension SWCompression.DeflateError : Swift.Equatable {}
+extension SWCompression.DeflateError : Swift.Hashable {}
+extension SWCompression.LZMAError : Swift.Equatable {}
+extension SWCompression.LZMAError : Swift.Hashable {}
+extension SWCompression.LZMA2Error : Swift.Equatable {}
+extension SWCompression.LZMA2Error : Swift.Hashable {}
+extension SWCompression.TarContainer.Format : Swift.Equatable {}
+extension SWCompression.TarContainer.Format : Swift.Hashable {}
+extension SWCompression.TarCreateError : Swift.Equatable {}
+extension SWCompression.TarCreateError : Swift.Hashable {}
+extension SWCompression.TarError : Swift.Equatable {}
+extension SWCompression.TarError : Swift.Hashable {}
+extension SWCompression.ZipExtraFieldLocation : Swift.Equatable {}
+extension SWCompression.ZipExtraFieldLocation : Swift.Hashable {}
+extension SWCompression.ZlibHeader.CompressionLevel : Swift.Equatable {}
+extension SWCompression.ZlibHeader.CompressionLevel : Swift.Hashable {}
+extension SWCompression.ZlibHeader.CompressionLevel : Swift.RawRepresentable {}

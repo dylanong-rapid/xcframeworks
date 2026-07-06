@@ -1,0 +1,4 @@
+module AmplifyUtilsNotifications {
+header "AmplifyUtilsNotifications-Swift.h"
+export *
+}

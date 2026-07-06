@@ -1,0 +1,3875 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ConcurrencyExtras",
+    "printedName": "ConcurrencyExtras",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "ActorIsolated",
+        "printedName": "ActorIsolated",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras13ActorIsolatedC5valuexvp",
+            "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC5valuexvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras13ActorIsolatedC5valuexvg",
+                "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC5valuexvg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras13ActorIsolatedC5valuexvs",
+                "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC5valuexvs",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras13ActorIsolatedC5valuexvM",
+                "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC5valuexvM",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "deprecated": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ActorIsolated",
+                "printedName": "ConcurrencyExtras.ActorIsolated<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras13ActorIsolatedC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras13ActorIsolatedCyACyxGxyYbKXKKcfc",
+            "mangledName": "$s17ConcurrencyExtras13ActorIsolatedCyACyxGxyYbKXKKcfc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "Rethrows",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "withValue",
+            "printedName": "withValue(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(inout τ_0_0) throws -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras13ActorIsolatedC9withValueyqd__qd__xzYbKXEKlF",
+            "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC9withValueyqd__qd__xzYbKXEKlF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_1_0>",
+            "sugared_genericSig": "<Value, T>",
+            "declAttributes": [
+              "Final",
+              "Rethrows",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setValue",
+            "printedName": "setValue(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras13ActorIsolatedC8setValueyyxyYbKXKKF",
+            "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC8setValueyyxyYbKXKKF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "Final",
+              "Rethrows",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "unownedExecutor",
+            "printedName": "unownedExecutor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnownedSerialExecutor",
+                "printedName": "_Concurrency.UnownedSerialExecutor",
+                "usr": "s:Sce"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras13ActorIsolatedC15unownedExecutorScevp",
+            "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC15unownedExecutorScevp",
+            "moduleName": "ConcurrencyExtras",
+            "deprecated": true,
+            "implicit": true,
+            "intro_Macosx": "10.15",
+            "intro_iOS": "13.0",
+            "intro_tvOS": "13.0",
+            "intro_watchOS": "6.0",
+            "declAttributes": [
+              "Available",
+              "Available",
+              "Available",
+              "Available",
+              "Available",
+              "Final",
+              "Nonisolated",
+              "Semantics"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnownedSerialExecutor",
+                    "printedName": "_Concurrency.UnownedSerialExecutor",
+                    "usr": "s:Sce"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras13ActorIsolatedC15unownedExecutorScevg",
+                "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC15unownedExecutorScevg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17ConcurrencyExtras13ActorIsolatedC",
+        "mangledName": "$s17ConcurrencyExtras13ActorIsolatedC",
+        "moduleName": "ConcurrencyExtras",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Value>",
+        "deprecated": true,
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Actor",
+            "printedName": "Actor",
+            "usr": "s:ScA",
+            "mangledName": "$sScA"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnyHashableSendable",
+        "printedName": "AnyHashableSendable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "base",
+            "printedName": "base",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "any Swift.Hashable & Swift.Sendable"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV4baseSH_s0E0pvp",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV4baseSH_s0E0pvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "any Swift.Hashable & Swift.Sendable"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV4baseSH_s0E0pvg",
+                "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV4baseSH_s0E0pvg",
+                "moduleName": "ConcurrencyExtras",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "any Swift.Hashable & Swift.Sendable"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableVyACSH_s0E0pcfc",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableVyACSH_s0E0pcfc",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl",
+              "DisfavoredOverload",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableVyACxcSHRzs0E0Rzlufc",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableVyACxcSHRzs0E0Rzlufc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Hashable, τ_0_0 : Swift.Sendable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV2eeoiySbAC_ACtFZ",
+            "moduleName": "ConcurrencyExtras",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV4hash4intoys6HasherVz_tF",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV9hashValueSivp",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV9hashValueSivp",
+            "moduleName": "ConcurrencyExtras",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV9hashValueSivg",
+                "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV9hashValueSivg",
+                "moduleName": "ConcurrencyExtras",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "debugDescription",
+            "printedName": "debugDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV16debugDescriptionSSvp",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV16debugDescriptionSSvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV16debugDescriptionSSvg",
+                "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV16debugDescriptionSSvg",
+                "moduleName": "ConcurrencyExtras",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customMirror",
+            "printedName": "customMirror",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Mirror",
+                "printedName": "Swift.Mirror",
+                "usr": "s:s6MirrorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV12customMirrors0G0Vvp",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV12customMirrors0G0Vvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mirror",
+                    "printedName": "Swift.Mirror",
+                    "usr": "s:s6MirrorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV12customMirrors0G0Vvg",
+                "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV12customMirrors0G0Vvg",
+                "moduleName": "ConcurrencyExtras",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV11descriptionSSvp",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV11descriptionSSvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV11descriptionSSvg",
+                "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV11descriptionSSvg",
+                "moduleName": "ConcurrencyExtras",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "_toCustomAnyHashable",
+            "printedName": "_toCustomAnyHashable()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.AnyHashable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV09_toCustomcD0s0cD0VSgyF",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV09_toCustomcD0s0cD0VSgyF",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(booleanLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV14booleanLiteralACSb_tcfc",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV14booleanLiteralACSb_tcfc",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(floatLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV12floatLiteralACSd_tcfc",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV12floatLiteralACSd_tcfc",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(integerLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV14integerLiteralACSi_tcfc",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV14integerLiteralACSi_tcfc",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyHashableSendable",
+                "printedName": "ConcurrencyExtras.AnyHashableSendable",
+                "usr": "s:17ConcurrencyExtras19AnyHashableSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras19AnyHashableSendableV13stringLiteralACSS_tcfc",
+            "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV13stringLiteralACSS_tcfc",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ConcurrencyExtras19AnyHashableSendableV",
+        "mangledName": "$s17ConcurrencyExtras19AnyHashableSendableV",
+        "moduleName": "ConcurrencyExtras",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByBooleanLiteral",
+            "printedName": "ExpressibleByBooleanLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "BooleanLiteralType",
+                "printedName": "BooleanLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s27ExpressibleByBooleanLiteralP",
+            "mangledName": "$ss27ExpressibleByBooleanLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByFloatLiteral",
+            "printedName": "ExpressibleByFloatLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "FloatLiteralType",
+                "printedName": "FloatLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByFloatLiteralP",
+            "mangledName": "$ss25ExpressibleByFloatLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByIntegerLiteral",
+            "printedName": "ExpressibleByIntegerLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "IntegerLiteralType",
+                "printedName": "IntegerLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s27ExpressibleByIntegerLiteralP",
+            "mangledName": "$ss27ExpressibleByIntegerLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConcurrencyExtras"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConcurrencyExtras"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConcurrencyExtras"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConcurrencyExtras"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LockIsolated",
+        "printedName": "LockIsolated",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockIsolated",
+                "printedName": "ConcurrencyExtras.LockIsolated<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras12LockIsolatedC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras12LockIsolatedCyACyxGxyYbKXKKcfc",
+            "mangledName": "$s17ConcurrencyExtras12LockIsolatedCyACyxGxyYbKXKKcfc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "Rethrows",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(dynamicMember:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyPath",
+                "printedName": "Swift.KeyPath<τ_0_0, τ_1_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:s7KeyPathC"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:17ConcurrencyExtras12LockIsolatedC13dynamicMemberqd__s7KeyPathCyxqd__G_tcs8SendableRd__luip",
+            "mangledName": "$s17ConcurrencyExtras12LockIsolatedC13dynamicMemberqd__s7KeyPathCyxqd__G_tcs8SendableRd__luip",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_1_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Value, Subject where Subject : Swift.Sendable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyPath",
+                    "printedName": "Swift.KeyPath<τ_0_0, τ_1_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:s7KeyPathC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras12LockIsolatedC13dynamicMemberqd__s7KeyPathCyxqd__G_tcs8SendableRd__luig",
+                "mangledName": "$s17ConcurrencyExtras12LockIsolatedC13dynamicMemberqd__s7KeyPathCyxqd__G_tcs8SendableRd__luig",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_1_0 where τ_1_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Value, Subject where Subject : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "withValue",
+            "printedName": "withValue(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(inout τ_0_0) throws -> τ_1_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras12LockIsolatedC9withValueyqd__qd__xzYbKXEKs8SendableRd__lF",
+            "mangledName": "$s17ConcurrencyExtras12LockIsolatedC9withValueyqd__qd__xzYbKXEKs8SendableRd__lF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_1_0 : Swift.Sendable>",
+            "sugared_genericSig": "<Value, T where T : Swift.Sendable>",
+            "declAttributes": [
+              "Final",
+              "Rethrows",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setValue",
+            "printedName": "setValue(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras12LockIsolatedC8setValueyyxyYbKXKKF",
+            "mangledName": "$s17ConcurrencyExtras12LockIsolatedC8setValueyyxyYbKXKKF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "Final",
+              "Rethrows",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras12LockIsolatedCAAs8SendableRzlE5valuexvp",
+            "mangledName": "$s17ConcurrencyExtras12LockIsolatedCAAs8SendableRzlE5valuexvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras12LockIsolatedCAAs8SendableRzlE5valuexvg",
+                "mangledName": "$s17ConcurrencyExtras12LockIsolatedCAAs8SendableRzlE5valuexvg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sendable>",
+                "sugared_genericSig": "<Value where Value : Swift.Sendable>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17ConcurrencyExtras12LockIsolatedC",
+        "mangledName": "$s17ConcurrencyExtras12LockIsolatedC",
+        "moduleName": "ConcurrencyExtras",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Value>",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "DynamicMemberLookup",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConcurrencyExtras"
+      },
+      {
+        "kind": "Function",
+        "name": "withMainSerialExecutor",
+        "printedName": "withMainSerialExecutor(operation:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "() async throws -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "typeAttributes": [
+              "noescape"
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:17ConcurrencyExtras22withMainSerialExecutor9operationyyyYaKYAXE_tYaKF",
+        "mangledName": "$s17ConcurrencyExtras22withMainSerialExecutor9operationyyyYaKYAXE_tYaKF",
+        "moduleName": "ConcurrencyExtras",
+        "declAttributes": [
+          "Rethrows",
+          "AccessControl",
+          "Custom",
+          "RawDocComment"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "withMainSerialExecutor",
+        "printedName": "withMainSerialExecutor(operation:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "() throws -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "typeAttributes": [
+              "noescape"
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:17ConcurrencyExtras22withMainSerialExecutor9operationyyyKXE_tKF",
+        "mangledName": "$s17ConcurrencyExtras22withMainSerialExecutor9operationyyyKXE_tKF",
+        "moduleName": "ConcurrencyExtras",
+        "declAttributes": [
+          "Rethrows",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Var",
+        "name": "uncheckedUseMainSerialExecutor",
+        "printedName": "uncheckedUseMainSerialExecutor",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvp",
+        "mangledName": "$s17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvp",
+        "moduleName": "ConcurrencyExtras",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvg",
+            "mangledName": "$s17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvg",
+            "moduleName": "ConcurrencyExtras",
+            "accessorKind": "get"
+          },
+          {
+            "kind": "Accessor",
+            "name": "Set",
+            "printedName": "Set()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvs",
+            "mangledName": "$s17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvs",
+            "moduleName": "ConcurrencyExtras",
+            "accessorKind": "set"
+          },
+          {
+            "kind": "Accessor",
+            "name": "Modify",
+            "printedName": "Modify()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvM",
+            "mangledName": "$s17ConcurrencyExtras30uncheckedUseMainSerialExecutorSbvM",
+            "moduleName": "ConcurrencyExtras",
+            "implicit": true,
+            "accessorKind": "_modify"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConcurrencyExtras"
+      },
+      {
+        "kind": "Var",
+        "name": "_defaultMegaYieldCount",
+        "printedName": "_defaultMegaYieldCount",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:17ConcurrencyExtras22_defaultMegaYieldCountSivp",
+        "mangledName": "$s17ConcurrencyExtras22_defaultMegaYieldCountSivp",
+        "moduleName": "ConcurrencyExtras",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:17ConcurrencyExtras22_defaultMegaYieldCountSivg",
+            "mangledName": "$s17ConcurrencyExtras22_defaultMegaYieldCountSivg",
+            "moduleName": "ConcurrencyExtras",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UncheckedSendable",
+        "printedName": "UncheckedSendable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableV5valuexvp",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV5valuexvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV5valuexvg",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV5valuexvg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV5valuexvs",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV5valuexvs",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV5valuexvM",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV5valuexvM",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UncheckedSendable",
+                "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableVyACyxGxcfc",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVyACyxGxcfc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(wrappedValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UncheckedSendable",
+                "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableV12wrappedValueACyxGx_tcfc",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV12wrappedValueACyxGx_tcfc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvp",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvg",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvs",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvs",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvM",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV12wrappedValuexvM",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "projectedValue",
+            "printedName": "projectedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UncheckedSendable",
+                "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvp",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UncheckedSendable",
+                    "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvg",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UncheckedSendable",
+                    "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvs",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvs",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvM",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV14projectedValueACyxGvM",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(dynamicMember:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyPath",
+                "printedName": "Swift.KeyPath<τ_0_0, τ_1_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:s7KeyPathC"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s7KeyPathCyxqd__G_tcluip",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s7KeyPathCyxqd__G_tcluip",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_1_0>",
+            "sugared_genericSig": "<Value, Subject>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyPath",
+                    "printedName": "Swift.KeyPath<τ_0_0, τ_1_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:s7KeyPathC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s7KeyPathCyxqd__G_tcluig",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s7KeyPathCyxqd__G_tcluig",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_1_0>",
+                "sugared_genericSig": "<Value, Subject>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(dynamicMember:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WritableKeyPath",
+                "printedName": "Swift.WritableKeyPath<τ_0_0, τ_1_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  }
+                ],
+                "usr": "s:s15WritableKeyPathC"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluip",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluip",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_1_0>",
+            "sugared_genericSig": "<Value, Subject>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WritableKeyPath",
+                    "printedName": "Swift.WritableKeyPath<τ_0_0, τ_1_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:s15WritableKeyPathC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluig",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluig",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_1_0>",
+                "sugared_genericSig": "<Value, Subject>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_1_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WritableKeyPath",
+                    "printedName": "Swift.WritableKeyPath<τ_0_0, τ_1_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:s15WritableKeyPathC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluis",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluis",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_1_0>",
+                "sugared_genericSig": "<Value, Subject>",
+                "implicit": true,
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WritableKeyPath",
+                    "printedName": "Swift.WritableKeyPath<τ_0_0, τ_1_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_1_0"
+                      }
+                    ],
+                    "usr": "s:s15WritableKeyPathC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluiM",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV13dynamicMemberqd__s15WritableKeyPathCyxqd__G_tcluiM",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_1_0>",
+                "sugared_genericSig": "<Value, Subject>",
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "makeAsyncIterator",
+            "printedName": "makeAsyncIterator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.AsyncIterator"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableVAASciRzlE17makeAsyncIterator0fG0QzyF",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVAASciRzlE17makeAsyncIterator0fG0QzyF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Value where Value : _Concurrency.AsyncSequence>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UncheckedSendable",
+                "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UncheckedSendable",
+                "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableVAASQRzlE2eeoiySbACyxG_AEtFZ",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVAASQRzlE2eeoiySbACyxG_AEtFZ",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Equatable>",
+            "sugared_genericSig": "<Value where Value : Swift.Equatable>",
+            "static": true,
+            "implicit": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableVAASHRzlE9hashValueSivp",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVAASHRzlE9hashValueSivp",
+            "moduleName": "ConcurrencyExtras",
+            "implicit": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableVAASHRzlE9hashValueSivg",
+                "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVAASHRzlE9hashValueSivg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0 where τ_0_0 : Swift.Hashable>",
+                "sugared_genericSig": "<Value where Value : Swift.Hashable>",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableVAASHRzlE4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVAASHRzlE4hash4intoys6HasherVz_tF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Hashable>",
+            "sugared_genericSig": "<Value where Value : Swift.Hashable>",
+            "implicit": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UncheckedSendable",
+                "printedName": "ConcurrencyExtras.UncheckedSendable<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ConcurrencyExtras17UncheckedSendableV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableVAASeRzlE4fromACyxGs7Decoder_p_tKcfc",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVAASeRzlE4fromACyxGs7Decoder_p_tKcfc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<Value where Value : Swift.Decodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ConcurrencyExtras17UncheckedSendableVAASERzlE6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ConcurrencyExtras17UncheckedSendableVAASERzlE6encode2toys7Encoder_p_tKF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Value where Value : Swift.Encodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ConcurrencyExtras17UncheckedSendableV",
+        "mangledName": "$s17ConcurrencyExtras17UncheckedSendableV",
+        "moduleName": "ConcurrencyExtras",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Value>",
+        "declAttributes": [
+          "AccessControl",
+          "PropertyWrapper",
+          "DynamicMemberLookup",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AsyncSequence",
+            "printedName": "AsyncSequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AsyncIterator",
+                "printedName": "AsyncIterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.AsyncIterator"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Failure",
+                "printedName": "Failure",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Failure"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sci",
+            "mangledName": "$sSci"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AsyncStream",
+        "printedName": "AsyncStream",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncStream",
+                "printedName": "_Concurrency.AsyncStream<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:ScS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:ScS17ConcurrencyExtrasEyScSyxGqd__c7ElementQyd__Rszs8SendableRd__SciRd__lufc",
+            "mangledName": "$sScS17ConcurrencyExtrasEyScSyxGqd__c7ElementQyd__Rszs8SendableRd__SciRd__lufc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0.Element, τ_1_0 : Swift.Sendable, τ_1_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Element, S where Element == S.Element, S : Swift.Sendable, S : _Concurrency.AsyncSequence>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncStream",
+                "printedName": "_Concurrency.AsyncStream<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:ScS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:ScS17ConcurrencyExtrasEyScSyxGqd__c7ElementQyd__RszSciRd__lufc",
+            "mangledName": "$sScS17ConcurrencyExtrasEyScSyxGqd__c7ElementQyd__RszSciRd__lufc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0.Element, τ_1_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Element, S where Element == S.Element, S : _Concurrency.AsyncSequence>",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "DisfavoredOverload",
+              "Available"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "never",
+            "printedName": "never",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncStream",
+                "printedName": "_Concurrency.AsyncStream<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:ScS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:ScS17ConcurrencyExtrasE5neverScSyxGvpZ",
+            "mangledName": "$sScS17ConcurrencyExtrasE5neverScSyxGvpZ",
+            "moduleName": "ConcurrencyExtras",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AsyncStream",
+                    "printedName": "_Concurrency.AsyncStream<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:ScS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:ScS17ConcurrencyExtrasE5neverScSyxGvgZ",
+                "mangledName": "$sScS17ConcurrencyExtrasE5neverScSyxGvgZ",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Element>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finished",
+            "printedName": "finished",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncStream",
+                "printedName": "_Concurrency.AsyncStream<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:ScS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:ScS17ConcurrencyExtrasE8finishedScSyxGvpZ",
+            "mangledName": "$sScS17ConcurrencyExtrasE8finishedScSyxGvpZ",
+            "moduleName": "ConcurrencyExtras",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AsyncStream",
+                    "printedName": "_Concurrency.AsyncStream<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:ScS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:ScS17ConcurrencyExtrasE8finishedScSyxGvgZ",
+                "mangledName": "$sScS17ConcurrencyExtrasE8finishedScSyxGvgZ",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Element>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:ScS",
+        "mangledName": "$sScS",
+        "moduleName": "_Concurrency",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Element>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AsyncSequence",
+            "printedName": "AsyncSequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AsyncIterator",
+                "printedName": "AsyncIterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "_Concurrency.AsyncStream<τ_0_0>.Iterator",
+                    "usr": "s:ScS8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Failure",
+                "printedName": "Failure",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sci",
+            "mangledName": "$sSci"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AsyncSequence",
+        "printedName": "AsyncSequence",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "eraseToStream",
+            "printedName": "eraseToStream()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncStream",
+                "printedName": "_Concurrency.AsyncStream<τ_0_0.Element>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ],
+                "usr": "s:ScS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:Sci17ConcurrencyExtrasE13eraseToStreamScSy7ElementQzGys8SendableRzrlF",
+            "mangledName": "$sSci17ConcurrencyExtrasE13eraseToStreamScSy7ElementQzGys8SendableRzrlF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sendable, τ_0_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Self where Self : Swift.Sendable, Self : _Concurrency.AsyncSequence>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "eraseToStream",
+            "printedName": "eraseToStream()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncStream",
+                "printedName": "_Concurrency.AsyncStream<τ_0_0.Element>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  }
+                ],
+                "usr": "s:ScS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:Sci17ConcurrencyExtrasE13eraseToStreamScSy7ElementQzGyF",
+            "mangledName": "$sSci17ConcurrencyExtrasE13eraseToStreamScSy7ElementQzGyF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Self where Self : _Concurrency.AsyncSequence>",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "eraseToThrowingStream",
+            "printedName": "eraseToThrowingStream()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0.Element, any Swift.Error>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Scs"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:Sci17ConcurrencyExtrasE21eraseToThrowingStreamScsy7ElementQzs5Error_pGys8SendableRzrlF",
+            "mangledName": "$sSci17ConcurrencyExtrasE21eraseToThrowingStreamScsy7ElementQzs5Error_pGys8SendableRzrlF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sendable, τ_0_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Self where Self : Swift.Sendable, Self : _Concurrency.AsyncSequence>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "eraseToThrowingStream",
+            "printedName": "eraseToThrowingStream()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0.Element, any Swift.Error>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Element"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Scs"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:Sci17ConcurrencyExtrasE21eraseToThrowingStreamScsy7ElementQzs5Error_pGyF",
+            "mangledName": "$sSci17ConcurrencyExtrasE21eraseToThrowingStreamScsy7ElementQzs5Error_pGyF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0 where τ_0_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Self where Self : _Concurrency.AsyncSequence>",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:Sci",
+        "mangledName": "$sSci",
+        "moduleName": "_Concurrency",
+        "genericSig": "<τ_0_0.AsyncIterator : _Concurrency.AsyncIteratorProtocol, τ_0_0.Element == τ_0_0.AsyncIterator.Element, τ_0_0.Failure == τ_0_0.AsyncIterator.Failure>",
+        "sugared_genericSig": "<Self.AsyncIterator : _Concurrency.AsyncIteratorProtocol, Self.Element == Self.AsyncIterator.Element, Self.Failure == Self.AsyncIterator.Failure>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AsyncThrowingStream",
+        "printedName": "AsyncThrowingStream",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Scs"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:Scs17ConcurrencyExtrass5Error_pRs_rlEyScsyxsAB_pGqd__c7ElementQyd__Rszs8SendableRd__SciRd__lufc",
+            "mangledName": "$sScs17ConcurrencyExtrass5Error_pRs_rlEyScsyxsAB_pGqd__c7ElementQyd__Rszs8SendableRd__SciRd__lufc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_0_1, τ_1_0 where τ_0_0 == τ_1_0.Element, τ_0_1 == any Swift.Error, τ_1_0 : Swift.Sendable, τ_1_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Element, Failure, S where Element == S.Element, Failure == any Swift.Error, S : Swift.Sendable, S : _Concurrency.AsyncSequence>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Scs"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:Scs17ConcurrencyExtrass5Error_pRs_rlEyScsyxsAB_pGqd__c7ElementQyd__RszSciRd__lufc",
+            "mangledName": "$sScs17ConcurrencyExtrass5Error_pRs_rlEyScsyxsAB_pGqd__c7ElementQyd__RszSciRd__lufc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_0_1, τ_1_0 where τ_0_0 == τ_1_0.Element, τ_0_1 == any Swift.Error, τ_1_0 : _Concurrency.AsyncSequence>",
+            "sugared_genericSig": "<Element, Failure, S where Element == S.Element, Failure == any Swift.Error, S : _Concurrency.AsyncSequence>",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "DisfavoredOverload",
+              "Available"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "never",
+            "printedName": "never",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, any Swift.Error>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Scs"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:Scs17ConcurrencyExtrass5Error_pRs_rlE5neverScsyxsAB_pGvpZ",
+            "mangledName": "$sScs17ConcurrencyExtrass5Error_pRs_rlE5neverScsyxsAB_pGvpZ",
+            "moduleName": "ConcurrencyExtras",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AsyncThrowingStream",
+                    "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Scs"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:Scs17ConcurrencyExtrass5Error_pRs_rlE5neverScsyxsAB_pGvgZ",
+                "mangledName": "$sScs17ConcurrencyExtrass5Error_pRs_rlE5neverScsyxsAB_pGvgZ",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 == any Swift.Error>",
+                "sugared_genericSig": "<Element, Failure where Failure == any Swift.Error>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "finished",
+            "printedName": "finished(throwing:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Scs"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_1?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:Scs17ConcurrencyExtrass5Error_pRs_rlE8finished8throwingScsyxsAB_pGsAB_pSg_tFZ",
+            "mangledName": "$sScs17ConcurrencyExtrass5Error_pRs_rlE8finished8throwingScsyxsAB_pGsAB_pSg_tFZ",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 == any Swift.Error>",
+            "sugared_genericSig": "<Element, Failure where Failure == any Swift.Error>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:Scs",
+        "mangledName": "$sScs",
+        "moduleName": "_Concurrency",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error>",
+        "sugared_genericSig": "<Element, Failure where Failure : Swift.Error>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AsyncSequence",
+            "printedName": "AsyncSequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AsyncIterator",
+                "printedName": "AsyncIterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:Scs8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Failure",
+                "printedName": "Failure",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sci",
+            "mangledName": "$sSci"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSRecursiveLock",
+        "printedName": "NSRecursiveLock",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sync",
+            "printedName": "sync(work:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So15NSRecursiveLockC17ConcurrencyExtrasE4sync4workxxyKXE_tKlF",
+            "mangledName": "$sSo15NSRecursiveLockC17ConcurrencyExtrasE4sync4workxxyKXE_tKlF",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<R>",
+            "declAttributes": [
+              "Rethrows",
+              "AccessControl",
+              "SPIAccessControl",
+              "DiscardableResult",
+              "Inlinable"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Internals"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSRecursiveLock",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSRecursiveLock",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Result",
+        "printedName": "Result",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(catching:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Result",
+                "printedName": "Swift.Result<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:s6ResultO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() async throws(τ_0_1) -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:s6ResultO17ConcurrencyExtrasE8catchingAByxq_GxyYaq_YKXE_tYacfc",
+            "mangledName": "$ss6ResultO17ConcurrencyExtrasE8catchingAByxq_GxyYaq_YKXE_tYacfc",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error>",
+            "sugared_genericSig": "<Success, Failure where Failure : Swift.Error>",
+            "declAttributes": [
+              "AccessControl",
+              "Transparent",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:s6ResultO",
+        "mangledName": "$ss6ResultO",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error, τ_0_0 : ~Copyable>",
+        "sugared_genericSig": "<Success, Failure where Failure : Swift.Error, Success : ~Copyable>",
+        "declAttributes": [
+          "Frozen"
+        ],
+        "isExternal": true,
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Task",
+        "printedName": "Task",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "megaYield",
+            "printedName": "megaYield(count:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ScT17ConcurrencyExtrass5NeverORszACRs_rlE9megaYield5countySi_tYaFZ",
+            "mangledName": "$sScT17ConcurrencyExtrass5NeverORszACRs_rlE9megaYield5countySi_tYaFZ",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == Swift.Never, τ_0_1 == Swift.Never>",
+            "sugared_genericSig": "<Success, Failure where Success == Swift.Never, Failure == Swift.Never>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "never",
+            "printedName": "never()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ScT17ConcurrencyExtrass5NeverORs_rlE5neverxyYaKFZ",
+            "mangledName": "$sScT17ConcurrencyExtrass5NeverORs_rlE5neverxyYaKFZ",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Sendable, τ_0_1 == Swift.Never>",
+            "sugared_genericSig": "<Success, Failure where Success : Swift.Sendable, Failure == Swift.Never>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "never",
+            "printedName": "never()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ScT17ConcurrencyExtrass5NeverORszACRs_rlE5neveryyYaKFZ",
+            "mangledName": "$sScT17ConcurrencyExtrass5NeverORszACRs_rlE5neveryyYaKFZ",
+            "moduleName": "ConcurrencyExtras",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == Swift.Never, τ_0_1 == Swift.Never>",
+            "sugared_genericSig": "<Success, Failure where Success == Swift.Never, Failure == Swift.Never>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "cancellableValue",
+            "printedName": "cancellableValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:ScT17ConcurrencyExtrass5NeverORs_rlE16cancellableValuexvp",
+            "mangledName": "$sScT17ConcurrencyExtrass5NeverORs_rlE16cancellableValuexvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:ScT17ConcurrencyExtrass5NeverORs_rlE16cancellableValuexvg",
+                "mangledName": "$sScT17ConcurrencyExtrass5NeverORs_rlE16cancellableValuexvg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Sendable, τ_0_1 == Swift.Never>",
+                "sugared_genericSig": "<Success, Failure where Success : Swift.Sendable, Failure == Swift.Never>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cancellableValue",
+            "printedName": "cancellableValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:ScT17ConcurrencyExtrass5Error_pRs_rlE16cancellableValuexvp",
+            "mangledName": "$sScT17ConcurrencyExtrass5Error_pRs_rlE16cancellableValuexvp",
+            "moduleName": "ConcurrencyExtras",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:ScT17ConcurrencyExtrass5Error_pRs_rlE16cancellableValuexvg",
+                "mangledName": "$sScT17ConcurrencyExtrass5Error_pRs_rlE16cancellableValuexvg",
+                "moduleName": "ConcurrencyExtras",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Sendable, τ_0_1 == any Swift.Error>",
+                "sugared_genericSig": "<Success, Failure where Success : Swift.Sendable, Failure == any Swift.Error>",
+                "isFromExtension": true,
+                "throwing": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:ScT",
+        "mangledName": "$sScT",
+        "moduleName": "_Concurrency",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Sendable, τ_0_1 : Swift.Error>",
+        "sugared_genericSig": "<Success, Failure where Success : Swift.Sendable, Failure : Swift.Error>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-concurrency-extras\/Sources\/ConcurrencyExtras\/MainSerialExecutor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4113,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-concurrency-extras\/Sources\/ConcurrencyExtras\/MainSerialExecutor.swift",
+      "kind": "StringLiteral",
+      "offset": 4117,
+      "length": 31,
+      "value": "\"swift_task_enqueueGlobal_hook\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-concurrency-extras\/Sources\/ConcurrencyExtras\/Task.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1181,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-concurrency-extras\/Sources\/ConcurrencyExtras\/Task.swift",
+      "kind": "StringLiteral",
+      "offset": 1231,
+      "length": 23,
+      "value": "\"TASK_MEGA_YIELD_COUNT\""
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-concurrency-extras\/Sources\/ConcurrencyExtras\/Task.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1277,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/var\/folders\/5_\/z2vvjg1j6bv1cqdnh4x20wk00000gp\/T\/rapid-xcframeworks\/src\/swift-concurrency-extras\/Sources\/ConcurrencyExtras\/Task.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1285,
+      "length": 6,
+      "value": "10000"
+    }
+  ]
+}

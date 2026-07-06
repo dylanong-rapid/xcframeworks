@@ -1,0 +1,181 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios17.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name Clocks -package-name swift_clocks
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import ConcurrencyExtras
+import Foundation
+import IssueReporting
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+final public class AnyClock<Duration> : _Concurrency.Clock where Duration : Swift.DurationProtocol, Duration : Swift.Hashable {
+  public struct Instant : Swift.InstantProtocol {
+    public func advanced(by duration: Duration) -> Clocks.AnyClock<Duration>.Instant
+    public func duration(to other: Clocks.AnyClock<Duration>.Instant) -> Duration
+    public static func < (lhs: Clocks.AnyClock<Duration>.Instant, rhs: Clocks.AnyClock<Duration>.Instant) -> Swift.Bool
+    public static func == (a: Clocks.AnyClock<Duration>.Instant, b: Clocks.AnyClock<Duration>.Instant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init<C>(_ clock: C) where Duration == C.Duration, C : _Concurrency.Clock
+  final public var minimumResolution: Duration {
+    get
+  }
+  final public var now: Clocks.AnyClock<Duration>.Instant {
+    get
+  }
+  final public func sleep(until deadline: Clocks.AnyClock<Duration>.Instant, tolerance: Duration? = nil) async throws
+  @objc deinit
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+final public class ImmediateClock<Duration> : _Concurrency.Clock, @unchecked Swift.Sendable where Duration : Swift.DurationProtocol, Duration : Swift.Hashable {
+  public struct Instant : Swift.InstantProtocol {
+    public init(offset: Duration = .zero)
+    public func advanced(by duration: Duration) -> Clocks.ImmediateClock<Duration>.Instant
+    public func duration(to other: Clocks.ImmediateClock<Duration>.Instant) -> Duration
+    public static func < (lhs: Clocks.ImmediateClock<Duration>.Instant, rhs: Clocks.ImmediateClock<Duration>.Instant) -> Swift.Bool
+    public static func == (a: Clocks.ImmediateClock<Duration>.Instant, b: Clocks.ImmediateClock<Duration>.Instant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var now: Clocks.ImmediateClock<Duration>.Instant {
+    get
+  }
+  final public var minimumResolution: Duration {
+    get
+  }
+  public init(now: Clocks.ImmediateClock<Duration>.Instant = .init())
+  final public func sleep(until deadline: Clocks.ImmediateClock<Duration>.Instant, tolerance: Duration?) async throws
+  @objc deinit
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+extension Clocks.ImmediateClock where Duration == Swift.Duration {
+  convenience public init()
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+extension _Concurrency.Clock where Self == Clocks.ImmediateClock<Swift.Duration> {
+  public static var immediate: Clocks.ImmediateClock<Swift.Duration> {
+    get
+  }
+}
+extension Foundation.NSLock {
+  @discardableResult
+  @inlinable internal func sync<R>(operation: () -> R) -> R {
+    self.lock()
+    defer { self.unlock() }
+    return operation()
+  }
+}
+extension Foundation.NSRecursiveLock {
+  @discardableResult
+  @inlinable internal func sync<R>(operation: () -> R) -> R {
+    self.lock()
+    defer { self.unlock() }
+    return operation()
+  }
+}
+@available(macOS 13.0, iOS 16.0, watchOS 9.0, tvOS 16.0, *)
+public struct _AsyncTimerSequence<C> : _Concurrency.AsyncSequence where C : _Concurrency.Clock {
+  public typealias Element = C.Instant
+  public struct Iterator : _Concurrency.AsyncIteratorProtocol {
+    public mutating func next() async -> C.Instant?
+    @available(iOS 16.0, tvOS 16.0, watchOS 9.0, macOS 13.0, *)
+    public typealias Element = C.Instant
+    @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+    @_implements(_Concurrency.AsyncIteratorProtocol, Failure) public typealias __AsyncIteratorProtocol_Failure = Swift.Never
+  }
+  public func makeAsyncIterator() -> Clocks._AsyncTimerSequence<C>.Iterator
+  @available(iOS 16.0, tvOS 16.0, watchOS 9.0, macOS 13.0, *)
+  public typealias AsyncIterator = Clocks._AsyncTimerSequence<C>.Iterator
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+}
+@available(macOS 13.0, iOS 16.0, watchOS 9.0, tvOS 16.0, *)
+extension Clocks._AsyncTimerSequence : Swift.Sendable {
+}
+@available(macOS 13.0, iOS 16.0, watchOS 9.0, tvOS 16.0, *)
+extension Clocks._AsyncTimerSequence.Iterator : Swift.Sendable {
+}
+@available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+extension SwiftUICore.EnvironmentValues {
+  public var continuousClock: any _Concurrency.Clock<Swift.Duration> {
+    get
+    set
+  }
+  public var suspendingClock: any _Concurrency.Clock<Swift.Duration> {
+    get
+    set
+  }
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+final public class TestClock<Duration> : _Concurrency.Clock, @unchecked Swift.Sendable where Duration : Swift.DurationProtocol, Duration : Swift.Hashable {
+  public struct Instant : Swift.InstantProtocol {
+    public init(offset: Duration = .zero)
+    public func advanced(by duration: Duration) -> Clocks.TestClock<Duration>.Instant
+    public func duration(to other: Clocks.TestClock<Duration>.Instant) -> Duration
+    public static func < (lhs: Clocks.TestClock<Duration>.Instant, rhs: Clocks.TestClock<Duration>.Instant) -> Swift.Bool
+    public static func == (a: Clocks.TestClock<Duration>.Instant, b: Clocks.TestClock<Duration>.Instant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var minimumResolution: Duration
+  final public var now: Clocks.TestClock<Duration>.Instant {
+    get
+  }
+  public init(now: Clocks.TestClock<Duration>.Instant = .init())
+  final public func sleep(until deadline: Clocks.TestClock<Duration>.Instant, tolerance: Duration? = nil) async throws
+  final public func checkSuspension() async throws
+  final public func advance(by duration: Duration = .zero) async
+  final public func advance(to deadline: Clocks.TestClock<Duration>.Instant) async
+  final public func run(timeout duration: Swift.Duration = .milliseconds(500), fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column) async
+  @objc deinit
+}
+public struct SuspensionError : Swift.Error {
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+extension Clocks.TestClock where Duration == Swift.Duration {
+  convenience public init()
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+extension _Concurrency.Clock where Self.Duration : Swift.Hashable {
+  public func timer(interval: Self.Duration, tolerance: Self.Duration? = nil) -> Clocks._AsyncTimerSequence<Clocks.AnyClock<Self.Duration>>
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+public struct UnimplementedClock<Duration> : _Concurrency.Clock where Duration : Swift.DurationProtocol, Duration : Swift.Hashable {
+  public struct Instant : Swift.InstantProtocol {
+    public func advanced(by duration: Duration) -> Clocks.UnimplementedClock<Duration>.Instant
+    public func duration(to other: Clocks.UnimplementedClock<Duration>.Instant) -> Duration
+    public static func < (lhs: Clocks.UnimplementedClock<Duration>.Instant, rhs: Clocks.UnimplementedClock<Duration>.Instant) -> Swift.Bool
+    public static func == (a: Clocks.UnimplementedClock<Duration>.Instant, b: Clocks.UnimplementedClock<Duration>.Instant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init<C>(_ base: C, name: Swift.String = "\(C.self)", fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column) where Duration == C.Duration, C : _Concurrency.Clock
+  public init(name: Swift.String = "Clock", now: Clocks.ImmediateClock<Duration>.Instant = .init(), fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column)
+  public var now: Clocks.UnimplementedClock<Duration>.Instant {
+    get
+  }
+  public var minimumResolution: Duration {
+    get
+  }
+  public func sleep(until deadline: Clocks.UnimplementedClock<Duration>.Instant, tolerance: Duration?) async throws
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+extension Clocks.UnimplementedClock where Duration == Swift.Duration {
+  public init(name: Swift.String = "Clock")
+}
+@available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+extension _Concurrency.Clock where Self == Clocks.UnimplementedClock<Swift.Duration> {
+  public static func unimplemented(fileID: Swift.StaticString = #fileID, filePath: Swift.StaticString = #filePath, line: Swift.UInt = #line, column: Swift.UInt = #column) -> Self
+}
